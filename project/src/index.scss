@@ -43,40 +43,14 @@ input, textarea {
   outline: none;
 }
 
-/*--------------------------*/
-
-
-/*------------colors--------------*/
-
-
-$primary: #FF3F3A;
-
-$btn-gradient: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
-
-$secondary: #FFCF2D;
-
-$divider-gradient: linear-gradient(270.01deg, rgba(218, 219, 221, 0) 0%, rgba(218, 219, 221, 0.5) 12.33%, #DADBDD 51.91%, rgba(218, 219, 221, 0.5) 87.85%, rgba(218, 219, 221, 0) 100%);
-
-$success: #03CEA4;
-
-$danger: #FF4242;
-
-$warning: #F89828;
-
-$info: #5A87FC;
-
-$gray900: #1E212C;
-$gray800: #424551;
-$gray700: #787A80;
-$gray600: #9A9CA5;
-$gray500: #B3B7BC;
-$gray400: #D7DADD;
-$gray300: #E5E8ED;
-$gray200: #F4F5F7;
-$gray100: #F9F9F9;
-
+button {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
 
 /*--------------------------*/
+
 
 /*------------text--------------*/
 
@@ -101,91 +75,5 @@ $gray100: #F9F9F9;
   font-style: normal;
 }
 
-@mixin title1 {
-  font: {
-    size: 4.6rem;
-    weight: 900;
-  };
-  line-height: 6rem;
-}
-
-@mixin title2 {
-  font: {
-    size: 3.2rem;
-    weight: 900;
-  };
-  line-height: 4.2rem;
-}
-
-@mixin title3 {
-  font: {
-    size: 2.8rem;
-    weight: 700;
-  };
-  line-height: 4.2rem;
-}
-
-@mixin title4 {
-  font: {
-    size: 2.4rem;
-    weight: 700;
-  };
-  line-height: 3.1rem;
-}
-
-@mixin title5 {
-  font: {
-    size: 2rem;
-    weight: 700;
-  };
-  line-height: 2.6rem;
-}
-
-@mixin title6 {
-  font: {
-    size: 1.6rem;
-    weight: 700;
-  };
-  line-height: 2.4rem;
-  text-transform: uppercase;
-  letter-spacing: .1rem;
-}
-
-
-@mixin display1 {
-  font: {
-    size: 7.2rem;
-    weight: 900;
-  };
-  line-height: 9.4rem;
-  letter-spacing: .1rem;
-}
-
-@mixin display2 {
-  font: {
-    size: 6.4rem;
-    weight: 900;
-  };
-  line-height: 8.3rem;
-  letter-spacing: .1rem;
-}
-
-@mixin display3 {
-  font: {
-    size: 5.6rem;
-    weight: 900;
-  };
-  line-height: 7.3rem;
-  letter-spacing: .1rem;
-}
-
-@mixin display4 {
-  font: {
-    size: 4.8rem;
-    weight: 900;
-  };
-  line-height: 6.2rem;
-  letter-spacing: .1rem;
-}
 
 /*--------------------------*/

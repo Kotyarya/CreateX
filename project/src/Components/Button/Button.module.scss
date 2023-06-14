@@ -1,0 +1,76 @@
+@import "src/Styles/global";
+
+button {
+  border-radius: .4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+
+
+  svg {
+    fill: white;
+  }
+}
+
+button[disabled],
+button:disabled {
+  opacity: .5;
+}
+
+.solid {
+  background: $btn-gradient;
+  color: white;
+}
+
+.outline {
+  background: $btn-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: .1rem solid $primary;
+
+  svg {
+    fill: $primary;
+  }
+}
+
+.outline:hover {
+  -webkit-background-clip: border;
+  -webkit-text-fill-color: white;
+  color: white;
+
+  svg {
+    fill: white;
+  }
+}
+
+.large {
+  height: 5.2rem;
+  padding: 0 4rem 0 4rem;
+  @include baseBold;
+
+  svg {
+    width: 1.8rem;
+  }
+}
+
+.regular {
+  height: 4.4rem;
+  padding: 0 3.2rem 0 3.2rem;
+  @include smallBold;
+
+  svg {
+    width: 1.2rem;
+  }
+}
+
+.small {
+  height: 3.6rem;
+  padding: 0 2.4rem 0 2.4rem;
+  @include extraSmallBold;
+
+
+  svg {
+    width: 1.2rem;
+  }
+}
