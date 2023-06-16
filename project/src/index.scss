@@ -23,6 +23,7 @@ html, body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
+  overflow-x: hidden;
 }
 
 ul,
@@ -44,7 +45,6 @@ input, textarea {
 }
 
 button {
-  background: rgba(0, 0, 0, 0);
   border: none;
   cursor: pointer;
 }

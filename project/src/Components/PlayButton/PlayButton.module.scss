@@ -1,0 +1,60 @@
+@import "../../Styles/global";
+
+.PlayButton {
+
+  background: $primary;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    position: absolute;
+    background: $primary;
+    opacity: 0;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+  }
+
+  svg {
+    fill: white;
+  }
+}
+
+.PlayButton:hover {
+  span {
+    opacity: 0.12;
+  }
+}
+
+.small {
+  width: 5.2rem;
+  height: 5.2rem;
+
+  span {
+    width: 8.4rem;
+    height: 8.4rem;
+  }
+
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+}
+
+.large {
+  width: 8rem;
+  height: 8rem;
+
+  svg {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  span {
+    width: 11.2rem;
+    height: 11.2rem;
+  }
+}
+

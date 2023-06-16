@@ -1,0 +1,53 @@
+@import "../../Styles/global";
+
+.navBar {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  position: absolute;
+
+  nav {
+    display: flex;
+
+    img {
+      margin-right: 6rem;
+    }
+
+    ul {
+      display: flex;
+      gap: 4rem;
+      margin-right: 22.5rem;
+
+      li > a {
+        @include baseBold;
+        color: $gray800;
+      }
+
+      .active {
+        color: $primary;
+      }
+    }
+  }
+
+  div {
+    display: flex;
+    gap: 3.6rem;
+
+    .logIn {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: rgba(0, 0, 0, 0);
+      @include baseBold;
+      color: $gray800;
+
+      svg {
+        fill: $gray800;
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+}

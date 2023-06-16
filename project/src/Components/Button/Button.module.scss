@@ -1,20 +1,20 @@
 @import "src/Styles/global";
 
-button {
+
+.button {
   border-radius: .4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: .8rem;
 
-
   svg {
     fill: white;
   }
 }
 
-button[disabled],
-button:disabled {
+.button[disabled],
+.button:disabled {
   opacity: .5;
 }
 
@@ -31,6 +31,7 @@ button:disabled {
 
   svg {
     fill: $primary;
+    transition: all .3s ease-in-out;
   }
 }
 

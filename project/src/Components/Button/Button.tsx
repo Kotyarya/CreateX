@@ -1,7 +1,6 @@
 import React, {FC} from 'react';
 import style from "./Button.module.scss"
-import icon from "./Line (Stroke).svg"
-import {ReactSVG} from "react-svg";
+import {ReactComponent as Icon} from "./icons/arrowSvg.svg"
 
 export enum ButtonVariant {
     solid = "solid",
@@ -26,12 +25,12 @@ interface ButtonProps {
 
 const Button: FC<ButtonProps> = ({text, disabled, size, variant, onClick, withIcon}) => {
     return (
-        <button className={style[variant] + " " + style[size]}
+        <button className={style.button + " " + style[variant] + " " + style[size]}
                 onClick={onClick}
                 disabled={disabled}
         >
             {text}
-            {withIcon ? <ReactSVG src={icon}/> : null}
+            {withIcon ? <Icon/> : null}
 
         </button>
     );
