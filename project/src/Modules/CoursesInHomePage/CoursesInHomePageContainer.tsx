@@ -1,10 +1,10 @@
-import React, {useEffect} from 'react';
+import React, {FC, useEffect} from 'react';
 import CoursesInHomePage from "./CoursesInHomePage";
 import {useAction} from "../../hook/useAction";
 import {useTypedSelector} from "../../hook/useTypedSelector";
 import {useNavigate} from "react-router-dom";
 
-const CoursesInHomePageContainer = () => {
+const CoursesInHomePageContainer: FC = () => {
 
     const courses = useTypedSelector(state => state.courses.courses)
     const navigate = useNavigate()

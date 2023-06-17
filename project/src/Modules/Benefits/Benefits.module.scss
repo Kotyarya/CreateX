@@ -1,0 +1,94 @@
+@import "../../Styles/global";
+
+.wrapper {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  align-items: center;
+
+  article {
+    color: $gray900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8rem;
+
+    p {
+      @include title6;
+    }
+
+    h2 {
+      @include title1;
+    }
+  }
+
+  .controls {
+    display: flex;
+
+    button {
+      background: rgba(0, 0, 0, 0);
+      width: 30.7rem;
+      height: 4.6rem;
+      @include baseBold;
+      color: $gray600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .8rem;
+      border-radius: .4rem;
+
+      svg {
+        fill: $gray600;
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+
+    button:hover {
+      color: $primary;
+
+
+      svg {
+        fill: $primary;
+      }
+    }
+
+    .active {
+      color: $primary;
+      border: .1rem solid $primary;
+
+      svg {
+        fill: $primary;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    gap: 13.5rem;
+    align-items: center;
+
+    .text {
+      width: 49.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+
+      h3 {
+        @include title2;
+        color: $gray900;
+      }
+
+      p {
+        @include baseRegular;
+        color: $gray800;
+      }
+    }
+
+    img {
+      width: 60rem;
+      height: inherit;
+    }
+  }
+}
