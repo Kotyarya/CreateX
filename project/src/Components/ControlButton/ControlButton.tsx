@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {ReactComponent as ArrowRightIcon} from "./icons/arrowRigthSVG.svg"
 import {ReactComponent as ArrowLeftIcon} from "./icons/arrowLeftSVG.svg"
-import "./ControlButton.module.scss"
+import style from "./ControlButton.module.scss"
 
 export enum ControlButtonRotation {
     left = "left",
@@ -10,12 +10,13 @@ export enum ControlButtonRotation {
 
 interface ControlButtonProps {
     rotation: ControlButtonRotation,
-    onClick: () => void
+    onClick?: () => void,
+    disabled: boolean
 }
 
-const ControlButton: FC<ControlButtonProps> = ({rotation, onClick}) => {
+const ControlButton: FC<ControlButtonProps> = ({rotation, onClick, disabled}) => {
     return (
-        <button onClick={onClick}>
+        <button disabled={disabled} onClick={onClick} className={style.controlButton}>
             {rotation === ControlButtonRotation.right ? <ArrowRightIcon/> : <ArrowLeftIcon/>}
         </button>
     );

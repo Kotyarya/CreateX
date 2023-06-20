@@ -1,0 +1,102 @@
+@import "../../Styles/global";
+
+.wrapper {
+  width: 100%;
+  height: 85rem;
+  background-image: url("./img/background.png");
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+  padding-top: 8rem;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    align-items: center;
+    color: $gray900;
+
+    p {
+      @include title6
+    }
+
+    h2 {
+      @include title1
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    .event {
+      background: white;
+      border-radius: .4rem;
+      display: flex;
+      gap: 4rem;
+      align-items: center;
+      justify-content: center;
+      padding: 3.2rem;
+      width: 123rem;
+      transition: all .3s ease-in-out;
+
+      .date {
+        display: flex;
+        gap: 2rem;
+
+        .number {
+          width: 6rem;
+          text-align: center;
+          @include display4;
+          color: $primary;
+        }
+
+        .monthTime {
+          .month {
+            @include largeBold;
+            color: $gray900;
+          }
+
+          .time {
+            @include baseRegular;
+            color: $gray700;
+          }
+
+        }
+      }
+
+      .text {
+        width: 75.7rem;
+
+        .title {
+          @include leadBold;
+          color: $gray900;
+        }
+
+        .type {
+          @include baseRegular;
+          color: $gray700;
+        }
+      }
+    }
+
+    .event:hover {
+      z-index: 2;
+      box-shadow: 0 8rem 8rem -2rem rgba(255, 63, 58, 0.16), 0 3rem 2.4rem -1rem rgba(255, 63, 58, 0.1), 0 1.2rem 1rem -.6rem rgba(255, 63, 58, 0.08), 0 .4rem .4rem -.4rem rgba(30, 33, 44, 0.05);
+    }
+  }
+
+  .wantMore {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+
+    p {
+      @include title3;
+      color: $gray900;
+    }
+  }
+}

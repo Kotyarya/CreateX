@@ -24,13 +24,13 @@ const Benefits: FC<BenefitsProps> = ({activeBenefits, setActiveBenefits, benefit
     const activeBenefit = benefits.map((benefit) => {
         if (activeBenefits === benefit.name) {
             return (
-                <>
+                <div key={benefit.id} className={style.content}>
                     <div className={style.text}>
                         <h3>{benefit.title}</h3>
                         <p>{benefit.text}</p>
                     </div>
                     <img src={benefit.img} alt="illustration"/>
-                </>
+                </div>
             )
         } else return null
     })
@@ -45,7 +45,7 @@ const Benefits: FC<BenefitsProps> = ({activeBenefits, setActiveBenefits, benefit
             <div className={style.controls}>
                 {benefitsButton}
             </div>
-            <div className={style.content}>
+            <div>
                 {activeBenefit}
             </div>
         </div>

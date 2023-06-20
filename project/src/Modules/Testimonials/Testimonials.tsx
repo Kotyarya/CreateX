@@ -1,0 +1,62 @@
+import React, {FC} from 'react';
+import style from "./Testimonials.module.scss"
+import ControlButton, {ControlButtonRotation} from "../../Components/ControlButton/ControlButton";
+import {ITestimonial} from "../../Redux/Other/data";
+import {nanoid} from "nanoid";
+
+interface TestimonialsProps {
+    translate: number,
+    moveBlocks: (num: number) => void,
+    testimonials: ITestimonial[]
+}
+
+
+const Testimonials: FC<TestimonialsProps> = ({translate, testimonials, moveBlocks}) => {
+
+
+    const testimonialsBlock = testimonials.map((person) => {
+        return (
+            <div key={nanoid(4)} className={style.block}>
+                <p className={style.text}>{person.text}</p>
+                <div className={style.author}>
+                    <img src={person.img} alt="author"/>
+                    <div className={style.article}>
+                        <h4>{person.title}</h4>
+                        <p>Position, Course</p>
+                    </div>
+                </div>
+            </div>
+        )
+    })
+
+    return (
+        <div className={style.wrapper}>
+            <article>
+                <p>TESTIMONIALS</p>
+                <h2>What our students say</h2>
+            </article>
+            <div className={style.content}>
+                <ControlButton rotation={ControlButtonRotation.left}
+                               disabled={translate >= 0}
+                               onClick={() => moveBlocks(translate + 102)}/>
+                <div className={style.carousel}>
+                    <div className={style.contentCarousel} style={{transform: `translateX(${translate}rem)`}}>
+                        {testimonialsBlock}
+                    </div>
+                </div>
+                <ControlButton rotation={ControlButtonRotation.right}
+                               disabled={translate <= -408}
+                               onClick={() => moveBlocks(translate - 102)}/>
+            </div>
+            <div className={style.dots}>
+                <span className={translate === 0 ? style.active : ""} onClick={() => moveBlocks(0)}></span>
+                <span className={translate === -102 ? style.active : ""} onClick={() => moveBlocks(-102)}></span>
+                <span className={translate === -204 ? style.active : ""} onClick={() => moveBlocks(-204)}></span>
+                <span className={translate === -306 ? style.active : ""} onClick={() => moveBlocks(-306)}></span>
+                <span className={translate === -408 ? style.active : ""} onClick={() => moveBlocks(-408)}></span>
+            </div>
+        </div>
+    );
+};
+
+export default Testimonials;

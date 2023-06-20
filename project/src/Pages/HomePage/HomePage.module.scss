@@ -1,4 +1,6 @@
 .homePage {
+  height: 1000vh;
+
   .head {
     margin-bottom: 18rem;
   }
@@ -9,5 +11,30 @@
 
   .courses {
     margin-bottom: 18rem;
+  }
+
+  .benefits {
+    margin-bottom: 12rem;
+  }
+
+  .events {
+    margin-bottom: 12rem;
+  }
+
+  .certificate {
+    margin-bottom: 12rem;
+  }
+
+  .teams {
+    margin-bottom: 18rem;
+  }
+
+  .group {
+    width: 100%;
+    height: 157rem;
+    background-image: url("../../assets/img/Background.png");
+    background-size: contain;
+    padding-top: 16.6rem;
+    margin-bottom: 12rem;
   }
 }

@@ -1,6 +1,6 @@
 @import "../../Styles/global";
 
-button {
+.controlButton {
   width: 4.8rem;
   height: 4.8rem;
   border-radius: 50%;
@@ -17,10 +17,22 @@ button {
   }
 }
 
-button:hover {
+.controlButton:hover {
   background: $primary;
 
   svg {
     fill: white;
+  }
+}
+
+.controlButton:disabled {
+  opacity: 0.5;
+}
+
+.controlButton:disabled:hover {
+  background: none;
+
+  svg {
+    fill: black;
   }
 }

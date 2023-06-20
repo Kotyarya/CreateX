@@ -13,15 +13,20 @@ const CoursesInHomePageContainer: FC = () => {
 
     useEffect(() => {
         getStartCourses()
-    })
+        // eslint-disable-next-line
+    }, [])
 
     const navigateToCoursesPage = () => {
-        navigate("/courses")
+        navigate("/courses/")
     }
 
+    const navigateToCourse = (courseID: number) => {
+        navigate(`/courses/${courseID}`)
+    }
 
     return (
-        <CoursesInHomePage courses={courses} onClickButton={navigateToCoursesPage}/>
+        <CoursesInHomePage courses={courses} onClickButton={navigateToCoursesPage}
+                           onClickButtonCourse={navigateToCourse}/>
     );
 };
 

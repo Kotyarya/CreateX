@@ -1,0 +1,130 @@
+@import "../../Styles/global";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+
+  .head {
+    display: flex;
+    gap: 80rem;
+    align-items: center;
+
+    article {
+
+      display: flex;
+      flex-direction: column;
+      gap: .8rem;
+
+      p {
+        @include title6;
+        color: $gray900;
+      }
+
+      h2 {
+        @include title1;
+        color: $gray900;
+      }
+    }
+
+    .controls {
+      display: flex;
+      gap: 1.3rem;
+    }
+  }
+
+  .carousel {
+    width: 123rem;
+    overflow: hidden;
+
+    .content {
+      //transform: translateX(-28.5rem - 3rem);
+      display: flex;
+      gap: 3rem;
+      transition: all .3s ease-in-out;
+    }
+
+    .block {
+      min-width: 28.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.6rem;
+
+      .img {
+        background: $secondary;
+        width: 28.5rem;
+        height: 34rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        img {
+          width: 24.5rem;
+          height: 32rem;
+        }
+
+        .gradient {
+          height: 0;
+          width: 28.5rem;
+          position: absolute;
+          background: linear-gradient(180deg, rgba(30, 33, 44, 0) 43.9%, rgba(30, 33, 44, 0.03) 55.21%, rgba(30, 33, 44, 0.33) 68.73%, rgba(30, 33, 44, 0.56) 76.17%, rgba(30, 33, 44, 0.768225) 83.75%, rgba(30, 33, 44, 0.92) 91.49%, #1E212C 100%);
+          transition: all .3s ease-in-out;
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+
+          div {
+            display: flex;
+            gap: 1.2rem;
+
+
+            svg {
+              opacity: .6;
+              cursor: pointer;
+              display: none;
+              width: 1.6rem;
+              height: 1.6rem;
+              transition: all .3s ease-in-out;
+              fill: white;
+            }
+
+            svg:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      article {
+        width: 28.5rem;
+        text-align: center;
+
+        h4 {
+          @include leadBold;
+          color: $gray800;
+        }
+
+        p {
+          @include baseRegular;
+          color: $gray700;
+        }
+      }
+    }
+
+    .block:hover {
+      .img {
+        .gradient {
+          height: 34rem;
+          padding: 2rem;
+
+
+          svg {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

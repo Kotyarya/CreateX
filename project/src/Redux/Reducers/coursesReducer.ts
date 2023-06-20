@@ -1,4 +1,4 @@
-import {CoursesAction, CoursesState} from "../Other/Types/coursesTypes";
+import {CoursesAction, CoursesActionType, CoursesState} from "../Other/Types/coursesTypes";
 
 const initialState: CoursesState = {
     courses: [],
@@ -7,16 +7,16 @@ const initialState: CoursesState = {
 
 const coursesReducer = (state = initialState, action: CoursesAction): CoursesState => {
     switch (action.type) {
-        case "GET_START_COURSES" :
+        case CoursesActionType.GET_START_COURSES :
             return {courses: action.payload, loading: false}
-        case "GET_MORE_COURSES" :
+        case CoursesActionType.GET_MORE_COURSES :
             return {courses: action.payload, loading: false}
-        case "FETCHING_COURSES" :
+        case CoursesActionType.FETCHING_COURSES :
             return {
                 courses: state.courses,
                 loading: true
             }
-        case "FILTER_COURSES_BY_BRANCH" :
+        case CoursesActionType.FILTER_COURSES_BY_BRANCH :
             return {
                 courses: state.courses.filter((course) => course.branch === action.payload),
                 loading: false

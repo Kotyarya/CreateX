@@ -7,9 +7,10 @@ import {ICourses} from "../../Redux/Other/data";
 interface CoursesInHomePageProps {
     courses: ICourses[],
     onClickButton: () => void,
+    onClickButtonCourse: (courseID: number) => void
 }
 
-const CoursesInHomePage: FC<CoursesInHomePageProps> = ({courses, onClickButton}) => {
+const CoursesInHomePage: FC<CoursesInHomePageProps> = ({courses, onClickButton, onClickButtonCourse}) => {
 
     return (
         <div className={style.wrapper}>
@@ -27,7 +28,8 @@ const CoursesInHomePage: FC<CoursesInHomePageProps> = ({courses, onClickButton})
             </article>
             <div className={style.content}>
                 {courses.map((course) => {
-                    return <div key={course.id} className={style.course + " " + style[course.branch]}>
+                    return <div key={course.id} className={style.course + " " + style[course.branch]}
+                                onClick={() => onClickButtonCourse(course.id)}>
                         <div className={style.img}><img src={course.photo} alt=""/></div>
                         <div className={style.info}>
                             <div className={style.branch + " " + style[course.branch]}>

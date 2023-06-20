@@ -1,5 +1,7 @@
-import * as courseActions from "./coursesAction"
+import * as courseActions from "./coursesActions"
+import * as eventsActions from "./eventsActions"
 
 export const rootActions = {
-    ...courseActions
+    ...courseActions,
+    ...eventsActions
 }
