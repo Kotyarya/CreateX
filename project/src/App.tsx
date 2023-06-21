@@ -4,6 +4,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import NavBarContainer from "./Modules/NavBar/NavBarContainer";
 import HomePage from "./Pages/HomePage/HomePage";
 
+
 function App() {
     return (
         <BrowserRouter>
