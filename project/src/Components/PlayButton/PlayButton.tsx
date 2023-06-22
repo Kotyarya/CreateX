@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {ReactComponent as Icon} from "./icons/playSVG.svg"
+import {ReactComponent as Icon} from "../../assets/img/icons/playSVG.svg"
 import style from "./PlayButton.module.scss"
 
 export enum PlayButtonSize {

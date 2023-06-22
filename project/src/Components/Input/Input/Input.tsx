@@ -19,10 +19,20 @@ interface InputProps {
     placeholder: string,
     label?: string,
     width: number,
-    sizeInput: sizeInput
+    sizeInput: sizeInput,
+    theme?: string
 }
 
-const Input: FC<InputProps> = ({meta: {error, valid, touched}, input, type, placeholder, label, width, sizeInput}) => {
+const Input: FC<InputProps> = ({
+                                   meta: {error, valid, touched},
+                                   input,
+                                   type,
+                                   placeholder,
+                                   label,
+                                   width,
+                                   sizeInput,
+                                   theme
+                               }) => {
 
 
     let result = ""
@@ -40,13 +50,13 @@ const Input: FC<InputProps> = ({meta: {error, valid, touched}, input, type, plac
 
 
     return (
-        <div className={style.input + " " + style[sizeInput]}>
+        <div className={style.input + " " + style[sizeInput]} data-theme={theme}>
             {label ?
                 <label>{label}</label> :
                 null
             }
             <div className={style.customInput + " " + style[classInput]}>
-                <input {...input} type={type} placeholder={placeholder}
+                <input autoComplete="off" {...input} type={type} placeholder={placeholder}
                        style={{width: `${width}rem`}}/>
 
             </div>
@@ -55,3 +65,4 @@ const Input: FC<InputProps> = ({meta: {error, valid, touched}, input, type, plac
     )
 }
 
+export default Input

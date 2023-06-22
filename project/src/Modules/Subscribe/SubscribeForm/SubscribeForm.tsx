@@ -1,0 +1,33 @@
+import React from 'react';
+import {Field, reduxForm} from "redux-form";
+import Input, {sizeInput} from "../../../Components/Input/Input/Input";
+import Button, {ButtonSize, ButtonType, ButtonVariant} from "../../../Components/Button/Button";
+import style from "./SubscribeForm.module.scss"
+import validateSubscribeForm from "../../../utils/validate/validateSubscribeForm";
+
+
+const SubscribeForm = ({handleSubmit}: any) => {
+    return (
+        <form onSubmit={handleSubmit} className={style.form}>
+            <Field
+                name={"email"}
+                placeholder={"Your working email"}
+                type={"email"}
+                component={Input}
+                sizeInput={sizeInput.large}
+                width={42.2}
+            />
+            <Button
+                type={ButtonType.submit}
+                text={"Subscribe"}
+                variant={ButtonVariant.solid}
+                size={ButtonSize.large}
+            />
+        </form>
+    );
+};
+
+export default reduxForm({
+    form: "SubscribeForm",
+    validate: validateSubscribeForm
+})(SubscribeForm);

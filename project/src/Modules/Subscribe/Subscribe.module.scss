@@ -1,0 +1,28 @@
+@import "../../Styles/global";
+
+.wrapper {
+  width: 100vw;
+  height: 56.4rem;
+  background-image: url("./img/background.png");
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 12rem;
+  gap: 6rem;
+
+  article {
+    text-align: center;
+    width: 81rem;
+
+    p {
+      @include title6;
+      color: $gray900;
+    }
+
+    h2 {
+      @include title1;
+      color: $gray900;
+    }
+  }
+}

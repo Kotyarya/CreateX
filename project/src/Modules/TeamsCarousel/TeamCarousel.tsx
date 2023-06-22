@@ -2,9 +2,9 @@ import React, {FC} from 'react';
 import style from "./TeamCarousel.module.scss"
 import ControlButton, {ControlButtonRotation} from "../../Components/ControlButton/ControlButton";
 import {ICurator} from "../../Redux/Other/data";
-import {ReactComponent as FacebookSVG} from "./icons/facebookSVG.svg";
-import {ReactComponent as InstagramSVG} from "./icons/instagramSVG.svg";
-import {ReactComponent as LinkedInSVG} from "./icons/linkedinSVG.svg";
+import {ReactComponent as FacebookSVG} from "../../assets/img/icons/facebookSVG.svg";
+import {ReactComponent as InstagramSVG} from "../../assets/img/icons/instagramSVG.svg";
+import {ReactComponent as LinkedInSVG} from "../../assets/img/icons/linkedinSVG.svg";
 import {nanoid} from "nanoid";
 
 

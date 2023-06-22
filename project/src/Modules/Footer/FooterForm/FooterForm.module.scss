@@ -1,0 +1,21 @@
+@import "../../../Styles/global";
+
+.form {
+  display: flex;
+
+  button {
+    height: 3.6rem;
+    width: 3.6rem;
+    background: #393C46;
+    border: .1rem solid rgba(255, 255, 255, 0.20);
+    border-left: none;
+    border-top-right-radius: .4rem;
+    border-bottom-right-radius: .4rem;
+
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+      fill: white;
+    }
+  }
+}

@@ -1,12 +1,17 @@
 import React, {FC} from 'react';
 import logo from "./img/logo.png"
+import logoDark from "./img/logoDark.png"
 import {NavLink} from "react-router-dom";
 import "./Logo.module.scss"
 
-const Logo: FC = () => {
+interface LogoProps {
+    darkMode?: boolean
+}
+
+const Logo: FC<LogoProps> = ({darkMode}) => {
     return (
         <NavLink to={"/"}>
-            <img src={logo} alt="logo"/>
+            <img src={darkMode ? logoDark : logo} alt="logo"/>
         </NavLink>
     );
 };

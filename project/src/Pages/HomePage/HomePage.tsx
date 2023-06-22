@@ -8,6 +8,7 @@ import EventsInHomePageContainer from "../../Modules/EventsInHomePage/EventsInHo
 import Certificate from "../../Components/Certificate/Certificate";
 import TeamCarouselContainer from "../../Modules/TeamsCarousel/TeamCarouselContainer";
 import TestimonialsContainer from "../../Modules/Testimonials/TestimonialsContainer";
+import Subscribe from "../../Modules/Subscribe/Subscribe";
 
 const HomePage: FC = () => {
 
@@ -39,6 +40,9 @@ const HomePage: FC = () => {
                 <div className={style.testimonials}>
                     <TestimonialsContainer/>
                 </div>
+            </div>
+            <div className={style.subscribe}>
+                <Subscribe/>
             </div>
         </div>
     );

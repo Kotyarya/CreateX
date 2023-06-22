@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import style from "./Button.module.scss"
-import {ReactComponent as Icon} from "./icons/arrowSvg.svg"
+import {ReactComponent as Icon} from "../../assets/img/icons/arrowSvg.svg"
 
 export enum ButtonVariant {
     solid = "solid",
@@ -13,19 +13,24 @@ export enum ButtonSize {
     small = "small"
 }
 
+export enum ButtonType {
+    submit = "submit"
+}
+
 interface ButtonProps {
     text: string,
     disabled?: boolean,
     variant: ButtonVariant,
     size: ButtonSize,
-    onClick: () => void,
-    withIcon?: boolean
+    onClick?: () => void,
+    withIcon?: boolean,
+    type?: ButtonType
 }
 
 
-const Button: FC<ButtonProps> = ({text, disabled, size, variant, onClick, withIcon}) => {
+const Button: FC<ButtonProps> = ({text, disabled, size, variant, onClick, withIcon, type}) => {
     return (
-        <button className={style.button + " " + style[variant] + " " + style[size]}
+        <button type={type} className={style.button + " " + style[variant] + " " + style[size]}
                 onClick={onClick}
                 disabled={disabled}
         >

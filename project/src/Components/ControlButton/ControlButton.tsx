@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
-import {ReactComponent as ArrowRightIcon} from "./icons/arrowRigthSVG.svg"
-import {ReactComponent as ArrowLeftIcon} from "./icons/arrowLeftSVG.svg"
+import {ReactComponent as ArrowRightIcon} from "../../assets/img/icons/arrowRigthSVG.svg"
+import {ReactComponent as ArrowLeftIcon} from "../../assets/img/icons/arrowLeftSVG.svg"
 import style from "./ControlButton.module.scss"
 
 export enum ControlButtonRotation {
