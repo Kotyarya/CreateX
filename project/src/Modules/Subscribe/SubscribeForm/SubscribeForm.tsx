@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {Field, reduxForm} from "redux-form";
 import Input, {sizeInput} from "../../../Components/Input/Input/Input";
 import Button, {ButtonSize, ButtonType, ButtonVariant} from "../../../Components/Button/Button";
@@ -6,7 +6,7 @@ import style from "./SubscribeForm.module.scss"
 import validateSubscribeForm from "../../../utils/validate/validateSubscribeForm";
 
 
-const SubscribeForm = ({handleSubmit}: any) => {
+const SubscribeForm: FC = ({handleSubmit}: any) => {
     return (
         <form onSubmit={handleSubmit} className={style.form}>
             <Field

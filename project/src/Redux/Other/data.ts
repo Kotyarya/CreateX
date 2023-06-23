@@ -117,11 +117,12 @@ export const curators: { [key: string]: ICurator } = {
 }
 
 export enum branch {
+    all = "All",
     marketing = "Marketing",
     management = "Management",
     hr = "hr",
     design = "Design",
-    development = "Development",
+    development = "Development"
 }
 
 export interface ICourses {
@@ -206,7 +207,48 @@ export const courses: ICourses[] = [
         author: curators["Cody Fisher"].title,
         photo: curators["Cody Fisher"].img,
     },
+    {
+        id: 9,
+        title: "User Experience. Human-centered Design",
+        branch: branch.design,
+        price: 240,
+        author: curators["Cody Fisher"].title,
+        photo: curators["Cody Fisher"].img,
+    },
+    {
+        id: 9,
+        title: "User Experience. Human-centered Design",
+        branch: branch.design,
+        price: 240,
+        author: curators["Cody Fisher"].title,
+        photo: curators["Cody Fisher"].img,
+    },
+    {
+        id: 9,
+        title: "User Experience. Human-centered Design",
+        branch: branch.design,
+        price: 240,
+        author: curators["Cody Fisher"].title,
+        photo: curators["Cody Fisher"].img,
+    },
+    {
+        id: 9,
+        title: "User Experience. Human-centered Design",
+        branch: branch.design,
+        price: 240,
+        author: curators["Cody Fisher"].title,
+        photo: curators["Cody Fisher"].img,
+    },
 ]
+
+export const lengthCoursesByBranch: { [key: string]: number } = {
+    all: courses.length,
+    marketing: courses.filter((course) => course.branch === branch.marketing).length,
+    management: courses.filter((course) => course.branch === branch.management).length,
+    hr: courses.filter((course) => course.branch === branch.hr).length,
+    design: courses.filter((course) => course.branch === branch.design).length,
+    development: courses.filter((course) => course.branch === branch.development).length,
+}
 
 export interface IBenefit {
     id: number,

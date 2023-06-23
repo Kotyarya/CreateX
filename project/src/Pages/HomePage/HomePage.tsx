@@ -8,7 +8,7 @@ import EventsInHomePageContainer from "../../Modules/EventsInHomePage/EventsInHo
 import Certificate from "../../Components/Certificate/Certificate";
 import TeamCarouselContainer from "../../Modules/TeamsCarousel/TeamCarouselContainer";
 import TestimonialsContainer from "../../Modules/Testimonials/TestimonialsContainer";
-import Subscribe from "../../Modules/Subscribe/Subscribe";
+import SubscribeContainer from "../../Modules/Subscribe/SubscribeContainer";
 
 const HomePage: FC = () => {
 
@@ -42,7 +42,7 @@ const HomePage: FC = () => {
                 </div>
             </div>
             <div className={style.subscribe}>
-                <Subscribe/>
+                <SubscribeContainer/>
             </div>
         </div>
     );

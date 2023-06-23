@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {FC} from 'react';
 import style from "./Subscribe.module.scss"
 import SubscribeForm from "./SubscribeForm/SubscribeForm";
 
+interface SubscribeProps {
+    submit: (values: any) => void
+}
 
-const Subscribe = () => {
+const Subscribe: FC<SubscribeProps> = ({submit}) => {
     return (
         <div className={style.wrapper}>
             <article>
@@ -11,9 +14,7 @@ const Subscribe = () => {
                 <h2>Subscribe to the Createx School announcements</h2>
             </article>
             <SubscribeForm
-                onSubmit={(values: any) => {
-                    console.log(`Thank for subscribe ${values.email}`)
-                }}
+                onSubmit={submit}
             />
         </div>
     );

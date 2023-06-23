@@ -13,15 +13,14 @@ import {ReactComponent as HeartSVG} from "../../assets/img/icons/heart.svg";
 import FooterForm from "./FooterForm/FooterForm";
 import {NavLink} from "react-router-dom";
 
-const Footer: FC = () => {
+interface FooterProps {
+    goTop: () => void,
+    submit: (values: any) => void
+}
 
 
-    const goTop = () => {
-        document.documentElement.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        })
-    }
+const Footer: FC<FooterProps> = ({goTop, submit}) => {
+
 
     return (
         <footer>
@@ -83,7 +82,7 @@ const Footer: FC = () => {
                 </ul>
                 <div className={style.signUp}>
                     <p className={style.title}>SIGN UP TO OUR NEWSLETTER</p>
-                    <FooterForm onSubmit={() => []}/>
+                    <FooterForm onSubmit={submit}/>
                     <p className={style.description}>*Subscribe to our newsletter to receive communications and early
                         updates from Createx SEO Agency.</p>
                 </div>
