@@ -1,0 +1,96 @@
+@import "../../Styles/global";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  gap: 13.5rem;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+
+    .about {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+
+      h2 {
+        @include title1;
+        color: $gray900;
+      }
+
+      p {
+        @include baseRegular;
+        color: $gray800;
+      }
+    }
+
+    .willLearn {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+
+      h3 {
+        @include title3;
+        color: $gray900;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: .4rem;
+
+        li {
+          @include baseRegular;
+          color: $gray800;
+          display: inline-flex;
+          gap: 1.6rem;
+        }
+
+        li:before {
+          content: "";
+          width: 1.6rem;
+          height: 1.6rem;
+          background-image: url("../../assets/img/icons/checkSVG.svg");
+          margin-top: .5rem;
+        }
+      }
+    }
+  }
+
+  .info {
+    padding: 4rem 3.2rem;
+    border: .2rem solid $gray300;
+    border-radius: .4rem;
+    box-shadow: $small;
+    width: 49.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    .block {
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+
+      .title {
+        @include title6;
+        color: $gray900;
+      }
+
+      .text {
+        @include title4;
+        color: $primary;
+      }
+
+      .description {
+        @include baseRegular;
+        color: $gray700;
+      }
+    }
+  }
+}

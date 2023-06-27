@@ -1,0 +1,31 @@
+@import "../../../Styles/global";
+
+.searchInput {
+  height: 4.4rem;
+  border-radius: .4rem;
+  border: .2rem solid $gray400;
+  @include smallRegular;
+  color: $gray900;
+  padding: 1.1rem 1.6rem;
+}
+
+.searchInput::placeholder {
+  color: $gray600;
+}
+
+.customSearchInput {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.customSearchInput::after {
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  position: absolute;
+  right: 1.6rem;
+  background-image: url("../../../assets/img/icons/search.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}

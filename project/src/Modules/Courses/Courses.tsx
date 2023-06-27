@@ -1,22 +1,38 @@
-import React, {FC, useEffect} from 'react';
+import React, {FC} from 'react';
 import style from "./Courses.module.scss"
-import {useTypedSelector} from "../../hook/useTypedSelector";
-import {branch, lengthCoursesByBranch} from "../../Redux/Other/data";
+import {branch, ICourses, lengthCoursesByBranch} from "../../Redux/Other/data";
 import {nanoid} from "nanoid";
-import {useAction} from "../../hook/useAction";
+import {ReactComponent as LoadSVG} from "../../assets/img/icons/load.svg";
+import {motion, useTime, useTransform} from "framer-motion";
+import SearchInput from "../../Components/Input/SearchInput/SearchInput";
 
-const Courses: FC = () => {
+interface CoursesProps {
+    allBranch: string[],
+    setFilterCourses: (oneBranch: string) => void,
+    onChangeHandler: (e: React.ChangeEvent<HTMLInputElement>) => void,
+    filterCourses: ICourses[],
+    navigateToCourse: (id: number) => void,
+    courses: ICourses[],
+    activeBranch: branch,
+    loading: boolean,
+    getMoreCourses: (activeBranch: branch) => void
+}
 
-    const {setActiveBranch, filterCoursesByBranch, getCourses} = useAction()
+const Courses: FC<CoursesProps> = ({
+                                       allBranch,
+                                       setFilterCourses,
+                                       onChangeHandler,
+                                       filterCourses,
+                                       navigateToCourse,
+                                       courses,
+                                       activeBranch,
+                                       loading,
+                                       getMoreCourses
+                                   }) => {
 
 
-    useEffect(() => {
-        getCourses()
-        // eslint-disable-next-line
-    }, [])
-
-    const allBranch: string[] = Object.keys(branch)
-    const {courses, activeBranch} = useTypedSelector(state => state.courses)
+    const time = useTime();
+    const rotate = useTransform(time, [0, 4000], [0, 360], {clamp: false});
 
 
     return (
@@ -28,10 +44,7 @@ const Courses: FC = () => {
             <div className={style.controls}>
                 {allBranch.map((oneBranch: string) => {
                     return (
-                        <button onClick={() => {
-                            setActiveBranch(oneBranch)
-                            filterCoursesByBranch(oneBranch)
-                        }}
+                        <button onClick={() => setFilterCourses(oneBranch)}
                                 className={activeBranch === branch[oneBranch as keyof typeof branch] ? style.active : ""}
                                 key={nanoid(10)}>
                             {oneBranch === "hr" ? "HR & Recruting" : branch[oneBranch as keyof typeof branch]}
@@ -39,14 +52,35 @@ const Courses: FC = () => {
                         </button>
                     )
                 })}
+                <div className={style.searchInput}>
+                    <SearchInput width={31.5} placeholder={"Search courses..."} onChange={onChangeHandler}/>
+                </div>
             </div>
             <div className={style.content}>
-                {courses.map((course) => {
+                {filterCourses.map((course) => {
                     return (
-                        <div key={course.id}>{course.branch}{course.title}</div>
+                        <div key={course.id} className={style.course} onClick={() => navigateToCourse(course.id)}>
+                            <div className={style.img}>
+                                <img src={course.photo} alt=""/>
+                            </div>
+                            <div className={style.info}>
+                                <p className={style.branch + " " + style[course.branch]}>{course.branch === "hr" ? "HR & Recruting" : course.branch}</p>
+                                <p className={style.title}>{course.title}</p>
+                                <p className={style.price}><span>$ {course.price}</span> | {course.author}</p>
+                            </div>
+                        </div>
                     )
                 })}
             </div>
+            {
+                courses.length !== lengthCoursesByBranch[activeBranch.toLowerCase() as keyof typeof lengthCoursesByBranch] ?
+                    <button className={style.loadMore} onClick={() => getMoreCourses(activeBranch)}>
+                        <motion.div className={style.motionDiv} style={loading ? {rotate} : undefined}><LoadSVG/>
+                        </motion.div>
+                        Load more
+                    </button>
+                    : null
+            }
         </div>
     );
 };

@@ -8,7 +8,7 @@ export enum sizeInput {
 }
 
 
-interface InputProps {
+interface FormInputProps {
     meta: {
         error: string,
         valid: boolean,
@@ -23,16 +23,16 @@ interface InputProps {
     theme?: string
 }
 
-const Input: FC<InputProps> = ({
-                                   meta: {error, valid, touched},
-                                   input,
-                                   type,
-                                   placeholder,
-                                   label,
-                                   width,
-                                   sizeInput,
-                                   theme
-                               }) => {
+const FormInput: FC<FormInputProps> = ({
+                                           meta: {error, valid, touched},
+                                           input,
+                                           type,
+                                           placeholder,
+                                           label,
+                                           width,
+                                           sizeInput,
+                                           theme
+                                       }) => {
 
 
     let result = ""
@@ -65,4 +65,4 @@ const Input: FC<InputProps> = ({
     )
 }
 
-export default Input
+export default FormInput

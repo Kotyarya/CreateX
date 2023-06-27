@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {Field, reduxForm} from "redux-form";
-import Input, {sizeInput} from "../../../Components/Input/Input/Input";
+import Input, {sizeInput} from "../../../Components/Input/FormInput/Input";
 import Button, {ButtonSize, ButtonType, ButtonVariant} from "../../../Components/Button/Button";
 import style from "./SubscribeForm.module.scss"
 import validateSubscribeForm from "../../../utils/validate/validateSubscribeForm";

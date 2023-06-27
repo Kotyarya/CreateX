@@ -2,10 +2,10 @@
 
 .wrapper {
   width: 100%;
-  height: 400vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 6rem;
   background-image: url("./img/background.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -53,5 +53,123 @@
       color: $primary;
       border: .1rem solid $primary;
     }
+
+    .searchInput {
+      margin-left: 10rem;
+    }
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3, 39rem);
+    grid-auto-rows: 43.8rem;
+    grid-gap: 3rem;
+
+    .course {
+      display: flex;
+      flex-direction: column;
+      border-radius: .4rem;
+      border: .1rem solid $gray300;
+      cursor: pointer;
+      box-shadow: $small;
+      transition: all .3s ease-in-out;
+
+      .img {
+        height: 24rem;
+        background-color: $secondary;
+        background-image: url("./img/backgroundCourse.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        img {
+          height: 22rem;
+          width: auto;
+
+        }
+      }
+
+      .info {
+        padding: 2.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .branch {
+          display: block;
+          width: fit-content;
+          padding: .1rem .8rem .1rem .8rem;
+          border-radius: .4rem;
+          @include smallRegular;
+          color: white;
+          background: $secondary;
+        }
+
+        .Marketing {
+          background: $success;
+        }
+
+        .Management {
+          background: $info;
+        }
+
+        .hr {
+          background: $warning;
+        }
+
+        .Design {
+          background: rgba(245, 47, 110, 1);
+        }
+
+        .Development {
+          background: #7772F1;
+        }
+
+        .title {
+          @include leadBold;
+          color: $gray900;
+        }
+
+        .price {
+          @include largeRegular;
+          color: $gray700;
+          display: inline-flex;
+          gap: .8rem;
+
+          span {
+            color: $primary;
+            @include largeBold;
+          }
+        }
+      }
+    }
+
+    .course:hover {
+      box-shadow: $regular;
+    }
+  }
+
+  .loadMore {
+    background: none;
+    @include baseBold;
+    color: $gray800;
+    display: inline-flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    .motionDiv {
+      width: 2.4rem;
+      height: 2.4rem;
+
+      svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: $gray800;
+      }
+    }
+
   }
 }

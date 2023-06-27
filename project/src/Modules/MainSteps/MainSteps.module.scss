@@ -1,0 +1,116 @@
+@import "../../Styles/global";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8rem;
+    text-align: center;
+    color: $gray900;
+
+    p {
+      @include title6;
+    }
+
+    h2 {
+      @include title1;
+    }
+  }
+
+  .content {
+    display: flex;
+    gap: 3rem;
+
+    .block {
+      width: 28.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      position: relative;
+
+
+      .bg1 {
+        width: 11.6rem;
+        height: 11.6rem;
+        border-radius: 50%;
+        background: $primary;
+        position: absolute;
+        opacity: 0;
+        left: -3.2rem;
+        top: -2.8rem;
+        transition: all .3s ease-in-out;
+      }
+
+      .bg2 {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        background: $primary;
+        position: absolute;
+        opacity: .0;
+        left: -1.4rem;
+        transition: all .3s ease-in-out;
+      }
+
+      .number {
+        @include title1;
+        color: $gray400;
+        display: inline-flex;
+        align-items: center;
+        gap: 2.2rem;
+        transition: all .3s ease-in-out;
+      }
+
+      .number:after {
+        content: "";
+        width: 20.9rem;
+        height: .1rem;
+        background-image: linear-gradient(to right, $gray700 40%, rgba(255, 255, 255, 0) 20%);
+        background-position: top;
+        background-size: 1rem .2rem;
+        background-repeat: repeat-x;
+      }
+
+      .text {
+        .title {
+          @include leadBold;
+          color: $gray900;
+        }
+
+        .description {
+          @include baseRegular;
+          color: $gray700;
+        }
+
+      }
+    }
+
+    .block:hover {
+
+      .bg1 {
+        opacity: .1;
+      }
+
+      .bg2 {
+        opacity: .2;
+      }
+
+      .number {
+        color: $primary;
+      }
+    }
+
+    .block:last-child {
+
+      .number:after {
+        display: none;
+      }
+    }
+  }
+}

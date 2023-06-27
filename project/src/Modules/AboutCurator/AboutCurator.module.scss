@@ -1,0 +1,105 @@
+@import "../../Styles/global";
+
+.wrapper {
+  display: flex;
+  gap: 13.5rem;
+  justify-content: center;
+
+  .img {
+    width: 49.5rem;
+    height: 50rem;
+    background: $secondary;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+
+    img {
+      height: 52rem;
+      width: 38rem;
+    }
+  }
+
+  .content {
+    width: 60rem;
+
+    article {
+      display: flex;
+      flex-direction: column;
+      gap: .8rem;
+      margin-bottom: 1.6rem;
+
+      p {
+        @include title6;
+        color: $gray900;
+      }
+
+      h3 {
+        @include title1;
+        color: $gray900;
+      }
+    }
+
+    .subtitle {
+      @include leadRegular;
+      color: $gray700;
+      margin-bottom: 3.2rem;
+    }
+
+    .statistic {
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+      margin-bottom: 3.2rem;
+
+      p {
+        display: inline-flex;
+        align-items: center;
+        gap: .8rem;
+        @include baseBold;
+        color: $gray800;
+      }
+
+      p:before {
+        width: 1.6rem;
+        height: 1.6rem;
+        content: "";
+      }
+
+      .rate:before {
+        background-image: url("../../assets/img/icons/Star.svg");
+      }
+
+      .courses:before {
+        background-image: url("../../assets/img/icons/Play.svg");
+      }
+
+      .students:before {
+        background-image: url("../../assets/img/icons/Profile.svg");
+      }
+    }
+
+    .description {
+      @include baseRegular;
+      color: $gray800;
+      margin-bottom: 4rem;
+    }
+
+    .social {
+      display: flex;
+      gap: 2.4rem;
+      align-items: center;
+
+      svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: $gray700;
+        cursor: pointer;
+      }
+
+      svg:hover {
+        fill: $primary;
+      }
+    }
+  }
+}

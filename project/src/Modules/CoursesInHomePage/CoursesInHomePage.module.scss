@@ -62,7 +62,8 @@
         padding: 3.2rem;
 
         .branch {
-          display: inline-block;
+          display: block;
+          width: fit-content;
           padding: .1rem .8rem .1rem .8rem;
           border-radius: .4rem;
           @include smallRegular;
