@@ -1,0 +1,43 @@
+@import "../../Styles/global";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 13.8rem;
+
+  article {
+    color: $gray900;
+    width: 49.2rem;
+
+    p {
+      @include title6;
+    }
+
+    h2 {
+      @include title1;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    li {
+      @include leadBold;
+      color: $gray800;
+      width: 56.4rem;
+      display: inline-flex;
+      gap: 1.6rem;
+    }
+
+    li:before {
+      content: "";
+      min-width: 2rem;
+      min-height: 2rem;
+      background-image: url("../../assets/img/icons/checkSVG.svg");
+      background-repeat: no-repeat;
+      margin-top: .6rem;
+    }
+  }
+}

@@ -39,7 +39,7 @@ const FormInput: FC<FormInputProps> = ({
 
     if (touched) {
         if (error) {
-            result = "Please provide a valid input."
+            result = error
         } else if (valid) {
             result = "Looks good!"
         }

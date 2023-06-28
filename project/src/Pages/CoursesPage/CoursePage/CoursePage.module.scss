@@ -9,12 +9,35 @@
 
   .group {
     background-image: url("../../../assets/img/Background1.png");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     padding-top: 6.6rem;
+    margin-bottom: 5.4rem;
 
     .aboutCurator {
       margin-bottom: 18rem;
     }
+
+    .mainSteps {
+      margin-bottom: 18rem;
+    }
+
+    .discount {
+      margin-bottom: 18rem;
+    }
+
+    .forWhom {
+      margin-bottom: 12.6rem;
+    }
+  }
+
+  .lessons {
+    margin-bottom: 12rem;
+  }
+
+  .groupGray {
+    background-image: url("../../../assets/img/Background.png");
+    background-size: cover;
+    padding-top: 8rem;
   }
 }

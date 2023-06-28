@@ -1,0 +1,76 @@
+@import "../../Styles/global";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  gap: 13.5rem;
+  justify-content: center;
+  align-items: flex-start;
+
+  .content {
+    article {
+      color: $gray900;
+      margin-bottom: 6rem;
+
+      p {
+        @include title6
+      }
+
+      h2 {
+        @include title1
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+
+      li {
+        width: 56rem;
+
+        details {
+          summary {
+            list-style: none;
+            color: $gray900;
+            @include leadBold;
+            display: inline-flex;
+            align-items: center;
+            gap: 2rem;
+            cursor: pointer;
+
+            span {
+              color: $primary;
+              @include leadRegular
+            }
+          }
+
+          summary:before {
+            content: "";
+            width: 2rem;
+            height: 2rem;
+            background-image: url("../../assets/img/icons/Close.svg");
+          }
+
+          p {
+            margin-top: 1.6rem;
+            margin-left: 4rem;
+            @include baseRegular;
+            color: $gray800;
+          }
+        }
+
+        details[open] {
+          summary:before {
+            background-image: url("../../assets/img/icons/Open.svg");
+          }
+        }
+      }
+    }
+  }
+
+  img {
+    width: 49.5rem;
+    height: 55.4rem;
+  }
+}

@@ -164,36 +164,36 @@ export const courses: ICourses[] = [
         date: "Sept 7 - Nov 2",
         lessons: [
             {
-                "title": "Introduction to Google Ads",
-                "description": "Get acquainted with the basics of Google Ads, its role in digital marketing, setting up an account, and understanding key performance indicators."
+                "title": "Lesson 1: Introduction to Google Ads",
+                "description": "In this lesson, you'll get an overview of Google Ads and learn about its benefits for businesses. We'll explore the different types of Google Ads campaigns and their objectives. You'll also learn how to set up your Google Ads account and navigate the interface."
             },
             {
-                "title": "Keyword Research and Market Analysis",
-                "description": "Learn methods for selecting keywords, using tools to analyze competitors, and identifying potential keyword phrases for effective ad targeting."
+                "title": "Lesson 2: Keyword Research and Planning",
+                "description": "In this lesson, we'll dive into keyword research and planning for your Google Ads campaigns. You'll learn how to use keyword research tools, identify relevant keywords for your business, and build effective keyword lists. We'll also discuss keyword match types and negative keywords."
             },
             {
-                "title": "Creating Compelling Advertisements",
-                "description": "Discover how to create engaging and informative ads tailored to your target audience, incorporating best practices for text and visual elements."
+                "title": "Lesson 3: Creating Compelling Ad Copy",
+                "description": "In this lesson, you'll discover the art of creating compelling ad copy that grabs attention and drives clicks. We'll discuss best practices for writing compelling headlines, crafting engaging ad descriptions, and utilizing ad extensions. You'll also learn how to align your ad copy with your target audience."
             },
             {
-                "title": "Targeting Strategies",
-                "description": "Understand various targeting methods, including geographic, time-based, demographic, and interest-based targeting, to maximize reaching your intended audience."
+                "title": "Lesson 4: Campaign and Ad Group Structure",
+                "description": "In this lesson, we'll explore the importance of a well-structured Google Ads campaign. You'll learn how to organize your campaigns and ad groups effectively, set appropriate budgets, and optimize your campaign settings. We'll also discuss ad scheduling and geotargeting strategies."
             },
             {
-                "title": "Bid and Budget Management",
-                "description": "Explore strategies for managing bids and budgets, including determining maximum bid amounts, optimizing budgets, and utilizing automated tools."
+                "title": "Lesson 5: Bidding and Budget Optimization",
+                "description": "In this lesson, we'll delve into bidding and budget optimization techniques. You'll learn about different bidding strategies and how to choose the right one for your goals. We'll also discuss budget allocation, bid adjustments, and conversion tracking to maximize your return on investment."
             },
             {
-                "title": "Conversions and Tracking Results",
-                "description": "Set up conversion tracking, measure campaign effectiveness, and optimize strategies based on data insights."
+                "title": "Lesson 6: Ad Extensions and Ad Formats",
+                "description": "In this lesson, we'll explore the power of ad extensions and various ad formats in Google Ads. You'll learn how to leverage extensions like sitelinks, callouts, and structured snippets to enhance your ads. We'll also discuss responsive search ads, display ads, and video ads."
             },
             {
-                "title": "Ad Extensions and Analytics",
-                "description": "Explore different types of ad extensions, their benefits, and how to leverage them to enhance ad quality and improve conversions."
+                "title": "Lesson 7: Monitoring and Optimization",
+                "description": "In this lesson, we'll cover the key aspects of monitoring and optimizing your Google Ads campaigns. You'll learn how to track the performance of your ads, analyze important metrics, and make data-driven optimizations. We'll discuss A/B testing, ad rotation, and campaign experiments."
             },
             {
-                "title": "Optimization and A/B Testing",
-                "description": "Learn techniques for optimizing ad campaigns, analyzing results, and conducting A/B testing to continuously improve the effectiveness of your Google Ads."
+                "title": "Lesson 8: Remarketing and Advanced Strategies",
+                "description": "In this final lesson, we'll explore advanced strategies in Google Ads, including remarketing, audience targeting, and advanced campaign settings. You'll learn how to reach and engage your audience across different channels and devices. We'll also discuss campaign automation and the future of Google Ads."
             }
         ],
         willLearn: [
@@ -224,32 +224,36 @@ export const courses: ICourses[] = [
         date: "May 14 - July 10",
         lessons: [
             {
-                "title": "Introduction to Product Management",
-                "description": "Explore the role of a product manager and the key responsibilities."
+                "title": "Lesson 1: Introduction to Product Management",
+                "description": "In this lesson, you'll be introduced to the role of a product manager and the key responsibilities involved. We'll explore the product management lifecycle and the importance of understanding customer needs. You'll also learn about the skills and qualities required to excel in product management."
             },
             {
-                "title": "Market Research and Competitive Analysis",
-                "description": "Learn techniques to gather market insights and analyze competition."
+                "title": "Lesson 2: Market Research and Analysis",
+                "description": "In this lesson, we'll dive into market research and analysis for effective product management. You'll learn how to conduct market research to identify customer pain points, analyze competitors, and uncover market opportunities. We'll also discuss techniques for gathering customer feedback and conducting user research."
             },
             {
-                "title": "User Experience Design and Prototyping",
-                "description": "Understand user-centered design principles and create interactive prototypes."
+                "title": "Lesson 3: Defining Product Strategy and Roadmapping",
+                "description": "In this lesson, we'll focus on defining a product strategy and creating a product roadmap. You'll learn how to align business goals with customer needs, prioritize features, and develop a strategic roadmap. We'll also discuss the importance of setting clear product goals and tracking progress."
             },
             {
-                "title": "Agile Development and Scrum Methodology",
-                "description": "Gain an understanding of agile principles and Scrum framework."
+                "title": "Lesson 4: User-Centric Design and Prototyping",
+                "description": "In this lesson, we'll explore the principles of user-centric design and the importance of prototyping. You'll learn how to conduct user research, create user personas, and develop user stories. We'll also discuss techniques for prototyping and usability testing to iterate and refine your product ideas."
             },
             {
-                "title": "Product Roadmapping and Prioritization",
-                "description": "Learn how to create product roadmaps and prioritize features."
+                "title": "Lesson 5: Agile Development and Scrum",
+                "description": "In this lesson, we'll delve into agile development methodologies, particularly Scrum, and their relevance to product management. You'll learn about sprint planning, backlog management, and effective collaboration with development teams. We'll also discuss the role of the product manager in an agile environment."
             },
             {
-                "title": "Effective Communication and Stakeholder Management",
-                "description": "Develop communication skills to collaborate with cross-functional teams and stakeholders."
+                "title": "Lesson 6: Product Launch and Go-to-Market Strategy",
+                "description": "In this lesson, we'll focus on the product launch phase and developing a go-to-market strategy. You'll learn how to plan and execute a successful product launch, define target markets, and create marketing and sales strategies. We'll discuss product positioning, pricing, and distribution channels."
             },
             {
-                "title": "Product Launch and Go-to-Market Strategy",
-                "description": "Explore strategies for successfully launching a product in the market."
+                "title": "Lesson 7: Product Metrics and Performance Tracking",
+                "description": "In this lesson, we'll cover the importance of product metrics and performance tracking in product management. You'll learn how to define and track key performance indicators (KPIs), measure product success, and make data-driven decisions. We'll discuss tools and techniques for analyzing product performance."
+            },
+            {
+                "title": "Lesson 8: Product Iteration and Continuous Improvement",
+                "description": "In this final lesson, we'll explore the concept of product iteration and continuous improvement. You'll learn how to gather and prioritize feedback, plan product enhancements, and manage product updates. We'll discuss the importance of maintaining a feedback loop with customers and stakeholders."
             }
         ],
         willLearn: [
@@ -280,32 +284,36 @@ export const courses: ICourses[] = [
         date: "Apr 5 - May 28",
         lessons: [
             {
-                "title": "Introduction to Selection and Recruitment",
-                "description": "Explore the fundamentals of employee selection and recruitment in organizations."
+                "title": "Lesson 1: Introduction to Selection and Recruitment",
+                "description": "In this lesson, you'll be introduced to the importance of effective selection and recruitment processes in human resources. We'll discuss the role of HR in talent acquisition and the impact of recruitment on organizational success. You'll also learn about legal and ethical considerations in the selection process."
             },
             {
-                "title": "Job Analysis and Job Descriptions",
-                "description": "Learn how to conduct job analysis and create accurate job descriptions."
+                "title": "Lesson 2: Job Analysis and Job Descriptions",
+                "description": "In this lesson, we'll explore the process of job analysis and its role in recruitment. You'll learn how to conduct job analysis, define job descriptions and specifications, and identify key competencies for different positions. We'll discuss the importance of aligning job requirements with organizational goals."
             },
             {
-                "title": "Candidate Sourcing and Talent Pool Management",
-                "description": "Understand effective methods for sourcing candidates and managing talent pools."
+                "title": "Lesson 3: Sourcing and Attracting Candidates",
+                "description": "In this lesson, we'll focus on sourcing and attracting candidates for job vacancies. You'll learn about different sourcing channels, such as job boards, social media, and professional networks. We'll discuss strategies for creating compelling job advertisements and employer branding to attract top talent."
             },
             {
-                "title": "Interviewing Techniques and Assessment Methods",
-                "description": "Develop skills in conducting effective interviews and assessing candidate suitability."
+                "title": "Lesson 4: Screening and Shortlisting Candidates",
+                "description": "In this lesson, we'll delve into the screening and shortlisting process in recruitment. You'll learn how to review resumes, conduct initial assessments, and use screening techniques like phone interviews or pre-employment tests. We'll discuss best practices for evaluating candidates and creating shortlists for further evaluation."
             },
             {
-                "title": "Selection Decision-Making and Offer Negotiation",
-                "description": "Learn how to make informed selection decisions and negotiate job offers."
+                "title": "Lesson 5: Selection Interviews",
+                "description": "In this lesson, we'll explore the different types of selection interviews and their effectiveness in assessing candidates. You'll learn how to structure and conduct behavioral, situational, and competency-based interviews. We'll discuss techniques for evaluating candidate responses and making informed hiring decisions."
             },
             {
-                "title": "Diversity and Inclusion in Recruitment",
-                "description": "Understand the importance of diversity and inclusion in recruitment practices."
+                "title": "Lesson 6: Assessments and Testing",
+                "description": "In this lesson, we'll focus on assessments and testing methods in the selection process. You'll learn about different types of assessments, such as cognitive ability tests, personality assessments, and skills tests. We'll discuss the benefits of using assessments for predicting job performance and minimizing bias."
             },
             {
-                "title": "Onboarding and Retention Strategies",
-                "description": "Explore effective onboarding techniques and strategies for employee retention."
+                "title": "Lesson 7: Reference Checks and Background Screening",
+                "description": "In this lesson, we'll cover the importance of reference checks and background screening in the selection process. You'll learn how to conduct effective reference checks, verify employment history, and perform background checks in compliance with legal requirements. We'll discuss techniques for validating candidate credentials and ensuring reliability."
+            },
+            {
+                "title": "Lesson 8: Making the Job Offer and Onboarding",
+                "description": "In this final lesson, we'll focus on making job offers and the onboarding process. You'll learn how to prepare and present job offers, negotiate compensation packages, and handle candidate acceptance or rejection. We'll discuss the importance of a comprehensive onboarding program to facilitate new employee integration."
             }
         ],
         willLearn: [
@@ -336,32 +344,36 @@ export const courses: ICourses[] = [
         date: "May 15 - Jul 10",
         lessons: [
             {
-                "title": "Introduction to User Experience Design",
-                "description": "Explore the fundamentals of user experience design and its impact on digital products."
+                "title": "Lesson 1: Introduction to User Experience (UX)",
+                "description": "In this lesson, you'll be introduced to the concept of User Experience (UX) and its importance in product design. We'll discuss the role of human-centered design in creating meaningful and usable products. You'll also learn about the key principles and elements of a good user experience."
             },
             {
-                "title": "User Research and Personas",
-                "description": "Learn how to conduct user research and develop user personas."
+                "title": "Lesson 2: User Research and Understanding User Needs",
+                "description": "In this lesson, we'll explore the process of user research and understanding user needs. You'll learn how to conduct user interviews, surveys, and usability testing to gather valuable insights. We'll discuss techniques for creating user personas and empathy maps to empathize with users and design for their needs."
             },
             {
-                "title": "Interface Design and Wireframing",
-                "description": "Understand the principles of creating intuitive and user-friendly interfaces."
+                "title": "Lesson 3: Information Architecture and User Flows",
+                "description": "In this lesson, we'll delve into information architecture and designing user flows. You'll learn how to organize information effectively, create intuitive navigation systems, and design user flows that guide users through the product. We'll discuss techniques for creating wireframes and prototypes to visualize the user experience."
             },
             {
-                "title": "Prototyping and Iterative Design",
-                "description": "Explore techniques for rapid prototyping and iterative design processes."
+                "title": "Lesson 4: Interaction Design and Usability",
+                "description": "In this lesson, we'll focus on interaction design and usability principles. You'll learn how to design intuitive and responsive user interfaces, define clear interactions, and provide feedback to users. We'll discuss usability testing methods to evaluate the effectiveness of the design and make improvements."
             },
             {
-                "title": "Usability Testing and User Feedback",
-                "description": "Learn how to conduct usability testing and gather user feedback for iterative improvements."
+                "title": "Lesson 5: Visual Design and Branding",
+                "description": "In this lesson, we'll explore the role of visual design and branding in user experience. You'll learn how to create visually appealing interfaces, use color and typography effectively, and align the design with the brand identity. We'll discuss the impact of visual design on user perception and emotional engagement."
             },
             {
-                "title": "Information Architecture and Interaction Design",
-                "description": "Understand the principles of organizing information and creating interactive experiences."
+                "title": "Lesson 6: Accessibility and Inclusive Design",
+                "description": "In this lesson, we'll delve into accessibility and inclusive design principles. You'll learn how to design products that are accessible to users with disabilities, follow web accessibility guidelines, and ensure equal access to information. We'll discuss the importance of inclusive design for a diverse user base."
             },
             {
-                "title": "Visual Design and User Interface (UI) Design",
-                "description": "Explore visual design principles and the creation of user interfaces."
+                "title": "Lesson 7: Usability Testing and User Feedback",
+                "description": "In this lesson, we'll cover usability testing techniques and gathering user feedback. You'll learn how to plan and conduct usability tests, analyze test results, and iterate on the design based on user feedback. We'll discuss the importance of iterative design and continuous improvement in user experience."
+            },
+            {
+                "title": "Lesson 8: UX Evaluation and Iteration",
+                "description": "In this final lesson, we'll focus on UX evaluation and iteration. You'll learn how to measure the success of your design through UX metrics and conduct heuristic evaluations. We'll discuss techniques for incorporating user feedback, making informed design decisions, and continuously iterating to improve the user experience."
             }
         ],
         willLearn: [
@@ -392,32 +404,36 @@ export const courses: ICourses[] = [
         date: "Oct 15 - Dec 10",
         lessons: [
             {
-                "title": "Introduction to HR Management",
-                "description": "Explore the role of HR in organizations and the key functions of HR management."
+                "title": "Lesson 1: Introduction to HR Management and Analytics",
+                "description": "In this lesson, you'll be introduced to the field of HR management and the growing importance of analytics in HR decision-making. We'll discuss the role of HR in organizational success and the value of data-driven HR strategies. You'll also learn about the key concepts and frameworks in HR analytics."
             },
             {
-                "title": "Talent Acquisition and Recruitment Strategies",
-                "description": "Learn best practices in attracting and selecting top talent for organizations."
+                "title": "Lesson 2: HR Metrics and Data Collection",
+                "description": "In this lesson, we'll explore the different types of HR metrics and the process of data collection. You'll learn how to identify and measure relevant HR metrics, such as employee turnover, recruitment effectiveness, and employee engagement. We'll discuss techniques for collecting and organizing HR data."
             },
             {
-                "title": "Employee Development and Performance Management",
-                "description": "Understand strategies for fostering employee growth and managing performance."
+                "title": "Lesson 3: HR Data Analysis and Visualization",
+                "description": "In this lesson, we'll focus on HR data analysis and visualization techniques. You'll learn how to analyze HR data to uncover insights, identify trends, and make informed decisions. We'll discuss data visualization tools and techniques for effectively communicating HR analytics findings to stakeholders."
             },
             {
-                "title": "HR Analytics and Data-driven Decision Making",
-                "description": "Gain insights into HR analytics and how to leverage data for informed decision-making."
+                "title": "Lesson 4: Predictive Analytics in HR",
+                "description": "In this lesson, we'll delve into predictive analytics in HR and its application in workforce planning and talent management. You'll learn how to use historical HR data to predict future trends, anticipate talent needs, and make proactive HR decisions. We'll discuss predictive modeling techniques and their limitations."
             },
             {
-                "title": "Employee Engagement and Retention Strategies",
-                "description": "Explore techniques to engage and retain employees for long-term success."
+                "title": "Lesson 5: HR Analytics for Recruitment and Selection",
+                "description": "In this lesson, we'll explore the use of HR analytics in recruitment and selection processes. You'll learn how to analyze recruitment data to evaluate the effectiveness of sourcing channels, assess candidate quality, and improve the selection process. We'll discuss the role of analytics in creating a diverse and inclusive workforce."
             },
             {
-                "title": "HR Compliance and Legal Considerations",
-                "description": "Understand the legal framework and compliance requirements in HR management."
+                "title": "Lesson 6: HR Analytics for Performance Management",
+                "description": "In this lesson, we'll focus on the application of HR analytics in performance management. You'll learn how to measure and analyze performance metrics, identify top performers, and uncover factors that contribute to high performance. We'll discuss the use of analytics in performance evaluations and feedback processes."
             },
             {
-                "title": "Strategic HR Planning and Organizational Development",
-                "description": "Learn how to align HR strategies with organizational goals and drive development initiatives."
+                "title": "Lesson 7: HR Analytics for Employee Engagement and Retention",
+                "description": "In this lesson, we'll cover the use of HR analytics in measuring employee engagement and retention. You'll learn how to analyze employee survey data, identify drivers of engagement, and develop strategies to improve employee retention. We'll discuss the role of analytics in creating a positive and inclusive work environment."
+            },
+            {
+                "title": "Lesson 8: Ethical Considerations and Future Trends in HR Analytics",
+                "description": "In this final lesson, we'll explore ethical considerations in HR analytics and emerging trends in the field. You'll learn about the importance of data privacy, security, and compliance in HR analytics. We'll discuss the future of HR analytics, including the use of artificial intelligence and machine learning in HR decision-making."
             }
         ],
         willLearn: [
@@ -448,32 +464,36 @@ export const courses: ICourses[] = [
         date: "Nov 5 - Dec 30",
         lessons: [
             {
-                "title": "Introduction to Brand Management",
-                "description": "Explore the fundamentals of brand management and its importance in business success."
+                "title": "Lesson 1: Introduction to Brand Management",
+                "description": "In this lesson, you'll be introduced to the concept of brand management and its importance in building a strong brand identity. We'll discuss the role of brand management in creating brand equity and fostering customer loyalty. You'll also learn about the key components of a brand and brand positioning strategies."
             },
             {
-                "title": "Crafting Brand Identity and Positioning",
-                "description": "Learn how to create a strong brand identity and position it effectively in the market."
+                "title": "Lesson 2: Brand Strategy and Development",
+                "description": "In this lesson, we'll explore the process of developing a brand strategy. You'll learn how to define brand goals, identify target markets, and differentiate your brand from competitors. We'll discuss techniques for brand personality development, brand architecture, and brand extension strategies."
             },
             {
-                "title": "Strategic Communication and PR Planning",
-                "description": "Understand the principles of strategic communication and develop PR plans."
+                "title": "Lesson 3: Brand Identity and Visual Communication",
+                "description": "In this lesson, we'll focus on brand identity and visual communication. You'll learn how to create a compelling brand identity, including logo design, color palette selection, and typography choices. We'll discuss the importance of consistency in visual branding and how it contributes to brand recognition."
             },
             {
-                "title": "Media Relations and Influencer Marketing",
-                "description": "Learn how to build relationships with the media and leverage influencers for brand promotion."
+                "title": "Lesson 4: Brand Messaging and Storytelling",
+                "description": "In this lesson, we'll delve into brand messaging and storytelling. You'll learn how to craft a brand narrative that resonates with your target audience and effectively communicates your brand values. We'll discuss storytelling techniques, brand voice, and messaging across different communication channels."
             },
             {
-                "title": "Crisis Management and Reputation Protection",
-                "description": "Explore strategies for managing crises and protecting brand reputation."
+                "title": "Lesson 5: Public Relations (PR) Fundamentals",
+                "description": "In this lesson, we'll explore the fundamentals of public relations (PR) and its role in brand management. You'll learn about the importance of PR in building brand reputation, managing crises, and fostering positive relationships with the media and stakeholders. We'll discuss key PR strategies and tactics."
             },
             {
-                "title": "Digital PR and Social Media Management",
-                "description": "Develop skills in managing PR campaigns and maintaining a strong social media presence."
+                "title": "Lesson 6: Media Relations and Press Release Writing",
+                "description": "In this lesson, we'll focus on media relations and the art of writing effective press releases. You'll learn how to build relationships with journalists, pitch stories, and navigate media interviews. We'll discuss the structure and elements of a press release and best practices for writing compelling news stories."
             },
             {
-                "title": "Brand Performance Measurement and Analytics",
-                "description": "Learn how to measure brand performance and analyze data for continuous improvement."
+                "title": "Lesson 7: Digital PR and Online Reputation Management",
+                "description": "In this lesson, we'll cover digital PR strategies and online reputation management. You'll learn how to leverage digital platforms, such as social media and online influencers, to enhance brand visibility and engagement. We'll discuss techniques for monitoring online reputation, handling negative feedback, and managing brand crises."
+            },
+            {
+                "title": "Lesson 8: Brand Measurement and Evaluation",
+                "description": "In this final lesson, we'll explore brand measurement and evaluation techniques. You'll learn how to assess brand performance, measure brand awareness, and track brand sentiment. We'll discuss the use of key performance indicators (KPIs) and brand audits to evaluate the effectiveness of brand management strategies."
             }
         ],
         willLearn: [
@@ -504,32 +524,36 @@ export const courses: ICourses[] = [
         date: "Mar 20 - May 15",
         lessons: [
             {
-                "title": "Introduction to High Load Software Architecture",
-                "description": "Explore the challenges and considerations of designing high-performance software systems."
+                "title": "Lesson 1: Introduction to High Load Software Architecture",
+                "description": "In this lesson, you'll be introduced to the concept of high load software architecture and its importance in designing scalable and efficient systems. We'll discuss the challenges of handling high traffic and large data volumes. You'll also learn about the key principles and considerations in high load software architecture."
             },
             {
-                "title": "Distributed Systems and Scalability",
-                "description": "Learn about distributed architectures and techniques for scaling software systems."
+                "title": "Lesson 2: Scalability and Performance Optimization",
+                "description": "In this lesson, we'll explore scalability and performance optimization techniques. You'll learn how to design systems that can handle increased load and traffic. We'll discuss strategies for horizontal and vertical scaling, caching mechanisms, and optimizing database performance. You'll also learn about load balancing and content delivery networks (CDNs)."
             },
             {
-                "title": "Load Balancing and Traffic Distribution",
-                "description": "Understand load balancing strategies to distribute incoming traffic efficiently."
+                "title": "Lesson 3: Distributed Systems and Microservices",
+                "description": "In this lesson, we'll focus on distributed systems and microservices architecture. You'll learn how to design and manage a distributed system that can handle high load. We'll discuss the benefits of microservices, service discovery, communication protocols, and fault tolerance in distributed environments."
             },
             {
-                "title": "Caching and Performance Optimization",
-                "description": "Explore caching techniques and performance optimization strategies."
+                "title": "Lesson 4: Data Storage and Database Design",
+                "description": "In this lesson, we'll delve into data storage and database design for high load systems. You'll learn about different types of databases, such as relational, NoSQL, and NewSQL. We'll discuss techniques for database partitioning, sharding, replication, and ensuring data consistency and integrity in distributed environments."
             },
             {
-                "title": "Data Partitioning and Database Scaling",
-                "description": "Learn how to partition data and scale databases to handle high loads."
+                "title": "Lesson 5: Caching and In-Memory Data Stores",
+                "description": "In this lesson, we'll explore caching and in-memory data stores. You'll learn how to implement caching strategies to improve system performance and reduce database load. We'll discuss popular caching mechanisms like Redis and Memcached, and their integration with high load systems."
             },
             {
-                "title": "Fault Tolerance and Resiliency",
-                "description": "Understand how to design fault-tolerant systems and ensure high availability."
+                "title": "Lesson 6: Message Brokers and Event-driven Architectures",
+                "description": "In this lesson, we'll focus on message brokers and event-driven architectures. You'll learn how to implement asynchronous communication patterns to handle high load scenarios. We'll discuss message queues, publish-subscribe systems, and event sourcing. You'll also learn about the benefits of decoupling components using messaging systems."
             },
             {
-                "title": "Communication Protocols and Messaging Systems",
-                "description": "Explore efficient communication protocols and messaging systems for distributed architectures."
+                "title": "Lesson 7: Fault Tolerance and Resilience",
+                "description": "In this lesson, we'll cover fault tolerance and resilience strategies in high load software architecture. You'll learn how to design systems that can recover from failures and continue operating smoothly. We'll discuss techniques such as redundancy, failover mechanisms, circuit breakers, and handling partial failures."
+            },
+            {
+                "title": "Lesson 8: Monitoring and Performance Testing",
+                "description": "In this final lesson, we'll explore monitoring and performance testing in high load systems. You'll learn how to monitor system health, collect metrics, and identify performance bottlenecks. We'll discuss performance testing techniques, load testing tools, and capacity planning to ensure system reliability and optimal performance."
             }
         ],
         willLearn: [
@@ -560,32 +584,36 @@ export const courses: ICourses[] = [
         date: "Jan 10 - Mar 5",
         lessons: [
             {
-                "title": "Introduction to Graphic Design",
-                "description": "Explore the basics of graphic design and its applications in various industries."
+                "title": "Lesson 1: Introduction to Graphic Design",
+                "description": "In this lesson, you'll be introduced to the world of graphic design. We'll discuss the role of graphic design in visual communication and its applications across various industries. You'll learn about the key principles of design, including typography, color theory, layout, and composition."
             },
             {
-                "title": "Composition and Layout Design",
-                "description": "Learn the principles of effective composition and create visually balanced designs."
+                "title": "Lesson 2: Typography and Text Design",
+                "description": "In this lesson, we'll focus on typography and text design. You'll learn about different types of fonts, font combinations, and their impact on visual communication. We'll discuss techniques for creating hierarchy, legibility, and emphasis through typography. You'll also learn about kerning, leading, and other typographic adjustments."
             },
             {
-                "title": "Color Theory and Application",
-                "description": "Understand the psychology of color and how to use it effectively in design."
+                "title": "Lesson 3: Color Theory and Color Harmony",
+                "description": "In this lesson, we'll delve into color theory and its importance in graphic design. You'll learn about color models, color psychology, and the use of color to evoke emotions and convey messages. We'll discuss color harmony, color schemes, and how to select and combine colors effectively in your designs."
             },
             {
-                "title": "Typography and Type Design",
-                "description": "Explore different typefaces and learn how to use typography to enhance design."
+                "title": "Lesson 4: Layout and Composition",
+                "description": "In this lesson, we'll explore layout and composition principles. You'll learn how to create visually balanced and aesthetically pleasing designs. We'll discuss concepts such as the rule of thirds, grid systems, visual hierarchy, and the use of white space. You'll also learn about the importance of alignment and proximity in design."
             },
             {
-                "title": "Logo Design and Branding",
-                "description": "Learn the process of creating unique logos and developing cohesive brand identities."
+                "title": "Lesson 5: Visual Elements and Graphic Design Tools",
+                "description": "In this lesson, we'll focus on visual elements in graphic design. You'll learn how to use shapes, lines, icons, and images to enhance your designs. We'll discuss the principles of visual consistency and how to create cohesive visual identities. You'll also be introduced to popular graphic design tools and software."
             },
             {
-                "title": "Digital Illustration and Image Editing",
-                "description": "Develop skills in creating digital illustrations and editing images using graphic design software."
+                "title": "Lesson 6: Image Editing and Photo Manipulation",
+                "description": "In this lesson, we'll cover image editing and photo manipulation techniques. You'll learn how to use graphic design software to enhance and modify images. We'll discuss cropping, resizing, retouching, and applying filters and effects to achieve desired visual outcomes. You'll also learn about file formats and optimization for web and print."
             },
             {
-                "title": "Print and Digital Media Design",
-                "description": "Understand the design principles and considerations for both print and digital media."
+                "title": "Lesson 7: Designing for Print and Digital Media",
+                "description": "In this lesson, we'll explore the different considerations for designing for print and digital media. You'll learn about print design principles, including color modes, resolution, and print file preparation. We'll discuss the requirements and best practices for designing graphics for websites, social media, and other digital platforms."
+            },
+            {
+                "title": "Lesson 8: Creative Brief and Design Process",
+                "description": "In this final lesson, we'll focus on the creative brief and the design process. You'll learn how to understand client requirements, conduct research, and develop design concepts. We'll discuss the importance of iteration, feedback, and collaboration in the design process. You'll also learn how to present and deliver your final designs effectively."
             }
         ],
         willLearn: [
@@ -614,32 +642,36 @@ export const courses: ICourses[] = [
         date: "Feb 15 - Apr 12",
         lessons: [
             {
-                "title": "Introduction to Business Development",
-                "description": "Explore the role of business development in organizational growth and success."
+                "title": "Lesson 1: Introduction to Business Development",
+                "description": "In this lesson, you'll be introduced to the field of business development and its role in organizational growth and success. We'll discuss the key functions and responsibilities of business development professionals. You'll also learn about the importance of strategic planning and market analysis in business development."
             },
             {
-                "title": "Market Research and Opportunity Analysis",
-                "description": "Learn how to conduct market research and analyze business opportunities."
+                "title": "Lesson 2: Market Research and Analysis",
+                "description": "In this lesson, we'll focus on market research and analysis techniques. You'll learn how to identify target markets, analyze customer needs, and assess market trends and competition. We'll discuss primary and secondary research methods, data collection and analysis techniques, and tools for market research."
             },
             {
-                "title": "Strategic Partnerships and Alliances",
-                "description": "Understand the process of developing strategic partnerships and alliances."
+                "title": "Lesson 3: Developing Business Strategies",
+                "description": "In this lesson, we'll delve into the process of developing business strategies. You'll learn how to define business objectives, evaluate strategic options, and develop action plans. We'll discuss different business models, competitive positioning, and strategic decision-making frameworks."
             },
             {
-                "title": "Sales Strategies and Relationship Building",
-                "description": "Develop effective sales strategies and techniques for building strong relationships."
+                "title": "Lesson 4: Sales and Partnership Development",
+                "description": "In this lesson, we'll explore sales and partnership development strategies. You'll learn how to identify and approach potential customers and partners, build relationships, and negotiate deals. We'll discuss techniques for sales forecasting, pipeline management, and establishing strategic partnerships."
             },
             {
-                "title": "Negotiation and Deal Structuring",
-                "description": "Learn negotiation skills and how to structure profitable deals."
+                "title": "Lesson 5: Lead Generation and Conversion",
+                "description": "In this lesson, we'll focus on lead generation and conversion techniques. You'll learn how to identify and qualify leads, develop effective lead generation campaigns, and optimize the lead conversion process. We'll discuss lead nurturing, customer relationship management (CRM) systems, and sales funnel optimization."
             },
             {
-                "title": "Market Entry and Expansion Strategies",
-                "description": "Explore strategies for entering new markets and expanding business operations."
+                "title": "Lesson 6: Business Networking and Relationship Building",
+                "description": "In this lesson, we'll cover the importance of business networking and relationship building in business development. You'll learn how to effectively network, build professional relationships, and leverage your network for business opportunities. We'll discuss networking events, online networking platforms, and relationship management strategies."
             },
             {
-                "title": "Risk Management and Contract Negotiation",
-                "description": "Understand how to manage risks and negotiate contracts for business development projects."
+                "title": "Lesson 7: Business Proposal and Pitching",
+                "description": "In this lesson, we'll explore the art of creating persuasive business proposals and delivering effective pitches. You'll learn how to structure and present your business proposals to potential clients and investors. We'll discuss key components of a business proposal, storytelling techniques, and effective presentation skills."
+            },
+            {
+                "title": "Lesson 8: Measuring and Evaluating Business Development Efforts",
+                "description": "In this final lesson, we'll focus on measuring and evaluating business development efforts. You'll learn how to set key performance indicators (KPIs), track progress, and evaluate the success of business development initiatives. We'll discuss data-driven decision-making, performance metrics, and continuous improvement strategies."
             }
         ],
         willLearn: [
@@ -670,32 +702,36 @@ export const courses: ICourses[] = [
         date: "Mar 20 - May 15",
         lessons: [
             {
-                "title": "Introduction to Digital Design and User-Centered Design Principles",
-                "description": "Explore the basics of digital design and learn about user-centered design principles."
+                "title": "Lesson 1: Introduction to Digital Design Studio",
+                "description": "In this lesson, you'll be introduced to the concept of a digital design studio and its role in transforming ideas into engaging websites. We'll discuss the key elements of a successful website design process and the importance of user-centered design. You'll also learn about the tools and technologies used in digital design studios."
             },
             {
-                "title": "Visual Design and Aesthetics in Web Design",
-                "description": "Learn how to create visually appealing designs and use color, typography, and imagery effectively."
+                "title": "Lesson 2: User Experience (UX) Design Principles",
+                "description": "In this lesson, we'll focus on user experience (UX) design principles. You'll learn how to create intuitive and user-friendly website interfaces. We'll discuss user research, information architecture, wireframing, and prototyping techniques. You'll also learn about usability testing and user feedback in the design process."
             },
             {
-                "title": "Creating Wireframes and Prototypes",
-                "description": "Master the process of creating wireframes and interactive prototypes using industry-standard tools."
+                "title": "Lesson 3: Visual Design and Branding",
+                "description": "In this lesson, we'll delve into visual design and branding for websites. You'll learn how to create visually appealing and cohesive website designs that align with a brand's identity. We'll discuss color theory, typography, layout, and the use of imagery and graphics in web design. You'll also learn about responsive design principles."
             },
             {
-                "title": "Responsive Web Design and Mobile Optimization",
-                "description": "Understand the importance of responsive design and learn techniques for optimizing websites for mobile devices."
+                "title": "Lesson 4: Front-End Web Development",
+                "description": "In this lesson, we'll explore front-end web development techniques. You'll learn how to translate design concepts into HTML, CSS, and JavaScript code. We'll discuss responsive web design, cross-browser compatibility, and best practices for writing clean and maintainable code. You'll also be introduced to popular front-end development frameworks and libraries."
             },
             {
-                "title": "Content Strategy and Information Architecture",
-                "description": "Explore the role of content strategy and information architecture in effective website design."
+                "title": "Lesson 5: Web Animation and Interaction Design",
+                "description": "In this lesson, we'll focus on web animation and interaction design. You'll learn how to add engaging animations and interactive elements to websites. We'll discuss CSS animations, JavaScript libraries for animation, and techniques for creating smooth and visually appealing transitions. You'll also learn about microinteractions and user engagement."
             },
             {
-                "title": "Designing Engaging User Experiences",
-                "description": "Learn how to create interactive and engaging user experiences through animations, microinteractions, and more."
+                "title": "Lesson 6: Content Creation and Management",
+                "description": "In this lesson, we'll cover content creation and management for websites. You'll learn how to create compelling and engaging website content, including text, images, and multimedia elements. We'll discuss content strategy, content management systems (CMS), and best practices for organizing and structuring website content."
             },
             {
-                "title": "Web Design Project: From Concept to Final Website",
-                "description": "Apply your skills and knowledge to complete a comprehensive web design project from concept to the final website."
+                "title": "Lesson 7: Website Testing and Optimization",
+                "description": "In this lesson, we'll explore website testing and optimization techniques. You'll learn how to conduct usability testing, analyze user behavior, and make data-driven design decisions. We'll discuss techniques for website performance optimization, search engine optimization (SEO), and accessibility considerations. You'll also learn about website analytics and tracking."
+            },
+            {
+                "title": "Lesson 8: Launching and Maintaining Websites",
+                "description": "In this final lesson, we'll focus on launching and maintaining websites. You'll learn how to deploy websites to a web server and ensure a smooth launch. We'll discuss website maintenance tasks, including updates, security, and backups. You'll also learn about ongoing website optimization and the importance of user feedback and iteration."
             }
         ],
         willLearn: [
@@ -726,33 +762,36 @@ export const courses: ICourses[] = [
         date: "Dec 3 - Feb 28",
         lessons: [
             {
-                "title": "Introduction to Coding and Programming Concepts",
-                "description": "Explore the basics of coding, programming languages, and essential concepts."
+                "title": "Lesson 1: Introduction to Coding and Programming",
+                "description": "In this lesson, you'll be introduced to the world of coding and programming. We'll discuss the importance of programming in the digital age and its applications across various industries. You'll learn about different programming languages, development environments, and the basic building blocks of code."
             },
             {
-                "title": "HTML/CSS: Building Webpages and Web Design",
-                "description": "Learn how to create and style webpages using HTML and CSS."
+                "title": "Lesson 2: Fundamentals of Programming Logic",
+                "description": "In this lesson, we'll focus on the fundamentals of programming logic. You'll learn how to think like a programmer and understand concepts such as variables, data types, conditionals, loops, and functions. We'll discuss algorithmic thinking and problem-solving strategies in programming."
             },
             {
-                "title": "Python Programming: From Fundamentals to Applications",
-                "description": "Understand the fundamentals of Python programming and its applications in various domains."
+                "title": "Lesson 3: Introduction to Web Development",
+                "description": "In this lesson, we'll delve into web development and its fundamental technologies. You'll learn HTML, CSS, and JavaScript—the core languages for building websites. We'll discuss the structure and styling of web pages, as well as how to add interactivity and functionality using JavaScript."
             },
             {
-                // eslint-disable-next-line no-script-url
-                "title": "JavaScript: Interactivity and Front-End Development",
-                "description": "Explore the power of JavaScript in adding interactivity and dynamic elements to websites."
+                "title": "Lesson 4: Object-Oriented Programming (OOP) Concepts",
+                "description": "In this lesson, we'll explore the concepts of object-oriented programming (OOP). You'll learn about classes, objects, inheritance, polymorphism, and encapsulation. We'll discuss how OOP promotes code reusability, modularity, and maintainability. You'll also learn about OOP principles and design patterns."
             },
             {
-                "title": "Algorithmic Thinking and Problem-Solving",
-                "description": "Develop algorithmic thinking skills and learn effective problem-solving strategies."
+                "title": "Lesson 5: Database Fundamentals and SQL",
+                "description": "In this lesson, we'll focus on database fundamentals and SQL (Structured Query Language). You'll learn how to design and interact with databases using SQL queries. We'll discuss concepts such as tables, relationships, data manipulation, and basic database management. You'll also be introduced to relational database management systems (RDBMS)."
             },
             {
-                "title": "Debugging and Troubleshooting in Coding",
-                "description": "Learn techniques for identifying and fixing errors in code."
+                "title": "Lesson 6: Introduction to Back-End Development",
+                "description": "In this lesson, we'll cover the basics of back-end development. You'll learn about server-side programming languages, such as Python or Node.js, and frameworks like Flask or Express.js. We'll discuss concepts like routing, handling requests and responses, and interacting with databases. You'll also learn about RESTful APIs."
             },
             {
-                "title": "Coding in the Digital Age: Emerging Technologies",
-                "description": "Explore the role of coding in emerging technologies such as AI, data science, and IoT."
+                "title": "Lesson 7: Introduction to Mobile App Development",
+                "description": "In this lesson, we'll explore the world of mobile app development. You'll learn about developing native or hybrid mobile apps using frameworks like React Native or Flutter. We'll discuss mobile app architecture, UI components, navigation, and integrating with device features. You'll also learn about publishing apps to app stores."
+            },
+            {
+                "title": "Lesson 8: Software Development Lifecycle and Best Practices",
+                "description": "In this final lesson, we'll focus on the software development lifecycle (SDLC) and best practices in coding. You'll learn about the different phases of the SDLC, including requirements gathering, design, development, testing, and deployment. We'll discuss version control, code documentation, testing methodologies, and the importance of collaboration and continuous learning."
             }
         ],
         willLearn: [
@@ -783,32 +822,36 @@ export const courses: ICourses[] = [
         date: "Jun 10 - Aug 5",
         lessons: [
             {
-                "title": "Introduction to Data-Driven Marketing",
-                "description": "Explore the fundamentals of data-driven marketing and its impact on business success."
+                "title": "Lesson 1: Introduction to Data-Driven Marketing",
+                "description": "In this lesson, you'll be introduced to the concept of data-driven marketing and its significance in today's digital landscape. We'll discuss the role of data in marketing decision-making and the benefits of leveraging data for targeted and personalized marketing campaigns. You'll also learn about the key technologies and tools used in data-driven marketing."
             },
             {
-                "title": "Data Collection and Analysis in Marketing",
-                "description": "Learn how to collect and analyze marketing data using IT solutions."
+                "title": "Lesson 2: Collecting and Analyzing Customer Data",
+                "description": "In this lesson, we'll focus on collecting and analyzing customer data. You'll learn about different data collection methods, including website analytics, customer surveys, and social media monitoring. We'll discuss data segmentation, profiling, and data visualization techniques for better understanding customer behavior and preferences."
             },
             {
-                "title": "Customer Segmentation and Targeting",
-                "description": "Understand techniques for segmenting customers and targeting specific audiences."
+                "title": "Lesson 3: Customer Relationship Management (CRM) Systems",
+                "description": "In this lesson, we'll delve into customer relationship management (CRM) systems and their role in data-driven marketing. You'll learn how to effectively manage customer data, track customer interactions, and create personalized marketing experiences. We'll discuss CRM implementation, data integration, and automation in CRM processes."
             },
             {
-                "title": "Marketing Automation and Campaign Management",
-                "description": "Explore the use of IT solutions for automating marketing processes and managing campaigns."
+                "title": "Lesson 4: Marketing Automation and Campaign Management",
+                "description": "In this lesson, we'll explore marketing automation and campaign management solutions. You'll learn how to automate marketing processes, including email marketing, lead nurturing, and campaign tracking. We'll discuss marketing automation platforms, segmentation strategies, and measuring the effectiveness of marketing campaigns."
             },
             {
-                "title": "Performance Tracking and ROI Measurement",
-                "description": "Learn how to track marketing performance and measure return on investment (ROI)."
+                "title": "Lesson 5: Data Visualization and Reporting",
+                "description": "In this lesson, we'll focus on data visualization and reporting in data-driven marketing. You'll learn how to create visually appealing and informative dashboards and reports to communicate marketing insights. We'll discuss data visualization tools, storytelling with data, and presenting data-driven marketing results to stakeholders."
             },
             {
-                "title": "Data Visualization in Marketing",
-                "description": "Develop skills in visualizing marketing data using data visualization tools."
+                "title": "Lesson 6: Predictive Analytics and Machine Learning in Marketing",
+                "description": "In this lesson, we'll cover the use of predictive analytics and machine learning in marketing. You'll learn how to leverage data and algorithms to make predictions, identify trends, and personalize marketing strategies. We'll discuss techniques such as customer segmentation, churn prediction, and recommendation systems."
             },
             {
-                "title": "Implementing Data-Driven Marketing Strategies",
-                "description": "Understand the practical aspects of implementing data-driven marketing strategies."
+                "title": "Lesson 7: Data Privacy and Ethics in Marketing",
+                "description": "In this lesson, we'll explore the importance of data privacy and ethics in data-driven marketing. You'll learn about data protection regulations, such as GDPR and CCPA, and their implications for marketing practices. We'll discuss ethical considerations in data collection, usage, and customer consent."
+            },
+            {
+                "title": "Lesson 8: Driving Marketing Success with Data and IT Solutions",
+                "description": "In this final lesson, we'll focus on driving marketing success through data and IT solutions. You'll learn how to develop data-driven marketing strategies, measure marketing ROI, and optimize marketing campaigns based on data insights. We'll discuss the evolving role of technology in marketing and emerging trends in data-driven marketing."
             }
         ],
         willLearn: [
@@ -839,32 +882,36 @@ export const courses: ICourses[] = [
         date: "Nov 10 - Jan 5",
         lessons: [
             {
-                "title": "Introduction to Tech-Driven Business Management",
-                "description": "Explore the fundamentals of tech-driven business management and its benefits."
+                "title": "Lesson 1: Introduction to Tech-Driven Business Management",
+                "description": "In this lesson, you'll be introduced to the concept of tech-driven business management and its importance in today's digital economy. We'll discuss how technology can drive business growth and efficiency. You'll also learn about the key technologies and IT solutions that can be leveraged for strategic business management."
             },
             {
-                "title": "Optimizing Business Processes with IT Solutions",
-                "description": "Learn how to streamline business processes and improve efficiency using IT solutions."
+                "title": "Lesson 2: Digital Transformation and Business Strategy",
+                "description": "In this lesson, we'll focus on digital transformation and its impact on business strategy. You'll learn how to align technology initiatives with overall business goals. We'll discuss the process of developing a digital transformation strategy, assessing technology needs, and managing change within the organization."
             },
             {
-                "title": "Data Analytics and Business Intelligence",
-                "description": "Understand the use of data analytics and business intelligence for informed decision-making."
+                "title": "Lesson 3: IT Infrastructure and Systems Integration",
+                "description": "In this lesson, we'll delve into IT infrastructure and systems integration for effective business management. You'll learn about different components of IT infrastructure, such as networks, servers, and cloud computing. We'll discuss the importance of systems integration for seamless data flow and communication across the organization."
             },
             {
-                "title": "Cloud Computing and Infrastructure Management",
-                "description": "Explore the benefits and best practices of cloud computing and infrastructure management."
+                "title": "Lesson 4: Data Management and Analytics",
+                "description": "In this lesson, we'll explore data management and analytics in the context of business management. You'll learn how to collect, store, and analyze data to gain valuable insights for decision-making. We'll discuss data governance, data quality, and the use of business intelligence tools for data visualization and reporting."
             },
             {
-                "title": "Digital Transformation and Innovation",
-                "description": "Learn about the process of digital transformation and fostering innovation through technology."
+                "title": "Lesson 5: Project Management with IT Solutions",
+                "description": "In this lesson, we'll focus on project management and how IT solutions can streamline project execution and collaboration. You'll learn about project management methodologies, tools, and techniques for effective planning, tracking, and communication. We'll discuss project management software, agile methodologies, and virtual collaboration platforms."
             },
             {
-                "title": "Cybersecurity and Risk Management",
-                "description": "Understand the importance of cybersecurity and risk management in tech-driven business management."
+                "title": "Lesson 6: E-commerce and Online Business Models",
+                "description": "In this lesson, we'll cover e-commerce and online business models. You'll learn how technology has revolutionized the way businesses operate and sell products or services online. We'll discuss different e-commerce platforms, payment gateways, and strategies for building and managing successful online businesses."
             },
             {
-                "title": "Emerging Technologies and Future Trends",
-                "description": "Explore the impact of emerging technologies on business management and upcoming trends to watch."
+                "title": "Lesson 7: Cybersecurity and Risk Management",
+                "description": "In this lesson, we'll explore the importance of cybersecurity and risk management in tech-driven business management. You'll learn about common cyber threats, best practices for securing data and IT systems, and risk assessment methodologies. We'll discuss the role of employee awareness and training in maintaining a secure business environment."
+            },
+            {
+                "title": "Lesson 8: Innovation and Emerging Technologies",
+                "description": "In this final lesson, we'll focus on innovation and emerging technologies that can drive business growth. You'll learn about disruptive technologies, such as artificial intelligence, blockchain, and Internet of Things (IoT), and their potential applications in business management. We'll discuss fostering an innovation culture and leveraging emerging technologies for competitive advantage."
             }
         ],
         willLearn: [
@@ -895,32 +942,36 @@ export const courses: ICourses[] = [
         date: "Aug 20 - Oct 15",
         lessons: [
             {
-                "title": "Introduction to IT Solutions in HR",
-                "description": "Explore the fundamentals of IT solutions in HR practices and their benefits."
+                "title": "Lesson 1: Introduction to IT Solutions in HR",
+                "description": "In this lesson, you'll be introduced to the concept of IT solutions in HR and their significance in streamlining HR processes. We'll discuss the role of technology in automating administrative tasks, improving communication, and enhancing employee experience. You'll also learn about the key IT solutions used in HR management."
             },
             {
-                "title": "HRIS and Employee Data Management",
-                "description": "Learn how to effectively use HRIS for managing employee data and information."
+                "title": "Lesson 2: HR Information Systems (HRIS)",
+                "description": "In this lesson, we'll focus on HR information systems (HRIS) and their role in managing employee data and HR processes. You'll learn how HRIS can centralize employee information, automate workflows, and support strategic decision-making. We'll discuss HRIS implementation, data security, and integration with other HR tools."
             },
             {
-                "title": "Recruitment and Talent Management Systems",
-                "description": "Understand the use of IT solutions for recruitment and talent management processes."
+                "title": "Lesson 3: Recruitment and Applicant Tracking Systems (ATS)",
+                "description": "In this lesson, we'll delve into recruitment and applicant tracking systems (ATS) for effective hiring processes. You'll learn how ATS can streamline job postings, applicant screening, and interview scheduling. We'll discuss features like resume parsing, candidate management, and analytics for optimizing recruitment efforts."
             },
             {
-                "title": "Performance Management and Appraisal Systems",
-                "description": "Explore the role of IT solutions in performance management and employee appraisals."
+                "title": "Lesson 4: Performance Management and Employee Feedback",
+                "description": "In this lesson, we'll explore IT solutions for performance management and employee feedback. You'll learn how technology can facilitate goal setting, performance reviews, and feedback collection. We'll discuss performance management software, 360-degree feedback tools, and real-time performance tracking."
             },
             {
-                "title": "HR Analytics and Data-Driven Decision-Making",
-                "description": "Learn how to leverage HR analytics for data-driven decision-making in HR practices."
+                "title": "Lesson 5: Learning Management Systems (LMS)",
+                "description": "In this lesson, we'll focus on learning management systems (LMS) for employee training and development. You'll learn how LMS can deliver online courses, track employee progress, and provide a centralized platform for learning resources. We'll discuss LMS features, content creation, and integration with HR systems."
             },
             {
-                "title": "Employee Self-Service Portals and Digital HR Platforms",
-                "description": "Understand the benefits and functionalities of employee self-service portals and digital HR platforms."
+                "title": "Lesson 6: Employee Self-Service Portals",
+                "description": "In this lesson, we'll cover employee self-service portals and their benefits for HR management. You'll learn how self-service portals empower employees to access and update their personal information, request time off, and access HR policies and resources. We'll discuss portal design, security considerations, and self-service adoption strategies."
             },
             {
-                "title": "Learning Management Systems and Employee Development",
-                "description": "Explore the use of learning management systems for employee training and development."
+                "title": "Lesson 7: Data Analytics and HR Metrics",
+                "description": "In this lesson, we'll explore the use of data analytics and HR metrics for evidence-based HR decision-making. You'll learn how to collect, analyze, and interpret HR data to gain insights into employee engagement, turnover, and workforce planning. We'll discuss HR analytics tools, data visualization, and key HR metrics."
+            },
+            {
+                "title": "Lesson 8: Emerging Trends in HR Technology",
+                "description": "In this final lesson, we'll focus on emerging trends in HR technology and their impact on HR practices. You'll learn about advancements such as artificial intelligence (AI), machine learning, and chatbots in HR processes. We'll discuss the future of HR technology and strategies for staying up-to-date with the latest trends."
             }
         ],
         willLearn: [
@@ -951,32 +1002,36 @@ export const courses: ICourses[] = [
         date: "Oct 5 - Dec 1",
         lessons: [
             {
-                "title": "Introduction to Tech Marketing and Digital Branding",
-                "description": "Explore the fundamentals of tech marketing and the importance of digital branding."
+                "title": "Lesson 1: Introduction to Tech Marketing",
+                "description": "In this lesson, you'll be introduced to the concept of tech marketing and its significance in the digital age. We'll discuss the role of technology in transforming marketing strategies and the opportunities it brings for building a strong digital brand. You'll also learn about the key technologies and IT tools used in tech marketing."
             },
             {
-                "title": "Digital Marketing Strategies for Brand Awareness",
-                "description": "Learn how to develop and implement digital marketing strategies to build brand awareness."
+                "title": "Lesson 2: Creating a Digital Marketing Strategy",
+                "description": "In this lesson, we'll focus on creating a digital marketing strategy. You'll learn how to identify target audiences, set marketing objectives, and develop a comprehensive digital marketing plan. We'll discuss digital channels, content marketing, social media strategies, and SEO techniques for effective online brand building."
             },
             {
-                "title": "Social Media and Content Marketing",
-                "description": "Understand the role of social media and content marketing in digital brand building."
+                "title": "Lesson 3: Website Design and User Experience (UX)",
+                "description": "In this lesson, we'll delve into website design and user experience (UX) for effective brand representation. You'll learn how to create visually appealing and user-friendly websites that align with your brand identity. We'll discuss responsive design, navigation, content organization, and the role of UX in driving conversions."
             },
             {
-                "title": "Data Analytics and Personalized Marketing",
-                "description": "Explore the use of data analytics and marketing automation for personalized customer experiences."
+                "title": "Lesson 4: Search Engine Optimization (SEO)",
+                "description": "In this lesson, we'll explore search engine optimization (SEO) techniques for improving online visibility and organic traffic. You'll learn how to optimize website content, meta tags, and backlink profiles to rank higher in search engine results. We'll discuss keyword research, on-page optimization, and SEO analytics tools."
             },
             {
-                "title": "Search Engine Optimization (SEO) for Brand Visibility",
-                "description": "Learn how to optimize your brand's online visibility through effective SEO strategies."
+                "title": "Lesson 5: Pay-Per-Click Advertising (PPC)",
+                "description": "In this lesson, we'll focus on pay-per-click advertising (PPC) and its role in driving targeted traffic to your digital brand. You'll learn how to create effective PPC campaigns using platforms like Google Ads or social media advertising. We'll discuss ad targeting, keyword bidding, ad copywriting, and conversion tracking."
             },
             {
-                "title": "Online Advertising and Mobile Marketing",
-                "description": "Understand the use of online advertising and mobile marketing in reaching target audiences."
+                "title": "Lesson 6: Content Marketing and Social Media Strategies",
+                "description": "In this lesson, we'll cover content marketing and social media strategies for building a strong digital brand presence. You'll learn how to develop compelling content that resonates with your target audience and drives engagement. We'll discuss social media platforms, content distribution strategies, influencer marketing, and measuring social media ROI."
             },
             {
-                "title": "Building a Tech Marketing Blueprint",
-                "description": "Gain practical insights into developing a comprehensive tech marketing blueprint for your brand."
+                "title": "Lesson 7: Email Marketing and Marketing Automation",
+                "description": "In this lesson, we'll explore the power of email marketing and marketing automation in nurturing leads and building customer relationships. You'll learn how to create effective email campaigns, segment your audience, and automate email workflows. We'll discuss email marketing platforms, personalization techniques, and email performance metrics."
+            },
+            {
+                "title": "Lesson 8: Analytics and Data-Driven Marketing",
+                "description": "In this final lesson, we'll focus on analytics and data-driven marketing. You'll learn how to track and analyze marketing metrics to gain insights into campaign performance, customer behavior, and ROI. We'll discuss web analytics tools, data visualization, A/B testing, and the role of data in making informed marketing decisions."
             }
         ],
         willLearn: [
@@ -1007,32 +1062,36 @@ export const courses: ICourses[] = [
         date: "Jan 15 - Mar 10",
         lessons: [
             {
-                "title": "Introduction to Managing Human Capital in the Digital Age",
-                "description": "Explore the fundamentals of managing human capital and the influence of IT."
+                "title": "Lesson 1: Introduction to Managing Human Capital in the Digital Age",
+                "description": "In this lesson, you'll be introduced to the concept of managing human capital in the digital age and the evolving role of technology. We'll discuss the challenges and opportunities presented by digital transformation in the workplace. You'll also learn about the key technologies and IT solutions that support effective human capital management."
             },
             {
-                "title": "HRIS and Digital Tools for HR Management",
-                "description": "Learn how HRIS and digital tools can streamline HR processes and improve efficiency."
+                "title": "Lesson 2: Technology and Talent Acquisition",
+                "description": "In this lesson, we'll focus on the role of technology in talent acquisition. You'll learn how technology has transformed recruitment processes, including sourcing candidates, applicant tracking, and candidate assessment. We'll discuss the use of applicant tracking systems (ATS), AI-powered resume screening, and leveraging data for informed hiring decisions."
             },
             {
-                "title": "Talent Acquisition and Recruitment in the Digital Era",
-                "description": "Understand the impact of digital transformation on talent acquisition strategies."
+                "title": "Lesson 3: Digital Onboarding and Employee Experience",
+                "description": "In this lesson, we'll delve into digital onboarding and employee experience in the digital age. You'll learn how technology can enhance the onboarding process, improve employee engagement, and foster a positive work environment. We'll discuss onboarding platforms, virtual training, and digital communication tools for effective employee onboarding and retention."
             },
             {
-                "title": "Performance Management and Employee Development",
-                "description": "Explore how technology can support performance management and foster employee development."
+                "title": "Lesson 4: Performance Management and Feedback Systems",
+                "description": "In this lesson, we'll explore the use of technology in performance management and feedback systems. You'll learn how digital tools can streamline performance evaluations, goal setting, and continuous feedback. We'll discuss performance management software, real-time feedback platforms, and the integration of performance data with talent development strategies."
             },
             {
-                "title": "Workforce Analytics and Data-Driven HR Decision-Making",
-                "description": "Learn how to leverage workforce analytics for data-driven HR decision-making."
+                "title": "Lesson 5: Learning and Development in the Digital Era",
+                "description": "In this lesson, we'll focus on learning and development in the digital era. You'll learn how technology has revolutionized training and skill development, including online learning platforms, microlearning, and virtual training environments. We'll discuss the role of learning management systems (LMS), personalized learning paths, and continuous learning initiatives."
             },
             {
-                "title": "Employee Engagement in the Remote Work Era",
-                "description": "Understand the challenges and strategies for promoting employee engagement in remote work settings."
+                "title": "Lesson 6: Remote Work and Collaboration Tools",
+                "description": "In this lesson, we'll cover remote work and collaboration tools that facilitate effective teamwork and productivity in the digital age. You'll learn about communication and collaboration platforms, project management software, and virtual meeting tools. We'll discuss best practices for managing remote teams and fostering a collaborative work culture."
             },
             {
-                "title": "Virtual Collaboration and HR Best Practices",
-                "description": "Gain insights into virtual collaboration tools and best practices for HR professionals."
+                "title": "Lesson 7: Data-Driven HR Analytics",
+                "description": "In this lesson, we'll explore the use of data and analytics in human capital management. You'll learn how HR analytics can provide insights into employee performance, engagement, and retention. We'll discuss data collection, analysis techniques, and the ethical use of HR data for making informed decisions and shaping HR strategies."
+            },
+            {
+                "title": "Lesson 8: Future Trends in Human Capital Management",
+                "description": "In this final lesson, we'll focus on future trends in human capital management and the role of IT. You'll learn about emerging technologies, such as artificial intelligence, machine learning, and augmented reality, and their potential impact on HR practices. We'll discuss the evolving role of HR professionals in leveraging technology for strategic talent management."
             }
         ],
         willLearn: [
@@ -1063,32 +1122,36 @@ export const courses: ICourses[] = [
         date: "Jul 15 - Sep 10",
         lessons: [
             {
-                "title": "Introduction to Strategic IT Management",
-                "description": "Explore the fundamentals of strategic IT management and its importance in the digital landscape."
+                "title": "Lesson 1: Introduction to Strategic IT Management",
+                "description": "In this lesson, you'll be introduced to the concept of strategic IT management and its significance in the digital landscape. We'll discuss the role of IT in driving business value, innovation, and competitive advantage. You'll also learn about the key components of strategic IT management and how they align with organizational goals."
             },
             {
-                "title": "Strategic Planning and IT Governance",
-                "description": "Learn how to develop strategic IT plans and establish effective IT governance frameworks."
+                "title": "Lesson 2: IT Governance and Alignment",
+                "description": "In this lesson, we'll focus on IT governance and alignment with business objectives. You'll learn how to establish effective governance structures, decision-making processes, and IT strategy alignment frameworks. We'll discuss the role of IT steering committees, performance measurement, and the integration of IT with overall organizational governance."
             },
             {
-                "title": "Technology Alignment and Digital Transformation",
-                "description": "Understand the alignment of technology with business objectives and the process of digital transformation."
+                "title": "Lesson 3: IT Portfolio Management",
+                "description": "In this lesson, we'll delve into IT portfolio management and its role in optimizing IT investments. You'll learn how to assess, prioritize, and manage IT projects and initiatives. We'll discuss portfolio management frameworks, risk assessment, resource allocation, and the evaluation of project success and business value."
             },
             {
-                "title": "Emerging Technologies and Strategic Impact",
-                "description": "Explore the strategic implications of emerging technologies such as AI, IoT, and blockchain."
+                "title": "Lesson 4: Digital Transformation Strategies",
+                "description": "In this lesson, we'll explore digital transformation strategies and their impact on organizational success. You'll learn how to develop and implement digital transformation initiatives that leverage emerging technologies and align with business objectives. We'll discuss the challenges and best practices for driving successful digital transformation journeys."
             },
             {
-                "title": "IT Project Management and Delivery",
-                "description": "Learn best practices for managing IT projects and ensuring successful delivery."
+                "title": "Lesson 5: IT Infrastructure and Cloud Computing",
+                "description": "In this lesson, we'll focus on IT infrastructure management and the role of cloud computing in the digital landscape. You'll learn about infrastructure components, including networks, servers, and storage, and how to design scalable and secure IT infrastructure. We'll discuss cloud computing models, deployment options, and the benefits and considerations of cloud adoption."
             },
             {
-                "title": "Risk Management and Cybersecurity",
-                "description": "Understand the importance of risk management and cybersecurity in strategic IT management."
+                "title": "Lesson 6: Cybersecurity and Risk Management",
+                "description": "In this lesson, we'll cover cybersecurity and risk management in the digital age. You'll learn how to assess and mitigate IT risks, protect against cyber threats, and ensure data privacy and compliance. We'll discuss cybersecurity frameworks, incident response planning, employee awareness, and the role of IT in maintaining a secure digital environment."
             },
             {
-                "title": "IT Leadership and Organizational Change",
-                "description": "Explore the role of IT leadership in driving organizational change and innovation."
+                "title": "Lesson 7: IT Project Management and Agile Methodologies",
+                "description": "In this lesson, we'll explore IT project management and the adoption of agile methodologies in delivering successful IT projects. You'll learn about project management principles, agile frameworks, and the role of project managers in overseeing IT initiatives. We'll discuss agile practices, scrum, kanban, and effective collaboration in agile project teams."
+            },
+            {
+                "title": "Lesson 8: Emerging Technologies and IT Leadership",
+                "description": "In this final lesson, we'll focus on emerging technologies and the role of IT leadership in driving innovation. You'll learn about trends such as artificial intelligence, Internet of Things (IoT), and blockchain, and their potential impact on businesses. We'll discuss the leadership qualities required to embrace emerging technologies and lead successful digital initiatives."
             }
         ],
         willLearn: [
@@ -1101,7 +1164,6 @@ export const courses: ICourses[] = [
             "IT leadership and driving organizational change"
         ]
     },
-
 ]
 
 export const lengthCoursesByBranch: { [key: string]: number } = {
