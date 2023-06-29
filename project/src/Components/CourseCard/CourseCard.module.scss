@@ -1,0 +1,81 @@
+@import "../../Styles/global";
+
+.course {
+  box-shadow: $small;
+  border: .1rem solid #E5E8ED;
+  border-radius: .4rem;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  display: flex;
+  min-width: 60rem;
+  min-height: 21.4rem;
+
+  .img {
+    min-width: 21.4rem;
+    height: 21.3rem;
+    background-image: url("./img/background.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    img {
+      height: 20rem;
+      width: 16rem;
+    }
+  }
+
+  .info {
+    padding: 3.2rem;
+
+    .branch {
+      display: block;
+      width: fit-content;
+      padding: .1rem .8rem .1rem .8rem;
+      border-radius: .4rem;
+      @include smallRegular;
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+    .Marketing {
+      background: $success;
+    }
+
+    .Management {
+      background: $info;
+    }
+
+    .hr {
+      background: $warning;
+    }
+
+    .Design {
+      background: rgba(245, 47, 110, 1);
+    }
+
+    .title {
+      @include leadBold;
+      color: $gray900;
+      margin-bottom: 2rem;
+    }
+
+    .price {
+      @include largeRegular;
+      color: $gray700;
+      display: inline-flex;
+      align-items: center;
+      gap: .8rem;
+
+      span {
+        @include largeBold;
+        color: $primary;
+      }
+    }
+  }
+}
+
+.course:hover {
+  box-shadow: $regular;
+}
+

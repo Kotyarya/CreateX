@@ -5,6 +5,7 @@ import NavBarContainer from "./Modules/NavBar/NavBarContainer";
 import HomePage from "./Pages/HomePage/HomePage";
 import CoursesPage from "./Pages/CoursesPage/CoursesPage";
 import CoursePage from "./Pages/CoursesPage/CoursePage/CoursePage";
+import EventsPage from "./Pages/EventsPage/EventsPage";
 
 
 const App: FC = () => {
@@ -15,6 +16,7 @@ const App: FC = () => {
                 <Route path={"/"} element={<HomePage/>}/>
                 <Route path={"/courses"} element={<CoursesPage/>}/>
                 <Route path={"/courses/:courseID"} element={<CoursePage/>}/>
+                <Route path={"/events"} element={<EventsPage/>}/>
             </Routes>
             {/*<FooterContainer/>*/}
         </BrowserRouter>

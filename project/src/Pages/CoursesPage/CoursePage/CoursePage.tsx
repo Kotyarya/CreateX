@@ -10,8 +10,17 @@ import DiscountContainer from "../../../Modules/Discount/DiscountContainer";
 import ForWhomCourseContainer from "../../../Modules/ForWhomCourse/ForWhomCourseContainer";
 import LessonsContainer from "../../../Modules/Lessons/LessonsContainer";
 import TestimonialsContainer from "../../../Modules/Testimonials/TestimonialsContainer";
+import RegisterForCourseContainer from "../../../Modules/RegisterForCourse/RegisterForCourseContainer";
+import CourseCarouselContainer from "../../../Modules/CourseCarousel/CourseCarouselContainer";
 
 const CoursePage = () => {
+
+    document.documentElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+
+
     const idCourse = useCourseId()
 
     const {getCourseById} = useAction()
@@ -47,7 +56,15 @@ const CoursePage = () => {
                 <LessonsContainer/>
             </div>
             <div className={style.groupGray}>
-                <TestimonialsContainer/>
+                <div className={style.testimonials}>
+                    <TestimonialsContainer/>
+                </div>
+                <div className={style.register}>
+                    <RegisterForCourseContainer/>
+                </div>
+            </div>
+            <div className={style.courseCarousel}>
+                <CourseCarouselContainer/>
             </div>
         </div>
     );

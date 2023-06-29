@@ -41,7 +41,8 @@
 
             span {
               color: $primary;
-              @include leadRegular
+              @include leadRegular;
+              width: 9rem;
             }
           }
 

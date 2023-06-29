@@ -11,7 +11,10 @@ import TestimonialsContainer from "../../Modules/Testimonials/TestimonialsContai
 import SubscribeContainer from "../../Modules/Subscribe/SubscribeContainer";
 
 const HomePage: FC = () => {
-
+    document.documentElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
 
     return (
         <div className={style.homePage}>

@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 import style from "./CoursesInHomePage.module.scss"
 import Button, {ButtonSize, ButtonVariant} from "../../Components/Button/Button";
 import {ICourses} from "../../Redux/Other/data";
+import CourseCard from "../../Components/CourseCard/CourseCard";
 
 
 interface CoursesInHomePageProps {
@@ -28,17 +29,7 @@ const CoursesInHomePage: FC<CoursesInHomePageProps> = ({courses, onClickButton, 
             </article>
             <div className={style.content}>
                 {courses.map((course) => {
-                    return <div key={course.id} className={style.course + " " + style[course.branch]}
-                                onClick={() => onClickButtonCourse(course.id)}>
-                        <div className={style.img}><img src={course.photo} alt=""/></div>
-                        <div className={style.info}>
-                            <div className={style.branch + " " + style[course.branch]}>
-                                <p>{course.branch === "hr" ? "HR & Recruting" : course.branch}</p>
-                            </div>
-                            <p className={style.title}>{course.title}</p>
-                            <p className={style.price}><span>${course.price}</span> | by {course.author}</p>
-                        </div>
-                    </div>
+                    return <CourseCard key={course.id} course={course}/>
                 })}
             </div>
         </div>
