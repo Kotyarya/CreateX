@@ -1219,10 +1219,11 @@ export const benefitsData: IBenefit[] = [
     }
 ]
 
-enum eventsType {
+export enum eventsType {
     masterClass = "Online master class",
     workshop = "Online workshop",
-    lecture = "Online lecture"
+    lecture = "Online lecture",
+    all = "all"
 }
 
 export interface IEvents {

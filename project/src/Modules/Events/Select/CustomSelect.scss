@@ -1,0 +1,64 @@
+@import "../../../Styles/global";
+
+.custom-select {
+
+  &__control {
+    border-radius: .4rem;
+    border: .1rem solid $gray400;
+    padding: 1.1rem 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: none !important;
+
+    &--menu-is-open,
+    &--is-focused {
+      border: .1rem solid $primary !important;
+      box-shadow: 0 0 0 .1rem $primary !important;
+    }
+  }
+
+  &__single-value {
+    color: $gray800 !important;
+    @include smallRegular;
+  }
+
+  &__placeholder {
+    color: $gray800 !important;
+    @include smallRegular;
+  }
+
+  &__input {
+    color: $gray800 !important;
+    font-size: 1.4rem !important;
+    font-weight: 400 !important;
+  }
+
+  &__indicator-separator {
+    display: none;
+  }
+
+  &__indicator {
+    padding: 0 !important;
+    width: 2rem !important;
+    height: 2rem !important;
+    background-image: url("../../../assets/img/icons/Down-chevron.svg");
+
+    svg {
+      display: none;
+    }
+  }
+
+  &__option {
+    &--is-focused {
+      background: $btn-gradient !important;
+      color: white !important;
+      opacity: .7;
+    }
+
+    &--is-selected {
+      background: $btn-gradient !important;
+      color: white !important;
+    }
+  }
+}

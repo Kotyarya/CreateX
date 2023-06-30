@@ -6,7 +6,7 @@ import {useNavigate} from "react-router-dom";
 
 const EventsInHomePageContainer: FC = () => {
 
-    const events = useTypedSelector(state => state.events.events)
+    const {events} = useTypedSelector(state => state.events)
 
     const {getStartEvents} = useAction()
 
