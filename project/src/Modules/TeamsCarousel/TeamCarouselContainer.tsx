@@ -1,9 +1,17 @@
-import React, {FC, useState} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import TeamCarousel from "./TeamCarousel";
-import {curators} from "../../Redux/Other/data";
+import {useTypedSelector} from "../../hook/useTypedSelector";
+import {useAction} from "../../hook/useAction";
 
 const TeamCarouselContainer: FC = () => {
     const [translate, setTranslate] = useState<number>(0)
+    const curators = useTypedSelector(state => state.curators.curators)
+    const {getCurators} = useAction()
+
+    useEffect(() => {
+        getCurators()
+        // eslint-disable-next-line
+    }, [])
 
     const moveCarousel = (num: number) => {
         setTranslate(num)

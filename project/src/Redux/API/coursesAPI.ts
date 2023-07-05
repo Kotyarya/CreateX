@@ -14,14 +14,18 @@ export interface ICourse {
     date: string,
     branchId: number,
     curatorId: number,
-    branch: IBranch
+    branch: IBranch,
+    curator: {
+        img: string,
+        name: string
+    }
 }
 
 
 export const coursesApi = {
     getStartCourse: async () => {
         try {
-            const response = await instance.get<ICourse[]>("/course?page=1&limit=8&branchId=0")
+            const response = await instance.get<ICourse[]>("/course?page=1&limit=6&branchId=0")
             return response.data
         } catch (e) {
             alert(e)

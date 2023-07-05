@@ -1,23 +1,24 @@
 import React, {FC} from 'react';
 import style from "./TeamCarousel.module.scss"
 import ControlButton, {ControlButtonRotation} from "../../Components/ControlButton/ControlButton";
-import {ICurator} from "../../Redux/Other/data";
 import {ReactComponent as FacebookSVG} from "../../assets/img/icons/facebookSVG.svg";
 import {ReactComponent as InstagramSVG} from "../../assets/img/icons/instagramSVG.svg";
 import {ReactComponent as LinkedInSVG} from "../../assets/img/icons/linkedinSVG.svg";
 import {nanoid} from "nanoid";
+import {imgUrl} from "../../utils/const/const";
+import {ICurator} from "../../Redux/API/curatorAPI";
 
 
 interface TeamCarouselProps {
     translate: number,
     moveCarousel: (num: number) => void,
-    curators: { [key: string]: ICurator }
+    curators: ICurator[] | undefined
 }
 
 const TeamCarousel: FC<TeamCarouselProps> = ({translate, moveCarousel, curators}) => {
 
 
-    const teamsBlock = Object.keys(curators).map((curator) => {
+    const teamsBlock = curators ? curators.map((curator) => {
         return (
             <div className={style.block} key={nanoid(10)}>
                 <div className={style.img}>
@@ -29,16 +30,18 @@ const TeamCarousel: FC<TeamCarouselProps> = ({translate, moveCarousel, curators}
                         </div>
 
                     </div>
-                    <img src={curators[curator].img} alt="img"/>
+                    <img src={imgUrl + curator.img} alt="img"/>
                 </div>
                 <article>
-                    <h4>{curators[curator].title}</h4>
-                    <p>{curators[curator].subtitle}</p>
+                    <h4>{curator.name}</h4>
+                    <p>{curator.jobTitle}</p>
                 </article>
             </div>
         )
-    })
+    }) : null
 
+
+    console.log(curators?.length)
 
     return (
         <div className={style.wrapper}>
@@ -50,7 +53,8 @@ const TeamCarousel: FC<TeamCarouselProps> = ({translate, moveCarousel, curators}
                 <div className={style.controls}>
                     <ControlButton disabled={translate >= 0} rotation={ControlButtonRotation.left}
                                    onClick={() => moveCarousel(translate + 31.5)}/>
-                    <ControlButton disabled={translate <= -157.5} rotation={ControlButtonRotation.right}
+                    <ControlButton disabled={curators ? translate <= -((curators?.length - 4) * 31.5) : false}
+                                   rotation={ControlButtonRotation.right}
                                    onClick={() => moveCarousel(translate - 31.5)}/>
                 </div>
             </div>

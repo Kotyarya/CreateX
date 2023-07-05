@@ -7,6 +7,8 @@ import EventsInHomePageContainer from "../../Modules/EventsInHomePage/EventsInHo
 import Certificate from "../../Components/Certificate/Certificate";
 import TestimonialsContainer from "../../Modules/Testimonials/TestimonialsContainer";
 import SubscribeContainer from "../../Modules/Subscribe/SubscribeContainer";
+import CoursesInHomePageContainer from "../../Modules/CoursesInHomePage/CoursesInHomePageContainer";
+import TeamCarouselContainer from "../../Modules/TeamsCarousel/TeamCarouselContainer";
 
 const HomePage: FC = () => {
     document.documentElement.scrollTo({
@@ -23,7 +25,7 @@ const HomePage: FC = () => {
                 <AboutInHomePageContainer/>
             </div>
             <div className={style.courses}>
-                {/*<CoursesInHomePageContainer/>*/}
+                <CoursesInHomePageContainer/>
             </div>
             <div className={style.benefits}>
                 <BenefitsContainer/>
@@ -36,7 +38,7 @@ const HomePage: FC = () => {
             </div>
             <div className={style.group}>
                 <div className={style.teams}>
-                    {/*<TeamCarouselContainer/>*/}
+                    <TeamCarouselContainer/>
                 </div>
                 <div className={style.testimonials}>
                     <TestimonialsContainer/>
