@@ -125,27 +125,27 @@ export enum branch {
     development = "Development"
 }
 
-export interface ICourses {
-    id: number,
-    title: string,
-    branch: branch
-    price: number,
-    author: string,
-    curator: ICurator
-    photo: string,
-    description: string,
-    forWhom: string[],
-    date: string,
-    lessons: ILessons[],
-    willLearn: string[]
-}
+// export interface ICourses {
+//     id: number,
+//     title: string,
+//     branch: branch
+//     price: number,
+//     author: string,
+//     curator: ICurator
+//     photo: string,
+//     description: string,
+//     forWhom: string[],
+//     date: string,
+//     lessons: ILessons[],
+//     willLearn: string[]
+// }
 
 export interface ILessons {
     title: string,
     description: string
 }
 
-export const courses: ICourses[] = [
+export const courses = [
     {
         id: 1,
         title: "The Ultimate Google Ads Training Course",

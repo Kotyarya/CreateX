@@ -2,11 +2,9 @@ import React, {FC} from 'react';
 import HeadContainer from "../../Modules/Head/HeadContainer";
 import AboutInHomePageContainer from "../../Modules/AboutInHomePage/AboutInHomePageContainer";
 import style from "./HomePage.module.scss"
-import CoursesInHomePageContainer from "../../Modules/CoursesInHomePage/CoursesInHomePageContainer";
 import BenefitsContainer from "../../Modules/Benefits/BenefitsContainer";
 import EventsInHomePageContainer from "../../Modules/EventsInHomePage/EventsInHomePageContainer";
 import Certificate from "../../Components/Certificate/Certificate";
-import TeamCarouselContainer from "../../Modules/TeamsCarousel/TeamCarouselContainer";
 import TestimonialsContainer from "../../Modules/Testimonials/TestimonialsContainer";
 import SubscribeContainer from "../../Modules/Subscribe/SubscribeContainer";
 
@@ -25,7 +23,7 @@ const HomePage: FC = () => {
                 <AboutInHomePageContainer/>
             </div>
             <div className={style.courses}>
-                <CoursesInHomePageContainer/>
+                {/*<CoursesInHomePageContainer/>*/}
             </div>
             <div className={style.benefits}>
                 <BenefitsContainer/>
@@ -38,7 +36,7 @@ const HomePage: FC = () => {
             </div>
             <div className={style.group}>
                 <div className={style.teams}>
-                    <TeamCarouselContainer/>
+                    {/*<TeamCarouselContainer/>*/}
                 </div>
                 <div className={style.testimonials}>
                     <TestimonialsContainer/>
