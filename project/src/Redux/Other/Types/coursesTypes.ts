@@ -3,6 +3,8 @@ import {ICourse} from "../../API/coursesAPI";
 export enum CoursesActionType {
     GET_START_COURSES = "GET_START_COURSES",
     FETCHING_COURSES = "FETCHING_COURSES",
+    SET_BRANCH = "SET_BRANCH",
+    GET_COURSES_BY_BRANCH = "GET_COURSES_BY_BRANCH"
 }
 
 interface GetStartCoursesAction {
@@ -15,10 +17,21 @@ interface FetchingCoursesAction {
     type: CoursesActionType.FETCHING_COURSES,
 }
 
+interface SetBranch {
+    type: CoursesActionType.SET_BRANCH,
+    payload: number
+}
 
-export type CoursesAction = GetStartCoursesAction | FetchingCoursesAction
+interface GetCoursesByBranch {
+    type: CoursesActionType.GET_COURSES_BY_BRANCH,
+    payload: ICourse[]
+}
+
+
+export type CoursesAction = GetStartCoursesAction | FetchingCoursesAction | SetBranch | GetCoursesByBranch
 
 export interface CoursesState {
     courses: ICourse[] | undefined
     loading: boolean,
+    activeBranch: number
 }

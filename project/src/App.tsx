@@ -9,6 +9,7 @@ import EventsPage from "./Pages/EventsPage/EventsPage";
 
 const App: FC = () => {
 
+
     return (
         <BrowserRouter>
             <NavBarContainer/>

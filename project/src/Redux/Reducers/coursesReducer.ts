@@ -3,6 +3,7 @@ import {CoursesAction, CoursesActionType, CoursesState} from "../Other/Types/cou
 const initialState: CoursesState = {
     courses: [],
     loading: false,
+    activeBranch: 0
 }
 
 const coursesReducer = (state = initialState, action: CoursesAction): CoursesState => {
@@ -11,11 +12,25 @@ const coursesReducer = (state = initialState, action: CoursesAction): CoursesSta
             return {
                 courses: action.payload,
                 loading: false,
+                activeBranch: state.activeBranch
             }
         case CoursesActionType.FETCHING_COURSES :
             return {
                 courses: state.courses,
                 loading: true,
+                activeBranch: state.activeBranch
+            }
+        case CoursesActionType.SET_BRANCH:
+            return {
+                courses: state.courses,
+                loading: false,
+                activeBranch: action.payload
+            }
+        case CoursesActionType.GET_COURSES_BY_BRANCH:
+            return {
+                courses: action.payload,
+                loading: false,
+                activeBranch: state.activeBranch
             }
         default :
             return state

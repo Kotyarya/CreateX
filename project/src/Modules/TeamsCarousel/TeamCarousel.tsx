@@ -41,8 +41,6 @@ const TeamCarousel: FC<TeamCarouselProps> = ({translate, moveCarousel, curators}
     }) : null
 
 
-    console.log(curators?.length)
-
     return (
         <div className={style.wrapper}>
             <div className={style.head}>

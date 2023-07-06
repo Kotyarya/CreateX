@@ -3,6 +3,7 @@ import style from "./CoursesPage.module.scss"
 import TestimonialsContainer from "../../Modules/Testimonials/TestimonialsContainer";
 import Certificate from "../../Components/Certificate/Certificate";
 import SubscribeContainer from "../../Modules/Subscribe/SubscribeContainer";
+import CoursesContainer from "../../Modules/Courses/CoursesContainer";
 
 const CoursesPage: FC = () => {
     document.documentElement.scrollTo({
@@ -14,7 +15,7 @@ const CoursesPage: FC = () => {
     return (
         <div className={style.coursesPage}>
             <div className={style.courses}>
-                {/*<CoursesContainer/>*/}
+                <CoursesContainer/>
             </div>
             <div className={style.testimonials}>
                 <TestimonialsContainer/>

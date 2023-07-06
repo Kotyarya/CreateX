@@ -17,7 +17,6 @@ const CourseCard: FC<CourseCardProps> = ({course}) => {
     }
 
     const classNameBranch = course.branch.name !== "HR & Recruting" ? style[course.branch.name] : style.hr
-    console.log(classNameBranch)
 
     return (
         <div className={style.course}
