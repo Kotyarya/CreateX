@@ -32,6 +32,12 @@ const coursesReducer = (state = initialState, action: CoursesAction): CoursesSta
                 loading: false,
                 activeBranch: state.activeBranch
             }
+        case CoursesActionType.GET_MORE_COURSES:
+            return {
+                courses: action.payload ? state.courses?.concat(action.payload) : state.courses,
+                loading: false,
+                activeBranch: state.activeBranch
+            }
         default :
             return state
     }

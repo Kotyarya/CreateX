@@ -30,5 +30,13 @@ export const coursesApi = {
         } catch (e) {
             alert(e)
         }
+    },
+    getCoursesByBranch: async (branchId: number = 0, page: number = 1) => {
+        try {
+            const response = await instance.get<ICourse[]>(`/course?branchId=${branchId}&page=${page}`)
+            return response.data
+        } catch (e) {
+            alert(e)
+        }
     }
 }

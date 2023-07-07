@@ -1,11 +1,12 @@
-import React, {FC, useEffect} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import style from "./Courses.module.scss"
 import {nanoid} from "nanoid";
-import {useTime, useTransform} from "framer-motion";
+import {motion, useTime, useTransform} from "framer-motion";
 import SearchInput from "../../Components/Input/SearchInput/SearchInput";
 import {useTypedSelector} from "../../hook/useTypedSelector";
 import {useAction} from "../../hook/useAction";
 import {imgUrl} from "../../utils/const/const";
+import {ReactComponent as LoadSVG} from "../../assets/img/icons/load.svg";
 
 // interface CoursesProps {
 //     allBranch: string[],
@@ -24,21 +25,24 @@ const Courses: FC = () => {
 
     const time = useTime();
     const rotate = useTransform(time, [0, 4000], [0, 360], {clamp: false});
+    const [page, setPage] = useState<number>(1)
+    const [searchText, setSearcText] = useState<string>("")
 
     const branches = useTypedSelector(state => state.branches.branches)
-    const activeBranch = useTypedSelector(state => state.courses.activeBranch)
-    const courses = useTypedSelector(state => state.courses.courses)
-    const {getBranches, setBranch, getStartCourses} = useAction()
+    const {courses, activeBranch, loading} = useTypedSelector(state => state.courses)
+    const {getBranches, getCourseByBranch, getMoreCourses} = useAction()
 
     useEffect(() => {
         getBranches()
-        getStartCourses()
+        getCourseByBranch(0, page)
+        // eslint-disable-next-line
     }, [])
 
     const countAllCourse = branches?.reduce((count, branch) => {
         return count + branch.courseCount
     }, 0)
 
+    const filterCourse = courses?.filter((course) => course.title.includes(searchText))
 
     return (
         <div className={style.wrapper}>
@@ -47,14 +51,17 @@ const Courses: FC = () => {
                 <h2>Our online courses</h2>
             </article>
             <div className={style.controls}>
-                <button onClick={() => setBranch(0)}
+                <button onClick={() => {
+                    setPage(1)
+                    getCourseByBranch(0, 1)
+                }}
                         className={activeBranch === 0 ? style.active : undefined}>All <p>{countAllCourse}</p></button>
                 {
                     branches ?
                         branches.map((oneBranch) => {
                             return (
                                 <button
-                                    onClick={() => setBranch(oneBranch.id)}
+                                    onClick={() => getCourseByBranch(oneBranch.id, 1)}
                                     className={oneBranch.id === activeBranch ? style.active : undefined}
                                     key={nanoid(10)}>
                                     {oneBranch.name}
@@ -64,12 +71,14 @@ const Courses: FC = () => {
                         })
                         : null}
                 <div className={style.searchInput}>
-                    <SearchInput width={31.5} placeholder={"Search courses..."} onChange={() => []}/>
+                    <SearchInput width={31.5} placeholder={"Search courses..."}
+                                 onChange={(e) => setSearcText(e.target.value)}/>
                 </div>
             </div>
             <div className={style.content}>
                 {
-                    courses?.map((course) => {
+                    filterCourse?.map((course) => {
+                        console.log(course)
                         return (
                             <div key={course.id} className={style.course}>
                                 <div className={style.img}>
@@ -85,15 +94,14 @@ const Courses: FC = () => {
                     })
                 }
             </div>
-            {/*{*/}
-            {/*    courses.length !== lengthCoursesByBranch[activeBranch.toLowerCase() as keyof typeof lengthCoursesByBranch] ?*/}
-            {/*        <button className={style.loadMore} onClick={() => getMoreCourses(activeBranch)}>*/}
-            {/*            <motion.div className={style.motionDiv} style={loading ? {rotate} : undefined}><LoadSVG/>*/}
-            {/*            </motion.div>*/}
-            {/*            Load more*/}
-            {/*        </button>*/}
-            {/*        : null*/}
-            {/*}*/}
+            <button className={style.loadMore} onClick={() => {
+                setPage(page + 1)
+                getMoreCourses(activeBranch, page + 1)
+            }}>
+                <motion.div className={style.motionDiv} style={loading ? {rotate} : undefined}><LoadSVG/>
+                </motion.div>
+                Load more
+            </button>
         </div>
     );
 };
