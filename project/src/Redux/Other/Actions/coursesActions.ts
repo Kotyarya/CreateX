@@ -21,7 +21,6 @@ export const getCourseByBranch = (branchId: number, page: number) => {
 }
 
 export const getMoreCourses = (branchId: number, page: number) => {
-    debugger
     return async (dispatch: Dispatch<CoursesAction>) => {
         dispatch({type: CoursesActionType.FETCHING_COURSES})
         const response = await coursesApi.getCoursesByBranch(branchId, page)

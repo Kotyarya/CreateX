@@ -7,7 +7,7 @@
   align-items: center;
   gap: 6rem;
   background-image: url("./img/background.png");
-  background-size: contain;
+  background-size: 100% auto;
   background-repeat: no-repeat;
 
   article {
@@ -131,6 +131,13 @@
         .title {
           @include leadBold;
           color: $gray900;
+
+          mark {
+            color: white;
+            background: $btn-gradient;
+            border-radius: .4rem;
+            padding: .2rem;
+          }
         }
 
         .price {
