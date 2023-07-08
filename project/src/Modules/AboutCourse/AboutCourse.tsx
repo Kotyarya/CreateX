@@ -2,14 +2,13 @@ import React, {FC} from 'react';
 import style from "./AboutCourse.module.scss"
 import {nanoid} from "nanoid";
 import Button, {ButtonSize, ButtonVariant} from "../../Components/Button/Button";
-import {ILessons} from "../../Redux/Other/data";
 
 interface AboutCourseProps {
     description: string,
-    willLearn: string[],
+    willLearn: { text: string }[],
     date: string,
     price: number,
-    lessons: ILessons[]
+    lessons: { title: string, description: string }[]
 }
 
 const AboutCourse: FC<AboutCourseProps> = ({description, willLearn, date, price, lessons}) => {
@@ -27,7 +26,7 @@ const AboutCourse: FC<AboutCourseProps> = ({description, willLearn, date, price,
                     <ul>
                         {
                             willLearn.map((item) => {
-                                return <li key={nanoid(10)}>{item}</li>
+                                return <li key={nanoid(10)}>{item.text}</li>
                             })
                         }
                     </ul>

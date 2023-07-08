@@ -40,9 +40,15 @@ const CoursesContainer: FC = () => {
     }, [])
 
     return (
-        <Courses filterCourses={filterCourses} loading={loading} searchText={searchText} loadMore={loadMore}
-                 branches={branches} activeBranch={activeBranch} onChangeHandler={onChangeHandler}
-                 changeBranch={changeBranch} navigateToCourse={navigateToCourse}/>
+        <Courses filterCourses={filterCourses}
+                 loading={loading}
+                 searchText={searchText}
+                 loadMore={loadMore}
+                 branches={branches}
+                 activeBranch={activeBranch}
+                 onChangeHandler={onChangeHandler}
+                 changeBranch={changeBranch}
+                 navigateToCourse={navigateToCourse}/>
     );
 };
 

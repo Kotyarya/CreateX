@@ -3,7 +3,7 @@ import style from "./ForWhomCourse.module.scss"
 import {nanoid} from "nanoid";
 
 interface ForWhomCourseProps {
-    forWhom: string[]
+    forWhom: { text: string }[] | undefined
 }
 
 const ForWhomCourse: FC<ForWhomCourseProps> = ({forWhom}) => {
@@ -15,8 +15,8 @@ const ForWhomCourse: FC<ForWhomCourseProps> = ({forWhom}) => {
                 <h2>Who will benefit from the course:</h2>
             </article>
             <ul>
-                {forWhom.map((item) => {
-                    return <li key={nanoid(10)}>{item}</li>
+                {forWhom?.map((item) => {
+                    return <li key={nanoid(10)}>{item.text}</li>
                 })}
             </ul>
         </div>

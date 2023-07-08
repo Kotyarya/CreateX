@@ -5,12 +5,12 @@ import style from "./Lessons.module.scss"
 import illustration from "./img/illustration.png"
 
 interface LessonsProps {
-    lessons: ILessons[]
+    lessons: ILessons[] | undefined
 }
 
 const Lessons: FC<LessonsProps> = ({lessons}) => {
 
-    const lessonsBlocks = lessons.map((lesson) => {
+    const lessonsBlocks = lessons?.map((lesson) => {
         return (
             <li key={nanoid(10)}>
                 <details>

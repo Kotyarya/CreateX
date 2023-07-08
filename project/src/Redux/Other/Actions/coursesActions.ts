@@ -27,3 +27,11 @@ export const getMoreCourses = (branchId: number, page: number) => {
         dispatch({type: CoursesActionType.GET_MORE_COURSES, payload: response})
     }
 }
+
+export const getActiveCourse = (courseId: number) => {
+    return async (dispatch: Dispatch<CoursesAction>) => {
+        dispatch({type: CoursesActionType.FETCHING_COURSES})
+        const response = await coursesApi.getCourseById(courseId)
+        dispatch({type: CoursesActionType.GET_ACTIVE_COURSE, payload: response})
+    }
+}

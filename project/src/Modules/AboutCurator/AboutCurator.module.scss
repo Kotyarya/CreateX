@@ -99,6 +99,10 @@
 
       svg:hover {
         fill: $primary;
+
+        rect {
+          fill: $primary;
+        }
       }
     }
   }

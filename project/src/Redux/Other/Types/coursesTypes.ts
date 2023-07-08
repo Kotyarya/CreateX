@@ -5,7 +5,8 @@ export enum CoursesActionType {
     FETCHING_COURSES = "FETCHING_COURSES",
     SET_BRANCH = "SET_BRANCH",
     GET_COURSES_BY_BRANCH = "GET_COURSES_BY_BRANCH",
-    GET_MORE_COURSES = "GET_MORE_COURSES"
+    GET_MORE_COURSES = "GET_MORE_COURSES",
+    GET_ACTIVE_COURSE = "GET_ACTIVE_COURSE"
 }
 
 interface GetStartCoursesAction {
@@ -33,6 +34,11 @@ interface GetMoreCourses {
     payload: ICourse[] | undefined
 }
 
+interface GetActiveCourse {
+    type: CoursesActionType.GET_ACTIVE_COURSE,
+    payload: ICourse | undefined
+}
+
 
 export type CoursesAction =
     GetStartCoursesAction
@@ -40,9 +46,11 @@ export type CoursesAction =
     | SetBranch
     | GetCoursesByBranch
     | GetMoreCourses
+    | GetActiveCourse
 
 export interface CoursesState {
     courses: ICourse[] | undefined
     loading: boolean,
-    activeBranch: number
+    activeBranch: number,
+    activeCourse: ICourse | undefined
 }

@@ -3,6 +3,7 @@ import {useNavigate} from "react-router-dom";
 import style from "./CourseCard.module.scss"
 import {ICourse} from "../../Redux/API/coursesAPI";
 import {imgUrl} from "../../utils/const/const";
+import {useAction} from "../../hook/useAction";
 
 interface CourseCardProps {
     course: ICourse
@@ -11,9 +12,11 @@ interface CourseCardProps {
 const CourseCard: FC<CourseCardProps> = ({course}) => {
 
     const navigate = useNavigate()
+    const {getActiveCourse} = useAction()
 
     const onClickButtonCourse = (id: number) => {
         navigate(`/courses/${id}`)
+        getActiveCourse(id)
     }
 
     const classNameBranch = course.branch.name !== "HR & Recruting" ? style[course.branch.name] : style.hr

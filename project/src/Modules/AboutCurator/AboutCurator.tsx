@@ -4,32 +4,31 @@ import {ReactComponent as FacebookSVG} from "../../assets/img/icons/facebookSVG.
 import {ReactComponent as BehanceSVG} from "../../assets/img/icons/behance.svg";
 import {ReactComponent as TwitterSVG} from "../../assets/img/icons/twitterSVG.svg";
 import {ReactComponent as LinkedInSVG} from "../../assets/img/icons/linkedinSVG.svg";
-import {ICurator} from "../../Redux/Other/data";
+import {ICurator} from "../../Redux/API/curatorAPI";
+import {imgUrl} from "../../utils/const/const";
 
 interface AboutCuratorProps {
-    curator: ICurator
+    curator: ICurator | undefined
 }
 
 const AboutCurator: FC<AboutCuratorProps> = ({curator}) => {
-
-
     return (
         <div className={style.wrapper}>
             <div className={style.img}>
-                <img src={curator.img} alt=""/>
+                <img src={imgUrl + curator?.img} alt=""/>
             </div>
             <div className={style.content}>
                 <article>
                     <p>course curator</p>
-                    <h3>{curator.title}</h3>
+                    <h3>{curator?.name}</h3>
                 </article>
-                <p className={style.subtitle}>{curator.subtitle}</p>
+                <p className={style.subtitle}>{curator?.jobTitle}</p>
                 <div className={style.statistic}>
-                    <p className={style.rate}>{curator.rate} rate</p>
-                    <p className={style.courses}>{curator.numberCourses} courses</p>
-                    <p className={style.students}>{curator.students} students</p>
+                    <p className={style.rate}>{curator?.rate} rate</p>
+                    <p className={style.courses}>2 courses</p>
+                    <p className={style.students}>{curator?.students} students</p>
                 </div>
-                <p className={style.description}>{curator.description}</p>
+                <p className={style.description}>{curator?.description}</p>
                 <div className={style.social}>
                     <FacebookSVG/>
                     <BehanceSVG/>
