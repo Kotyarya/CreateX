@@ -7,6 +7,7 @@ import {imgUrl} from "../../utils/const/const";
 import {ReactComponent as LoadSVG} from "../../assets/img/icons/load.svg";
 import {IBranch} from "../../Redux/API/branchAPI";
 import {ICourse} from "../../Redux/API/coursesAPI";
+import {markText} from "../../utils/helpers/markText";
 
 interface CoursesProps {
     searchText: string,
@@ -19,6 +20,7 @@ interface CoursesProps {
     loadMore: () => void,
     navigateToCourse: (courseId: number) => void
 }
+
 
 const Courses: FC<CoursesProps> = ({
                                        searchText,
@@ -40,25 +42,6 @@ const Courses: FC<CoursesProps> = ({
     const countAllCourse = branches?.reduce((count, branch) => {
         return count + branch.courseCount
     }, 0)
-
-
-    const markText = (text: string) => {
-        if (searchText) {
-            const startIndex = text.indexOf(searchText)
-            const lastIndex = searchText.length + startIndex
-            debugger
-            return (
-                <p className={style.title}>
-                    {text.slice(0, startIndex)}
-                    <mark>{text.slice(startIndex, lastIndex)}</mark>
-                    {text.slice(lastIndex)}
-                </p>
-            )
-
-        } else {
-            return <p className={style.title}>{text}</p>
-        }
-    }
 
 
     let loadButton
@@ -90,7 +73,7 @@ const Courses: FC<CoursesProps> = ({
                 </div>
                 <div className={style.info}>
                     <p className={(course.branch.name !== "HR & Recruting" ? style[course.branch.name] : style.hr) + " " + style.branch}>{course.branch.name}</p>
-                    {markText(course.title)}
+                    {markText(course.title, searchText, style.title)}
                     <p className={style.price}><span>${course.price}</span> | {course.curator.name}</p>
                 </div>
             </div>

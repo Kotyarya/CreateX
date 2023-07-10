@@ -4,8 +4,8 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import NavBarContainer from "./Modules/NavBar/NavBarContainer";
 import HomePage from "./Pages/HomePage/HomePage";
 import CoursesPage from "./Pages/CoursesPage/CoursesPage";
-import EventsPage from "./Pages/EventsPage/EventsPage";
 import CoursePage from "./Pages/CoursesPage/CoursePage/CoursePage";
+import EventsPage from "./Pages/EventsPage/EventsPage";
 import FooterContainer from "./Modules/Footer/FooterContainer";
 
 

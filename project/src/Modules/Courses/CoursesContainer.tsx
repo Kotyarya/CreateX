@@ -14,7 +14,7 @@ const CoursesContainer: FC = () => {
     const navigate = useNavigate()
 
 
-    const filterCourses = courses?.filter((course) => course.title.includes(searchText))
+    const filterCourses = courses?.filter((course) => course.title.includes(searchText.trim()))
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setSearchText(e.target.value)
     }

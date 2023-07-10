@@ -1,11 +1,11 @@
 import React, {FC} from 'react';
 import style from "./EventsInHomePage.module.scss"
 import Button, {ButtonSize, ButtonVariant} from "../../Components/Button/Button";
-import {IEvents} from "../../Redux/Other/data";
+import {IEvent} from "../../Redux/API/eventAPI";
 
 
 interface EventsInHomePageProps {
-    events: IEvents[],
+    events: IEvent[] | undefined,
     onClickButton: () => void,
     onClickButtonEvent: (eventID: number) => void
 }
@@ -14,7 +14,7 @@ interface EventsInHomePageProps {
 const EventsInHomePage: FC<EventsInHomePageProps> = ({events, onClickButton, onClickButtonEvent}) => {
 
 
-    const eventsBlock = events.map((event) => {
+    const eventsBlock = events?.map((event) => {
         return (
             <div key={event.id} className={style.event}>
                 <div className={style.date}>
@@ -26,7 +26,7 @@ const EventsInHomePage: FC<EventsInHomePageProps> = ({events, onClickButton, onC
                 </div>
                 <div className={style.text}>
                     <p className={style.title}>{event.title}</p>
-                    <p className={style.type}>{event.type}</p>
+                    <p className={style.type}>{event.eventType.name}</p>
                 </div>
                 <div className={style.viewMore}>
                     <Button text={"View more"}

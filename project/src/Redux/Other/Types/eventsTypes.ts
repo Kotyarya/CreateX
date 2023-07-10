@@ -1,29 +1,36 @@
-import {eventsType, IEvents} from "../data";
+import {IEvent, IEventCategory} from "../../API/eventAPI";
 
 export enum EventsActionType {
     GET_START_EVENTS = "GET_START_EVENTS",
     GET_EVENTS = "GET_EVENTS",
-    FILTER_BY_CATEGORY = "FILTER_BY_CATEGORY"
+    GET_EVENTS_CATEGORY = "GET_EVENTS_CATEGORY",
+    GET_COUNT = "GET_COUNT"
 }
 
 interface GetStartEventsAction {
     type: EventsActionType.GET_START_EVENTS,
-    payload: IEvents[]
+    payload: IEvent[] | undefined
 }
 
 interface GetEvents {
     type: EventsActionType.GET_EVENTS,
-    payload: IEvents[]
+    payload: IEvent[] | undefined
 }
 
-interface FilterByCategory {
-    type: EventsActionType.FILTER_BY_CATEGORY,
-    payload: eventsType
+interface GetEventsCategory {
+    type: EventsActionType.GET_EVENTS_CATEGORY,
+    payload: IEventCategory[] | undefined
 }
 
-export type EventsAction = GetStartEventsAction | GetEvents | FilterByCategory
+interface GetCount {
+    type: EventsActionType.GET_COUNT,
+    payload: number
+}
+
+export type EventsAction = GetStartEventsAction | GetEvents | GetEventsCategory | GetCount
 
 export interface EventsState {
-    events: IEvents[],
-    eventCategory: eventsType
+    events: IEvent[] | undefined,
+    eventCategory: IEventCategory[] | undefined,
+    count: number
 }
