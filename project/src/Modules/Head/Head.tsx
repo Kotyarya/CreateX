@@ -3,14 +3,10 @@ import style from "./Head.module.scss"
 import PlayButton, {PlayButtonSize} from "../../Components/PlayButton/PlayButton";
 import Button, {ButtonSize, ButtonVariant} from "../../Components/Button/Button";
 import illustration from "./img/illustration.png"
-
-interface HeadProps {
-    navigateToAboutPage: () => void,
-    navigateToCoursesPage: () => void
-}
+import {NavLink} from "react-router-dom";
 
 
-const Head: FC<HeadProps> = ({navigateToAboutPage, navigateToCoursesPage}) => {
+const Head: FC = () => {
     return (
         <div className={style.wrapper}>
             <div className={style.title}>
@@ -21,14 +17,16 @@ const Head: FC<HeadProps> = ({navigateToAboutPage, navigateToCoursesPage}) => {
                     </div>
                     <h1>Enjoy studying with CreateX Online Courses</h1>
                     <div className={style.controls}>
-                        <Button text={"About us"}
-                                variant={ButtonVariant.outline}
-                                size={ButtonSize.large}
-                                onClick={navigateToAboutPage}/>
-                        <Button text={"Explore courses"}
-                                variant={ButtonVariant.solid}
-                                size={ButtonSize.large}
-                                onClick={navigateToCoursesPage}/>
+                        <NavLink to={"/about-us"}>
+                            <Button text={"About us"}
+                                    variant={ButtonVariant.outline}
+                                    size={ButtonSize.large}/>
+                        </NavLink>
+                        <NavLink to={"/courses"}>
+                            <Button text={"Explore courses"}
+                                    variant={ButtonVariant.solid}
+                                    size={ButtonSize.large}/>
+                        </NavLink>
                     </div>
                 </div>
                 <img src={illustration} alt="illustration"/>

@@ -1,17 +1,16 @@
 import React, {FC} from 'react';
-import style from "./CoursesInHomePage.module.scss"
+import style from "./HomeCourses.module.scss"
 import Button, {ButtonSize, ButtonVariant} from "../../Components/Button/Button";
 import CourseCard from "../../Components/CourseCard/CourseCard";
 import {ICourse} from "../../Redux/API/coursesAPI";
+import {NavLink} from "react-router-dom";
 
 
 interface CoursesInHomePageProps {
     courses: ICourse[] | undefined,
-    onClickButton: () => void,
-    onClickButtonCourse: (courseID: number) => void
 }
 
-const CoursesInHomePage: FC<CoursesInHomePageProps> = ({courses, onClickButton, onClickButtonCourse}) => {
+const HomeCourses: FC<CoursesInHomePageProps> = ({courses}) => {
 
     return (
         <div className={style.wrapper}>
@@ -20,12 +19,13 @@ const CoursesInHomePage: FC<CoursesInHomePageProps> = ({courses, onClickButton, 
                     <p>Ready to learn?</p>
                     <h2>Featured Courses</h2>
                 </div>
-                <Button
-                    text={"View all courses"}
-                    variant={ButtonVariant.outline}
-                    size={ButtonSize.large}
-                    onClick={onClickButton}
-                />
+                <NavLink to={"/courses"}>
+                    <Button
+                        text={"View all courses"}
+                        variant={ButtonVariant.outline}
+                        size={ButtonSize.large}
+                    />
+                </NavLink>
             </article>
             <div className={style.content}>
                 {
@@ -39,4 +39,4 @@ const CoursesInHomePage: FC<CoursesInHomePageProps> = ({courses, onClickButton, 
     );
 };
 
-export default CoursesInHomePage;
+export default HomeCourses;

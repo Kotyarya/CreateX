@@ -32,55 +32,9 @@
     flex-direction: column;
     gap: 2.4rem;
 
+
     .event {
-      background: white;
-      border-radius: .4rem;
-      display: flex;
-      gap: 4rem;
-      align-items: center;
-      justify-content: center;
-      padding: 3.2rem;
-      width: 123rem;
       transition: all .3s ease-in-out;
-
-      .date {
-        display: flex;
-        gap: 2rem;
-
-        .number {
-          width: 6rem;
-          text-align: center;
-          @include display4;
-          color: $primary;
-        }
-
-        .monthTime {
-          .month {
-            @include largeBold;
-            color: $gray900;
-          }
-
-          .time {
-            @include baseRegular;
-            color: $gray700;
-          }
-
-        }
-      }
-
-      .text {
-        width: 75.7rem;
-
-        .title {
-          @include leadBold;
-          color: $gray900;
-        }
-
-        .type {
-          @include baseRegular;
-          color: $gray700;
-        }
-      }
     }
 
     .event:hover {

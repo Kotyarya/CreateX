@@ -2,13 +2,10 @@ import React, {FC} from 'react';
 import style from "./AboutInHomePage.module.scss"
 import img from "./img/image.png"
 import Button, {ButtonSize, ButtonVariant} from "../../Components/Button/Button";
+import {NavLink} from "react-router-dom";
 
 
-interface AboutInHomePageProps {
-    navigateTo: () => void
-}
-
-const AboutInHomePage: FC<AboutInHomePageProps> = ({navigateTo}) => {
+const WhoWeAre: FC = () => {
     return (
         <div className={style.wrapper}>
             <img src={img} alt="illustration"/>
@@ -26,16 +23,18 @@ const AboutInHomePage: FC<AboutInHomePageProps> = ({navigateTo}) => {
                     <li>Ultricies amet justo et eget quisque purus vulputate dapibus tortor.</li>
                 </ul>
                 <div>
-                    <Button
-                        text={"More about us"}
-                        variant={ButtonVariant.solid}
-                        size={ButtonSize.large}
-                        onClick={navigateTo}
-                    />
+                    <NavLink to={"/about-us"}>
+                        <Button
+                            text={"More about us"}
+                            variant={ButtonVariant.solid}
+                            size={ButtonSize.large}
+                        />
+                    </NavLink>
+
                 </div>
             </div>
         </div>
     );
 };
 
-export default AboutInHomePage;
+export default WhoWeAre;

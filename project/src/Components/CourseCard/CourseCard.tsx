@@ -14,7 +14,7 @@ const CourseCard: FC<CourseCardProps> = ({course}) => {
     const navigate = useNavigate()
     const {getActiveCourse} = useAction()
 
-    const onClickButtonCourse = (id: number) => {
+    const NavigateToCourse = (id: number) => {
         navigate(`/courses/${id}`)
         getActiveCourse(id)
     }
@@ -23,7 +23,7 @@ const CourseCard: FC<CourseCardProps> = ({course}) => {
 
     return (
         <div className={style.course}
-             onClick={() => onClickButtonCourse(course.id)}>
+             onClick={() => NavigateToCourse(course.id)}>
             <div className={style.img}>
                 <img src={imgUrl + course.curator.img} alt=""/>
             </div>

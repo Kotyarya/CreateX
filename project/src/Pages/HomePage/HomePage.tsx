@@ -1,14 +1,14 @@
 import React, {FC} from 'react';
 import HeadContainer from "../../Modules/Head/HeadContainer";
-import AboutInHomePageContainer from "../../Modules/AboutInHomePage/AboutInHomePageContainer";
 import style from "./HomePage.module.scss"
 import BenefitsContainer from "../../Modules/Benefits/BenefitsContainer";
-import EventsInHomePageContainer from "../../Modules/EventsInHomePage/EventsInHomePageContainer";
+import HomeEventsContainer from "../../Modules/HomeEvents/HomeEventsContainer";
 import Certificate from "../../Components/Certificate/Certificate";
 import TestimonialsContainer from "../../Modules/Testimonials/TestimonialsContainer";
 import SubscribeContainer from "../../Modules/Subscribe/SubscribeContainer";
-import CoursesInHomePageContainer from "../../Modules/CoursesInHomePage/CoursesInHomePageContainer";
+import HomeCoursesContainer from "../../Modules/HomeCourses/HomeCoursesContainer";
 import TeamCarouselContainer from "../../Modules/TeamsCarousel/TeamCarouselContainer";
+import WhoWeAre from "../../Modules/WhoWeAre/AboutInHomePage";
 
 const HomePage: FC = () => {
     document.documentElement.scrollTo({
@@ -22,16 +22,16 @@ const HomePage: FC = () => {
                 <HeadContainer/>
             </div>
             <div className={style.about}>
-                <AboutInHomePageContainer/>
+                <WhoWeAre/>
             </div>
             <div className={style.courses}>
-                <CoursesInHomePageContainer/>
+                <HomeCoursesContainer/>
             </div>
             <div className={style.benefits}>
                 <BenefitsContainer/>
             </div>
             <div className={style.events}>
-                <EventsInHomePageContainer/>
+                <HomeEventsContainer/>
             </div>
             <div className={style.certificate}>
                 <Certificate/>
