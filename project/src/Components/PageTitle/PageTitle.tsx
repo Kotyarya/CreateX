@@ -1,13 +1,10 @@
 import React, {FC} from 'react';
 import style from "./PageTitle.module.scss"
 
-export enum PageTitleType {
-    courses = "courses",
-}
 
 interface PageTitleProps {
-    title: string,
-    type: PageTitleType
+    title: string | undefined,
+    type: string | undefined
 }
 
 const PageTitle: FC<PageTitleProps> = ({title, type}) => {
