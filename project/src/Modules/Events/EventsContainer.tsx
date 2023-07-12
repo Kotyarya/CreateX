@@ -2,13 +2,11 @@ import React, {ChangeEvent, useEffect, useState} from 'react';
 import Events from "./Events";
 import {useTypedSelector} from "../../hook/useTypedSelector";
 import {useAction} from "../../hook/useAction";
-import {useNavigate} from "react-router-dom";
 
 const EventsContainer = () => {
 
     const {eventCategory, events, count} = useTypedSelector(state => state.events)
     const {getEventsCategory, getEvents} = useAction()
-    const navigate = useNavigate()
 
     const optionsSortBy = [
         {value: "newest", label: "newest"},
@@ -79,13 +77,8 @@ const EventsContainer = () => {
         pages.push(i)
     }
 
-    const navigateToEvent = (eventId: number) => {
-        navigate(`event/${eventId}`)
-    }
-
 
     return <Events events={events}
-                   navigateToEvent={navigateToEvent}
                    currentPage={currentPage}
                    onChangePage={onChangePage}
                    onSetPage={onSetPage}

@@ -9,6 +9,7 @@ import {markText} from "../../utils/helpers/markText";
 import {ReactComponent as FlexSVG} from "../../assets/img/icons/flex.svg";
 import {ReactComponent as GridSVG} from "../../assets/img/icons/grid.svg";
 import {IEvent} from "../../Redux/API/eventAPI";
+import {NavLink} from "react-router-dom";
 
 
 interface EventsProps {
@@ -25,7 +26,6 @@ interface EventsProps {
     onChangeHandler: (e: ChangeEvent<HTMLInputElement>) => void,
     searchText: string,
     events: IEvent[] | undefined,
-    navigateToEvent: (id: number) => void,
     currentPage: number,
     pages: number[],
     onChangeTypeBlocks: (isGridType: boolean) => void,
@@ -49,7 +49,6 @@ const Events: FC<EventsProps> = ({
                                      searchText,
                                      onChangeTypeBlocks,
                                      events,
-                                     navigateToEvent,
                                      currentPage,
                                      onSetPage,
                                      onChangePage,
@@ -117,15 +116,16 @@ const Events: FC<EventsProps> = ({
                                 dateBlock(event.day, event.month, event.time)
                             }
                             <div className={style.text}>
-                                <p className={style.title}>{markText(event.title, searchText, style.title)}</p>
+                                {markText(event.title, searchText, style.title)}
                                 <p className={style.type}>{event.eventType.name}</p>
                             </div>
                             <div className={style.viewMore}>
-                                <Button text={"View more"}
-                                        variant={ButtonVariant.outline}
-                                        size={ButtonSize.regular}
-                                        onClick={() => navigateToEvent(event.id)}
-                                />
+                                <NavLink to={`/events/${event.id}`}>
+                                    <Button text={"View more"}
+                                            variant={ButtonVariant.outline}
+                                            size={ButtonSize.regular}
+                                    />
+                                </NavLink>
                             </div>
                         </div>
                     })

@@ -4,6 +4,8 @@ import EventsContainer from "../../Modules/Events/EventsContainer";
 import SubscribeContainer from "../../Modules/Subscribe/SubscribeContainer";
 
 const EventsPage = () => {
+
+
     return (
         <div className={style.eventsPage}>
             <div className={style.events}>

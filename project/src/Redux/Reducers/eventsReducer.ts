@@ -3,7 +3,8 @@ import {EventsAction, EventsActionType, EventsState} from "../Other/Types/events
 const initialState: EventsState = {
     events: [],
     eventCategory: [],
-    count: 0
+    count: 0,
+    activeEvent: null
 }
 
 const eventsReducer = (state = initialState, action: EventsAction): EventsState => {
@@ -12,7 +13,8 @@ const eventsReducer = (state = initialState, action: EventsAction): EventsState 
             return {
                 events: action.payload,
                 eventCategory: state.eventCategory,
-                count: state.count
+                count: state.count,
+                activeEvent: state.activeEvent
             }
         case EventsActionType.GET_EVENTS_CATEGORY:
             return {
@@ -23,12 +25,18 @@ const eventsReducer = (state = initialState, action: EventsAction): EventsState 
             return {
                 events: action.payload,
                 eventCategory: state.eventCategory,
-                count: state.count
+                count: state.count,
+                activeEvent: state.activeEvent
             }
         case EventsActionType.GET_COUNT:
             return {
                 ...state,
                 count: action.payload
+            }
+        case EventsActionType.GET_EVENT_BY_ID:
+            return {
+                ...state,
+                activeEvent: action.payload
             }
         default :
             return state

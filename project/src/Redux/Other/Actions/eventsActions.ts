@@ -69,6 +69,13 @@ export const getEvents = (limit: number, eventTypeId: number, page: number, text
     }
 }
 
+export const getEventsById = (eventId: number) => {
+    return async (dispatch: Dispatch<EventsAction>) => {
+        const response = await eventAPI.getEventsById(eventId)
+        dispatch({type: EventsActionType.GET_EVENT_BY_ID, payload: response})
+    }
+}
+
 // export const getEvents = () => {
 //     return async (dispatch: Dispatch<EventsAction>) => {
 //         setTimeout(() => {

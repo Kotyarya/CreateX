@@ -57,7 +57,15 @@ export const eventAPI = {
             const response = await instance.get<IResponseEventAPI>(`event?limit=${limit}&page=${page}&eventTypeId=${eventTypeId}${requestText}`)
             return response.data
         } catch (e) {
-
+            alert(e)
+        }
+    },
+    async getEventsById(eventId: number) {
+        try {
+            const response = await instance.get(`event/${eventId}`)
+            return response.data
+        } catch (e) {
+            alert(e)
         }
     }
 }

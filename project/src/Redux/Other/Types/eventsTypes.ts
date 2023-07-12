@@ -4,7 +4,8 @@ export enum EventsActionType {
     GET_START_EVENTS = "GET_START_EVENTS",
     GET_EVENTS = "GET_EVENTS",
     GET_EVENTS_CATEGORY = "GET_EVENTS_CATEGORY",
-    GET_COUNT = "GET_COUNT"
+    GET_COUNT = "GET_COUNT",
+    GET_EVENT_BY_ID = "GET_EVENT_BY_ID"
 }
 
 interface GetStartEventsAction {
@@ -27,10 +28,16 @@ interface GetCount {
     payload: number
 }
 
-export type EventsAction = GetStartEventsAction | GetEvents | GetEventsCategory | GetCount
+interface GetEventById {
+    type: EventsActionType.GET_EVENT_BY_ID,
+    payload: IEvent
+}
+
+export type EventsAction = GetStartEventsAction | GetEvents | GetEventsCategory | GetCount | GetEventById
 
 export interface EventsState {
     events: IEvent[] | undefined,
     eventCategory: IEventCategory[] | undefined,
-    count: number
+    count: number,
+    activeEvent: IEvent | null
 }
