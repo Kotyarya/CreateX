@@ -18,7 +18,6 @@ const Lessons: FC<LessonsProps> = ({lessons}) => {
                     <p>{lesson.description}</p>
                 </details>
             </li>
-
         )
     })
 

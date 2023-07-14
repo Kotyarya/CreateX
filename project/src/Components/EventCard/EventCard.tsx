@@ -3,23 +3,45 @@ import style from "./EventCard.module.scss";
 import Button, {ButtonSize, ButtonVariant} from "../Button/Button";
 import {IEvent} from "../../Redux/API/eventAPI";
 import {NavLink} from "react-router-dom";
+import {markText} from "../../utils/helpers/markText";
 
 interface EventCardProps {
-    event: IEvent
+    event: IEvent,
+    isGridType: boolean,
+    searchText?: string
 }
 
-const EventCard: FC<EventCardProps> = ({event}) => {
-    return (
-        <div key={event.id} className={style.event}>
-            <div className={style.date}>
-                <div className={style.number}>{event.day}</div>
-                <div className={style.monthTime}>
-                    <p className={style.month}>{event.month}</p>
-                    <p className={style.time}>{event.time}</p>
+const EventCard: FC<EventCardProps> = ({event, isGridType, searchText}) => {
+
+
+    const dateBlock = (eventDay: string, eventMonth: string, eventTime: string) => {
+        if (!isGridType) {
+            return (
+                <div className={style.date}>
+                    <p className={style.number}>{eventDay}</p>
+                    <div className={style.monthTime}>
+                        <p className={style.month}>{eventMonth}</p>
+                        <p className={style.time}>{eventTime}</p>
+                    </div>
                 </div>
-            </div>
+            )
+        } else {
+            return (
+                <div className={style.date}>
+                    <p className={style.number}>{eventDay} {eventMonth.slice(0, 3)}</p>
+                    <p className={style.time}>{eventTime}</p>
+                </div>
+            )
+        }
+    }
+
+    return (
+        <div key={event.id} className={style.event + " " + (isGridType ? style.gridEvent : style.flexEvent)}>
+            {
+                dateBlock(event.day, event.month, event.time)
+            }
             <div className={style.text}>
-                <p className={style.title}>{event.title}</p>
+                <p className={style.title}>{markText(event.title, searchText || "", style.title)}</p>
                 <p className={style.type}>{event.eventType.name}</p>
             </div>
             <div className={style.viewMore}>
@@ -29,7 +51,6 @@ const EventCard: FC<EventCardProps> = ({event}) => {
                             size={ButtonSize.regular}
                     />
                 </NavLink>
-
             </div>
         </div>
     );

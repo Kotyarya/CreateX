@@ -7,11 +7,17 @@ import {ReactComponent as LinkedInSVG} from "../../assets/img/icons/linkedinSVG.
 import {ICurator} from "../../Redux/API/curatorAPI";
 import {imgUrl} from "../../utils/const/const";
 
-interface AboutCuratorProps {
-    curator: ICurator | undefined
+export enum AboutCuratorType {
+    curator = "course curator",
+    speaker = "speaker"
 }
 
-const AboutCurator: FC<AboutCuratorProps> = ({curator}) => {
+interface AboutCuratorProps {
+    curator: ICurator | undefined,
+    type: AboutCuratorType
+}
+
+const AboutCurator: FC<AboutCuratorProps> = ({curator, type}) => {
     return (
         <div className={style.wrapper}>
             <div className={style.img}>
@@ -19,7 +25,7 @@ const AboutCurator: FC<AboutCuratorProps> = ({curator}) => {
             </div>
             <div className={style.content}>
                 <article>
-                    <p>course curator</p>
+                    <p>{type}</p>
                     <h3>{curator?.name}</h3>
                 </article>
                 <p className={style.subtitle}>{curator?.jobTitle}</p>

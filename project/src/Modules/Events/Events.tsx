@@ -2,14 +2,12 @@ import React, {ChangeEvent, FC} from 'react';
 import style from "./Events.module.scss"
 import CustomSelect from "./Select/CustomSelect";
 import {nanoid} from "nanoid";
-import Button, {ButtonSize, ButtonVariant} from "../../Components/Button/Button";
 import ControlButton, {ControlButtonRotation} from "../../Components/ControlButton/ControlButton";
 import SearchInput from "../../Components/Input/SearchInput/SearchInput";
-import {markText} from "../../utils/helpers/markText";
 import {ReactComponent as FlexSVG} from "../../assets/img/icons/flex.svg";
 import {ReactComponent as GridSVG} from "../../assets/img/icons/grid.svg";
 import {IEvent} from "../../Redux/API/eventAPI";
-import {NavLink} from "react-router-dom";
+import EventCard from "../../Components/EventCard/EventCard";
 
 
 interface EventsProps {
@@ -55,27 +53,6 @@ const Events: FC<EventsProps> = ({
                                      pages
                                  }) => {
 
-    const dateBlock = (eventDay: string, eventMonth: string, eventTime: string) => {
-        if (!isGridType) {
-            return (
-                <div className={style.date}>
-                    <p className={style.number}>{eventDay}</p>
-                    <div className={style.monthTime}>
-                        <p className={style.month}>{eventMonth}</p>
-                        <p className={style.time}>{eventTime}</p>
-                    </div>
-                </div>
-            )
-        } else {
-            return (
-                <div className={style.date}>
-                    <p className={style.number}>{eventDay} {eventMonth.slice(0, 3)}</p>
-                    <p className={style.time}>{eventTime}</p>
-                </div>
-            )
-        }
-    }
-
     return (
         <div className={style.wrapper}>
             <article>
@@ -111,23 +88,7 @@ const Events: FC<EventsProps> = ({
             <div className={style.content + " " + (isGridType ? style.gridContent : style.flexContent)}>
                 {
                     events?.map((event) => {
-                        return <div className={style.event} key={event.id}>
-                            {
-                                dateBlock(event.day, event.month, event.time)
-                            }
-                            <div className={style.text}>
-                                {markText(event.title, searchText, style.title)}
-                                <p className={style.type}>{event.eventType.name}</p>
-                            </div>
-                            <div className={style.viewMore}>
-                                <NavLink to={`/events/${event.id}`}>
-                                    <Button text={"View more"}
-                                            variant={ButtonVariant.outline}
-                                            size={ButtonSize.regular}
-                                    />
-                                </NavLink>
-                            </div>
-                        </div>
+                        return <EventCard event={event} isGridType={isGridType} searchText={searchText}/>
                     })
                 }
             </div>

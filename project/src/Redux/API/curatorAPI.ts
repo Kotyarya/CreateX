@@ -37,5 +37,19 @@ export const curatorAPI = {
         } catch (e) {
             alert(e)
         }
+    },
+
+
+    async getActiveCurators(curatorId: number) {
+        try {
+            const response = await instance.get<ICuratorTemp>(`/curator/${curatorId}`)
+            const result: ICurator = {
+                ...response.data,
+                description: response.data.description.data.map((element) => String.fromCharCode(element)).join("")
+            }
+            return result
+        } catch (e) {
+            alert(e)
+        }
     }
 }

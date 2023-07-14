@@ -1,0 +1,117 @@
+@import "../../Styles/global";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 13.5rem;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    article {
+      h2 {
+        color: $gray900;
+        @include title1
+      }
+    }
+
+    .themes {
+      ul {
+        max-width: 65rem;
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+
+        li {
+          details {
+            summary {
+              width: 100%;
+              cursor: pointer;
+              display: inline-flex;
+              align-items: center;
+              gap: 2rem;
+              list-style: none;
+              color: $gray900;
+              @include leadBold;
+              margin-bottom: 1.6rem;
+
+              span {
+                color: $primary;
+                @include leadRegular;
+
+              }
+            }
+
+            summary:before {
+              content: "";
+              width: 2rem;
+              height: 2rem;
+              background-image: url("../../assets/img/icons/Close.svg");
+            }
+
+
+            p {
+              color: $gray800;
+              @include baseRegular;
+              margin-left: 4rem;
+              margin-bottom: 2rem;
+            }
+          }
+
+          details[open] {
+
+            summary:before {
+              background-image: url("../../assets/img/icons/Open.svg");
+            }
+
+          }
+
+
+        }
+      }
+    }
+  }
+
+  .card {
+    width: 49.5rem;
+    height: 45.5rem;
+    border: .1rem solid $gray300;
+    border-radius: .4rem;
+    box-shadow: $small;
+    padding: 4rem 3.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    .block {
+      .title {
+        color: $gray900;
+        text-transform: uppercase;
+        @include smallBold
+      }
+
+      .info {
+        color: $primary;
+        @include title4;
+      }
+
+      .description {
+        color: $gray700;
+        @include baseRegular;
+      }
+    }
+
+    a {
+      color: $primary;
+      text-transform: uppercase;
+      text-decoration: underline;
+      @include smallBold;
+    }
+
+    button {
+      margin-top: 3rem;
+    }
+  }
+}

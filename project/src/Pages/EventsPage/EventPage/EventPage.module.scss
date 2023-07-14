@@ -1,4 +1,22 @@
 .eventPage {
+  .head {
+    margin-bottom: 12rem;
+  }
+
   .themes {
+    margin-bottom: 12rem;
+  }
+
+  .group {
+    background-image: url("../../../assets/img/Background1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 6.6rem;
+    padding-bottom: 5.2rem;
+    margin-bottom: 12rem;
+
+    .speaker {
+      margin-bottom: 18rem;
+    }
   }
 }

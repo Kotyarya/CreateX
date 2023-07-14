@@ -13,7 +13,7 @@ export interface IEvent {
     time: string,
     date: string,
     eventTypeID: string,
-    curatorId: string,
+    curatorId: number,
     eventType: {
         name: string
     },
@@ -22,7 +22,8 @@ export interface IEvent {
         title: string,
         description: string,
         eventId: number
-    }[]
+    }[],
+    forWhom: { text: string }[]
 }
 
 export interface IEventCategory {
@@ -63,6 +64,7 @@ export const eventAPI = {
     async getEventsById(eventId: number) {
         try {
             const response = await instance.get(`event/${eventId}`)
+            console.log(response.data)
             return response.data
         } catch (e) {
             alert(e)

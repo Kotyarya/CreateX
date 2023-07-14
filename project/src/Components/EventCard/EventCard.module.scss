@@ -1,15 +1,45 @@
 @import "../../Styles/global";
 
 .event {
-  background: white;
+  transition: all .3s ease-in-out;
+  border: .1rem solid $gray300;
   border-radius: .4rem;
   display: flex;
+  background: white;
+
+  .number {
+    color: $primary;
+  }
+
+  .time {
+    @include baseRegular;
+    color: $gray700;
+  }
+
+
+  mark {
+    color: white;
+    background: $btn-gradient;
+    border-radius: .4rem;
+    padding: .2rem;
+  }
+
+  .type {
+    @include baseRegular;
+    color: $gray700;
+  }
+
+  .title {
+    color: $gray900;
+  }
+}
+
+.flexEvent {
   gap: 4rem;
   align-items: center;
   justify-content: center;
   padding: 3.2rem;
   width: 123rem;
-  transition: all .3s ease-in-out;
 
   .date {
     display: flex;
@@ -19,7 +49,6 @@
       width: 6rem;
       text-align: center;
       @include display4;
-      color: $primary;
     }
 
     .monthTime {
@@ -27,12 +56,6 @@
         @include largeBold;
         color: $gray900;
       }
-
-      .time {
-        @include baseRegular;
-        color: $gray700;
-      }
-
     }
   }
 
@@ -41,12 +64,38 @@
 
     .title {
       @include leadBold;
-      color: $gray900;
-    }
-
-    .type {
-      @include baseRegular;
-      color: $gray700;
     }
   }
+}
+
+.gridEvent {
+  padding: 2.4rem;
+  border: .1rem solid $gray300;
+  border-radius: .4rem;
+
+  flex-direction: column;
+  justify-content: space-between;
+
+  .date {
+    .number {
+      @include title3;
+    }
+  }
+
+  .text {
+    height: 13.9rem;
+
+    .title {
+      @include largeBold;
+    }
+
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.event:hover {
+  box-shadow: $small;
 }

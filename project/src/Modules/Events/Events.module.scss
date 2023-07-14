@@ -56,118 +56,18 @@
     }
   }
 
-  .content {
-    .event {
-      transition: all .3s ease-in-out;
-      border: .1rem solid $gray300;
-      border-radius: .4rem;
-      display: flex;
-
-      .number {
-        color: $primary;
-      }
-
-      .time {
-        @include baseRegular;
-        color: $gray700;
-      }
-
-
-      mark {
-        color: white;
-        background: $btn-gradient;
-        border-radius: .4rem;
-        padding: .2rem;
-      }
-
-      .type {
-        @include baseRegular;
-        color: $gray700;
-      }
-
-      .title {
-        color: $gray900;
-      }
-    }
-
-    .event:hover {
-      box-shadow: $small;
-    }
-  }
-
   .gridContent {
     display: grid;
     grid-template-columns: repeat(3, 39rem);
     grid-auto-rows: 32.3rem;
     grid-gap: 3rem;
-
-    .event {
-      padding: 2.4rem;
-      border: .1rem solid $gray300;
-      border-radius: .4rem;
-
-      flex-direction: column;
-      justify-content: space-between;
-
-      .date {
-        .number {
-          @include title3;
-        }
-      }
-
-      .text {
-        height: 13.9rem;
-
-        .title {
-          @include largeBold;
-        }
-
-      }
-
-      button {
-        width: 100%;
-      }
-    }
   }
+
 
   .flexContent {
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
-
-    .event {
-      gap: 4rem;
-      align-items: center;
-      justify-content: center;
-      padding: 3.2rem;
-      width: 123rem;
-
-      .date {
-        display: flex;
-        gap: 2rem;
-
-        .number {
-          width: 6rem;
-          text-align: center;
-          @include display4;
-        }
-
-        .monthTime {
-          .month {
-            @include largeBold;
-            color: $gray900;
-          }
-        }
-      }
-
-      .text {
-        width: 75.7rem;
-
-        .title {
-          @include leadBold;
-        }
-      }
-    }
   }
 
   .page {

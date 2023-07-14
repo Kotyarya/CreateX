@@ -12,7 +12,7 @@ import {ICurator} from "../../Redux/API/curatorAPI";
 interface TeamCarouselProps {
     translate: number,
     moveCarousel: (num: number) => void,
-    curators: ICurator[] | undefined
+    curators: ICurator[] | null
 }
 
 const TeamCarousel: FC<TeamCarouselProps> = ({translate, moveCarousel, curators}) => {
