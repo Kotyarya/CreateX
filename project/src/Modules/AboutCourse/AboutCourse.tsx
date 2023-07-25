@@ -8,12 +8,10 @@ interface AboutCourseProps {
     willLearn: { text: string }[],
     date: string,
     price: number,
-    lessons: { title: string, description: string }[]
+    lessonsLength: number
 }
 
-const AboutCourse: FC<AboutCourseProps> = ({description, willLearn, date, price, lessons}) => {
-
-
+const AboutCourse: FC<AboutCourseProps> = ({description, willLearn, date, price, lessonsLength}) => {
     return (
         <div className={style.wrapper}>
             <div className={style.content}>
@@ -40,7 +38,7 @@ const AboutCourse: FC<AboutCourseProps> = ({description, willLearn, date, price,
                 </div>
                 <div className={style.block}>
                     <p className={style.title}>duration</p>
-                    <p className={style.text}>2 months - {lessons.length} lessons</p>
+                    <p className={style.text}>2 months - {lessonsLength} lessons</p>
                     <p className={style.description}>Rhoncus pellentesque auctor auctor orci vulputate faucibus quis
                         ut.</p>
                 </div>

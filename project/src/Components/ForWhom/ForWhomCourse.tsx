@@ -1,18 +1,24 @@
 import React, {FC} from 'react';
-import style from "./ForWhomCourse.module.scss"
+import style from "./ForWhom.module.scss"
 import {nanoid} from "nanoid";
 
-interface ForWhomCourseProps {
-    forWhom: { text: string }[] | undefined
+export enum ForWhomType {
+    event = "event",
+    course = "event"
 }
 
-const ForWhomCourse: FC<ForWhomCourseProps> = ({forWhom}) => {
+interface ForWhomCourseProps {
+    forWhom: { text: string }[] | undefined,
+    type: ForWhomType
+}
+
+const ForWhom: FC<ForWhomCourseProps> = ({forWhom, type}) => {
 
     return (
         <div className={style.wrapper}>
             <article>
                 <p>for whom?</p>
-                <h2>Who will benefit from the course:</h2>
+                <h2>Who will benefit from the {type}:</h2>
             </article>
             <ul>
                 {forWhom?.map((item) => {
@@ -23,4 +29,4 @@ const ForWhomCourse: FC<ForWhomCourseProps> = ({forWhom}) => {
     );
 };
 
-export default ForWhomCourse;
+export default ForWhom;

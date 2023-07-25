@@ -9,11 +9,15 @@ const AboutCourseContainer = () => {
     const date = course ? course.date : ""
     const price = course ? course.price : 0
     const willLearn = course ? course.willLearn : []
-    const lessons = course ? course.lessons : []
+    const lessonsLength = course ? course.lessons.length : 0
 
 
     return (
-        <AboutCourse description={description} willLearn={willLearn} date={date} lessons={lessons} price={price}/>
+        <AboutCourse description={description}
+                     willLearn={willLearn}
+                     date={date}
+                     lessonsLength={lessonsLength}
+                     price={price}/>
     );
 };
 

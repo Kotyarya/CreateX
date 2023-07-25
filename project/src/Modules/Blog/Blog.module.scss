@@ -1,0 +1,132 @@
+@import "../../Styles/global";
+
+.wrapper {
+  width: 81rem;
+
+  .type {
+    @include baseRegular;
+    color: $gray800;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+      fill: $gray900;
+      margin-right: .8rem;
+    }
+
+    span {
+      color: $primary;
+      @include baseBold;
+      display: inline-flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-left: 1.2rem;
+    }
+
+    span:before {
+      content: "";
+      width: .1rem;
+      height: 1.6rem;
+      background-image: url("../../assets/img/icons/divider.svg");
+      background-repeat: repeat-x;
+      background-position: center;
+    }
+  }
+
+  h2 {
+    @include title1;
+    color: $gray900;
+    margin-bottom: 2.6rem;
+  }
+
+  .info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    .dateTime {
+      @include baseRegular;
+      color: $gray700;
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+
+      p {
+        display: inline-flex;
+        align-items: center;
+        gap: .8rem;
+      }
+
+      p:before {
+        content: "";
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+
+      .date:before {
+        background-image: url("../../assets/img/icons/Calendar.svg");
+      }
+
+      .time:before {
+        background-image: url("../../assets/img/icons/Clock.svg");
+      }
+    }
+
+    .share {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+
+      p {
+        @include baseBold;
+        color: $gray900;
+      }
+
+      svg {
+        width: 2rem;
+        height: 2rem;
+        fill: $gray700;
+        cursor: pointer;
+      }
+
+      svg:hover {
+        fill: $primary;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: .4rem;
+    margin-bottom: 6rem;
+  }
+
+  .text {
+    margin-bottom: 2.4rem;
+
+    .mainText {
+      @include leadBold;
+      color: $gray900;
+      margin-bottom: 2.4rem;
+    }
+
+    .firstText,
+    .secondText {
+      @include baseRegular;
+      color: $gray800;
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  .summary {
+    @include baseRegular;
+    color: $gray800;
+    margin-top: 2.4rem;
+  }
+}

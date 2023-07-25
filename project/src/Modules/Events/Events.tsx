@@ -88,7 +88,7 @@ const Events: FC<EventsProps> = ({
             <div className={style.content + " " + (isGridType ? style.gridContent : style.flexContent)}>
                 {
                     events?.map((event) => {
-                        return <EventCard event={event} isGridType={isGridType} searchText={searchText}/>
+                        return <EventCard key={event.id} event={event} isGridType={isGridType} searchText={searchText}/>
                     })
                 }
             </div>

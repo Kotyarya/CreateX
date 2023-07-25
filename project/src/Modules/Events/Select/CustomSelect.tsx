@@ -1,8 +1,16 @@
-import React from 'react';
+import React, {FC} from 'react';
 import "./CustomSelect.scss"
 import Select from "react-select";
 
-const CustomSelect = ({options, value, onChange, defaultValue, placeholder}: any) => {
+interface CustomSelectProps {
+    options: any,
+    value: any,
+    onChange: any,
+    defaultValue?: any,
+    placeholder: any
+}
+
+const CustomSelect: FC<CustomSelectProps> = ({options, value, onChange, defaultValue, placeholder}) => {
     return <Select options={options} value={value} onChange={onChange} defaultValue={defaultValue}
                    placeholder={placeholder} classNamePrefix={"custom-select"} className={"custom-select-container"}
     />

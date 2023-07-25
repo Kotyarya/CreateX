@@ -1,6 +1,6 @@
 import {instance} from "./axiosConfig";
 
-interface IResponseEventAPI {
+interface IEventResponse {
     count: number,
     rows: IEvent[]
 }
@@ -12,7 +12,7 @@ export interface IEvent {
     day: string,
     time: string,
     date: string,
-    eventTypeID: string,
+    eventTypeID: number,
     curatorId: number,
     eventType: {
         name: string
@@ -34,7 +34,7 @@ export interface IEventCategory {
 export const eventAPI = {
     async getStartEvent() {
         try {
-            const response = await instance.get<IResponseEventAPI>("event?page=1&limit=3")
+            const response = await instance.get<IEventResponse>("event?page=1&limit=3")
             return response.data.rows
         } catch (e) {
             alert(e)
@@ -55,7 +55,7 @@ export const eventAPI = {
 
             let requestText = text ? `&text=${text}` : ""
 
-            const response = await instance.get<IResponseEventAPI>(`event?limit=${limit}&page=${page}&eventTypeId=${eventTypeId}${requestText}`)
+            const response = await instance.get<IEventResponse>(`event?limit=${limit}&page=${page}&eventTypeId=${eventTypeId}${requestText}`)
             return response.data
         } catch (e) {
             alert(e)
@@ -64,7 +64,6 @@ export const eventAPI = {
     async getEventsById(eventId: number) {
         try {
             const response = await instance.get(`event/${eventId}`)
-            console.log(response.data)
             return response.data
         } catch (e) {
             alert(e)

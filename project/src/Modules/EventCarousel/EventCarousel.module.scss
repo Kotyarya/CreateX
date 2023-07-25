@@ -1,0 +1,61 @@
+@import "../../Styles/global";
+
+.wrapper {
+  width: 100%;
+  padding-top: 10rem;
+  padding-bottom: 18.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../../assets/img/Background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .head {
+    display: flex;
+    align-items: center;
+    gap: 64.3rem;
+    margin-bottom: 6rem;
+
+    article {
+      color: $gray900;
+
+      p {
+
+        @include title6
+      }
+
+      h2 {
+        @include title1
+      }
+    }
+
+    .control {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  .carousel {
+    width: 123rem;
+    overflow: hidden;
+    margin-bottom: 8.5rem;
+
+    .content {
+      transition: all .3s ease-in-out;
+      display: flex;
+      gap: 3rem;
+    }
+  }
+
+  .allEvents {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    p {
+      color: $gray900;
+      @include title3;
+    }
+  }
+}

@@ -21,7 +21,11 @@ const AboutCurator: FC<AboutCuratorProps> = ({curator, type}) => {
     return (
         <div className={style.wrapper}>
             <div className={style.img}>
-                <img src={imgUrl + curator?.img} alt=""/>
+                <img src={
+                    curator ?
+                        imgUrl + curator.img
+                        : ""
+                } alt=""/>
             </div>
             <div className={style.content}>
                 <article>

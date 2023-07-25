@@ -1,0 +1,43 @@
+@import "../../Styles/global";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  span {
+    box-sizing: content-box;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: white;
+    border-radius: .4rem;
+    border: .2rem solid $gray500;
+    display: grid;
+    place-content: center;
+
+    svg {
+      width: 1.3rem;
+      height: 1.3rem;
+      fill: white;
+    }
+  }
+
+  input:checked ~ span {
+    background: $primary;
+    border-color: $primary;
+  }
+
+  p {
+    color: $gray800;
+    @include baseRegular
+  }
+}

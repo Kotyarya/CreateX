@@ -6,7 +6,9 @@ import ThemesEventContainer from "../../../Modules/ThemesEvent/ThemesEventContai
 import EventTitle from "../../../Modules/EventTitle/EventTitle";
 import AboutSpeakerContainer from "../../../Modules/AboutSpeaker/AboutSpeakerContainer";
 import ForWhomEventContainer from "../../../Modules/ForWhomEvent/ForWhomEventContainer";
-import SubscribeInEventPageContainer from "../../../Modules/SubscribeInEventPage/SubscribeInEventPageContainer";
+import SubscribeNewsletterContainer from "../../../Modules/SubscribeInEventPage/SubscribeNewsletterContainer";
+import EventCarouselContainer from "../../../Modules/EventCarousel/EventCarouselContainer";
+import RegisterForEventContainer from "../../../Modules/RegisterForEvent/RegisterForEventContainer";
 
 const EventPage = () => {
     const eventId = useEventId()
@@ -34,7 +36,13 @@ const EventPage = () => {
                 </div>
             </div>
             <div className={style.subscribe}>
-                <SubscribeInEventPageContainer/>
+                <SubscribeNewsletterContainer/>
+            </div>
+            <div className={style.joinEvent}>
+                <RegisterForEventContainer/>
+            </div>
+            <div className={style.eventsCarousel}>
+                <EventCarouselContainer/>
             </div>
         </div>
     );

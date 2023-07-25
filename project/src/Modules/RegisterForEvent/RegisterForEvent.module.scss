@@ -1,0 +1,35 @@
+@import "../../Styles/global";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13.5rem;
+
+  .content {
+    article {
+      color: $gray900;
+      margin-bottom: 4rem;
+
+      p {
+        @include title6
+      }
+
+      h2 {
+        @include title1
+      }
+
+    }
+
+    .text {
+      margin-top: 2.4rem;
+      color: $gray800;
+      @include baseRegular
+    }
+  }
+
+  img {
+    width: 60rem;
+    height: 46.8rem;
+  }
+}

@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import style from "./AboutInHomePage.module.scss"
+import style from "./WhoWeAre.module.scss"
 import img from "./img/image.png"
 import Button, {ButtonSize, ButtonVariant} from "../../Components/Button/Button";
 import {NavLink} from "react-router-dom";
@@ -30,7 +30,6 @@ const WhoWeAre: FC = () => {
                             size={ButtonSize.large}
                         />
                     </NavLink>
-
                 </div>
             </div>
         </div>

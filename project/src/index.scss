@@ -1,3 +1,5 @@
+@import "Styles/global";
+
 /*------------null style--------------*/
 
 :root {
@@ -48,6 +50,25 @@ button {
   border: none;
   cursor: pointer;
 }
+
+::-webkit-scrollbar {
+  width: .7rem;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FEDCD2;
+  transition: all .3s ease-in-out;
+  border-radius: .6rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $btn-gradient;
+}
+
 
 /*--------------------------*/
 

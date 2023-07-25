@@ -1,6 +1,6 @@
 import {instance} from "./axiosConfig";
 
-export interface ICuratorTemp {
+export interface ICuratorResponse {
     id: number,
     name: string,
     jobTitle: string,
@@ -13,13 +13,7 @@ export interface ICuratorTemp {
     }
 }
 
-export interface ICurator {
-    id: number,
-    name: string,
-    jobTitle: string,
-    rate: number,
-    students: number,
-    img: string,
+export interface ICurator extends Omit<ICuratorResponse, 'description'> {
     description: string
 }
 
@@ -27,7 +21,7 @@ export interface ICurator {
 export const curatorAPI = {
     getCurators: async (limit?: number) => {
         try {
-            const response = await instance.get<ICuratorTemp[]>(`/curator${limit ? `?limit=${limit}` : ""}`)
+            const response = await instance.get<ICuratorResponse[]>(`/curator${limit ? `?limit=${limit}` : ""}`)
             return response.data.map((curator) => {
                 return {
                     ...curator,
@@ -42,7 +36,7 @@ export const curatorAPI = {
 
     async getActiveCurators(curatorId: number) {
         try {
-            const response = await instance.get<ICuratorTemp>(`/curator/${curatorId}`)
+            const response = await instance.get<ICuratorResponse>(`/curator/${curatorId}`)
             const result: ICurator = {
                 ...response.data,
                 description: response.data.description.data.map((element) => String.fromCharCode(element)).join("")

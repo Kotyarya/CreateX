@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
-import {ILessons} from "../../Redux/Other/data";
 import {nanoid} from "nanoid";
 import style from "./Lessons.module.scss"
 import illustration from "./img/illustration.png"
+import {ILessons} from "../../Redux/API/coursesAPI";
 
 interface LessonsProps {
     lessons: ILessons[] | undefined

@@ -1,0 +1,144 @@
+@import "../../Styles/global";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+
+
+  article {
+    color: $gray900;
+    text-align: center;
+
+    p {
+      @include title6
+    }
+
+    h2 {
+      @include title1
+    }
+  }
+
+  .control {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+
+    .blogTypes {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-right: 17.3rem;
+
+      button {
+        @include baseBold;
+        color: $gray600;
+        padding: 1rem 2rem;
+        background: none;
+        border-radius: .4rem;
+        display: inline-flex;
+        align-items: center;
+        gap: .8rem;
+
+        svg {
+          width: 1.6rem;
+          height: 1.6rem;
+          fill: $gray600;
+        }
+
+        p {
+          @include extraExtraSmallBold;
+        }
+      }
+
+      button:hover {
+        color: $primary;
+
+        svg {
+          fill: $primary;
+        }
+      }
+
+      .active {
+        color: $primary;
+        border: .1rem solid $primary;
+
+        svg {
+          fill: $primary;
+        }
+      }
+    }
+
+    .select {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-right: 4rem;
+
+      p {
+        @include baseBold;
+        color: $gray800;
+      }
+    }
+  }
+
+  .content {
+    display: grid;
+    row-gap: 6rem;
+    column-gap: 1rem;
+    grid-template-columns: repeat(12, 10rem);
+
+    .blog0 {
+      grid-area: zero;
+    }
+
+    .blog1 {
+      grid-area: one;
+    }
+
+    .blog2 {
+      grid-area: two;
+    }
+
+    .blog3 {
+      grid-area: three;
+    }
+
+    .blog4 {
+      grid-area: four;
+    }
+
+    .blog5 {
+      grid-area: five;
+    }
+
+    .blog6 {
+      grid-area: six;
+    }
+
+    .blog7 {
+      grid-area: seven;
+
+    }
+  }
+
+  .page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    p {
+      cursor: pointer;
+      @include baseBold;
+      color: $gray800;
+      user-select: none;
+    }
+
+    .activePage {
+      color: $primary;
+    }
+
+  }
+}

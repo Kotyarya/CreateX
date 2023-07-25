@@ -1,13 +1,15 @@
 import {instance} from "./axiosConfig";
-import {ICurator, ICuratorTemp} from "./curatorAPI";
+import {ICurator, ICuratorResponse} from "./curatorAPI";
+import {IBranch} from "./branchAPI";
 
 
-interface IBranch {
-    id: number,
-    name: string
+export interface ILessons {
+    title: string,
+    description: string
 }
 
-export interface ICourseTemp {
+
+export interface ICourseResponse {
     id: number,
     title: string,
     price: number,
@@ -16,25 +18,14 @@ export interface ICourseTemp {
     branchId: number,
     curatorId: number,
     branch: IBranch,
-    curator: ICuratorTemp,
+    curator: ICuratorResponse,
     willLearn: { text: string }[],
-    lessons: { title: string, description: string }[],
+    lessons: ILessons[],
     forWhom: { text: string }[]
 }
 
-export interface ICourse {
-    id: number,
-    title: string,
-    price: number,
-    description: string,
-    date: string,
-    branchId: number,
-    curatorId: number,
-    branch: IBranch,
+export interface ICourse extends Omit<ICourseResponse, "curator"> {
     curator: ICurator,
-    willLearn: { text: string }[],
-    lessons: { title: string, description: string }[],
-    forWhom: { text: string }[]
 }
 
 
@@ -55,9 +46,10 @@ export const coursesApi = {
             alert(e)
         }
     },
+
     getCourseById: async (courseId: number) => {
         try {
-            const response = await instance.get<ICourseTemp>(`/course/${courseId}`)
+            const response = await instance.get<ICourseResponse>(`/course/${courseId}`)
             return {
                 ...response.data,
                 curator: {

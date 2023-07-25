@@ -1,0 +1,139 @@
+@import "../../Styles/global";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  position: relative;
+
+  img {
+    width: auto;
+    min-height: 30rem;
+    object-fit: cover;
+    border-radius: .4rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+
+    .info {
+      display: flex;
+
+      .branch {
+        @include smallBold;
+        color: $gray700;
+      }
+
+      .time,
+      .date {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        margin-left: 1.2rem;
+
+        p {
+          @include smallRegular;
+          color: $gray700;
+          display: inline-flex;
+          align-items: center;
+          gap: .8rem;
+        }
+
+        p:before {
+          content: "";
+          background-repeat: no-repeat;
+          width: 1.6rem;
+          height: 1.6rem;
+        }
+      }
+
+      .date {
+        p:before {
+          background-image: url("../../assets/img/icons/Calendar.svg");
+        }
+      }
+
+      .time {
+        p:before {
+          background-image: url("../../assets/img/icons/Clock.svg");
+        }
+      }
+
+      .date:before,
+      .time:before {
+        content: "";
+        width: .1rem;
+        height: 1.2rem;
+        background-image: url("../../assets/img/icons/divider.svg");
+        background-repeat: no-repeat;
+      }
+
+
+    }
+
+    .title {
+      color: $gray900;
+      @include leadBold;
+
+
+      mark {
+        color: white;
+        background: $btn-gradient;
+        border-radius: .4rem;
+        padding: .2rem;
+      }
+    }
+
+    .description {
+      color: $gray800;
+      @include baseRegular;
+      max-height: 5.2rem;
+      overflow: hidden;
+    }
+
+    .link {
+      color: $gray900;
+      @include baseBold;
+      display: inline-flex;
+      align-items: center;
+      gap: .8rem;
+      width: fit-content;
+
+
+      svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: $primary;
+      }
+    }
+
+    .link:hover {
+      color: $primary;
+    }
+
+  }
+
+  .label {
+    position: absolute;
+    z-index: 1;
+    top: 1.2rem;
+    left: 1.2rem;
+    background: white;
+    color: $gray800;
+    @include smallRegular;
+    padding: 0 .8rem;
+    border-radius: .4rem;
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+      fill: $gray800;
+    }
+  }
+}
+

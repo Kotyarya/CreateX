@@ -22,6 +22,7 @@ const TeamCarousel: FC<TeamCarouselProps> = ({translate, moveCarousel, curators}
         return (
             <div className={style.block} key={nanoid(10)}>
                 <div className={style.img}>
+                    <img src={imgUrl + curator.img} alt="img"/>
                     <div className={style.gradient}>
                         <div>
                             <FacebookSVG/>
@@ -30,7 +31,6 @@ const TeamCarousel: FC<TeamCarouselProps> = ({translate, moveCarousel, curators}
                         </div>
 
                     </div>
-                    <img src={imgUrl + curator.img} alt="img"/>
                 </div>
                 <article>
                     <h4>{curator.name}</h4>

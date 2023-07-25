@@ -41,7 +41,7 @@ const EventCard: FC<EventCardProps> = ({event, isGridType, searchText}) => {
                 dateBlock(event.day, event.month, event.time)
             }
             <div className={style.text}>
-                <p className={style.title}>{markText(event.title, searchText || "", style.title)}</p>
+                {markText(event.title, searchText || "", style.title)}
                 <p className={style.type}>{event.eventType.name}</p>
             </div>
             <div className={style.viewMore}>

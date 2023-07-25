@@ -28,8 +28,8 @@
 }
 
 .small {
-  width: 5.2rem;
-  height: 5.2rem;
+  min-width: 5.2rem;
+  min-height: 5.2rem;
 
   span {
     width: 8.4rem;
@@ -44,8 +44,8 @@
 }
 
 .large {
-  width: 8rem;
-  height: 8rem;
+  min-width: 8rem;
+  min-height: 8rem;
 
   svg {
     width: 2.6rem;

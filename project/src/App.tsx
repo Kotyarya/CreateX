@@ -7,11 +7,11 @@ import CoursesPage from "./Pages/CoursesPage/CoursesPage";
 import CoursePage from "./Pages/CoursesPage/CoursePage/CoursePage";
 import EventsPage from "./Pages/EventsPage/EventsPage";
 import EventPage from "./Pages/EventsPage/EventPage/EventPage";
+import BlogsPage from "./Pages/BlogsPage/BlogsPage";
+import BlogPage from "./Pages/BlogsPage/BlogPage/BlogPage";
 
 
 const App: FC = () => {
-
-
     return (
         <BrowserRouter>
             <NavBarContainer/>
@@ -21,7 +21,10 @@ const App: FC = () => {
                 <Route path={"/courses/:courseID"} element={<CoursePage/>}/>
                 <Route path={"/events"} element={<EventsPage/>}/>
                 <Route path={"/events/:eventID"} element={<EventPage/>}/>
+                <Route path={"/blog/"} element={<BlogsPage/>}/>
+                <Route path={"/blog/:blogId"} element={<BlogPage/>}/>
             </Routes>
+            {/*<FooterContainer/>*/}
         </BrowserRouter>
     );
 }

@@ -16,7 +16,7 @@ const HomeEvents: FC<HomeEventsProps> = ({events}) => {
 
     const eventsBlock = events?.map((event) => {
         return (
-            <div className={style.event}>
+            <div key={event.id} className={style.event}>
                 <EventCard event={event} isGridType={false}/>
             </div>
         )

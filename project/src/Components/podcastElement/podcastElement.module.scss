@@ -1,0 +1,45 @@
+@import "../../Styles/global";
+
+.podcastElement {
+  background: white;
+
+
+  .track {
+    position: relative;
+
+
+    input {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      cursor: pointer;
+      outline: none;
+      overflow: hidden;
+
+    }
+
+    input::-webkit-slider-runnable-track {
+      height: 10rem;
+      background: $gray600;
+    }
+
+    input::-moz-range-track {
+      height: 10rem;
+      background: $gray600;
+    }
+
+    input::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 1rem;
+      box-shadow: -40rem 0 0 40rem $primary;
+    }
+
+    input::-moz-range-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 1rem;
+      box-shadow: -40rem 0 0 40rem $primary;
+    }
+  }
+}

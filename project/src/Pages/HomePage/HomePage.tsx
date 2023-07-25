@@ -8,7 +8,7 @@ import TestimonialsContainer from "../../Modules/Testimonials/TestimonialsContai
 import SubscribeContainer from "../../Modules/Subscribe/SubscribeContainer";
 import HomeCoursesContainer from "../../Modules/HomeCourses/HomeCoursesContainer";
 import TeamCarouselContainer from "../../Modules/TeamsCarousel/TeamCarouselContainer";
-import WhoWeAre from "../../Modules/WhoWeAre/AboutInHomePage";
+import WhoWeAre from "../../Modules/WhoWeAre/WhoWeAre";
 
 const HomePage: FC = () => {
     document.documentElement.scrollTo({
