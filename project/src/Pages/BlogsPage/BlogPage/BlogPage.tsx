@@ -4,6 +4,8 @@ import BlogContainer from "../../../Modules/Blog/BlogContainer";
 import {useBlogId} from "../../../hook/useBlogId";
 import {useAction} from "../../../hook/useAction";
 import BlogAsideContainer from "../../../Modules/BlogAside/BlogAsideContainer";
+import SubscribeNewsletterContainer from "../../../Modules/SubscribeInEventPage/SubscribeNewsletterContainer";
+import BlogsCarouselContainer from "../../../Modules/BlogsCarousel/BlogsCarouselContainer";
 
 const BlogPage = () => {
 
@@ -25,6 +27,12 @@ const BlogPage = () => {
                 <div className={style.aside}>
                     <BlogAsideContainer/>
                 </div>
+            </div>
+            <div className={style.subscribeNewsletter}>
+                <SubscribeNewsletterContainer/>
+            </div>
+            <div className={style.blogsCarousel}>
+                <BlogsCarouselContainer/>
             </div>
         </div>
     );

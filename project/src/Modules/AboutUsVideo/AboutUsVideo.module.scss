@@ -1,0 +1,42 @@
+@import "../../Styles/global";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13.5rem;
+
+  .content {
+    .play {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      margin-bottom: 4rem;
+
+      p {
+        color: $gray900;
+        @include smallBold
+      }
+    }
+
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .block {
+      h3 {
+        color: $primary;
+        @include display4;
+      }
+
+      p {
+        color: $gray900;
+        @include largeBold
+      }
+    }
+  }
+
+}

@@ -1,7 +1,6 @@
 @import "../../Styles/global";
 
 .PlayButton {
-
   background: $primary;
   border-radius: 50%;
   display: flex;
@@ -44,8 +43,8 @@
 }
 
 .large {
-  min-width: 8rem;
-  min-height: 8rem;
+  width: 8rem;
+  height: 8rem;
 
   svg {
     width: 2.6rem;

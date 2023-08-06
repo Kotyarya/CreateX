@@ -1,7 +1,30 @@
 @import "../../Styles/global";
 
+
 .wrapper {
   width: 81rem;
+
+  .share {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    p {
+      @include baseBold;
+      color: $gray900;
+    }
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+      fill: $gray700;
+      cursor: pointer;
+    }
+
+    svg:hover {
+      fill: $primary;
+    }
+  }
 
   .type {
     @include baseRegular;
@@ -77,27 +100,7 @@
       }
     }
 
-    .share {
-      display: flex;
-      align-items: center;
-      gap: 1.2rem;
 
-      p {
-        @include baseBold;
-        color: $gray900;
-      }
-
-      svg {
-        width: 2rem;
-        height: 2rem;
-        fill: $gray700;
-        cursor: pointer;
-      }
-
-      svg:hover {
-        fill: $primary;
-      }
-    }
   }
 
   img {
@@ -128,5 +131,38 @@
     @include baseRegular;
     color: $gray800;
     margin-top: 2.4rem;
+  }
+
+  .shareTagsWrapper {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+
+    .tags {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+
+      p {
+        color: $gray900;
+        @include baseBold
+      }
+
+      div {
+        padding: .5rem 1.6rem;
+        border-radius: .4rem;
+        border: .1rem solid $gray400;
+        @include smallBold;
+        color: $gray700;
+        cursor: default;
+        transition: all .3s ease-in-out;
+      }
+
+      div:hover {
+        border: .1rem solid $primary;
+        background: $primary;
+        color: white;
+      }
+    }
   }
 }

@@ -9,6 +9,7 @@ import EventsPage from "./Pages/EventsPage/EventsPage";
 import EventPage from "./Pages/EventsPage/EventPage/EventPage";
 import BlogsPage from "./Pages/BlogsPage/BlogsPage";
 import BlogPage from "./Pages/BlogsPage/BlogPage/BlogPage";
+import AboutUsPage from "./Pages/AboutUsPage/AboutUsPage";
 
 
 const App: FC = () => {
@@ -23,6 +24,7 @@ const App: FC = () => {
                 <Route path={"/events/:eventID"} element={<EventPage/>}/>
                 <Route path={"/blog/"} element={<BlogsPage/>}/>
                 <Route path={"/blog/:blogId"} element={<BlogPage/>}/>
+                <Route path={"/about-us"} element={<AboutUsPage/>}/>
             </Routes>
             {/*<FooterContainer/>*/}
         </BrowserRouter>

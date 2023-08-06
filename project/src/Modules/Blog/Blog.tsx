@@ -9,6 +9,7 @@ import {ReactComponent as FacebookSVG} from "../../assets/img/icons/facebookSVG.
 import {ReactComponent as TwitterSVG} from "../../assets/img/icons/twitterSVG.svg";
 import {ReactComponent as LinkedInSVG} from "../../assets/img/icons/linkedinSVG.svg";
 import BlogElement from "../../Components/BlogElement/BlogElement";
+import {nanoid} from "nanoid";
 
 const Blog = () => {
     const blog = useTypedSelector(state => state.blogs.activeBlog)
@@ -59,6 +60,20 @@ const Blog = () => {
                          videoElement={blog?.videoElement || null}
                          podcastElement={blog?.podcastElement || null}/>
             <p className={style.summary}>{blog?.summary}</p>
+            <div className={style.shareTagsWrapper}>
+                <div className={style.tags}>
+                    <p>Tags:</p>
+                    {
+                        blog?.branch.tags.map((tag, index) => index < 3 ? <div key={nanoid(10)}>{tag.text}</div> : null)
+                    }
+                </div>
+                <div className={style.share}>
+                    <p>Share:</p>
+                    <FacebookSVG/>
+                    <TwitterSVG/>
+                    <LinkedInSVG/>
+                </div>
+            </div>
         </div>
     );
 };

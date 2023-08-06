@@ -1,0 +1,31 @@
+@import "../../Styles/global";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+
+  .head {
+    display: flex;
+    gap: 80rem;
+
+    article {
+      color: $gray900;
+
+      p {
+        @include title6
+      }
+
+      h2 {
+        @include title1
+      }
+    }
+  }
+
+
+  .content {
+    display: flex;
+    gap: 3rem;
+  }
+}

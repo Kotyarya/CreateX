@@ -1,0 +1,54 @@
+@import "../../Styles/global";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .head {
+    display: flex;
+    gap: 75rem;
+    margin-bottom: 6rem;
+
+    article {
+      color: $gray900;
+
+      p {
+        @include title6
+      }
+
+      h2 {
+        @include title1
+      }
+    }
+
+    .control {
+      display: flex;
+      gap: 2.4rem;
+    }
+  }
+
+  .content {
+    overflow: hidden;
+    width: 123rem;
+    margin-bottom: 8rem;
+
+    .carousel {
+      display: flex;
+      gap: 3rem;
+      transition: all .3s ease-in-out;
+      transform: translateX(4rem);
+    }
+  }
+
+  .more {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    p {
+      color: $gray900;
+      @include title3
+    }
+  }
+}

@@ -36,7 +36,12 @@ const BlogCard: FC<BlogCardProps> = ({blog, staticSize, searchText}) => {
 
 
     return (
-        <div className={style.wrapper} style={staticSize ? {width: "39rem", height: "50.7rem"} : undefined}>
+        <div className={style.wrapper} style={staticSize ? {
+            minWidth: "39rem",
+            minHeight: "50.7rem",
+            maxWidth: "39rem",
+            maxHeight: "50.7rem"
+        } : undefined}>
             <div className={style.label}>{svg} {blog.blogType.name}</div>
             <img src={imgUrl + blog.img} alt=""/>
             <div className={style.content}>

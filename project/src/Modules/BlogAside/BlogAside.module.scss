@@ -5,6 +5,43 @@
   display: flex;
   flex-direction: column;
   gap: 6rem;
+  position: relative;
+
+  .blog {
+    cursor: pointer;
+    display: flex;
+    gap: 2rem;
+
+    img {
+      width: 10rem;
+      height: 10rem;
+      object-fit: cover;
+      border-radius: .4rem;
+    }
+
+    .info {
+      .date {
+        @include smallRegular;
+        color: $gray700;
+        display: inline-flex;
+        align-items: center;
+        gap: .8rem;
+      }
+
+      .date:before {
+        content: "";
+        width: 1.6rem;
+        height: 1.6rem;
+        background-image: url("../../assets/img/icons/Calendar.svg");
+
+      }
+
+      .title {
+        @include baseBold;
+        color: $gray900;
+      }
+    }
+  }
 
   .curator,
   .trendingBlogs,
@@ -74,50 +111,29 @@
     }
   }
 
-  .trendingBlogs {
-    .blog {
-      cursor: pointer;
-      display: flex;
-      gap: 2rem;
-
-      img {
-        width: 10rem;
-        height: 10rem;
-        object-fit: cover;
-        border-radius: .4rem;
-      }
-
-      .info {
-        .date {
-          @include smallRegular;
-          color: $gray700;
-          display: inline-flex;
-          align-items: center;
-          gap: .8rem;
-        }
-
-        .date:before {
-          content: "";
-          width: 1.6rem;
-          height: 1.6rem;
-          background-image: url("../../assets/img/icons/Calendar.svg");
-
-        }
-
-        .title {
-          @include baseBold;
-          color: $gray900;
-        }
-      }
-    }
-  }
-
   .blog:hover {
     .info {
       .title {
         color: $primary;
       }
     }
+  }
+
+  .searchBlogs {
+    top: 6rem;
+    left: -3rem;
+    position: absolute;
+    background: white;
+    width: 40rem;
+    padding: 5rem;
+    border-radius: .4rem;
+    border: .1rem $gray300 solid;
+    box-shadow: $regular;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    height: 74rem;
+    overflow: scroll;
   }
 
   .tags {

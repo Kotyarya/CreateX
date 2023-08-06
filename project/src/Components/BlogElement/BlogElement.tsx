@@ -7,8 +7,6 @@ import PodcastElement from "../podcastElement/podcastElement";
 
 
 const BlogElement: FC<IBlogElementProps> = ({articleElement, videoElement, podcastElement}) => {
-
-
     if (articleElement) {
         return (
             <div className={style.articleElement}>

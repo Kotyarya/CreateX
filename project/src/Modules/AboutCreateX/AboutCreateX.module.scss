@@ -1,0 +1,46 @@
+@import "../../Styles/global";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 16.5rem;
+
+  .content {
+    width: 60rem;
+
+    article {
+      color: $gray900;
+      margin-bottom: 4.8rem;
+
+      p {
+        @include title6
+      }
+
+      h2 {
+        @include title1
+      }
+    }
+
+    .text {
+      color: $gray900;
+      @include leadBold;
+      margin-bottom: 2.4rem;
+    }
+
+    .description {
+      color: $gray800;
+      @include baseRegular;
+      margin-bottom: 6rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 2.4rem;
+    }
+  }
+
+  img {
+    width: 46.5rem;
+    height: 40rem;
+  }
+}

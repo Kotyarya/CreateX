@@ -5,6 +5,7 @@ import AboutCourseContainer from "../Modules/AboutCourse/AboutCourseContainer";
 import EventPage from "../Pages/EventsPage/EventPage/EventPage";
 import WhoWeAre from "../Modules/WhoWeAre/WhoWeAre";
 import Blog from "../Modules/Blog/Blog";
+import AboutCreateX from "../Modules/AboutCreateX/AboutCreateX";
 
 const ComponentPreviews = () => {
     return (
@@ -23,6 +24,9 @@ const ComponentPreviews = () => {
             </ComponentPreview>
             <ComponentPreview path="/Blog">
                 <Blog/>
+            </ComponentPreview>
+            <ComponentPreview path="/AboutCreateX">
+                <AboutCreateX/>
             </ComponentPreview>
         </Previews>
     );

@@ -9,6 +9,7 @@ import SubscribeContainer from "../../Modules/Subscribe/SubscribeContainer";
 import HomeCoursesContainer from "../../Modules/HomeCourses/HomeCoursesContainer";
 import TeamCarouselContainer from "../../Modules/TeamsCarousel/TeamCarouselContainer";
 import WhoWeAre from "../../Modules/WhoWeAre/WhoWeAre";
+import LatestBlogsContainer from "../../Modules/LatestBlogs/LatestBlogsContainer";
 
 const HomePage: FC = () => {
     document.documentElement.scrollTo({
@@ -43,6 +44,9 @@ const HomePage: FC = () => {
                 <div className={style.testimonials}>
                     <TestimonialsContainer/>
                 </div>
+            </div>
+            <div className={style.latestBlogs}>
+                <LatestBlogsContainer/>
             </div>
             <div className={style.subscribe}>
                 <SubscribeContainer/>
