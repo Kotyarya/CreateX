@@ -35,3 +35,9 @@ export const getActiveCourse = (courseId: number) => {
         dispatch({type: CoursesActionType.GET_ACTIVE_COURSE, payload: response})
     }
 }
+
+export const setActiveBranch = (branchId: number) => {
+    return (dispatch: Dispatch<CoursesAction>) => {
+        dispatch({type: CoursesActionType.SET_BRANCH, payload: branchId})
+    }
+}

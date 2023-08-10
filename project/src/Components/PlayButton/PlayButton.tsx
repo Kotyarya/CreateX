@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
-import {ReactComponent as Icon} from "../../assets/img/icons/playSVG.svg"
+import {ReactComponent as PlaySVG} from "../../assets/img/icons/playSVG.svg"
+import {ReactComponent as PauseSVG} from "../../assets/img/icons/pauseSVG.svg"
 import style from "./PlayButton.module.scss"
 
 export enum PlayButtonSize {
@@ -9,13 +10,17 @@ export enum PlayButtonSize {
 
 interface PlayButtonProps {
     size: PlayButtonSize,
-    onClick?: () => void
+    onClick?: () => void,
+    pause?: boolean
 }
 
-const PlayButton: FC<PlayButtonProps> = ({size, onClick}) => {
+const PlayButton: FC<PlayButtonProps> = ({size, onClick, pause}) => {
+
+    const icon = pause === undefined || !pause ? <PlaySVG/> : <PauseSVG/>
+
     return (
         <button onClick={onClick} className={style.PlayButton + " " + style[size]}>
-            <Icon/>
+            {icon}
             <span></span>
         </button>
     );

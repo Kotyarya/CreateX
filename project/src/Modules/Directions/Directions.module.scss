@@ -1,0 +1,129 @@
+@import "../../Styles/global";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  article {
+    color: $gray900;
+    text-align: center;
+
+    p {
+      @include title6
+    }
+
+    h2 {
+      @include title1
+    }
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3, 39rem);
+    grid-auto-rows: 42rem;
+    grid-gap: 3rem;
+
+    .block {
+      transition: all .3s ease-in-out;
+      z-index: 0;
+
+      img {
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+        border-top-right-radius: .4rem;
+        border-top-left-radius: .4rem;
+      }
+
+      .info {
+        padding: 2.4rem;
+
+        .branch {
+          color: white;
+          background: #000;
+          padding: .1rem .8rem;
+          border-radius: .4rem;
+          width: fit-content;
+          @include baseBold;
+          margin-bottom: 2rem;
+        }
+
+        .Marketing {
+          background: $success;
+        }
+
+        .Management {
+          background: $info;
+        }
+
+        .hr {
+          background: $warning;
+        }
+
+        .Design {
+          background: rgba(245, 47, 110, 1);
+        }
+
+        .Development {
+          background: #7772F1;
+        }
+
+        .text {
+          position: relative;
+          color: $gray700;
+          @include baseRegular;
+          margin-bottom: 2rem;
+
+          span {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2rem;
+            background-image: linear-gradient(to bottom, transparent, #ffffff);
+          }
+        }
+
+        .link {
+          width: fit-content;
+          color: $gray900;
+          @include baseBold;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          gap: .8rem;
+
+          svg {
+            width: 2.4rem;
+            height: 2.4rem;
+            fill: $primary;
+          }
+        }
+
+        .link:hover {
+          color: $primary;
+        }
+      }
+    }
+
+    .block:hover {
+      box-shadow: $small;
+      z-index: 1;
+    }
+
+    .nullBlock {
+      background: $gray200;
+      display: grid;
+      place-content: center;
+      border-radius: .4rem;
+
+      p {
+        color: $gray800;
+        text-align: center;
+        @include leadBold;
+        width: 24.2rem;
+      }
+    }
+  }
+}

@@ -4,4 +4,23 @@
   .aboutUs {
     margin-bottom: 18rem;
   }
+
+  .group {
+    padding-top: 23.7rem;
+    background-image: url("../../assets/img/Background1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    .values {
+      margin-bottom: 18rem;
+    }
+
+    .directions {
+      margin-bottom: 18rem;
+    }
+
+    .process {
+      margin-bottom: 19.2rem;
+    }
+  }
 }

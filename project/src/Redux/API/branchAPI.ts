@@ -3,7 +3,9 @@ import {instance} from "./axiosConfig";
 export interface IBranch {
     id: number,
     name: string,
-    courseCount: number
+    courseCount: number,
+    img: string,
+    text: string
 }
 
 export const branchAPI = {

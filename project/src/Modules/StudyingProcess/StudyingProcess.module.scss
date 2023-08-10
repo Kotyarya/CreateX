@@ -1,0 +1,75 @@
+@import "../../Styles/global";
+
+.wrapper {
+  display: flex;
+  gap: 21.1rem;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 52.5rem;
+    height: 62rem;
+  }
+
+  .content {
+
+    article {
+      color: $gray900;
+      margin-bottom: 6rem;
+
+      p {
+        @include title6
+      }
+
+      h2 {
+        @include title1
+      }
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+      position: relative;
+      padding-left: 4.4rem;
+
+      .block {
+        width: 44.6rem;
+
+        .number {
+          color: $gray700;
+          text-transform: uppercase;
+          @include extraExtraSmallBold
+        }
+
+        .number:before {
+          content: "";
+          position: absolute;
+          width: 1.6rem;
+          height: 1.6rem;
+          background-image: url("./img/ellipse.svg");
+          left: -.75rem;
+        }
+
+        .title {
+          color: $gray900;
+          @include leadBold
+        }
+
+        .text {
+          color: $gray700;
+          @include baseRegular
+        }
+      }
+    }
+
+    .steps:before {
+      content: "";
+      width: .1rem;
+      height: 100%;
+      background: $gray600;
+      position: absolute;
+      left: 0;
+    }
+  }
+}

@@ -35,7 +35,7 @@ const CoursesContainer: FC = () => {
 
     useEffect(() => {
         getBranches()
-        getCourseByBranch(0, page)
+        getCourseByBranch(activeBranch || 0, page)
         // eslint-disable-next-line
     }, [])
 

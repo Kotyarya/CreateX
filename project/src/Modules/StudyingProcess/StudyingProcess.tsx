@@ -1,0 +1,31 @@
+import React from 'react';
+import style from "./StudyingProcess.module.scss"
+import illustration from "./img/illustration.png"
+import {stepStudying} from "../../Redux/Other/data";
+
+const StudyingProcess = () => {
+    return (
+        <div className={style.wrapper}>
+            <div className={style.content}>
+                <article>
+                    <p>Studying process</p>
+                    <h2>That’s how we do it</h2>
+                </article>
+                <div className={style.steps}>
+                    {stepStudying.map((step) => {
+                        return (
+                            <div className={style.block}>
+                                <p className={style.number}>step {step.step}</p>
+                                <p className={style.title}>{step.name}</p>
+                                <p className={style.text}>{step.text}</p>
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
+            <img src={illustration} alt="illustration"/>
+        </div>
+    );
+};
+
+export default StudyingProcess;

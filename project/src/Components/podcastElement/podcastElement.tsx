@@ -17,7 +17,7 @@ const PodcastElement: FC<IPodcastElementProps> = ({podcastElement}) => {
     const [duration, setDuration] = useState(0)
     const [playStatus, setPlayStatus] = useState(false)
     const [volume, setVolume] = useState(0.5)
-    
+
     useEffect(() => {
         audio = new Audio(imgUrl + podcastElement.audio)
         audio.onloadedmetadata = () => {
@@ -59,7 +59,7 @@ const PodcastElement: FC<IPodcastElementProps> = ({podcastElement}) => {
         <div className={style.podcastElement}>
             <div className={style.wrapper}>
                 <div className={style.track}>
-                    <PlayButton size={PlayButtonSize.small} onClick={play}/>
+                    <PlayButton size={PlayButtonSize.small} onClick={play} pause={playStatus}/>
                     <div className={style.trackBar}>
                         <img src={mask} alt=""/>
                         <input min={0} max={duration} value={currentTime} onChange={changeCurrentTime}

@@ -15,7 +15,7 @@ const AboutUsVideo = () => {
         <div className={style.wrapper}>
             <div className={style.content}>
                 <div className={style.play}>
-                    <PlayButton size={PlayButtonSize.small} onClick={onPlay}/>
+                    <PlayButton size={PlayButtonSize.small} onClick={onPlay} pause={playing}/>
                     <p>Watch Video</p>
                 </div>
                 <ReactPlayer width={"91rem"} height={"54rem"} url={video} playing={playing}></ReactPlayer>
