@@ -1,6 +1,6 @@
 import {Dispatch} from "redux";
 import {EventsAction, EventsActionType} from "../Types/eventsTypes";
-import {eventAPI} from "../../API/eventAPI";
+import {eventAPI} from "../../API/event/eventAPI";
 
 
 // const month: { [key: string]: number } = {

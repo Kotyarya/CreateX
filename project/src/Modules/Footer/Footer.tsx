@@ -1,15 +1,15 @@
 import React, {FC} from 'react';
 import style from "./Footer.module.scss"
 import Logo from "../../Components/Logo/Logo";
-import {ReactComponent as FacebookSVG} from "../../assets/img/icons/facebookSVG.svg";
-import {ReactComponent as TwitterSVG} from "../../assets/img/icons/twitterSVG.svg";
-import {ReactComponent as YouTubeSVG} from "../../assets/img/icons/youtubeSVG.svg";
-import {ReactComponent as TelegramSVG} from "../../assets/img/icons/telegramSVG.svg";
-import {ReactComponent as InstagramSVG} from "../../assets/img/icons/instagramSVG.svg";
-import {ReactComponent as LinkedInSVG} from "../../assets/img/icons/linkedinSVG.svg";
-import {ReactComponent as PhoneSVG} from "../../assets/img/icons/phoneSVG.svg";
-import {ReactComponent as MailSVG} from "../../assets/img/icons/mailSVG.svg";
-import {ReactComponent as HeartSVG} from "../../assets/img/icons/heart.svg";
+import {ReactComponent as FacebookSVG} from "../../assets/icons/socialMedia/facebookSVG.svg";
+import {ReactComponent as TwitterSVG} from "../../assets/icons/socialMedia/twitterSVG.svg";
+import {ReactComponent as YouTubeSVG} from "../../assets/icons/socialMedia/youtubeSVG.svg";
+import {ReactComponent as TelegramSVG} from "../../assets/icons/socialMedia/telegramSVG.svg";
+import {ReactComponent as InstagramSVG} from "../../assets/icons/socialMedia/instagramSVG.svg";
+import {ReactComponent as LinkedInSVG} from "../../assets/icons/socialMedia/linkedinSVG.svg";
+import {ReactComponent as PhoneSVG} from "../../assets/icons/other/phoneSVG.svg";
+import {ReactComponent as MailSVG} from "../../assets/icons/other/mailSVG.svg";
+import {ReactComponent as HeartSVG} from "../../assets/icons/other/heart.svg";
 import FooterForm from "./FooterForm/FooterForm";
 import {NavLink} from "react-router-dom";
 

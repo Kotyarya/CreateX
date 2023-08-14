@@ -3,8 +3,9 @@ import {Field, reduxForm} from "redux-form";
 import Input, {sizeInput} from "../../../Components/Input/FormInput/Input";
 import validateSubscribeForm from "../../../utils/validate/validateSubscribeForm";
 import CheckBox from "../../../Components/CheckBox/CheckBox";
-import Button, {ButtonSize, ButtonType, ButtonVariant} from "../../../Components/Button/Button";
+import Button from "../../../Components/Button/Button";
 import style from "./SubscribeNewsletterForm.module.scss"
+import {ButtonSize, ButtonType, ButtonVariant} from "../../../Components/Button/ButtonTypes";
 
 const SubscribeNewsletterForm = ({handleSubmit}: any) => {
     return (

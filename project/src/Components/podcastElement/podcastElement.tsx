@@ -1,11 +1,11 @@
 import React, {FC, useEffect, useState} from 'react';
 import style from "./podcastElement.module.scss";
-import {IPodcastElement} from "../../Redux/API/blogsAPI";
-import {imgUrl} from "../../utils/const/const";
-import mask from "../../assets/Exclude.png"
-import {ReactComponent as VolumeOnSVG} from "../../assets/img/icons/on.svg";
-import {ReactComponent as VolumeOffSVG} from "../../assets/img/icons/off.svg";
+import {imgUrl} from "../../utils/const/imgUrl";
+import mask from "../../assets/mask/Exclude.png"
+import {ReactComponent as VolumeOnSVG} from "../../assets/icons/other/on.svg";
+import {ReactComponent as VolumeOffSVG} from "../../assets/icons/other/off.svg";
 import PlayButton, {PlayButtonSize} from "../PlayButton/PlayButton";
+import {IPodcastElement} from "../../Redux/Other/Types/blogsTypes";
 
 interface IPodcastElementProps {
     podcastElement: IPodcastElement

@@ -1,12 +1,12 @@
 import {BlogsActions, BlogsActionType, BlogsState} from "../Other/Types/blogsTypes";
 
 const initialState: BlogsState = {
-    blogs: [],
-    blogTypes: [],
+    blogs: null,
+    blogTypes: null,
     loading: false,
     activeBlogType: 0,
     count: 0,
-    activeBlog: undefined
+    activeBlog: null
 }
 
 

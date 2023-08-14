@@ -1,4 +1,57 @@
-import {IBlog, IBlogType} from "../../API/blogsAPI";
+export interface IBlog {
+    id: number,
+    title: string,
+    month: string,
+    day: number,
+    img: string,
+    mainText: string,
+    firstText: string,
+    secondText: string,
+    summary: string,
+    curatorId: number,
+    branchId: number,
+    blogTypeId: number
+    blogType: {
+        name: string
+    },
+    branch: {
+        name: string,
+        tags: { text: string }[]
+    },
+    articleElement: IArticleElement | null,
+    videoElement: IVideoElement | null,
+    podcastElement: IPodcastElement | null
+}
+
+export interface IArticleElement {
+    id: number,
+    article: string,
+    blogId: number,
+    text: string,
+    articleElementList: {
+        text: string
+    }[]
+}
+
+export interface IVideoElement {
+    id: number,
+    url: string,
+    blogId: number,
+    time: number
+}
+
+export interface IPodcastElement {
+    id: number,
+    audio: string,
+    blogId: number,
+    time: number
+}
+
+export interface IBlogType {
+    id: number,
+    name: string
+}
+
 
 export enum BlogsActionType {
     FETCHING_BLOGS = "FETCHING_BLOGS",
@@ -16,12 +69,12 @@ interface GetCountBlogs {
 
 interface GetBlogs {
     type: BlogsActionType.GET_BLOGS
-    payload: IBlog[] | undefined
+    payload: IBlog[] | null
 }
 
 interface GetBlogTypes {
     type: BlogsActionType.GET_BLOG_TYPES,
-    payload: IBlogType[] | undefined
+    payload: IBlogType[] | null
 }
 
 interface SetActiveBlogType {
@@ -35,16 +88,16 @@ interface FetchingBlogs {
 
 interface GetActiveBlog {
     type: BlogsActionType.GET_ACTIVE_BLOG,
-    payload: IBlog | undefined
+    payload: IBlog | null
 }
 
 export type BlogsActions = GetBlogs | FetchingBlogs | GetBlogTypes | SetActiveBlogType | GetCountBlogs | GetActiveBlog
 
 export interface BlogsState {
-    blogs: IBlog[] | undefined,
+    blogs: IBlog[] | null,
     loading: boolean,
     activeBlogType: number,
-    blogTypes: IBlogType[] | undefined,
+    blogTypes: IBlogType[] | null,
     count: number,
-    activeBlog: IBlog | undefined
+    activeBlog: IBlog | null
 }

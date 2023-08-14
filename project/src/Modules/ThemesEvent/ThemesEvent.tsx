@@ -1,8 +1,9 @@
 import React, {FC} from 'react';
 import style from "./ThemesEvent.module.scss"
 import {nanoid} from "nanoid";
-import Button, {ButtonSize, ButtonVariant} from "../../Components/Button/Button";
-import {IEvent} from "../../Redux/API/eventAPI";
+import Button from "../../Components/Button/Button";
+import {IEvent} from "../../Redux/Other/Types/eventsTypes";
+import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
 
 
 interface ThemesEventProps {

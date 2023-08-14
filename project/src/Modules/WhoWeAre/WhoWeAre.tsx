@@ -1,35 +1,46 @@
 import React, {FC} from 'react';
 import style from "./WhoWeAre.module.scss"
 import img from "./img/image.png"
-import Button, {ButtonSize, ButtonVariant} from "../../Components/Button/Button";
-import {NavLink} from "react-router-dom";
+import Button from "../../Components/Button/Button";
+import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
+import {WhoWeAreTypes} from "./WhoWeAreTypes";
 
 
-const WhoWeAre: FC = () => {
+const WhoWeAre: FC<WhoWeAreTypes> = ({navigateToAboutUsPage}) => {
+
     return (
         <div className={style.wrapper}>
-            <img src={img} alt="illustration"/>
+            <img src={img} alt="img"/>
             <div className={style.content}>
                 <article>
                     <p>Who we are</p>
                     <h2>Why Createx?</h2>
                 </article>
                 <ul>
-                    <li>A fermentum in morbi pretium aliquam adipiscing donec tempus.</li>
-                    <li>Vulputate placerat amet pulvinar lorem nisl.</li>
-                    <li>Consequat feugiat habitant gravida quisque elit bibendum id adipiscing sed.</li>
-                    <li>Etiam duis lobortis in fames ultrices commodo nibh.</li>
-                    <li>Tincidunt sagittis neque sem ac eget.</li>
-                    <li>Ultricies amet justo et eget quisque purus vulputate dapibus tortor.</li>
+                    <li>Practical Skills: Education geared towards practical application of knowledge in real-world
+                        scenarios.
+                    </li>
+                    <li>Expert Instructors: Seasoned specialists as your educators.
+                    </li>
+                    <li>Current Content: Courses regularly updated, reflecting the latest trends and methods in each
+                        field.
+                    </li>
+                    <li>Flexible Format: Video, assignments, workshops — choose what suits you.
+                    </li>
+                    <li>Learner Community: Join an active community of students and professionals for networking and
+                        collaboration.
+                    </li>
+                    <li>Student Success: Many achieved — you matter to us.
+                    </li>
+
                 </ul>
                 <div>
-                    <NavLink to={"/about-us"}>
-                        <Button
-                            text={"More about us"}
-                            variant={ButtonVariant.solid}
-                            size={ButtonSize.large}
-                        />
-                    </NavLink>
+                    <Button
+                        text={"More about us"}
+                        variant={ButtonVariant.solid}
+                        size={ButtonSize.large}
+                        onClick={navigateToAboutUsPage}
+                    />
                 </div>
             </div>
         </div>

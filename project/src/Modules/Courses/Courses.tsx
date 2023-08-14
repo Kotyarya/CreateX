@@ -3,16 +3,16 @@ import style from "./Courses.module.scss"
 import {nanoid} from "nanoid";
 import {motion, useTime, useTransform} from "framer-motion";
 import SearchInput from "../../Components/Input/SearchInput/SearchInput";
-import {imgUrl} from "../../utils/const/const";
-import {ReactComponent as LoadSVG} from "../../assets/img/icons/load.svg";
-import {IBranch} from "../../Redux/API/branchAPI";
-import {ICourse} from "../../Redux/API/coursesAPI";
+import {imgUrl} from "../../utils/const/imgUrl";
+import {ReactComponent as LoadSVG} from "../../assets/icons/other/load.svg";
 import {markText} from "../../utils/helpers/markText";
+import {IBranch} from "../../Redux/Other/Types/branchTypes";
+import {ICourse} from "../../Redux/Other/Types/coursesTypes";
 
 interface CoursesProps {
     searchText: string,
     onChangeHandler: (e: ChangeEvent<HTMLInputElement>) => void,
-    branches: IBranch[] | undefined,
+    branches: IBranch[] | null,
     filterCourses: ICourse[] | undefined,
     activeBranch: number,
     loading: boolean,

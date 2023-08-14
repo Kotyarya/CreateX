@@ -3,8 +3,9 @@ import style from "./BlogsCarousel.module.scss"
 import ControlButton, {ControlButtonRotation} from "../../Components/ControlButton/ControlButton";
 import {useTypedSelector} from "../../hook/useTypedSelector";
 import BlogCard from "../../Components/BlogCard/BlogCard";
-import Button, {ButtonSize, ButtonVariant} from "../../Components/Button/Button";
 import {NavLink} from "react-router-dom";
+import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
+import Button from "../../Components/Button/Button";
 
 const BlogsCarousel = () => {
     const blogs = useTypedSelector(state => state.blogs.blogs)

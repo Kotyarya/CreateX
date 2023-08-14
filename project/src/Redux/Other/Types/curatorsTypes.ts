@@ -1,4 +1,19 @@
-import {ICurator} from "../../API/curatorAPI";
+export interface ICuratorResponse {
+    id: number,
+    name: string,
+    jobTitle: string,
+    rate: number,
+    students: number,
+    img: string,
+    description: {
+        type: string,
+        data: number[]
+    }
+}
+
+export interface ICurator extends Omit<ICuratorResponse, 'description'> {
+    description: string
+}
 
 export enum CuratorsActionType {
     GET_CURATORS = "GET_CURATORS",

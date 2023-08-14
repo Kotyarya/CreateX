@@ -3,7 +3,7 @@
 .wrapper {
   width: 100vw;
   min-height: 48.4rem;
-  background-image: url("./img/background.png");
+  background-image: url("../../assets/img/Backgrounds/Background9.png");
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
@@ -52,7 +52,7 @@
 
       li:before {
         content: "";
-        background-image: url("../../assets/img/icons/checkSVG.svg");
+        background-image: url("../../assets/icons/other/checkSVG.svg");
         background-size: contain;
         background-repeat: no-repeat;
         min-width: 1.6rem;

@@ -1,11 +1,11 @@
 import React, {FC} from 'react';
 import style from "./AboutCurator.module.scss"
-import {ReactComponent as FacebookSVG} from "../../assets/img/icons/facebookSVG.svg";
-import {ReactComponent as BehanceSVG} from "../../assets/img/icons/behance.svg";
-import {ReactComponent as TwitterSVG} from "../../assets/img/icons/twitterSVG.svg";
-import {ReactComponent as LinkedInSVG} from "../../assets/img/icons/linkedinSVG.svg";
-import {ICurator} from "../../Redux/API/curatorAPI";
-import {imgUrl} from "../../utils/const/const";
+import {ReactComponent as FacebookSVG} from "../../assets/icons/socialMedia/facebookSVG.svg";
+import {ReactComponent as BehanceSVG} from "../../assets/icons/socialMedia/behance.svg";
+import {ReactComponent as TwitterSVG} from "../../assets/icons/socialMedia/twitterSVG.svg";
+import {ReactComponent as LinkedInSVG} from "../../assets/icons/socialMedia/linkedinSVG.svg";
+import {imgUrl} from "../../utils/const/imgUrl";
+import {ICurator} from "../../Redux/Other/Types/curatorsTypes";
 
 export enum AboutCuratorType {
     curator = "course curator",

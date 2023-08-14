@@ -2,8 +2,9 @@ import React, {FC} from 'react';
 import style from "./DiscountForm.module.scss"
 import {Field, reduxForm} from "redux-form";
 import Input, {sizeInput} from "../../../Components/Input/FormInput/Input";
-import Button, {ButtonSize, ButtonType, ButtonVariant} from "../../../Components/Button/Button";
 import validateDiscountForm from "../../../utils/validate/validateDiscountForm";
+import {ButtonSize, ButtonType, ButtonVariant} from "../../../Components/Button/ButtonTypes";
+import Button from "../../../Components/Button/Button";
 
 const DiscountForm: FC = ({handleSubmit}: any) => {
     return (

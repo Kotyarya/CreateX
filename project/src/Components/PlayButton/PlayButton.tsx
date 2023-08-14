@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
-import {ReactComponent as PlaySVG} from "../../assets/img/icons/playSVG.svg"
-import {ReactComponent as PauseSVG} from "../../assets/img/icons/pauseSVG.svg"
+import {ReactComponent as PlaySVG} from "../../assets/icons/other/playSVG.svg"
+import {ReactComponent as PauseSVG} from "../../assets/icons/other/pauseSVG.svg"
 import style from "./PlayButton.module.scss"
 
 export enum PlayButtonSize {

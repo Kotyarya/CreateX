@@ -1,12 +1,6 @@
-import {instance} from "./axiosConfig";
+import {instance} from "../axiosConfig";
+import {IBranch} from "../../Other/Types/branchTypes";
 
-export interface IBranch {
-    id: number,
-    name: string,
-    courseCount: number,
-    img: string,
-    text: string
-}
 
 export const branchAPI = {
     getBranch: async () => {
@@ -19,7 +13,7 @@ export const branchAPI = {
                 }
             })
         } catch (e) {
-            alert(e)
+            return null
         }
     }
 }

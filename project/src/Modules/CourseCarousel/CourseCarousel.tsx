@@ -1,9 +1,10 @@
 import React, {FC} from 'react';
 import style from "./CourseCarousel.module.scss"
 import ControlButton, {ControlButtonRotation} from "../../Components/ControlButton/ControlButton";
-import Button, {ButtonSize, ButtonVariant} from "../../Components/Button/Button";
 import CourseCard from "../../Components/CourseCard/CourseCard";
-import {ICourse} from "../../Redux/API/coursesAPI";
+import {ICourse} from "../../Redux/Other/Types/coursesTypes";
+import Button from "../../Components/Button/Button";
+import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
 
 interface CourseCarouselProps {
     courses: ICourse[] | undefined,

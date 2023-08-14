@@ -1,18 +1,18 @@
 import React, {FC} from 'react';
 import style from "./EventCard.module.scss";
-import Button, {ButtonSize, ButtonVariant} from "../Button/Button";
-import {IEvent} from "../../Redux/API/eventAPI";
-import {NavLink} from "react-router-dom";
 import {markText} from "../../utils/helpers/markText";
+import Button from "../Button/Button";
+import {ButtonSize, ButtonVariant} from "../Button/ButtonTypes";
+import {useNavigateTo} from "../../hook/useNavigateTo";
+import {EventCardTypes} from "./EventCardTypes"
 
-interface EventCardProps {
-    event: IEvent,
-    isGridType: boolean,
-    searchText?: string
-}
 
-const EventCard: FC<EventCardProps> = ({event, isGridType, searchText}) => {
+const EventCard: FC<EventCardTypes> = ({event, isGridType, searchText}) => {
 
+    const {navigateToEventPage} = useNavigateTo()
+    const onNavigateToEventPage = () => {
+        navigateToEventPage(event.id)
+    }
 
     const dateBlock = (eventDay: string, eventMonth: string, eventTime: string) => {
         if (!isGridType) {
@@ -45,12 +45,11 @@ const EventCard: FC<EventCardProps> = ({event, isGridType, searchText}) => {
                 <p className={style.type}>{event.eventType.name}</p>
             </div>
             <div className={style.viewMore}>
-                <NavLink to={`/events/${event.id}`}>
-                    <Button text={"View more"}
-                            variant={ButtonVariant.outline}
-                            size={ButtonSize.regular}
-                    />
-                </NavLink>
+                <Button text={"View more"}
+                        variant={ButtonVariant.outline}
+                        size={ButtonSize.regular}
+                        onClick={onNavigateToEventPage}
+                />
             </div>
         </div>
     );

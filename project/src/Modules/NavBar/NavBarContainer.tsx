@@ -1,28 +1,23 @@
-import React, {FC, useState} from 'react';
-import {useNavigate} from "react-router-dom";
+import React, {FC} from 'react';
 import NavBar from "./NavBar";
+import {ModalType} from "../../Redux/Other/Types/modalTypes";
+import {useAction} from "../../hook/useAction";
+import {useNavigateTo} from "../../hook/useNavigateTo";
 
 const NavBarContainer: FC = () => {
-    const navigate = useNavigate()
-    const [loginModalIsActive, setLoginModalIsActive] = useState<boolean>(false)
+    const {navigateToContactsPage} = useNavigateTo()
+    const {showModalWindow} = useAction()
 
-    const navigateToContactsPage = () => {
-        navigate("/contacts")
+
+    const onShowModalWindow = () => {
+        showModalWindow(ModalType.logIn)
     }
 
-    const showLoginModal = () => {
-        setLoginModalIsActive(true)
-    }
-
-    const removeLoginModal = () => {
-        setLoginModalIsActive(false)
-    }
 
     return (
-        <NavBar loginModalIsActive={loginModalIsActive}
-                showLoginModal={showLoginModal}
-                removeLoginModal={removeLoginModal}
-                navigateToContactsPage={navigateToContactsPage}
+        <NavBar
+            navigateToContactsPage={navigateToContactsPage}
+            onShowModalWindow={onShowModalWindow}
         />
     );
 };

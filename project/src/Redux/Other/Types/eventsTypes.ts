@@ -1,4 +1,34 @@
-import {IEvent, IEventCategory} from "../../API/eventAPI";
+export interface IEventResponse {
+    count: number,
+    rows: IEvent[]
+}
+
+export interface IEvent {
+    id: number,
+    title: string,
+    month: string,
+    day: string,
+    time: string,
+    date: string,
+    eventTypeID: number,
+    curatorId: number,
+    eventType: {
+        name: string
+    },
+    theme: {
+        id: number,
+        title: string,
+        description: string,
+        eventId: number
+    }[],
+    forWhom: { text: string }[]
+}
+
+export interface IEventCategory {
+    id: number,
+    name: string
+}
+
 
 export enum EventsActionType {
     GET_START_EVENTS = "GET_START_EVENTS",

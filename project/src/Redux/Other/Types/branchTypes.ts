@@ -1,4 +1,11 @@
-import {IBranch} from "../../API/branchAPI";
+export interface IBranch {
+    id: number,
+    name: string,
+    courseCount: number,
+    img: string,
+    text: string
+}
+
 
 export enum BranchActionTypes {
     GET_BRANCHES = "GET_BRANCHES",
@@ -7,7 +14,7 @@ export enum BranchActionTypes {
 
 interface GetBranches {
     type: BranchActionTypes.GET_BRANCHES,
-    payload: IBranch[] | undefined
+    payload: IBranch[] | null
 }
 
 
@@ -19,6 +26,6 @@ interface FetchingBranches {
 export type BranchesAction = GetBranches | FetchingBranches
 
 export interface BranchesState {
-    branches: IBranch[] | undefined
+    branches: IBranch[] | null
     loading: boolean,
 }

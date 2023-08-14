@@ -4,7 +4,8 @@ import {useAction} from "../../hook/useAction";
 import {useTypedSelector} from "../../hook/useTypedSelector";
 import EventCard from "../../Components/EventCard/EventCard";
 import ControlButton, {ControlButtonRotation} from "../../Components/ControlButton/ControlButton";
-import Button, {ButtonSize, ButtonVariant} from "../../Components/Button/Button";
+import Button from "../../Components/Button/Button";
+import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
 
 const EventCarousel = () => {
 

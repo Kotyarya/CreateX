@@ -3,7 +3,7 @@ import style from "./FooterForm.module.scss";
 import {Field, reduxForm} from "redux-form";
 import Input, {sizeInput} from "../../../Components/Input/FormInput/Input";
 import validateSubscribeForm from "../../../utils/validate/validateSubscribeForm";
-import {ReactComponent as ArrowSVG} from "../../../assets/img/icons/Right.svg";
+import {ReactComponent as ArrowSVG} from "../../../assets/icons/other/Right.svg";
 
 const FooterForm = ({handleSubmit}: any) => {
     return (

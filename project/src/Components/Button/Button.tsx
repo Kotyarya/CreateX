@@ -1,39 +1,17 @@
 import React, {FC} from 'react';
 import style from "./Button.module.scss"
-import {ReactComponent as Icon} from "../../assets/img/icons/arrowSvg.svg"
-
-export enum ButtonVariant {
-    solid = "solid",
-    outline = "outline",
-}
-
-export enum ButtonSize {
-    large = "large",
-    regular = "regular",
-    small = "small"
-}
-
-export enum ButtonType {
-    submit = "submit"
-}
-
-interface ButtonProps {
-    text: string,
-    disabled?: boolean,
-    variant: ButtonVariant,
-    size: ButtonSize,
-    onClick?: () => void,
-    withIcon?: boolean,
-    type?: ButtonType
-}
+import {ReactComponent as Icon} from "../../assets/icons/arrows/arrowRigthSVG.svg"
+import {ButtonTypes} from "./ButtonTypes";
 
 
-const Button: FC<ButtonProps> = ({text, disabled, size, variant, onClick, withIcon, type}) => {
+const Button: FC<ButtonTypes> = ({text, disabled, size, variant, onClick, withIcon, type}) => {
     return (
-        <button type={type} className={style.button + " " + style[variant] + " " + style[size]}
+        <button type={type}
+                className={style.button + " " + style[variant] + " " + style[size]}
                 onClick={onClick}
                 disabled={disabled}
         >
+
             {text}
             {withIcon ? <Icon/> : null}
 

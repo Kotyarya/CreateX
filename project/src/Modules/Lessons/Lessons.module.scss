@@ -49,7 +49,7 @@
             content: "";
             width: 2rem;
             height: 2rem;
-            background-image: url("../../assets/img/icons/Close.svg");
+            background-image: url("../../assets/icons/other/Close.svg");
           }
 
           p {
@@ -63,7 +63,7 @@
 
         details[open] {
           summary:before {
-            background-image: url("../../assets/img/icons/Open.svg");
+            background-image: url("../../assets/icons/other/Open.svg");
           }
         }
       }

@@ -1,12 +1,12 @@
 import {Dispatch} from "redux";
 import {BlogsActions, BlogsActionType} from "../Types/blogsTypes";
-import {blogAPI} from "../../API/blogsAPI";
+import {blogAPI} from "../../API/blogs/blogsAPI";
 
 export const getBlogs = (page: number, blogTypeId: number, branchId: number, text: string) => {
     return async (dispatch: Dispatch<BlogsActions>) => {
         dispatch({type: BlogsActionType.FETCHING_BLOGS})
-        const response = await blogAPI.getBlogs(page, blogTypeId, branchId, text)
-        dispatch({type: BlogsActionType.GET_BLOGS, payload: response?.blogs})
+        const response = await blogAPI.getBlogs(page, blogTypeId, branchId, text) || null
+        dispatch({type: BlogsActionType.GET_BLOGS, payload: response?.blogs || null})
         dispatch({type: BlogsActionType.GET_COUNT_BLOGS, payload: response?.count})
     }
 }
@@ -14,7 +14,7 @@ export const getBlogs = (page: number, blogTypeId: number, branchId: number, tex
 export const getBlogTypes = () => {
     return async (dispatch: Dispatch<BlogsActions>) => {
         dispatch({type: BlogsActionType.FETCHING_BLOGS})
-        const response = await blogAPI.getBlogType()
+        const response = await blogAPI.getBlogType() || null
         dispatch({type: BlogsActionType.GET_BLOG_TYPES, payload: response})
     }
 }

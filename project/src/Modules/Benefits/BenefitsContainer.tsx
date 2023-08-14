@@ -1,17 +1,17 @@
-import React, {useState} from 'react';
+import React, {FC, useState} from 'react';
 import Benefits from "./Benefits";
 import {benefitsData} from "../../Redux/Other/data";
 
-const BenefitsContainer = () => {
-    const [activeBenefits, setActiveBenefits] = useState<string>("Experienced Tutors")
+const BenefitsContainer: FC = () => {
+    const [activeBenefitId, setActiveBenefitId] = useState<number>(1)
 
-    const setBenefits = (benefits: string) => {
-        setActiveBenefits(benefits)
+    const setBenefits = (benefitsId: number) => {
+        setActiveBenefitId(benefitsId)
     }
 
 
     return (
-        <Benefits activeBenefits={activeBenefits} setActiveBenefits={setBenefits} benefits={benefitsData}/>
+        <Benefits activeBenefitId={activeBenefitId} setActiveBenefits={setBenefits} benefits={benefitsData}/>
     );
 };
 

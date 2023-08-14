@@ -1,13 +1,13 @@
 import React, {FC} from 'react';
-import {IBlog} from "../../Redux/API/blogsAPI";
-import {imgUrl} from "../../utils/const/const";
+import {imgUrl} from "../../utils/const/imgUrl";
 import style from "./BlogCard.module.scss"
 import {NavLink} from "react-router-dom";
-import {ReactComponent as ArrowSVG} from "../../assets/img/icons/Right.svg";
-import {ReactComponent as ArticleSVG} from "../../assets/img/icons/Article.svg";
-import {ReactComponent as VideoSVG} from "../../assets/img/icons/Video.svg";
-import {ReactComponent as PodcastSVG} from "../../assets/img/icons/Podcast.svg";
+import {ReactComponent as ArrowSVG} from "../../assets/icons/other/Right.svg";
+import {ReactComponent as ArticleSVG} from "../../assets/icons/blogLabel/Article.svg";
+import {ReactComponent as VideoSVG} from "../../assets/icons/blogLabel/Video.svg";
+import {ReactComponent as PodcastSVG} from "../../assets/icons/blogLabel/Podcast.svg";
 import {markText} from "../../utils/helpers/markText";
+import {IBlog} from "../../Redux/Other/Types/blogsTypes";
 
 interface BlogCardProps {
     blog: IBlog,

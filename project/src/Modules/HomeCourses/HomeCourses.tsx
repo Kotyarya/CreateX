@@ -1,16 +1,16 @@
 import React, {FC} from 'react';
 import style from "./HomeCourses.module.scss"
-import Button, {ButtonSize, ButtonVariant} from "../../Components/Button/Button";
 import CourseCard from "../../Components/CourseCard/CourseCard";
-import {ICourse} from "../../Redux/API/coursesAPI";
-import {NavLink} from "react-router-dom";
+import Button from "../../Components/Button/Button";
+import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
+import {HomeCoursesTypes} from "./HomeCoursesTypes";
 
 
-interface CoursesInHomePageProps {
-    courses: ICourse[] | undefined,
-}
+const HomeCourses: FC<HomeCoursesTypes> = ({courses, navigateToCoursesPage}) => {
 
-const HomeCourses: FC<CoursesInHomePageProps> = ({courses}) => {
+    const courseBlocks = courses?.map((course) => {
+        return <CourseCard key={course.id} course={course}/>
+    })
 
     return (
         <div className={style.wrapper}>
@@ -19,21 +19,15 @@ const HomeCourses: FC<CoursesInHomePageProps> = ({courses}) => {
                     <p>Ready to learn?</p>
                     <h2>Featured Courses</h2>
                 </div>
-                <NavLink to={"/courses"}>
-                    <Button
-                        text={"View all courses"}
-                        variant={ButtonVariant.outline}
-                        size={ButtonSize.large}
-                    />
-                </NavLink>
+                <Button
+                    text={"View all courses"}
+                    variant={ButtonVariant.outline}
+                    size={ButtonSize.large}
+                    onClick={navigateToCoursesPage}
+                />
             </article>
             <div className={style.content}>
-                {
-                    courses ? courses.map((course) => {
-                            return <CourseCard key={course.id} course={course}/>
-                        })
-                        : null
-                }
+                {courseBlocks}
             </div>
         </div>
     );

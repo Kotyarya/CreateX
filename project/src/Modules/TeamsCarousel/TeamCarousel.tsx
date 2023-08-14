@@ -1,12 +1,12 @@
 import React, {FC} from 'react';
 import style from "./TeamCarousel.module.scss"
 import ControlButton, {ControlButtonRotation} from "../../Components/ControlButton/ControlButton";
-import {ReactComponent as FacebookSVG} from "../../assets/img/icons/facebookSVG.svg";
-import {ReactComponent as InstagramSVG} from "../../assets/img/icons/instagramSVG.svg";
-import {ReactComponent as LinkedInSVG} from "../../assets/img/icons/linkedinSVG.svg";
+import {ReactComponent as FacebookSVG} from "../../assets/icons/socialMedia/facebookSVG.svg";
+import {ReactComponent as InstagramSVG} from "../../assets/icons/socialMedia/instagramSVG.svg";
+import {ReactComponent as LinkedInSVG} from "../../assets/icons/socialMedia/linkedinSVG.svg";
 import {nanoid} from "nanoid";
-import {imgUrl} from "../../utils/const/const";
-import {ICurator} from "../../Redux/API/curatorAPI";
+import {imgUrl} from "../../utils/const/imgUrl";
+import {ICurator} from "../../Redux/Other/Types/curatorsTypes";
 
 
 interface TeamCarouselProps {

@@ -3,10 +3,10 @@ import style from "./BlogAside.module.scss"
 import SearchInput from "../../Components/Input/SearchInput/SearchInput";
 import {useAction} from "../../hook/useAction";
 import {useTypedSelector} from "../../hook/useTypedSelector";
-import {imgUrl} from "../../utils/const/const";
-import {ReactComponent as InstagramSVG} from "../../assets/img/icons/instagramSVG.svg";
-import {ReactComponent as TwitterSVG} from "../../assets/img/icons/twitterSVG.svg";
-import {ReactComponent as LinkedInSVG} from "../../assets/img/icons/linkedinSVG.svg";
+import {imgUrl} from "../../utils/const/imgUrl";
+import {ReactComponent as InstagramSVG} from "../../assets/icons/socialMedia/instagramSVG.svg";
+import {ReactComponent as TwitterSVG} from "../../assets/icons/socialMedia/twitterSVG.svg";
+import {ReactComponent as LinkedInSVG} from "../../assets/icons/socialMedia/linkedinSVG.svg";
 import {nanoid} from "nanoid";
 import {NavLink} from "react-router-dom";
 import {markText} from "../../utils/helpers/markText";

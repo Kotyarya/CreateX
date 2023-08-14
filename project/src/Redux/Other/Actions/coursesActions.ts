@@ -1,6 +1,6 @@
 import {Dispatch} from "redux";
 import {CoursesAction, CoursesActionType} from "../Types/coursesTypes";
-import {coursesApi} from "../../API/coursesAPI";
+import {coursesApi} from "../../API/course/coursesAPI";
 
 export const getStartCourses = () => {
     return async (dispatch: Dispatch<CoursesAction>) => {

@@ -1,35 +1,6 @@
-import {instance} from "./axiosConfig";
+import {instance} from "../axiosConfig";
+import {IEventCategory, IEventResponse} from "../../Other/Types/eventsTypes";
 
-interface IEventResponse {
-    count: number,
-    rows: IEvent[]
-}
-
-export interface IEvent {
-    id: number,
-    title: string,
-    month: string,
-    day: string,
-    time: string,
-    date: string,
-    eventTypeID: number,
-    curatorId: number,
-    eventType: {
-        name: string
-    },
-    theme: {
-        id: number,
-        title: string,
-        description: string,
-        eventId: number
-    }[],
-    forWhom: { text: string }[]
-}
-
-export interface IEventCategory {
-    id: number,
-    name: string
-}
 
 export const eventAPI = {
     async getStartEvent() {
@@ -37,7 +8,7 @@ export const eventAPI = {
             const response = await instance.get<IEventResponse>("event?page=1&limit=3")
             return response.data.rows
         } catch (e) {
-            alert(e)
+            return undefined
         }
     },
 
@@ -46,7 +17,7 @@ export const eventAPI = {
             const response = await instance.get<IEventCategory[]>("eventType")
             return response.data
         } catch (e) {
-            alert(e)
+            return undefined
         }
     },
 
@@ -58,7 +29,7 @@ export const eventAPI = {
             const response = await instance.get<IEventResponse>(`event?limit=${limit}&page=${page}&eventTypeId=${eventTypeId}${requestText}`)
             return response.data
         } catch (e) {
-            alert(e)
+            return undefined
         }
     },
     async getEventsById(eventId: number) {
@@ -66,7 +37,7 @@ export const eventAPI = {
             const response = await instance.get(`event/${eventId}`)
             return response.data
         } catch (e) {
-            alert(e)
+            return undefined
         }
     }
 }

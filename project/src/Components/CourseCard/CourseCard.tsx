@@ -1,31 +1,24 @@
 import React, {FC} from 'react';
-import {useNavigate} from "react-router-dom";
 import style from "./CourseCard.module.scss"
-import {ICourse} from "../../Redux/API/coursesAPI";
-import {imgUrl} from "../../utils/const/const";
-import {useAction} from "../../hook/useAction";
+import {imgUrl} from "../../utils/const/imgUrl";
+import {useNavigateTo} from "../../hook/useNavigateTo";
+import {CourseCardTypes} from "./CourseCardTypes";
 
-interface CourseCardProps {
-    course: ICourse
-}
 
-const CourseCard: FC<CourseCardProps> = ({course}) => {
+const CourseCard: FC<CourseCardTypes> = ({course}) => {
+    const {navigateToCoursePage} = useNavigateTo()
 
-    const navigate = useNavigate()
-    const {getActiveCourse} = useAction()
-
-    const NavigateToCourse = (id: number) => {
-        navigate(`/courses/${id}`)
-        getActiveCourse(id)
+    const onNavigateToCoursePage = () => {
+        navigateToCoursePage(course.id)
     }
 
     const classNameBranch = course.branch.name !== "HR & Recruting" ? style[course.branch.name] : style.hr
 
     return (
         <div className={style.course}
-             onClick={() => NavigateToCourse(course.id)}>
+             onClick={onNavigateToCoursePage}>
             <div className={style.img}>
-                <img src={imgUrl + course.curator.img} alt=""/>
+                <img src={imgUrl + course.curator.img} alt="img"/>
             </div>
             <div className={style.info}>
                 <div className={style.branch + " " + classNameBranch}>

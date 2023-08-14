@@ -1,4 +1,4 @@
-import {IArticleElement, IPodcastElement, IVideoElement} from "../../Redux/API/blogsAPI";
+import {IArticleElement, IPodcastElement, IVideoElement} from "../../Redux/Other/Types/blogsTypes";
 
 export interface IBlogElementProps {
     articleElement: IArticleElement | null,

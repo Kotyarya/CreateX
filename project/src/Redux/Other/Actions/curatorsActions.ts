@@ -1,6 +1,6 @@
 import {Dispatch} from "redux";
 import {CuratorAction, CuratorsActionType} from "../Types/curatorsTypes";
-import {curatorAPI} from "../../API/curatorAPI";
+import {curatorAPI} from "../../API/curator/curatorAPI";
 
 export const getCurators = () => {
     return async (dispatch: Dispatch<CuratorAction>) => {

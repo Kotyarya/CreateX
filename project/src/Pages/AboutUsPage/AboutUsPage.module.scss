@@ -7,7 +7,7 @@
 
   .group {
     padding-top: 23.7rem;
-    background-image: url("../../assets/img/Background1.png");
+    background-image: url("../../assets/img/Backgrounds/Background1.png");
     background-size: contain;
     background-repeat: no-repeat;
 
@@ -22,5 +22,17 @@
     .process {
       margin-bottom: 19.2rem;
     }
+  }
+
+  .testimonials {
+    background-image: url("../../assets/img/Backgrounds/Background.png");
+    background-size: cover;
+    padding-top: 16.6rem;
+    padding-bottom: 18rem;
+    margin-bottom: 10rem;
+  }
+
+  .latestBlog {
+    margin-bottom: 18rem;
   }
 }

@@ -1,7 +1,7 @@
 import {BranchActionTypes, BranchesAction, BranchesState} from "../Other/Types/branchTypes";
 
 const initialState: BranchesState = {
-    branches: [],
+    branches: null,
     loading: false,
 }
 

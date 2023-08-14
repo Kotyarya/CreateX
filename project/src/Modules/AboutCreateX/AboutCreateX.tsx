@@ -1,8 +1,9 @@
 import React from 'react';
 import style from "./AboutCreateX.module.scss"
-import Button, {ButtonSize, ButtonVariant} from "../../Components/Button/Button";
 import img from "./img/illustration.png"
 import {NavLink} from "react-router-dom";
+import Button from "../../Components/Button/Button";
+import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
 
 const AboutCreateX = () => {
     return (

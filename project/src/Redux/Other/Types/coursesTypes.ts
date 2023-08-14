@@ -1,4 +1,31 @@
-import {ICourse} from "../../API/coursesAPI";
+import {IBranch} from "./branchTypes";
+import {ICurator, ICuratorResponse} from "./curatorsTypes";
+
+export interface ILessons {
+    title: string,
+    description: string
+}
+
+
+export interface ICourseResponse {
+    id: number,
+    title: string,
+    price: number,
+    description: string,
+    date: string,
+    branchId: number,
+    curatorId: number,
+    branch: IBranch,
+    curator: ICuratorResponse,
+    willLearn: { text: string }[],
+    lessons: ILessons[],
+    forWhom: { text: string }[]
+}
+
+export interface ICourse extends Omit<ICourseResponse, "curator"> {
+    curator: ICurator,
+}
+
 
 export enum CoursesActionType {
     GET_START_COURSES = "GET_START_COURSES",

@@ -1,13 +1,13 @@
 import React, {ReactComponentElement} from 'react';
 import style from "./Blog.module.scss"
 import {useTypedSelector} from "../../hook/useTypedSelector";
-import {imgUrl} from "../../utils/const/const";
-import {ReactComponent as ArticleSVG} from "../../assets/img/icons/Article.svg";
-import {ReactComponent as VideoSVG} from "../../assets/img/icons/Video.svg";
-import {ReactComponent as PodcastSVG} from "../../assets/img/icons/Podcast.svg";
-import {ReactComponent as FacebookSVG} from "../../assets/img/icons/facebookSVG.svg";
-import {ReactComponent as TwitterSVG} from "../../assets/img/icons/twitterSVG.svg";
-import {ReactComponent as LinkedInSVG} from "../../assets/img/icons/linkedinSVG.svg";
+import {imgUrl} from "../../utils/const/imgUrl";
+import {ReactComponent as ArticleSVG} from "../../assets/icons/blogLabel/Article.svg";
+import {ReactComponent as VideoSVG} from "../../assets/icons/blogLabel/Video.svg";
+import {ReactComponent as PodcastSVG} from "../../assets/icons/blogLabel/Podcast.svg";
+import {ReactComponent as FacebookSVG} from "../../assets/icons/socialMedia/facebookSVG.svg";
+import {ReactComponent as TwitterSVG} from "../../assets/icons/socialMedia/twitterSVG.svg";
+import {ReactComponent as LinkedInSVG} from "../../assets/icons/socialMedia/linkedinSVG.svg";
 import BlogElement from "../../Components/BlogElement/BlogElement";
 import {nanoid} from "nanoid";
 

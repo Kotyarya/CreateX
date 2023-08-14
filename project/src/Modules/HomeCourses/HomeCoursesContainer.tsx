@@ -1,12 +1,14 @@
 import React, {FC, useEffect} from 'react';
-import StartCourse from "./HomeCourses";
+import HomeCourses from "./HomeCourses";
 import {useAction} from "../../hook/useAction";
 import {useTypedSelector} from "../../hook/useTypedSelector";
+import {useNavigateTo} from "../../hook/useNavigateTo";
 
 const HomeCoursesContainer: FC = () => {
 
     const courses = useTypedSelector(state => state.courses.courses)
     const {getStartCourses} = useAction()
+    const {navigateToCoursesPage} = useNavigateTo()
 
 
     useEffect(() => {
@@ -16,7 +18,7 @@ const HomeCoursesContainer: FC = () => {
 
 
     return (
-        <StartCourse courses={courses}/>
+        <HomeCourses courses={courses} navigateToCoursesPage={navigateToCoursesPage}/>
     );
 };
 

@@ -8,8 +8,8 @@ import TestimonialsContainer from "../../Modules/Testimonials/TestimonialsContai
 import SubscribeContainer from "../../Modules/Subscribe/SubscribeContainer";
 import HomeCoursesContainer from "../../Modules/HomeCourses/HomeCoursesContainer";
 import TeamCarouselContainer from "../../Modules/TeamsCarousel/TeamCarouselContainer";
-import WhoWeAre from "../../Modules/WhoWeAre/WhoWeAre";
 import LatestBlogsContainer from "../../Modules/LatestBlogs/LatestBlogsContainer";
+import WhoWeAreContainer from "../../Modules/WhoWeAre/WhoWeAreContainer";
 
 const HomePage: FC = () => {
     document.documentElement.scrollTo({
@@ -23,7 +23,7 @@ const HomePage: FC = () => {
                 <HeadContainer/>
             </div>
             <div className={style.about}>
-                <WhoWeAre/>
+                <WhoWeAreContainer/>
             </div>
             <div className={style.courses}>
                 <HomeCoursesContainer/>

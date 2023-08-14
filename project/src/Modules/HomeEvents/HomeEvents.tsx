@@ -1,18 +1,15 @@
 import React, {FC} from 'react';
-import style from "./EventsInHomePage.module.scss"
-import Button, {ButtonSize, ButtonVariant} from "../../Components/Button/Button";
-import {IEvent} from "../../Redux/API/eventAPI";
+import style from "./HomeEvents.module.scss"
+import Button from "../../Components/Button/Button";
 import EventCard from "../../Components/EventCard/EventCard";
-import {NavLink} from "react-router-dom";
+import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
+import {useNavigateTo} from "../../hook/useNavigateTo";
+import {HomeEventsTypes} from "./HomeEventsTypes";
 
 
-interface HomeEventsProps {
-    events: IEvent[] | undefined,
-}
+const HomeEvents: FC<HomeEventsTypes> = ({events}) => {
 
-
-const HomeEvents: FC<HomeEventsProps> = ({events}) => {
-
+    const {navigateToEventsPage} = useNavigateTo()
 
     const eventsBlock = events?.map((event) => {
         return (
@@ -33,13 +30,11 @@ const HomeEvents: FC<HomeEventsProps> = ({events}) => {
             </div>
             <div className={style.wantMore}>
                 <p>Do you want more?</p>
-                <NavLink to={"/events"}>
-                    <Button text={"Explore all events"}
-                            variant={ButtonVariant.solid}
-                            size={ButtonSize.large}
-                    />
-                </NavLink>
-
+                <Button text={"Explore all events"}
+                        variant={ButtonVariant.solid}
+                        size={ButtonSize.large}
+                        onClick={navigateToEventsPage}
+                />
             </div>
         </div>
     );

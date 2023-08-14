@@ -2,9 +2,10 @@ import React, {useEffect} from 'react';
 import style from "./LatestBlogs.module.scss"
 import {useTypedSelector} from "../../hook/useTypedSelector";
 import {useAction} from "../../hook/useAction";
-import Button, {ButtonSize, ButtonVariant} from "../../Components/Button/Button";
+import Button from "../../Components/Button/Button";
 import BlogCard from "../../Components/BlogCard/BlogCard";
 import {NavLink} from "react-router-dom";
+import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
 
 const LatestBlogs = () => {
     const blogs = useTypedSelector(state => state.blogs.blogs)

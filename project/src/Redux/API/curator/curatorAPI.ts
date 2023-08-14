@@ -1,21 +1,5 @@
-import {instance} from "./axiosConfig";
-
-export interface ICuratorResponse {
-    id: number,
-    name: string,
-    jobTitle: string,
-    rate: number,
-    students: number,
-    img: string,
-    description: {
-        type: string,
-        data: number[]
-    }
-}
-
-export interface ICurator extends Omit<ICuratorResponse, 'description'> {
-    description: string
-}
+import {instance} from "../axiosConfig";
+import {ICurator, ICuratorResponse} from "../../Other/Types/curatorsTypes";
 
 
 export const curatorAPI = {
@@ -29,7 +13,7 @@ export const curatorAPI = {
                 }
             })
         } catch (e) {
-            alert(e)
+            return undefined
         }
     },
 
@@ -43,7 +27,7 @@ export const curatorAPI = {
             }
             return result
         } catch (e) {
-            alert(e)
+            return undefined
         }
     }
 }

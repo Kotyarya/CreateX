@@ -1,7 +1,8 @@
 import React, {FC} from 'react';
 import style from "./AboutCourse.module.scss"
 import {nanoid} from "nanoid";
-import Button, {ButtonSize, ButtonVariant} from "../../Components/Button/Button";
+import Button from "../../Components/Button/Button";
+import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
 
 interface AboutCourseProps {
     description: string,

@@ -1,14 +1,15 @@
-@import "../../../Styles/global";
+@import "../../Styles/global";
 
 .custom-select {
 
   &__control {
+    min-height: 6rem !important;
+    max-height: 6rem !important;
     border-radius: .4rem;
     border: .1rem solid $gray400;
     padding: 1.1rem 1.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    place-content: center;
     outline: none !important;
 
     &--menu-is-open,
@@ -42,7 +43,7 @@
     padding: 0 !important;
     width: 2rem !important;
     height: 2rem !important;
-    background-image: url("../../../assets/img/icons/Down-chevron.svg");
+    background-image: url("../../assets/icons/other/Down-chevron.svg");
 
     svg {
       display: none;

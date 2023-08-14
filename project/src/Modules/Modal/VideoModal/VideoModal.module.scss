@@ -1,0 +1,32 @@
+@import "../../../Styles/global";
+
+.video {
+  width: 100rem;
+  height: 65.3rem;
+  background: white;
+  border-radius: .4rem;
+  border: .1rem solid $gray300;
+  position: relative;
+  display: grid;
+  place-content: center;
+
+  iframe {
+    width: 90.4rem;
+    height: 51rem;
+  }
+
+  button {
+    position: absolute;
+    top: 2.4rem;
+    right: 2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: none;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $gray700;
+    }
+  }
+}

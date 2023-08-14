@@ -1,20 +1,14 @@
 import React, {FC} from 'react';
 import style from "./Benefits.module.scss"
-import {IBenefit} from "../../Redux/Other/data";
+import {BenefitsTypes} from "./BenefitsTypes";
 
 
-interface BenefitsProps {
-    activeBenefits: string,
-    setActiveBenefits: (benefits: string) => void,
-    benefits: IBenefit[],
-}
-
-const Benefits: FC<BenefitsProps> = ({activeBenefits, setActiveBenefits, benefits}) => {
+const Benefits: FC<BenefitsTypes> = ({activeBenefitId, setActiveBenefits, benefits}) => {
 
     const benefitsButton = benefits.map((benefit) => {
         return (
-            <button onClick={() => setActiveBenefits(benefit.name)}
-                    className={activeBenefits === benefit.name ? style.active : undefined} key={benefit.id}>
+            <button onClick={() => setActiveBenefits(benefit.id)}
+                    className={activeBenefitId === benefit.id ? style.active : ""} key={benefit.id}>
                 <benefit.svg/>
                 {benefit.name}
             </button>
@@ -22,7 +16,7 @@ const Benefits: FC<BenefitsProps> = ({activeBenefits, setActiveBenefits, benefit
     })
 
     const activeBenefit = benefits.map((benefit) => {
-        if (activeBenefits === benefit.name) {
+        if (activeBenefitId === benefit.id) {
             return (
                 <div key={benefit.id} className={style.content}>
                     <div className={style.text}>
@@ -45,9 +39,7 @@ const Benefits: FC<BenefitsProps> = ({activeBenefits, setActiveBenefits, benefit
             <div className={style.controls}>
                 {benefitsButton}
             </div>
-            <div>
-                {activeBenefit}
-            </div>
+            {activeBenefit}
         </div>
     );
 };

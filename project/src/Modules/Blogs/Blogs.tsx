@@ -1,14 +1,14 @@
 import React, {FC} from 'react';
 import style from "./Blogs.module.scss"
-import CustomSelect from "../Events/Select/CustomSelect";
+import CustomSelect from "../../Components/Select/CustomSelect";
 import SearchInput from "../../Components/Input/SearchInput/SearchInput";
-import {ReactComponent as ArticleSVG} from "../../assets/img/icons/Article.svg";
-import {ReactComponent as VideoSVG} from "../../assets/img/icons/Video.svg";
-import {ReactComponent as PodcastSVG} from "../../assets/img/icons/Podcast.svg";
+import {ReactComponent as ArticleSVG} from "../../assets/icons/blogLabel/Article.svg";
+import {ReactComponent as VideoSVG} from "../../assets/icons/blogLabel/Video.svg";
+import {ReactComponent as PodcastSVG} from "../../assets/icons/blogLabel/Podcast.svg";
 import BlogCard from "../../Components/BlogCard/BlogCard";
 import ControlButton, {ControlButtonRotation} from "../../Components/ControlButton/ControlButton";
 import {nanoid} from "nanoid";
-import {IBlog, IBlogType} from "../../Redux/API/blogsAPI";
+import {IBlog, IBlogType} from "../../Redux/Other/Types/blogsTypes";
 
 
 const gridAreaOptions = [
@@ -28,7 +28,7 @@ const gridAreaOptions = [
 ]
 
 interface BlogsProps {
-    blogTypes: IBlogType[] | undefined,
+    blogTypes: IBlogType[] | null,
     activeBlogType: number,
     onClickBlogTypeButtons: (blogTypeId: number) => void,
     optionsBlogBranch: {
@@ -42,7 +42,7 @@ interface BlogsProps {
     onChangeBlogBranch: (newValue: any) => void,
     onChangeSearchTextInput: (e: React.ChangeEvent<HTMLInputElement>) => void,
     searchText: string,
-    blogs: IBlog[] | undefined,
+    blogs: IBlog[] | null,
     randomNumberForGridArea: number,
     currentPage: number,
     onChangePage: (num: number) => void,

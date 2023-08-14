@@ -1,20 +1,15 @@
 import React, {FC} from 'react';
 import Logo from "../../Components/Logo/Logo";
 import {NavLink} from "react-router-dom";
-import Button, {ButtonSize, ButtonVariant} from "../../Components/Button/Button";
+import Button from "../../Components/Button/Button";
 import style from "./NavBar.module.scss"
-import {ReactComponent as PersonIcon} from "./icons/personSVG.svg";
-import LoginModal from "../../Components/LoginModal/LoginModal";
+import {ReactComponent as PersonIcon} from "../../assets/icons/other/personSVG.svg";
+import {staticPath} from "../../utils/helpers/path";
+import {NavBarTypes} from "./NavBarTypes";
+import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
 
 
-interface NavBarProps {
-    loginModalIsActive: boolean,
-    showLoginModal: () => void,
-    removeLoginModal: () => void,
-    navigateToContactsPage: () => void
-}
-
-const NavBar: FC<NavBarProps> = ({loginModalIsActive, showLoginModal, removeLoginModal, navigateToContactsPage}) => {
+const NavBar: FC<NavBarTypes> = ({navigateToContactsPage, onShowModalWindow}) => {
     const navLinkIsActive = (isActive: boolean): string => {
         return isActive ? style.active : ""
     }
@@ -22,7 +17,6 @@ const NavBar: FC<NavBarProps> = ({loginModalIsActive, showLoginModal, removeLogi
 
     return (
         <>
-            {loginModalIsActive ? <LoginModal closeModal={removeLoginModal}/> : null}
             <header className={style.navBar}>
                 <nav>
                     <Logo/>
@@ -30,7 +24,7 @@ const NavBar: FC<NavBarProps> = ({loginModalIsActive, showLoginModal, removeLogi
                         <li>
                             <NavLink
                                 className={({isActive}) => navLinkIsActive(isActive)}
-                                to={"/about-us"}
+                                to={staticPath.aboutUsPage}
                             >
                                 About us
                             </NavLink>
@@ -38,7 +32,7 @@ const NavBar: FC<NavBarProps> = ({loginModalIsActive, showLoginModal, removeLogi
                         <li>
                             <NavLink
                                 className={({isActive}) => navLinkIsActive(isActive)}
-                                to={"/courses"}
+                                to={staticPath.coursePage}
                             >
                                 Courses
                             </NavLink>
@@ -46,7 +40,7 @@ const NavBar: FC<NavBarProps> = ({loginModalIsActive, showLoginModal, removeLogi
                         <li>
                             <NavLink
                                 className={({isActive}) => navLinkIsActive(isActive)}
-                                to={"/events"}
+                                to={staticPath.eventsPage}
                             >
                                 Events
                             </NavLink>
@@ -54,7 +48,7 @@ const NavBar: FC<NavBarProps> = ({loginModalIsActive, showLoginModal, removeLogi
                         <li>
                             <NavLink
                                 className={({isActive}) => navLinkIsActive(isActive)}
-                                to={"/blog"}
+                                to={staticPath.blogPage}
                             >
                                 Blog
                             </NavLink>
@@ -62,7 +56,7 @@ const NavBar: FC<NavBarProps> = ({loginModalIsActive, showLoginModal, removeLogi
                         <li>
                             <NavLink
                                 className={({isActive}) => navLinkIsActive(isActive)}
-                                to={"/contacts"}
+                                to={staticPath.contactsPage}
                             >
                                 Contacts
                             </NavLink>
@@ -74,7 +68,7 @@ const NavBar: FC<NavBarProps> = ({loginModalIsActive, showLoginModal, removeLogi
                             variant={ButtonVariant.solid}
                             size={ButtonSize.large}
                             onClick={navigateToContactsPage}/>
-                    <button onClick={showLoginModal} className={style.logIn}>
+                    <button className={style.logIn} onClick={onShowModalWindow}>
                         <PersonIcon/>
                         Log in / Register
                     </button>

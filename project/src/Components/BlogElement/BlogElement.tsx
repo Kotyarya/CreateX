@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import style from "./BlogElement.module.scss"
 import {nanoid} from "nanoid";
-import {ReactComponent as BracesSVG} from "../../assets/img/icons/braces.svg";
+import {ReactComponent as BracesSVG} from "../../assets/icons/other/braces.svg";
 import {IBlogElementProps} from "./IBlogElement";
 import PodcastElement from "../podcastElement/podcastElement";
 

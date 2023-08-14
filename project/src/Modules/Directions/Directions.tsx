@@ -2,8 +2,8 @@ import React, {useEffect} from 'react';
 import style from "./Directions.module.scss"
 import {useTypedSelector} from "../../hook/useTypedSelector";
 import {useAction} from "../../hook/useAction";
-import {imgUrl} from "../../utils/const/const";
-import {ReactComponent as ArrowSVG} from "../../assets/img/icons/Right.svg";
+import {imgUrl} from "../../utils/const/imgUrl";
+import {ReactComponent as ArrowSVG} from "../../assets/icons/other/Right.svg";
 import {useNavigate} from "react-router-dom";
 
 const Directions = () => {

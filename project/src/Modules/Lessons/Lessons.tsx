@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import {nanoid} from "nanoid";
 import style from "./Lessons.module.scss"
 import illustration from "./img/illustration.png"
-import {ILessons} from "../../Redux/API/coursesAPI";
+import {ILessons} from "../../Redux/Other/Types/coursesTypes";
 
 interface LessonsProps {
     lessons: ILessons[] | undefined

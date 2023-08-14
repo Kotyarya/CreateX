@@ -1,9 +1,10 @@
 import React from 'react';
 import {Field, reduxForm} from "redux-form";
 import Input, {sizeInput} from "../../../Components/Input/FormInput/Input";
-import Button, {ButtonSize, ButtonType, ButtonVariant} from "../../../Components/Button/Button";
+import Button from "../../../Components/Button/Button";
 import validateDiscountForm from "../../../utils/validate/validateDiscountForm";
 import style from "./RegisterForCourseForm.module.scss"
+import {ButtonSize, ButtonType, ButtonVariant} from "../../../Components/Button/ButtonTypes";
 
 
 const RegisterForCourseForm = ({handleSubmit}: any) => {

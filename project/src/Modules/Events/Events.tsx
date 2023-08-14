@@ -1,13 +1,13 @@
 import React, {ChangeEvent, FC} from 'react';
 import style from "./Events.module.scss"
-import CustomSelect from "./Select/CustomSelect";
+import CustomSelect from "../../Components/Select/CustomSelect";
 import {nanoid} from "nanoid";
 import ControlButton, {ControlButtonRotation} from "../../Components/ControlButton/ControlButton";
 import SearchInput from "../../Components/Input/SearchInput/SearchInput";
-import {ReactComponent as FlexSVG} from "../../assets/img/icons/flex.svg";
-import {ReactComponent as GridSVG} from "../../assets/img/icons/grid.svg";
-import {IEvent} from "../../Redux/API/eventAPI";
+import {ReactComponent as FlexSVG} from "../../assets/icons/other/flex.svg";
+import {ReactComponent as GridSVG} from "../../assets/icons/other/grid.svg";
 import EventCard from "../../Components/EventCard/EventCard";
+import {IEvent} from "../../Redux/Other/Types/eventsTypes";
 
 
 interface EventsProps {

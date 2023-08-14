@@ -1,9 +1,9 @@
 import React from 'react';
 import style from "./Values.module.scss"
-import {ReactComponent as StructureSVG} from "../../assets/img/values/ic-structure.svg";
-import {ReactComponent as ChatSVG} from "../../assets/img/values/ic-chat.svg";
-import {ReactComponent as TargetSVG} from "../../assets/img/values/ic-target.svg";
-import {ReactComponent as CalendarSVG} from "../../assets/img/values/ic-calendar.svg";
+import {ReactComponent as StructureSVG} from "../../assets/icons/values/ic-structure.svg";
+import {ReactComponent as ChatSVG} from "../../assets/icons/values/ic-chat.svg";
+import {ReactComponent as TargetSVG} from "../../assets/icons/values/ic-target.svg";
+import {ReactComponent as CalendarSVG} from "../../assets/icons/values/ic-calendar.svg";
 
 const Values = () => {
     return (

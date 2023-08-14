@@ -1,6 +1,6 @@
 import React from 'react';
 import style from "./CheckBox.module.scss"
-import {ReactComponent as CheckSVG} from "../../assets/img/icons/Check.svg";
+import {ReactComponent as CheckSVG} from "../../assets/icons/other/Check.svg";
 
 const CheckBox = ({text}: { text: string }) => {
     return (

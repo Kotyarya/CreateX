@@ -5,6 +5,7 @@ import {reducer as formReducer} from 'redux-form'
 import curatorsReducer from "./curatorsReducer";
 import branchReducer from "./branchReducer";
 import blogReducer from "./blogsReducer";
+import modalReducer from "./modalReducer";
 
 export const rootReducer = combineReducers({
     courses: coursesReducer,
@@ -12,7 +13,8 @@ export const rootReducer = combineReducers({
     curators: curatorsReducer,
     branches: branchReducer,
     blogs: blogReducer,
-    form: formReducer
+    form: formReducer,
+    modal: modalReducer
 })
 
 
