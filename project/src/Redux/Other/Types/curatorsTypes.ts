@@ -26,8 +26,7 @@ interface GetCurators {
     payload: ICurator[] | null
 }
 
-
-interface FetchingCuratorsAction {
+interface FetchingCurators {
     type: CuratorsActionType.FETCHING_CURATORS,
 }
 
@@ -38,7 +37,7 @@ interface GetActiveCurator {
 }
 
 
-export type CuratorAction = GetCurators | FetchingCuratorsAction | GetActiveCurator
+export type CuratorAction = GetCurators | FetchingCurators | GetActiveCurator
 
 export interface CuratorState {
     curators: ICurator[] | null

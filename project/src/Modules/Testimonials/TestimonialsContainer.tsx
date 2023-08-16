@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {testimonials} from "../../Redux/Other/data"
 import Testimonials from "./Testimonials";
+import {testimonials} from "../../Redux/Other/Data/TestimonialsData/TestimonialsData";
 
 const TestimonialsContainer = () => {
 

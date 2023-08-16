@@ -1,7 +1,7 @@
 import React from 'react';
 import style from "./StudyingProcess.module.scss"
 import illustration from "./img/illustration.png"
-import {stepStudying} from "../../Redux/Other/data";
+import {stepsStudying} from "../../Redux/Other/Data/StepsStudyingData/StepsStudyingData";
 
 const StudyingProcess = () => {
     return (
@@ -12,7 +12,7 @@ const StudyingProcess = () => {
                     <h2>That’s how we do it</h2>
                 </article>
                 <div className={style.steps}>
-                    {stepStudying.map((step) => {
+                    {stepsStudying.map((step) => {
                         return (
                             <div className={style.block}>
                                 <p className={style.number}>step {step.step}</p>

@@ -23,7 +23,7 @@ const BlogElement: FC<IBlogElementProps> = ({articleElement, videoElement, podca
             </div>
         )
     } else if (videoElement) {
-        const videoUrl = videoElement.url.replace("watch?v=", "embed/").slice(0, 41)
+        const videoUrl = videoElement.url.replace("watch?v=", "embed/").slice(0, 41).replace("youtube", "youtube-nocookie")
         return (
             <div className={style.videoElement}>
                 <iframe src={videoUrl}

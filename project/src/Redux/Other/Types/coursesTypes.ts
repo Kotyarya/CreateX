@@ -6,7 +6,6 @@ export interface ILessons {
     description: string
 }
 
-
 export interface ICourseResponse {
     id: number,
     title: string,
@@ -40,7 +39,6 @@ interface GetStartCoursesAction {
     type: CoursesActionType.GET_START_COURSES,
     payload: ICourse[] | undefined
 }
-
 
 interface FetchingCoursesAction {
     type: CoursesActionType.FETCHING_COURSES,

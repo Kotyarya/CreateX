@@ -4,39 +4,46 @@ const initialState: EventsState = {
     events: [],
     eventCategory: [],
     count: 0,
-    activeEvent: null
+    activeEvent: null,
+    loading: false
 }
 
 const eventsReducer = (state = initialState, action: EventsAction): EventsState => {
     switch (action.type) {
         case EventsActionType.GET_START_EVENTS:
             return {
+                ...state,
                 events: action.payload,
-                eventCategory: state.eventCategory,
-                count: state.count,
-                activeEvent: state.activeEvent
+                loading: false
             }
         case EventsActionType.GET_EVENTS_CATEGORY:
             return {
                 ...state,
-                eventCategory: action.payload
+                eventCategory: action.payload,
+                loading: false
             }
         case EventsActionType.GET_EVENTS:
             return {
+                ...state,
                 events: action.payload,
-                eventCategory: state.eventCategory,
-                count: state.count,
-                activeEvent: state.activeEvent
+                loading: false
             }
         case EventsActionType.GET_COUNT:
             return {
                 ...state,
-                count: action.payload
+                count: action.payload,
+                loading: false
             }
         case EventsActionType.GET_EVENT_BY_ID:
             return {
                 ...state,
-                activeEvent: action.payload
+                activeEvent: action.payload,
+                loading: false
+            }
+        case EventsActionType.FETCHING_EVENTS:
+            return {
+                ...state,
+                loading: true
             }
         default :
             return state

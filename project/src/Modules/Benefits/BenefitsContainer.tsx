@@ -1,6 +1,6 @@
 import React, {FC, useState} from 'react';
 import Benefits from "./Benefits";
-import {benefitsData} from "../../Redux/Other/data";
+import {benefitsData} from "../../Redux/Other/Data/BenefitsData/BenefitsData";
 
 const BenefitsContainer: FC = () => {
     const [activeBenefitId, setActiveBenefitId] = useState<number>(1)

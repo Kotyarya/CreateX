@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 import style from "./Testimonials.module.scss"
 import ControlButton, {ControlButtonRotation} from "../../Components/ControlButton/ControlButton";
-import {ITestimonial} from "../../Redux/Other/data";
 import {nanoid} from "nanoid";
+import {ITestimonial} from "../../Redux/Other/Data/TestimonialsData/TestimonialsDataTypes";
 
 interface TestimonialsProps {
     translate: number,

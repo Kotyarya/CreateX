@@ -1,4 +1,4 @@
-import {IBenefit} from "../../Redux/Other/data";
+import {IBenefit} from "../../Redux/Other/Data/BenefitsData/BenefitsDataTypes";
 
 export interface BenefitsTypes {
     activeBenefitId: number,

@@ -17,7 +17,6 @@ interface GetBranches {
     payload: IBranch[] | null
 }
 
-
 interface FetchingBranches {
     type: BranchActionTypes.FETCHING_BRANCHES,
 }
