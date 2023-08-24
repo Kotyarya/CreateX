@@ -1,32 +1,16 @@
-import React, {ReactComponentElement} from 'react';
+import React, {FC} from 'react';
 import style from "./Blog.module.scss"
-import {useTypedSelector} from "../../hook/useTypedSelector";
 import {imgUrl} from "../../utils/const/imgUrl";
-import {ReactComponent as ArticleSVG} from "../../assets/icons/blogLabel/Article.svg";
-import {ReactComponent as VideoSVG} from "../../assets/icons/blogLabel/Video.svg";
-import {ReactComponent as PodcastSVG} from "../../assets/icons/blogLabel/Podcast.svg";
+
 import {ReactComponent as FacebookSVG} from "../../assets/icons/socialMedia/facebookSVG.svg";
 import {ReactComponent as TwitterSVG} from "../../assets/icons/socialMedia/twitterSVG.svg";
 import {ReactComponent as LinkedInSVG} from "../../assets/icons/socialMedia/linkedinSVG.svg";
 import BlogElement from "../../Components/BlogElement/BlogElement";
 import {nanoid} from "nanoid";
+import {BlogTypes} from "./BlogTypes";
 
-const Blog = () => {
-    const blog = useTypedSelector(state => state.blogs.activeBlog)
 
-    let svg: null | ReactComponentElement<typeof ArticleSVG | typeof VideoSVG | typeof PodcastSVG> = null
-    let time: null | string = null
-
-    if (blog?.blogTypeId === 1) {
-        svg = <ArticleSVG/>
-    } else if (blog?.blogTypeId === 2) {
-        svg = <VideoSVG/>
-        time = `${blog.videoElement?.time} min watch`
-    } else if (blog?.blogTypeId === 3) {
-        svg = <PodcastSVG/>
-        time = `${blog.podcastElement?.time} min listen`
-    }
-
+const Blog: FC<BlogTypes> = ({blog, svg, time}) => {
     return (
         <div className={style.wrapper}>
             <div className={style.type}>{svg} {blog?.blogType.name} <span>{blog?.branch.name}</span></div>

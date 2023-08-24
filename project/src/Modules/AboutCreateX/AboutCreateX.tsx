@@ -1,11 +1,14 @@
 import React from 'react';
 import style from "./AboutCreateX.module.scss"
 import img from "./img/illustration.png"
-import {NavLink} from "react-router-dom";
 import Button from "../../Components/Button/Button";
 import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
+import {useNavigateTo} from "../../hook/useNavigateTo";
 
 const AboutCreateX = () => {
+
+    const {navigateToEventsPage, navigateToCoursesPage} = useNavigateTo()
+
     return (
         <div className={style.wrapper}>
             <div className={style.content}>
@@ -20,12 +23,10 @@ const AboutCreateX = () => {
                     specialty from scratch. During your studies, we will help you find a job. Check the courses and
                     online events that we organise.</p>
                 <div className={style.buttons}>
-                    <NavLink to={"/events"}>
-                        <Button text={"Explore events"} variant={ButtonVariant.outline} size={ButtonSize.large}/>
-                    </NavLink>
-                    <NavLink to={"/courses"}>
-                        <Button text={"Browse courses"} variant={ButtonVariant.solid} size={ButtonSize.large}/>
-                    </NavLink>
+                    <Button text={"Explore events"} variant={ButtonVariant.outline} size={ButtonSize.large}
+                            onClick={navigateToEventsPage}/>
+                    <Button text={"Browse courses"} variant={ButtonVariant.solid} size={ButtonSize.large}
+                            onClick={navigateToCoursesPage}/>
                 </div>
             </div>
             <img src={img} alt="illustration"/>

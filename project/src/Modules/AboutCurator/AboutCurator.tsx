@@ -5,17 +5,8 @@ import {ReactComponent as BehanceSVG} from "../../assets/icons/socialMedia/behan
 import {ReactComponent as TwitterSVG} from "../../assets/icons/socialMedia/twitterSVG.svg";
 import {ReactComponent as LinkedInSVG} from "../../assets/icons/socialMedia/linkedinSVG.svg";
 import {imgUrl} from "../../utils/const/imgUrl";
-import {ICurator} from "../../Redux/Other/Types/curatorsTypes";
+import {AboutCuratorProps} from "./AboutCuratorTypes";
 
-export enum AboutCuratorType {
-    curator = "course curator",
-    speaker = "speaker"
-}
-
-interface AboutCuratorProps {
-    curator: ICurator | undefined,
-    type: AboutCuratorType
-}
 
 const AboutCurator: FC<AboutCuratorProps> = ({curator, type}) => {
     return (

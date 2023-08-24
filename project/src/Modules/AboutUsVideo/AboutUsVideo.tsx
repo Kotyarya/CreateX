@@ -2,10 +2,11 @@ import React, {useState} from 'react';
 import video from '../../assets/video/video.mp4'
 import ReactPlayer from "react-player";
 import style from "./AboutUsVideo.module.scss"
-import PlayButton, {PlayButtonSize} from "../../Components/PlayButton/PlayButton";
+import PlayButton from "../../Components/PlayButton/PlayButton";
+import {PlayButtonSize} from "../../Components/PlayButton/PlayButtonTypes";
 
 const AboutUsVideo = () => {
-    const [playing, setPlaying] = useState(false)
+    const [playing, setPlaying] = useState<boolean>(false)
 
     const onPlay = () => {
         setPlaying(!playing)

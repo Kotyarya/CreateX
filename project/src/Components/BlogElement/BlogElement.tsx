@@ -2,11 +2,11 @@ import React, {FC} from 'react';
 import style from "./BlogElement.module.scss"
 import {nanoid} from "nanoid";
 import {ReactComponent as BracesSVG} from "../../assets/icons/other/braces.svg";
-import {IBlogElementProps} from "./IBlogElement";
-import PodcastElement from "../podcastElement/podcastElement";
+import {BlogElementTypes} from "./BlogElementTypes";
+import PodcastElementContainer from "../PodcastElement/PodcastElementContainer";
 
 
-const BlogElement: FC<IBlogElementProps> = ({articleElement, videoElement, podcastElement}) => {
+const BlogElement: FC<BlogElementTypes> = ({articleElement, videoElement, podcastElement}) => {
     if (articleElement) {
         return (
             <div className={style.articleElement}>
@@ -32,9 +32,8 @@ const BlogElement: FC<IBlogElementProps> = ({articleElement, videoElement, podca
             </div>
         )
     } else if (podcastElement) {
-
         return (
-            <PodcastElement podcastElement={podcastElement}/>
+            <PodcastElementContainer podcastElement={podcastElement}/>
         )
     } else {
         return <></>

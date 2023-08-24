@@ -1,7 +1,8 @@
 import React, {useEffect} from 'react';
-import AboutCurator, {AboutCuratorType} from "../AboutCurator/AboutCurator";
 import {useTypedSelector} from "../../hook/useTypedSelector";
 import {useAction} from "../../hook/useAction";
+import AboutCurator from "../AboutCurator/AboutCurator";
+import {AboutCuratorType} from "../AboutCurator/AboutCuratorTypes";
 
 const AboutSpeakerContainer = () => {
     const speakerId = useTypedSelector(state => state.events.activeEvent?.curatorId)

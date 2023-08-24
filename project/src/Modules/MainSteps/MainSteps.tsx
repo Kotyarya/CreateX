@@ -12,7 +12,7 @@ const MainSteps = () => {
             <div className={style.content}>
                 {stepsStudying.map((step) => {
                     return (
-                        <div className={style.block}>
+                        <div className={style.block} key={step.step}>
                             <div className={style.number}>
                                 <p>0{step.step}</p>
                                 <span className={style.bg1}></span>

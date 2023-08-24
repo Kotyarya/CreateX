@@ -3,7 +3,7 @@ import "./CustomSelect.scss"
 import Select from "react-select";
 
 interface CustomSelectProps {
-    options: any,
+    options: { value: any, label: any }[] | undefined,
     value: any,
     onChange: any,
     defaultValue?: any,

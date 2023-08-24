@@ -3,16 +3,9 @@ import style from "./AboutCourse.module.scss"
 import {nanoid} from "nanoid";
 import Button from "../../Components/Button/Button";
 import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
+import {AboutCourseTypes} from "./AboutCourseTypes";
 
-interface AboutCourseProps {
-    description: string,
-    willLearn: { text: string }[],
-    date: string,
-    price: number,
-    lessonsLength: number
-}
-
-const AboutCourse: FC<AboutCourseProps> = ({description, willLearn, date, price, lessonsLength}) => {
+const AboutCourse: FC<AboutCourseTypes> = ({description, willLearn, date, price, lessonsLength}) => {
     return (
         <div className={style.wrapper}>
             <div className={style.content}>

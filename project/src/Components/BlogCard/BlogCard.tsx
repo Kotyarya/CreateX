@@ -36,7 +36,7 @@ const BlogCard: FC<BlogCardProps> = ({blog, staticSize, searchText}) => {
 
 
     return (
-        <div className={style.wrapper} style={staticSize ? {
+        <div key={blog.id} className={style.wrapper} style={staticSize ? {
             minWidth: "39rem",
             minHeight: "50.7rem",
             maxWidth: "39rem",

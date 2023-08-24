@@ -31,7 +31,7 @@ const LatestBlogs = () => {
             <div className={style.content}>
                 {
                     blogs?.map((blog, index) => index < 3 ?
-                        <BlogCard blog={blog} staticSize={true} searchText={""}/> : null)
+                        <BlogCard key={blog.id} blog={blog} staticSize={true} searchText={""}/> : null)
                 }
             </div>
         </div>

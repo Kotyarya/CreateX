@@ -1,6 +1,7 @@
 import React from 'react';
-import ForWhom, {ForWhomType} from "../../Components/ForWhom/ForWhomCourse";
 import {useTypedSelector} from "../../hook/useTypedSelector";
+import ForWhom from "../../Components/ForWhom/ForWhomCourse";
+import {ForWhomType} from "../../Components/ForWhom/ForWhomTypes";
 
 const ForWhomEventContainer = () => {
     const forWhom = useTypedSelector(state => state.events.activeEvent?.forWhom)

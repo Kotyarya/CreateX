@@ -1,10 +1,11 @@
 import React, {FC} from 'react';
 import style from "./Head.module.scss"
-import PlayButton, {PlayButtonSize} from "../../Components/PlayButton/PlayButton";
 import illustration from "./img/illustration.png"
 import Button from "../../Components/Button/Button";
 import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
 import {HeadTypes} from "./HeadTypes";
+import PlayButton from "../../Components/PlayButton/PlayButton";
+import {PlayButtonSize} from "../../Components/PlayButton/PlayButtonTypes";
 
 
 const Head: FC<HeadTypes> = ({onShowModalWindow, navigateToAboutUsPage, navigateToCoursesPage}) => {

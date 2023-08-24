@@ -14,7 +14,7 @@ const StudyingProcess = () => {
                 <div className={style.steps}>
                     {stepsStudying.map((step) => {
                         return (
-                            <div className={style.block}>
+                            <div className={style.block} key={step.step}>
                                 <p className={style.number}>step {step.step}</p>
                                 <p className={style.title}>{step.name}</p>
                                 <p className={style.text}>{step.text}</p>

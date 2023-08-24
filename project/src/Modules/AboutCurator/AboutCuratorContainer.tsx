@@ -1,7 +1,8 @@
 import React, {useEffect} from 'react';
-import AboutCurator, {AboutCuratorType} from "./AboutCurator";
 import {useTypedSelector} from "../../hook/useTypedSelector";
 import {useAction} from "../../hook/useAction";
+import AboutCurator from "./AboutCurator";
+import {AboutCuratorType} from "./AboutCuratorTypes";
 
 const AboutCuratorContainer = () => {
     const curatorId = useTypedSelector(state => state.courses.activeCourse?.curator.id)

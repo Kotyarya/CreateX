@@ -1,19 +1,10 @@
 import React, {FC} from 'react';
 import style from "./ForWhom.module.scss"
 import {nanoid} from "nanoid";
+import {ForWhomProps} from "./ForWhomTypes";
 
-export enum ForWhomType {
-    event = "event",
-    course = "event"
-}
 
-interface ForWhomCourseProps {
-    forWhom: { text: string }[] | undefined,
-    type: ForWhomType
-}
-
-const ForWhom: FC<ForWhomCourseProps> = ({forWhom, type}) => {
-
+const ForWhom: FC<ForWhomProps> = ({forWhom, type}) => {
     return (
         <div className={style.wrapper}>
             <article>
