@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f6b50f66-595e-4b61-b032-de6627445505" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/ForWhom/ForWhomTypes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/PlayButton/PlayButtonTypes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/PodcastElement/PodcastElementContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/PodcastElement/PodcastElementTypes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/AboutCourse/AboutCourseTypes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/AboutCurator/AboutCuratorTypes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/Blog/BlogTypes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/BlogAside/BlogAsideTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/BlogCard/BlogCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BlogCard/BlogCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/BlogElement/BlogElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BlogElement/BlogElement.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/BlogElement/IBlogElement.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BlogElement/BlogElementTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ForWhom/ForWhomCourse.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ForWhom/ForWhomCourse.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/PlayButton/PlayButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PlayButton/PlayButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Select/CustomSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Select/CustomSelect.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/podcastElement/podcastElement.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PodcastElement/PodcastElement.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/podcastElement/podcastElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PodcastElement/PodcastElement.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/AboutCourse/AboutCourse.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/AboutCourse/AboutCourse.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/AboutCreateX/AboutCreateX.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/AboutCreateX/AboutCreateX.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/AboutCurator/AboutCurator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/AboutCurator/AboutCurator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/AboutCurator/AboutCuratorContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/AboutCurator/AboutCuratorContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/AboutSpeaker/AboutSpeakerContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/AboutSpeaker/AboutSpeakerContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/AboutUsVideo/AboutUsVideo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/AboutUsVideo/AboutUsVideo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Blog/Blog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Blog/Blog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Blog/BlogContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Blog/BlogContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/BlogAside/BlogAside.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/BlogAside/BlogAside.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/BlogAside/BlogAsideContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/BlogAside/BlogAsideContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/ForWhomCourse/ForWhomCourseContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/ForWhomCourse/ForWhomCourseContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/ForWhomEvent/ForWhomEventContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/ForWhomEvent/ForWhomEventContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Head/Head.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Head/Head.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/LatestBlogs/LatestBlogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/LatestBlogs/LatestBlogs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/MainSteps/MainSteps.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/MainSteps/MainSteps.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/StudyingProcess/StudyingProcess.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/StudyingProcess/StudyingProcess.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="com.haulmont.rcb.palette" />
+        <option value="com.haulmont.rcb.previews" />
+        <option value="com.haulmont.rcb.index" />
+        <option value="com.haulmont.rcb.useInitial" />
+        <option value="com.haulmont.rcb.README" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Modules/Head/Head.tsx" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProjectId" id="2RCsRX4nIRss2sQp4QsOjrWj1g5" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kotyarya/Documents/Programowanie/GitHub/CreateX/project/src/Modules/Modal/VideoModal&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/kotyarya/Documents/Programowanie/GitHub/CreateX/project/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;TypeScript JSX&quot;
+    ]
+  }
+}</component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.rcb.reactComponents" value="false" />
+        <entry key="com.haulmont.rcb.reactInspector" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Modules/Modal/VideoModal" />
+      <recent name="$PROJECT_DIR$/src/Modules/AboutCourse" />
+      <recent name="$PROJECT_DIR$/src/Modules/Courses/img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Redux/Other/Data/BenefitsData" />
+      <recent name="$PROJECT_DIR$/src/Modules" />
+      <recent name="$PROJECT_DIR$/src/Redux/API/event" />
+      <recent name="$PROJECT_DIR$/src/Redux/API/curator" />
+      <recent name="$PROJECT_DIR$/src/Redux/API/course" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f6b50f66-595e-4b61-b032-de6627445505" name="Changes" comment="" />
+      <created>1686765389547</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686765389547</updated>
+      <workItem from="1686765391219" duration="645000" />
+      <workItem from="1686766079747" duration="2105000" />
+      <workItem from="1686768211701" duration="1279000" />
+      <workItem from="1686774433555" duration="8274000" />
+      <workItem from="1686822146155" duration="15106000" />
+      <workItem from="1686926525254" duration="7000" />
+      <workItem from="1686926541661" duration="6118000" />
+      <workItem from="1686932818144" duration="2000" />
+      <workItem from="1686995729344" duration="5038000" />
+      <workItem from="1687001585595" duration="9049000" />
+      <workItem from="1687021339755" duration="10645000" />
+      <workItem from="1687083756395" duration="28775000" />
+      <workItem from="1687165677553" duration="19179000" />
+      <workItem from="1687254855153" duration="18977000" />
+      <workItem from="1687277600890" duration="48000" />
+      <workItem from="1687290277208" duration="10236000" />
+      <workItem from="1687352758081" duration="6864000" />
+      <workItem from="1687425740217" duration="14092000" />
+      <workItem from="1687518787717" duration="12644000" />
+      <workItem from="1687602293559" duration="19743000" />
+      <workItem from="1687858275455" duration="17414000" />
+      <workItem from="1687953811455" duration="14352000" />
+      <workItem from="1688030074155" duration="12662000" />
+      <workItem from="1688120461747" duration="16895000" />
+      <workItem from="1688288149160" duration="630000" />
+      <workItem from="1688507521487" duration="631000" />
+      <workItem from="1688510565357" duration="7521000" />
+      <workItem from="1688552183669" duration="8686000" />
+      <workItem from="1688652442220" duration="5302000" />
+      <workItem from="1688681524517" duration="15259000" />
+      <workItem from="1688770159684" duration="5604000" />
+      <workItem from="1688815649849" duration="637000" />
+      <workItem from="1688893445357" duration="24872000" />
+      <workItem from="1689094721617" duration="6265000" />
+      <workItem from="1689180345467" duration="2923000" />
+      <workItem from="1689186372306" duration="545000" />
+      <workItem from="1689241130086" duration="6821000" />
+      <workItem from="1689261486907" duration="2375000" />
+      <workItem from="1689328710531" duration="8238000" />
+      <workItem from="1689418830683" duration="13411000" />
+      <workItem from="1689502209681" duration="19267000" />
+      <workItem from="1689971333329" duration="61047000" />
+      <workItem from="1690364026716" duration="25946000" />
+      <workItem from="1691572875484" duration="14115000" />
+      <workItem from="1691658440083" duration="147000" />
+      <workItem from="1691658713833" duration="28854000" />
+      <workItem from="1692034553601" duration="603000" />
+      <workItem from="1692212845480" duration="5163000" />
+      <workItem from="1692280385337" duration="7304000" />
+    </task>
+    <task id="LOCAL-00001" summary="Start">
+      <created>1686766810853</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686766810853</updated>
+    </task>
+    <task id="LOCAL-00002" summary="global.scss">
+      <created>1686769477093</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686769477093</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Button.tsx">
+      <created>1686782717943</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686782717943</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Head.tsx&#10;AboutInHomePage.tsx">
+      <created>1686932709555</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686932709555</updated>
+    </task>
+    <task id="LOCAL-00005" summary="temp">
+      <created>1687002116002</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687002116002</updated>
+    </task>
+    <task id="LOCAL-00006" summary="CoursesInHomePage.tsx">
+      <created>1687010641720</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687010641720</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Benefits.tsx">
+      <created>1687038797687</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1687038797687</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Testimonials.tsx">
+      <created>1687277622507</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1687277622507</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Input.tsx">
+      <created>1687382676778</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1687382676778</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Footer.tsx">
+      <created>1687443412566</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1687443412566</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Courses.tsx">
+      <created>1687552613080</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1687552613080</updated>
+    </task>
+    <task id="LOCAL-00012" summary="CoursePage.tsx">
+      <option name="closed" value="true" />
+      <created>1687882577067</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1687882577067</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Discount.tsx&#10;ForWhomCourse.tsx&#10;Lessons.tsx">
+      <option name="closed" value="true" />
+      <created>1687984508582</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1687984508582</updated>
+    </task>
+    <task id="LOCAL-00014" summary="EventsPage.tsx">
+      <option name="closed" value="true" />
+      <created>1688069338685</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1688069338685</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Events.tsx">
+      <option name="closed" value="true" />
+      <created>1688144627985</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1688144627985</updated>
+    </task>
+    <task id="LOCAL-00016" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1688520500913</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1688520500913</updated>
+    </task>
+    <task id="LOCAL-00017" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1688581584143</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1688581584143</updated>
+    </task>
+    <task id="LOCAL-00018" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1688658419025</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1688658419025</updated>
+    </task>
+    <task id="LOCAL-00019" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1688742264329</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1688742264329</updated>
+    </task>
+    <task id="LOCAL-00020" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1688759010678</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1688759010678</updated>
+    </task>
+    <task id="LOCAL-00021" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1688775896426</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1688775896426</updated>
+    </task>
+    <task id="LOCAL-00022" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1689018744392</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1689018744392</updated>
+    </task>
+    <task id="LOCAL-00023" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1689101890007</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1689101890007</updated>
+    </task>
+    <task id="LOCAL-00024" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1689185515747</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1689185515747</updated>
+    </task>
+    <task id="LOCAL-00025" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1689186906484</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1689186906484</updated>
+    </task>
+    <task id="LOCAL-00026" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1689358755163</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1689358755163</updated>
+    </task>
+    <task id="LOCAL-00027" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1690314349122</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1690314349122</updated>
+    </task>
+    <task id="LOCAL-00028" summary="commit">
+      <option name="closed" value="true" />
+      <created>1691348286215</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1691348286215</updated>
+    </task>
+    <task id="LOCAL-00029" summary="commit">
+      <option name="closed" value="true" />
+      <created>1691658197089</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1691658197089</updated>
+    </task>
+    <task id="LOCAL-00030" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1692033247851</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1692033247851</updated>
+    </task>
+    <task id="LOCAL-00031" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1692227641970</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1692227641970</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Start" />
+    <MESSAGE value="global.scss" />
+    <MESSAGE value="Button.tsx" />
+    <MESSAGE value="Head.tsx&#10;AboutInHomePage.tsx" />
+    <MESSAGE value="temp" />
+    <MESSAGE value="CoursesInHomePage.tsx" />
+    <MESSAGE value="Benefits.tsx" />
+    <MESSAGE value="Testimonials.tsx" />
+    <MESSAGE value="Input.tsx" />
+    <MESSAGE value="Footer.tsx" />
+    <MESSAGE value="Courses.tsx" />
+    <MESSAGE value="CoursePage.tsx" />
+    <MESSAGE value="Discount.tsx&#10;ForWhomCourse.tsx&#10;Lessons.tsx" />
+    <MESSAGE value="EventsPage.tsx" />
+    <MESSAGE value="Events.tsx" />
+    <MESSAGE value="commit" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+  </component>
+</project>
