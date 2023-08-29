@@ -4,7 +4,7 @@ import {useTypedSelector} from "../../hook/useTypedSelector";
 import {useAction} from "../../hook/useAction";
 
 const TeamCarouselContainer: FC = () => {
-    const [translate, setTranslate] = useState<number>(0)
+    const [translate, setTranslate] = useState(0)
     const curators = useTypedSelector(state => state.curators.curators)
     const {getCurators} = useAction()
 

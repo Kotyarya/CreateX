@@ -11,15 +11,16 @@ export const coursesApi = {
             return undefined
         }
     },
-    getCoursesByBranch: async (branchId: number = 0, page: number = 1) => {
+    getCoursesByBranch: async (branchId: number = 0, page: number = 1, text: string) => {
         try {
-            const response = await instance.get<ICourse[]>(`/course?branchId=${branchId}&page=${page}`)
+            let searchText = text ? `&text=${text}` : ""
+            const response = await instance.get<ICourse[]>(`/course?branchId=${branchId}&page=${page}${searchText}`)
+            console.log(`/course?branchId=${branchId}&page=${page}${searchText}`)
             return response.data
         } catch (e) {
             return undefined
         }
     },
-
     getCourseById: async (courseId: number) => {
         try {
             const response = await instance.get<ICourseResponse>(`/course/${courseId}`)

@@ -8,7 +8,7 @@ import {ReactComponent as PodcastSVG} from "../../assets/icons/blogLabel/Podcast
 import BlogCard from "../../Components/BlogCard/BlogCard";
 import ControlButton, {ControlButtonRotation} from "../../Components/ControlButton/ControlButton";
 import {nanoid} from "nanoid";
-import {IBlog, IBlogType} from "../../Redux/Other/Types/blogsTypes";
+import {BlogsTypes} from "./BlogsTypes";
 
 
 const gridAreaOptions = [
@@ -27,30 +27,8 @@ const gridAreaOptions = [
     "six six six six six six six seven seven seven seven seven"`
 ]
 
-interface BlogsProps {
-    blogTypes: IBlogType[] | null,
-    activeBlogType: number,
-    onClickBlogTypeButtons: (blogTypeId: number) => void,
-    optionsBlogBranch: {
-        value: number,
-        label: string
-    }[] | undefined,
-    activeBranch: {
-        value: number,
-        label: string
-    },
-    onChangeBlogBranch: (newValue: any) => void,
-    onChangeSearchTextInput: (e: React.ChangeEvent<HTMLInputElement>) => void,
-    searchText: string,
-    blogs: IBlog[] | null,
-    randomNumberForGridArea: number,
-    currentPage: number,
-    onChangePage: (num: number) => void,
-    pages: number[],
-    onClickSetPage: (page: number) => void
-}
 
-const Blogs: FC<BlogsProps> = ({
+const Blogs: FC<BlogsTypes> = ({
                                    blogTypes,
                                    activeBlogType,
                                    onClickBlogTypeButtons,

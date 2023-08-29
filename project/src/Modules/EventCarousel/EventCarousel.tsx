@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import style from "./EventCarousel.module.scss"
 import {useAction} from "../../hook/useAction";
 import {useTypedSelector} from "../../hook/useTypedSelector";
@@ -6,12 +6,13 @@ import EventCard from "../../Components/EventCard/EventCard";
 import ControlButton, {ControlButtonRotation} from "../../Components/ControlButton/ControlButton";
 import Button from "../../Components/Button/Button";
 import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
+import {useCarousel} from "../../hook/useCarousel";
 
 const EventCarousel = () => {
 
     const {getEvents} = useAction()
     const events = useTypedSelector(state => state.events.events)
-    const [translate, setTranslate] = useState<number>(0)
+    const {translate, onMoveBack, onMoveForward} = useCarousel(42)
 
     useEffect(() => {
         getEvents(10, 0, 1, "")
@@ -27,10 +28,10 @@ const EventCarousel = () => {
                 </article>
                 <div className={style.control}>
                     <ControlButton rotation={ControlButtonRotation.left} disabled={translate === 0}
-                                   onClick={() => setTranslate(translate + 42)}/>
+                                   onClick={onMoveBack}/>
                     <ControlButton rotation={ControlButtonRotation.right}
                                    disabled={translate <= -294}
-                                   onClick={() => setTranslate(translate - 42)}/>
+                                   onClick={onMoveForward}/>
                 </div>
             </div>
             <div className={style.carousel}>

@@ -4,7 +4,6 @@ export const instance = axios.create({
     baseURL: "https://createx-db-f2fc5b834a98.herokuapp.com/api",
     headers: {
         'Content-Type': 'application/json',
-        'SameSite': 'None'
+        'Access-Control-Allow-Origin': '*',
     },
-    withCredentials: false,
 })

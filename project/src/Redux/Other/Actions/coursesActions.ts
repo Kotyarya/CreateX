@@ -11,19 +11,19 @@ export const getStartCourses = () => {
 }
 
 
-export const getCourseByBranch = (branchId: number, page: number) => {
+export const getCourseByBranch = (branchId: number, page: number, text: string) => {
     return async (dispatch: Dispatch<CoursesAction>) => {
         dispatch({type: CoursesActionType.FETCHING_COURSES})
-        const response = await coursesApi.getCoursesByBranch(branchId, page)
+        const response = await coursesApi.getCoursesByBranch(branchId, page, text)
         dispatch({type: CoursesActionType.SET_BRANCH, payload: branchId})
         dispatch({type: CoursesActionType.GET_COURSES_BY_BRANCH, payload: response})
     }
 }
 
-export const getMoreCourses = (branchId: number, page: number) => {
+export const getMoreCourses = (branchId: number, page: number, text: string) => {
     return async (dispatch: Dispatch<CoursesAction>) => {
         dispatch({type: CoursesActionType.FETCHING_COURSES})
-        const response = await coursesApi.getCoursesByBranch(branchId, page)
+        const response = await coursesApi.getCoursesByBranch(branchId, page, text)
         dispatch({type: CoursesActionType.GET_MORE_COURSES, payload: response})
     }
 }

@@ -2,7 +2,6 @@ import React, {ChangeEvent, FC, useEffect, useState} from 'react';
 import Courses from "./Courses";
 import {useTypedSelector} from "../../hook/useTypedSelector";
 import {useAction} from "../../hook/useAction";
-import {useNavigate} from "react-router-dom";
 
 const CoursesContainer: FC = () => {
 
@@ -11,44 +10,39 @@ const CoursesContainer: FC = () => {
     const branches = useTypedSelector(state => state.branches.branches)
     const {courses, activeBranch, loading} = useTypedSelector(state => state.courses)
     const {getBranches, getCourseByBranch, getMoreCourses} = useAction()
-    const navigate = useNavigate()
 
 
-    const filterCourses = courses?.filter((course) => course.title.includes(searchText.trim()))
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        setPage(1)
         setSearchText(e.target.value)
     }
 
-
     const changeBranch = (branchId: number, page: number) => {
         setPage(page)
-        getCourseByBranch(branchId, 1)
+        getCourseByBranch(branchId, 1, searchText)
     }
+
     const loadMore = () => {
         setPage(page + 1)
-        getMoreCourses(activeBranch, page + 1)
-    }
-    const navigateToCourse = (courseId: number) => {
-        navigate(`/courses/${courseId}`)
+        getMoreCourses(activeBranch, page + 1, searchText)
     }
 
 
     useEffect(() => {
         getBranches()
-        getCourseByBranch(activeBranch || 0, page)
+        getCourseByBranch(activeBranch || 0, page, searchText)
         // eslint-disable-next-line
-    }, [])
+    }, [searchText])
 
     return (
-        <Courses filterCourses={filterCourses}
+        <Courses courses={courses}
                  loading={loading}
                  searchText={searchText}
                  loadMore={loadMore}
                  branches={branches}
                  activeBranch={activeBranch}
                  onChangeHandler={onChangeHandler}
-                 changeBranch={changeBranch}
-                 navigateToCourse={navigateToCourse}/>
+                 changeBranch={changeBranch}/>
     );
 };
 

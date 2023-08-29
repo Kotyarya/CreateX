@@ -1,27 +1,11 @@
-import React, {useEffect} from 'react';
+import React, {FC} from 'react';
 import style from "./Directions.module.scss"
-import {useTypedSelector} from "../../hook/useTypedSelector";
-import {useAction} from "../../hook/useAction";
 import {imgUrl} from "../../utils/const/imgUrl";
 import {ReactComponent as ArrowSVG} from "../../assets/icons/other/Right.svg";
-import {useNavigate} from "react-router-dom";
+import {DirectionsTypes} from "./DirectionsTypes";
 
-const Directions = () => {
 
-    const branches = useTypedSelector(state => state.branches.branches)
-    const {getBranches, setActiveBranch} = useAction()
-    const navigate = useNavigate()
-
-    useEffect(() => {
-        getBranches()
-        // eslint-disable-next-line
-    }, [])
-
-    const navigateToCoursesPage = (branchId: number) => {
-        setActiveBranch(branchId)
-        navigate("/courses")
-    }
-
+const Directions: FC<DirectionsTypes> = ({branches, navigateToCoursesPageHandler}) => {
     return (
         <div className={style.wrapper}>
             <article>
@@ -38,7 +22,7 @@ const Directions = () => {
                             <div className={style.info}>
                                 <p className={style.branch + " " + classNameBranch}>{branch.name}</p>
                                 <p className={style.text}>{branch.text.slice(0, 134)}...<span></span></p>
-                                <p className={style.link} onClick={() => navigateToCoursesPage(branch.id)}>Check
+                                <p className={style.link} onClick={() => navigateToCoursesPageHandler(branch.id)}>Check
                                     Courses <ArrowSVG/></p>
                             </div>
                         </div>

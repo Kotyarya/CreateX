@@ -23,6 +23,9 @@ export const useNavigateTo = () => {
         },
         navigateToEventPage: (id: number) => {
             navigate(variablePath(staticPath.eventsPage, id))
+        },
+        navigateToBlogsPage: () => {
+            navigate(staticPath.blogPage)
         }
     }
 }

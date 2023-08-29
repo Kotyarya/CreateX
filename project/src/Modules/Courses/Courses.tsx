@@ -1,4 +1,4 @@
-import React, {ChangeEvent, FC} from 'react';
+import React, {FC} from 'react';
 import style from "./Courses.module.scss"
 import {nanoid} from "nanoid";
 import {motion, useTime, useTransform} from "framer-motion";
@@ -6,37 +6,25 @@ import SearchInput from "../../Components/Input/SearchInput/SearchInput";
 import {imgUrl} from "../../utils/const/imgUrl";
 import {ReactComponent as LoadSVG} from "../../assets/icons/other/load.svg";
 import {markText} from "../../utils/helpers/markText";
-import {IBranch} from "../../Redux/Other/Types/branchTypes";
-import {ICourse} from "../../Redux/Other/Types/coursesTypes";
-
-interface CoursesProps {
-    searchText: string,
-    onChangeHandler: (e: ChangeEvent<HTMLInputElement>) => void,
-    branches: IBranch[] | null,
-    filterCourses: ICourse[] | undefined,
-    activeBranch: number,
-    loading: boolean,
-    changeBranch: (branchId: number, page: number) => void,
-    loadMore: () => void,
-    navigateToCourse: (courseId: number) => void
-}
+import {useNavigateTo} from "../../hook/useNavigateTo";
+import {CoursesTypes} from "./CoursesTypes";
 
 
-const Courses: FC<CoursesProps> = ({
+const Courses: FC<CoursesTypes> = ({
                                        searchText,
                                        onChangeHandler,
                                        branches,
-                                       filterCourses,
+                                       courses,
                                        activeBranch,
                                        loading,
                                        changeBranch,
                                        loadMore,
-                                       navigateToCourse
                                    }) => {
 
 
     const time = useTime();
     const rotate = useTransform(time, [0, 4000], [0, 360], {clamp: false});
+    const {navigateToCoursePage} = useNavigateTo()
 
 
     const countAllCourse = branches?.reduce((count, branch) => {
@@ -65,9 +53,11 @@ const Courses: FC<CoursesProps> = ({
             </button>
         )
     })
-    const filterCoursesBlocks = filterCourses?.map((course) => {
+
+
+    const coursesBlocks = courses?.map((course) => {
         return (
-            <div key={course.id} className={style.course} onClick={() => navigateToCourse(course.id)}>
+            <div key={course.id} className={style.course} onClick={() => navigateToCoursePage(course.id)}>
                 <div className={style.img}>
                     <img src={imgUrl + course.curator.img} alt=""/>
                 </div>
@@ -99,7 +89,7 @@ const Courses: FC<CoursesProps> = ({
                 </div>
             </div>
             <div className={style.content}>
-                {filterCoursesBlocks}
+                {coursesBlocks}
             </div>
             {
                 loadButton ?

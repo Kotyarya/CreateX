@@ -67,12 +67,24 @@ const BlogsContainer = () => {
         setActiveBranch(newValue)
     }
 
-    return <Blogs blogs={blogs} blogTypes={blogTypes} activeBlogType={activeBlogType} onClickSetPage={onClickSetPage}
-                  pages={pages} searchText={searchText} activeBranch={activeBranch}
-                  onChangeSearchTextInput={onChangeSearchTextInput} onChangeBlogBranch={onChangeBlogBranch}
-                  optionsBlogBranch={optionsBlogBranch} onChangePage={onChangePage}
-                  onClickBlogTypeButtons={onClickBlogTypeButtons} currentPage={currentPage}
-                  randomNumberForGridArea={randomNumberForGridArea}/>
+    const props = {
+        blogs,
+        blogTypes,
+        activeBlogType,
+        onClickSetPage,
+        pages,
+        searchText,
+        activeBranch,
+        onChangeSearchTextInput,
+        onChangeBlogBranch,
+        optionsBlogBranch,
+        onChangePage,
+        onClickBlogTypeButtons,
+        currentPage,
+        randomNumberForGridArea
+    }
+
+    return <Blogs {...props}/>
 };
 
 export default BlogsContainer;
