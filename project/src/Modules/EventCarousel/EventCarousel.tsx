@@ -1,23 +1,16 @@
-import React, {useEffect} from 'react';
+import React, {FC} from 'react';
 import style from "./EventCarousel.module.scss"
-import {useAction} from "../../hook/useAction";
-import {useTypedSelector} from "../../hook/useTypedSelector";
 import EventCard from "../../Components/EventCard/EventCard";
 import ControlButton, {ControlButtonRotation} from "../../Components/ControlButton/ControlButton";
 import Button from "../../Components/Button/Button";
 import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
 import {useCarousel} from "../../hook/useCarousel";
+import {EventCarouselTypes} from "./EventCarouselTypes";
 
-const EventCarousel = () => {
+const EventCarousel: FC<EventCarouselTypes> = ({events}) => {
 
-    const {getEvents} = useAction()
-    const events = useTypedSelector(state => state.events.events)
     const {translate, onMoveBack, onMoveForward} = useCarousel(42)
 
-    useEffect(() => {
-        getEvents(10, 0, 1, "")
-        //eslint-disable-next-line
-    }, [])
 
     return (
         <div className={style.wrapper}>

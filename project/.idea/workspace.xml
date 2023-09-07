@@ -5,31 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6b50f66-595e-4b61-b032-de6627445505" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/PageTitle/PageTitleTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Blogs/BlogsTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/BlogsCarousel/BlogsCarouselTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/CourseCarousel/CourseCarouselTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Courses/CoursesTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Directions/DirectionsTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hook/useCarousel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/EventCarousel/EventCarouselTypes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/PageTitle/PageTitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PageTitle/PageTitle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Blogs/Blogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Blogs/Blogs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Blogs/BlogsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Blogs/BlogsContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/BlogsCarousel/BlogsCarousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/BlogsCarousel/BlogsCarousel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/BlogsCarousel/BlogsCarouselContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/BlogsCarousel/BlogsCarouselContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/CourseCarousel/CourseCarousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/CourseCarousel/CourseCarousel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/CourseCarousel/CourseCarouselContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/CourseCarousel/CourseCarouselContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Courses/Courses.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Courses/Courses.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Courses/CoursesContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Courses/CoursesContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Directions/Directions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Directions/Directions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Directions/DirectionsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Directions/DirectionsContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/EventCarousel/EventCarousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/EventCarousel/EventCarousel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/TeamsCarousel/TeamCarouselContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/TeamsCarousel/TeamCarouselContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/API/axiosConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/API/axiosConfig.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/API/course/coursesAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/API/course/coursesAPI.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Other/Actions/coursesActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Other/Actions/coursesActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useNavigateTo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useNavigateTo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/EventCarousel/EventCarouselContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/EventCarousel/EventCarouselContainer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +168,8 @@
       <workItem from="1692034553601" duration="603000" />
       <workItem from="1692212845480" duration="5163000" />
       <workItem from="1692280385337" duration="7413000" />
-      <workItem from="1692985928503" duration="10940000" />
+      <workItem from="1692985928503" duration="11026000" />
+      <workItem from="1693727582795" duration="1643000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1686766810853</created>
@@ -444,7 +424,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692869414895</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1693328254694</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1693328254694</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
