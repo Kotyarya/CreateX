@@ -1,19 +1,14 @@
 import {IBlog, IBlogType} from "../../Redux/Other/Types/blogsTypes";
 import React from "react";
+import {OptionsType} from "../../Components/Select/SelectTypes";
 
 export interface BlogsTypes {
     blogTypes: IBlogType[] | null,
     activeBlogType: number,
     onClickBlogTypeButtons: (blogTypeId: number) => void,
-    optionsBlogBranch: {
-        value: number,
-        label: string
-    }[] | undefined,
-    activeBranch: {
-        value: number,
-        label: string
-    },
-    onChangeBlogBranch: (newValue: any) => void,
+    optionsBlogBranch: OptionsType<number>[] | undefined,
+    activeBranch: OptionsType<number>,
+    onChangeBlogBranch: (newValue: OptionsType<number>) => void,
     onChangeSearchTextInput: (e: React.ChangeEvent<HTMLInputElement>) => void,
     searchText: string,
     blogs: IBlog[] | null,

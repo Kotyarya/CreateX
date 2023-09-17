@@ -2,16 +2,21 @@ import React, {useEffect, useState} from 'react';
 import Blogs from "./Blogs";
 import {useTypedSelector} from "../../hook/useTypedSelector";
 import {useAction} from "../../hook/useAction";
+import {OptionsType} from "../../Components/Select/SelectTypes";
 
 const BlogsContainer = () => {
 
-    const [searchText, setSearchText] = useState("")
-    const [currentPage, setCurrentPage] = useState(1)
-    const [randomNumberForGridArea, setRandomNumberForGridArea] = useState(0)
+    const [searchText, setSearchText] = useState<string>("")
+    const [currentPage, setCurrentPage] = useState<number>(1)
+    const [randomNumberForGridArea, setRandomNumberForGridArea] = useState<number>(0)
+    const [activeBranch, setActiveBranch] = useState<OptionsType<number>>({value: 0, label: "All themes"})
+
+
     const {blogs, blogTypes, activeBlogType, count} = useTypedSelector(state => state.blogs)
     const {branches} = useTypedSelector(state => state.branches)
+
+
     const {getBlogs, getBlogTypes, setActiveBlogType, getBranches} = useAction()
-    const [activeBranch, setActiveBranch] = useState({value: 0, label: "All themes"})
 
 
     const onChangeSearchTextInput = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -43,9 +48,7 @@ const BlogsContainer = () => {
 
     const onClickBlogTypeButtons = (blogTypeId: number) => {
         setActiveBlogType(blogTypeId)
-
     }
-
 
     const onChangePage = (num: number) => {
         setCurrentPage(currentPage + num)
@@ -62,7 +65,7 @@ const BlogsContainer = () => {
 
     optionsBlogBranch?.push({value: 0, label: "All themes"})
 
-    const onChangeBlogBranch = (newValue: any) => {
+    const onChangeBlogBranch = (newValue: OptionsType<number>) => {
         setCurrentPage(1)
         setActiveBranch(newValue)
     }

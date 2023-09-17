@@ -5,11 +5,13 @@ import EventCard from "../../Components/EventCard/EventCard";
 import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
 import {useNavigateTo} from "../../hook/useNavigateTo";
 import {HomeEventsTypes} from "./HomeEventsTypes";
+import {useSkeleton} from "../../hook/useSkeleton";
 
 
-const HomeEvents: FC<HomeEventsTypes> = ({events}) => {
+const HomeEvents: FC<HomeEventsTypes> = ({events, loading}) => {
 
     const {navigateToEventsPage} = useNavigateTo()
+    const skeletonBlocks = useSkeleton(3, 123, 12.6)
 
     const eventsBlock = events?.map((event) => {
         return (
@@ -26,7 +28,11 @@ const HomeEvents: FC<HomeEventsTypes> = ({events}) => {
                 <h2>Lectures & workshops</h2>
             </article>
             <div className={style.content}>
-                {eventsBlock}
+                {
+                    loading ?
+                        skeletonBlocks :
+                        eventsBlock
+                }
             </div>
             <div className={style.wantMore}>
                 <p>Do you want more?</p>

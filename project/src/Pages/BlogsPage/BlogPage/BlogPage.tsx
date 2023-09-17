@@ -14,9 +14,19 @@ const BlogPage = () => {
 
     useEffect(() => {
         getActiveBlog(blogId)
+
+
+        return () => {
+            getActiveBlog(0)
+        }
+
         // eslint-disable-next-line
     }, [blogId])
 
+    document.documentElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
 
     return (
         <div className={style.blogPage}>

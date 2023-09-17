@@ -4,7 +4,10 @@ import EventsContainer from "../../Modules/Events/EventsContainer";
 import SubscribeContainer from "../../Modules/Subscribe/SubscribeContainer";
 
 const EventsPage = () => {
-
+    document.documentElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
 
     return (
         <div className={style.eventsPage}>

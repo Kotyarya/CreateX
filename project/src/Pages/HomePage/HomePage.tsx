@@ -4,12 +4,12 @@ import style from "./HomePage.module.scss"
 import BenefitsContainer from "../../Modules/Benefits/BenefitsContainer";
 import HomeEventsContainer from "../../Modules/HomeEvents/HomeEventsContainer";
 import Certificate from "../../Components/Certificate/Certificate";
-import TestimonialsContainer from "../../Modules/Testimonials/TestimonialsContainer";
 import SubscribeContainer from "../../Modules/Subscribe/SubscribeContainer";
 import HomeCoursesContainer from "../../Modules/HomeCourses/HomeCoursesContainer";
 import TeamCarouselContainer from "../../Modules/TeamsCarousel/TeamCarouselContainer";
 import LatestBlogsContainer from "../../Modules/LatestBlogs/LatestBlogsContainer";
-import WhoWeAreContainer from "../../Modules/WhoWeAre/WhoWeAreContainer";
+import Testimonials from "../../Modules/Testimonials/Testimonials";
+import WhoWeAre from "../../Modules/WhoWeAre/WhoWeAre";
 
 const HomePage: FC = () => {
     document.documentElement.scrollTo({
@@ -23,7 +23,7 @@ const HomePage: FC = () => {
                 <HeadContainer/>
             </div>
             <div className={style.about}>
-                <WhoWeAreContainer/>
+                <WhoWeAre/>
             </div>
             <div className={style.courses}>
                 <HomeCoursesContainer/>
@@ -42,7 +42,7 @@ const HomePage: FC = () => {
                     <TeamCarouselContainer/>
                 </div>
                 <div className={style.testimonials}>
-                    <TestimonialsContainer/>
+                    <Testimonials/>
                 </div>
             </div>
             <div className={style.latestBlogs}>

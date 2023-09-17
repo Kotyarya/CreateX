@@ -4,9 +4,10 @@ import {NavLink} from "react-router-dom";
 import Button from "../../Components/Button/Button";
 import style from "./NavBar.module.scss"
 import {ReactComponent as PersonIcon} from "../../assets/icons/other/personSVG.svg";
-import {staticPath} from "../../utils/helpers/path";
 import {NavBarTypes} from "./NavBarTypes";
 import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
+import {navLinks} from "../../utils/const/navLinks";
+import {nanoid} from "nanoid";
 
 
 const NavBar: FC<NavBarTypes> = ({navigateToContactsPage, onShowModalWindow}) => {
@@ -21,46 +22,20 @@ const NavBar: FC<NavBarTypes> = ({navigateToContactsPage, onShowModalWindow}) =>
                 <nav>
                     <Logo/>
                     <ul>
-                        <li>
-                            <NavLink
-                                className={({isActive}) => navLinkIsActive(isActive)}
-                                to={staticPath.aboutUsPage}
-                            >
-                                About us
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                className={({isActive}) => navLinkIsActive(isActive)}
-                                to={staticPath.coursePage}
-                            >
-                                Courses
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                className={({isActive}) => navLinkIsActive(isActive)}
-                                to={staticPath.eventsPage}
-                            >
-                                Events
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                className={({isActive}) => navLinkIsActive(isActive)}
-                                to={staticPath.blogPage}
-                            >
-                                Blog
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                className={({isActive}) => navLinkIsActive(isActive)}
-                                to={staticPath.contactsPage}
-                            >
-                                Contacts
-                            </NavLink>
-                        </li>
+                        {
+                            navLinks.map((navLink) => {
+                                return (
+                                    <li key={nanoid((10))}>
+                                        <NavLink
+                                            to={navLink.path}
+                                            className={({isActive}) => navLinkIsActive(isActive)}
+                                        >
+                                            {navLink.label}
+                                        </NavLink>
+                                    </li>
+                                )
+                            })
+                        }
                     </ul>
                 </nav>
                 <div>

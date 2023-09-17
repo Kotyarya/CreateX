@@ -1,9 +1,9 @@
 import React, {FC} from 'react';
 import style from "./CoursesPage.module.scss"
-import TestimonialsContainer from "../../Modules/Testimonials/TestimonialsContainer";
 import Certificate from "../../Components/Certificate/Certificate";
 import SubscribeContainer from "../../Modules/Subscribe/SubscribeContainer";
 import CoursesContainer from "../../Modules/Courses/CoursesContainer";
+import Testimonials from "../../Modules/Testimonials/Testimonials";
 
 const CoursesPage: FC = () => {
     document.documentElement.scrollTo({
@@ -18,7 +18,7 @@ const CoursesPage: FC = () => {
                 <CoursesContainer/>
             </div>
             <div className={style.testimonials}>
-                <TestimonialsContainer/>
+                <Testimonials/>
             </div>
             <div className={style.certificate}>
                 <Certificate/>

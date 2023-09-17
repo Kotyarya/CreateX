@@ -5,11 +5,17 @@ import AboutUsVideo from "../../Modules/AboutUsVideo/AboutUsVideo";
 import Values from "../../Modules/Values/Values";
 import DirectionsContainer from "../../Modules/Directions/DirectionsContainer";
 import StudyingProcess from "../../Modules/StudyingProcess/StudyingProcess";
-import TestimonialsContainer from "../../Modules/Testimonials/TestimonialsContainer";
 import LatestBlogsContainer from "../../Modules/LatestBlogs/LatestBlogsContainer";
 import SubscribeContainer from "../../Modules/Subscribe/SubscribeContainer";
+import Testimonials from "../../Modules/Testimonials/Testimonials";
 
 const AboutUsPage = () => {
+
+    document.documentElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+
     return (
         <div className={style.aboutUsPage}>
             <div className={style.aboutUs}>
@@ -30,7 +36,7 @@ const AboutUsPage = () => {
                 </div>
             </div>
             <div className={style.testimonials}>
-                <TestimonialsContainer/>
+                <Testimonials/>
             </div>
             <div className={style.latestBlog}>
                 <LatestBlogsContainer/>

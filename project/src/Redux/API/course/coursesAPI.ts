@@ -15,7 +15,6 @@ export const coursesApi = {
         try {
             let searchText = text ? `&text=${text}` : ""
             const response = await instance.get<ICourse[]>(`/course?branchId=${branchId}&page=${page}${searchText}`)
-            console.log(`/course?branchId=${branchId}&page=${page}${searchText}`)
             return response.data
         } catch (e) {
             return undefined

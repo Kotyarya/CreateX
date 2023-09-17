@@ -6,16 +6,13 @@ import {ReactComponent as InstagramSVG} from "../../assets/icons/socialMedia/ins
 import {ReactComponent as LinkedInSVG} from "../../assets/icons/socialMedia/linkedinSVG.svg";
 import {nanoid} from "nanoid";
 import {imgUrl} from "../../utils/const/imgUrl";
-import {ICurator} from "../../Redux/Other/Types/curatorsTypes";
+import {useCarousel} from "../../hook/useCarousel";
+import {TeamCarouselTypes} from "./TeamCarouselTypes";
 
 
-interface TeamCarouselProps {
-    translate: number,
-    moveCarousel: (num: number) => void,
-    curators: ICurator[] | null
-}
+const TeamCarousel: FC<TeamCarouselTypes> = ({curators}) => {
 
-const TeamCarousel: FC<TeamCarouselProps> = ({translate, moveCarousel, curators}) => {
+    const {translate, onMoveBack, onMoveForward} = useCarousel(31.5)
 
 
     const teamsBlock = curators ? curators.map((curator) => {
@@ -50,10 +47,10 @@ const TeamCarousel: FC<TeamCarouselProps> = ({translate, moveCarousel, curators}
                 </article>
                 <div className={style.controls}>
                     <ControlButton disabled={translate >= 0} rotation={ControlButtonRotation.left}
-                                   onClick={() => moveCarousel(translate + 31.5)}/>
+                                   onClick={onMoveBack}/>
                     <ControlButton disabled={curators ? translate <= -((curators?.length - 4) * 31.5) : false}
                                    rotation={ControlButtonRotation.right}
-                                   onClick={() => moveCarousel(translate - 31.5)}/>
+                                   onClick={onMoveForward}/>
                 </div>
             </div>
             <div className={style.carousel}>

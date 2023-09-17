@@ -9,9 +9,9 @@ import MainSteps from "../../../Modules/MainSteps/MainSteps";
 import DiscountContainer from "../../../Modules/Discount/DiscountContainer";
 import ForWhomCourseContainer from "../../../Modules/ForWhomCourse/ForWhomCourseContainer";
 import LessonsContainer from "../../../Modules/Lessons/LessonsContainer";
-import TestimonialsContainer from "../../../Modules/Testimonials/TestimonialsContainer";
 import RegisterForCourseContainer from "../../../Modules/RegisterForCourse/RegisterForCourseContainer";
 import CourseCarouselContainer from "../../../Modules/CourseCarousel/CourseCarouselContainer";
+import Testimonials from "../../../Modules/Testimonials/Testimonials";
 
 const CoursePage = () => {
 
@@ -26,6 +26,12 @@ const CoursePage = () => {
 
     useEffect(() => {
         getActiveCourse(idCourse)
+
+
+        return () => {
+            getActiveCourse(0)
+        }
+
         // eslint-disable-next-line
     }, [])
 
@@ -55,7 +61,7 @@ const CoursePage = () => {
                 </div>
                 <div className={style.groupGray}>
                     <div className={style.testimonials}>
-                        <TestimonialsContainer/>
+                        <Testimonials/>
                     </div>
                     <div className={style.register}>
                         <RegisterForCourseContainer/>

@@ -2,15 +2,11 @@ import React, {FC} from 'react';
 import style from "./ThemesEvent.module.scss"
 import {nanoid} from "nanoid";
 import Button from "../../Components/Button/Button";
-import {IEvent} from "../../Redux/Other/Types/eventsTypes";
 import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
+import {ThemesEventTypes} from "./ThemesEventTypes";
 
 
-interface ThemesEventProps {
-    event: IEvent | null
-}
-
-const ThemesEvent: FC<ThemesEventProps> = ({event}) => {
+const ThemesEvent: FC<ThemesEventTypes> = ({event}) => {
 
 
     const themesList = event?.theme.map((theme, index) => {

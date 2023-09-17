@@ -5,7 +5,6 @@ import {ForWhomType} from "../../Components/ForWhom/ForWhomTypes";
 
 const ForWhomEventContainer = () => {
     const forWhom = useTypedSelector(state => state.events.activeEvent?.forWhom)
-
     return <ForWhom forWhom={forWhom} type={ForWhomType.event}/>
 };
 

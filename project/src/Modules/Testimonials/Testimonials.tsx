@@ -2,17 +2,13 @@ import React, {FC} from 'react';
 import style from "./Testimonials.module.scss"
 import ControlButton, {ControlButtonRotation} from "../../Components/ControlButton/ControlButton";
 import {nanoid} from "nanoid";
-import {ITestimonial} from "../../Redux/Other/Data/TestimonialsData/TestimonialsDataTypes";
-
-interface TestimonialsProps {
-    translate: number,
-    moveBlocks: (num: number) => void,
-    testimonials: ITestimonial[]
-}
+import {testimonials} from "../../Redux/Other/Data/TestimonialsData/TestimonialsData";
+import {useCarousel} from "../../hook/useCarousel";
 
 
-const Testimonials: FC<TestimonialsProps> = ({translate, testimonials, moveBlocks}) => {
+const Testimonials: FC = () => {
 
+    const {translate, onMoveBack, onMoveForward, setCarouselPosition} = useCarousel(102)
 
     const testimonialsBlock = testimonials.map((person) => {
         return (
@@ -38,7 +34,7 @@ const Testimonials: FC<TestimonialsProps> = ({translate, testimonials, moveBlock
             <div className={style.content}>
                 <ControlButton rotation={ControlButtonRotation.left}
                                disabled={translate >= 0}
-                               onClick={() => moveBlocks(translate + 102)}/>
+                               onClick={onMoveBack}/>
                 <div className={style.carousel}>
                     <div className={style.contentCarousel} style={{transform: `translateX(${translate}rem)`}}>
                         {testimonialsBlock}
@@ -46,14 +42,18 @@ const Testimonials: FC<TestimonialsProps> = ({translate, testimonials, moveBlock
                 </div>
                 <ControlButton rotation={ControlButtonRotation.right}
                                disabled={translate <= -408}
-                               onClick={() => moveBlocks(translate - 102)}/>
+                               onClick={onMoveForward}/>
             </div>
             <div className={style.dots}>
-                <span className={translate === 0 ? style.active : ""} onClick={() => moveBlocks(0)}></span>
-                <span className={translate === -102 ? style.active : ""} onClick={() => moveBlocks(-102)}></span>
-                <span className={translate === -204 ? style.active : ""} onClick={() => moveBlocks(-204)}></span>
-                <span className={translate === -306 ? style.active : ""} onClick={() => moveBlocks(-306)}></span>
-                <span className={translate === -408 ? style.active : ""} onClick={() => moveBlocks(-408)}></span>
+                <span className={translate === 0 ? style.active : ""} onClick={() => setCarouselPosition(0)}></span>
+                <span className={translate === -102 ? style.active : ""}
+                      onClick={() => setCarouselPosition(-102)}></span>
+                <span className={translate === -204 ? style.active : ""}
+                      onClick={() => setCarouselPosition(-204)}></span>
+                <span className={translate === -306 ? style.active : ""}
+                      onClick={() => setCarouselPosition(-306)}></span>
+                <span className={translate === -408 ? style.active : ""}
+                      onClick={() => setCarouselPosition(-408)}></span>
             </div>
         </div>
     );

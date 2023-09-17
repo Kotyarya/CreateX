@@ -49,14 +49,14 @@ footer {
       flex-direction: column;
       gap: .8rem;
 
-      p {
+      .linkTitle {
         color: white;
         @include title6;
         margin-bottom: .6rem;
       }
 
       li {
-        a {
+        a, p {
           color: white;
           opacity: .6;
           @include baseRegular;
@@ -75,7 +75,7 @@ footer {
       }
 
       li:hover {
-        a {
+        a, p {
           opacity: 1;
         }
       }

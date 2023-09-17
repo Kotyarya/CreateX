@@ -5,7 +5,7 @@ import {useAction} from "../../hook/useAction";
 
 const HomeEventsContainer: FC = () => {
 
-    const {events} = useTypedSelector(state => state.events)
+    const {events, loading} = useTypedSelector(state => state.events)
 
     const {getStartEvents} = useAction()
 
@@ -15,7 +15,7 @@ const HomeEventsContainer: FC = () => {
     }, [])
 
 
-    return <HomeEvents events={events}/>
+    return <HomeEvents events={events} loading={loading}/>
 };
 
 export default HomeEventsContainer;

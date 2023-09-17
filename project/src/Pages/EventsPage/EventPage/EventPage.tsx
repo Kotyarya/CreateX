@@ -17,8 +17,20 @@ const EventPage = () => {
 
     useEffect(() => {
         getEventsById(eventId)
+
+
+        return () => {
+            getEventsById(0)
+        }
+
         // eslint-disable-next-line
     }, [])
+
+
+    document.documentElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
     return (
         <div className={style.eventPage}>
             <div className={style.head}>

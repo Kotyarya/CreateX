@@ -1,4 +1,4 @@
-import React, {ChangeEvent, FC} from 'react';
+import React, {FC} from 'react';
 import style from "./Events.module.scss"
 import CustomSelect from "../../Components/Select/CustomSelect";
 import {nanoid} from "nanoid";
@@ -7,32 +7,10 @@ import SearchInput from "../../Components/Input/SearchInput/SearchInput";
 import {ReactComponent as FlexSVG} from "../../assets/icons/other/flex.svg";
 import {ReactComponent as GridSVG} from "../../assets/icons/other/grid.svg";
 import EventCard from "../../Components/EventCard/EventCard";
-import {IEvent} from "../../Redux/Other/Types/eventsTypes";
+import {EventsTypes} from "./EventsTypes";
 
 
-interface EventsProps {
-    isGridType: boolean,
-    optionsEventCategory: { value: number, label: string }[] | undefined,
-    category: { value: number, label: string },
-    onChangeCategory: (newValue: any) => void
-    onChangeSortBy: (newValue: any) => void
-    onChangeShow: (newValue: any) => void,
-    optionsSortBy: { value: string, label: string }[],
-    sortBy: string,
-    optionsLimit: { value: number, label: string }[],
-    show: { value: number, label: string },
-    onChangeHandler: (e: ChangeEvent<HTMLInputElement>) => void,
-    searchText: string,
-    events: IEvent[] | undefined,
-    currentPage: number,
-    pages: number[],
-    onChangeTypeBlocks: (isGridType: boolean) => void,
-    onSetPage: (page: number) => void,
-    onChangePage: (number: number) => void,
-}
-
-
-const Events: FC<EventsProps> = ({
+const Events: FC<EventsTypes> = ({
                                      isGridType,
                                      optionsEventCategory,
                                      category,

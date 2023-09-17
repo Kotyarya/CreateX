@@ -2,6 +2,11 @@ import {instance} from "../axiosConfig";
 import {IEventCategory, IEventResponse} from "../../Other/Types/eventsTypes";
 
 
+export enum SortBy {
+    ASC = "ASC",
+    DESC = "DESC"
+}
+
 export const eventAPI = {
     async getStartEvent() {
         try {
@@ -21,12 +26,11 @@ export const eventAPI = {
         }
     },
 
-    async getEvents(limit: number, eventTypeId: number, page: number, text: string) {
+    async getEvents(limit: number, eventTypeId: number, page: number, text: string, sortBy: SortBy) {
         try {
-
             let requestText = text ? `&text=${text}` : ""
-
-            const response = await instance.get<IEventResponse>(`event?limit=${limit}&page=${page}&eventTypeId=${eventTypeId}${requestText}`)
+            const response = await instance.get<IEventResponse>(`event?limit=${limit}&page=${page}&eventTypeId=${eventTypeId}${requestText}&sortBy=${sortBy}`)
+            console.log(`event?limit=${limit}&page=${page}&eventTypeId=${eventTypeId}${requestText}&sortBy=${sortBy}`)
             return response.data
         } catch (e) {
             return undefined

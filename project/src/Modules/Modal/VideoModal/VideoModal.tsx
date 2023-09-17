@@ -1,9 +1,9 @@
 import React, {FC} from 'react';
 import style from "./VideoModal.module.scss";
-import {LoginModalProps} from "../LoginModal/LoginModal";
 import {ReactComponent as CloseSVG} from "../../../assets/icons/other/Cross.svg";
+import {ModalTypes} from "../ModalTypes";
 
-const VideoModal: FC<LoginModalProps> = ({removeModalWindow}) => {
+const VideoModal: FC<ModalTypes> = ({removeModalWindow}) => {
     return (
         <div className={style.video}>
             <button onClick={removeModalWindow}><CloseSVG/></button>

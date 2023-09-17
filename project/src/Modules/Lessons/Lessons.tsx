@@ -2,13 +2,10 @@ import React, {FC} from 'react';
 import {nanoid} from "nanoid";
 import style from "./Lessons.module.scss"
 import illustration from "./img/illustration.png"
-import {ILessons} from "../../Redux/Other/Types/coursesTypes";
+import {LessonsTypes} from "./LessonsTypes";
 
-interface LessonsProps {
-    lessons: ILessons[] | undefined
-}
 
-const Lessons: FC<LessonsProps> = ({lessons}) => {
+const Lessons: FC<LessonsTypes> = ({lessons}) => {
 
     const lessonsBlocks = lessons?.map((lesson) => {
         return (

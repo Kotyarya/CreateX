@@ -6,7 +6,7 @@ import {useNavigateTo} from "../../hook/useNavigateTo";
 
 const HomeCoursesContainer: FC = () => {
 
-    const courses = useTypedSelector(state => state.courses.courses)
+    const {courses, loading} = useTypedSelector(state => state.courses)
     const {getStartCourses} = useAction()
     const {navigateToCoursesPage} = useNavigateTo()
 
@@ -18,7 +18,7 @@ const HomeCoursesContainer: FC = () => {
 
 
     return (
-        <HomeCourses courses={courses} navigateToCoursesPage={navigateToCoursesPage}/>
+        <HomeCourses courses={courses} navigateToCoursesPage={navigateToCoursesPage} loading={loading}/>
     );
 };
 

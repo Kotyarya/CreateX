@@ -65,7 +65,7 @@ interface GetCount {
 
 interface GetEventById {
     type: EventsActionType.GET_EVENT_BY_ID,
-    payload: IEvent
+    payload: IEvent | null
 }
 
 export type EventsAction =

@@ -11,5 +11,9 @@ export const useCarousel = (step: number) => {
         setTranslate(translate + step)
     }
 
-    return {translate, onMoveBack, onMoveForward}
+    const setCarouselPosition = (position: number) => {
+        setTranslate(position)
+    }
+
+    return {translate, onMoveBack, onMoveForward, setCarouselPosition}
 }

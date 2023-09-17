@@ -4,13 +4,17 @@ import CourseCard from "../../Components/CourseCard/CourseCard";
 import Button from "../../Components/Button/Button";
 import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
 import {HomeCoursesTypes} from "./HomeCoursesTypes";
+import {useSkeleton} from "../../hook/useSkeleton";
 
 
-const HomeCourses: FC<HomeCoursesTypes> = ({courses, navigateToCoursesPage}) => {
+const HomeCourses: FC<HomeCoursesTypes> = ({courses, navigateToCoursesPage, loading}) => {
 
     const courseBlocks = courses?.map((course) => {
         return <CourseCard key={course.id} course={course}/>
     })
+
+
+    const skeletonBlocks = useSkeleton(9)
 
     return (
         <div className={style.wrapper}>
@@ -27,7 +31,11 @@ const HomeCourses: FC<HomeCoursesTypes> = ({courses, navigateToCoursesPage}) => 
                 />
             </article>
             <div className={style.content}>
-                {courseBlocks}
+                {
+                    loading ?
+                        skeletonBlocks :
+                        courseBlocks
+                }
             </div>
         </div>
     );

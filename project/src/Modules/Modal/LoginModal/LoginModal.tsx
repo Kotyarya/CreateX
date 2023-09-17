@@ -1,11 +1,9 @@
 import React, {FC} from 'react';
 import style from "./LoginModal.module.scss";
+import {ModalTypes} from "../ModalTypes";
 
-export interface LoginModalProps {
-    removeModalWindow: () => void
-}
 
-const LoginModal: FC<LoginModalProps> = ({removeModalWindow}) => {
+const LoginModal: FC<ModalTypes> = ({removeModalWindow}) => {
     return (
         <div className={style.login}>
             <button onClick={removeModalWindow}>Login</button>

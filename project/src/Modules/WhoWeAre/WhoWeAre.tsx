@@ -3,11 +3,11 @@ import style from "./WhoWeAre.module.scss"
 import img from "./img/image.png"
 import Button from "../../Components/Button/Button";
 import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
-import {WhoWeAreTypes} from "./WhoWeAreTypes";
+import {useNavigateTo} from "../../hook/useNavigateTo";
 
 
-const WhoWeAre: FC<WhoWeAreTypes> = ({navigateToAboutUsPage}) => {
-
+const WhoWeAre: FC = () => {
+    const {navigateToAboutUsPage} = useNavigateTo()
     return (
         <div className={style.wrapper}>
             <img src={img} alt="img"/>

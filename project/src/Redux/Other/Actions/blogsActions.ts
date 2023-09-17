@@ -28,7 +28,7 @@ export const setActiveBlogType = (BlogTypeId: number) => {
 export const getActiveBlog = (blogId: number) => {
     return async (dispatch: Dispatch<BlogsActions>) => {
         dispatch({type: BlogsActionType.FETCHING_BLOGS})
-        const response = await blogAPI.getBlogById(blogId)
+        const response = blogId === 0 ? null : await blogAPI.getBlogById(blogId)
         dispatch({type: BlogsActionType.GET_ACTIVE_BLOG, payload: response})
     }
 }

@@ -12,16 +12,12 @@ import {ReactComponent as MailSVG} from "../../assets/icons/other/mailSVG.svg";
 import {ReactComponent as HeartSVG} from "../../assets/icons/other/heart.svg";
 import FooterForm from "./FooterForm/FooterForm";
 import {NavLink} from "react-router-dom";
-
-interface FooterProps {
-    goTop: () => void,
-    submit: (values: any) => void
-}
+import {navLinks} from "../../utils/const/navLinks";
+import {nanoid} from "nanoid";
+import {FooterTypes} from "./FooterTypes";
 
 
-const Footer: FC<FooterProps> = ({goTop, submit}) => {
-
-
+const Footer: FC<FooterTypes> = ({goTop, submit, branches, onClickToCoursePage}) => {
     return (
         <footer>
             <div className={style.content}>
@@ -40,45 +36,31 @@ const Footer: FC<FooterProps> = ({goTop, submit}) => {
                     </div>
                 </div>
                 <ul>
-                    <p>Site map</p>
-                    <li>
-                        <NavLink to={"/about-us"}>About us</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={"/courses"}>Courses</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={"/events"}>Events</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={"/blog"}>Blog</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={"/contacts"}>Contacts</NavLink>
-                    </li>
+                    <p className={style.linkTitle}>Site map</p>
+                    {
+                        navLinks.map((navLink) => {
+                            return (
+                                <li key={nanoid(10)}>
+                                    <NavLink to={navLink.path}>{navLink.label}</NavLink>
+                                </li>
+                            )
+                        })
+                    }
                 </ul>
                 <ul>
-                    <p>Courses</p>
-                    <li>
-                        <NavLink to={"/courses"}>Marketing</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={"/courses"}>Management</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={"/courses"}>HR & Recruting</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={"/courses"}>Design</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={"/courses"}>Development</NavLink>
-                    </li>
+                    <p className={style.linkTitle}>Courses</p>
+                    {branches?.map((branch) => {
+                        return (
+                            <li key={branch.id} onClick={() => onClickToCoursePage(branch.id)}>
+                                <p>{branch.name}</p>
+                            </li>
+                        )
+                    })}
                 </ul>
                 <ul>
-                    <p>Contact us</p>
-                    <li><NavLink to={"/contacts"}><PhoneSVG/> (405) 555-0128</NavLink></li>
-                    <li><NavLink to={"/contacts"}><MailSVG/> hello@createx.com</NavLink></li>
+                    <p className={style.linkTitle}>Contact us</p>
+                    <li><a href={"tel:(405) 555-0128"}><PhoneSVG/> (405) 555-0128</a></li>
+                    <li><a href={"mailto:hello@createx.com"}><MailSVG/> hello@createx.com</a></li>
                 </ul>
                 <div className={style.signUp}>
                     <p className={style.title}>SIGN UP TO OUR NEWSLETTER</p>
