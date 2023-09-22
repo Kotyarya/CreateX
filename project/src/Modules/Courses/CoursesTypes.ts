@@ -11,4 +11,5 @@ export interface CoursesTypes {
     loading: boolean,
     changeBranch: (branchId: number, page: number) => void,
     loadMore: () => void,
+    branchesLoading: boolean
 }

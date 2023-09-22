@@ -9,6 +9,7 @@ import BlogCard from "../../Components/BlogCard/BlogCard";
 import ControlButton, {ControlButtonRotation} from "../../Components/ControlButton/ControlButton";
 import {nanoid} from "nanoid";
 import {BlogsTypes} from "./BlogsTypes";
+import {useSkeleton} from "../../hook/useSkeleton";
 
 
 const gridAreaOptions = [
@@ -42,7 +43,8 @@ const Blogs: FC<BlogsTypes> = ({
                                    currentPage,
                                    onChangePage,
                                    pages,
-                                   onClickSetPage
+                                   onClickSetPage,
+                                   loading
                                }) => {
 
     const blogTypeButtons = blogTypes?.map((type) => {
@@ -63,6 +65,10 @@ const Blogs: FC<BlogsTypes> = ({
         )
     })
 
+    const skeletonControlsBlocks = useSkeleton(4, 10, 4.6)
+    const skeletonSelectBlock = useSkeleton(1, 25.2, 6)
+    const skeletonBlogsBlocks = useSkeleton(8, undefined, 46.9)
+
     return (
         <div className={style.wrapper}>
             <article>
@@ -71,26 +77,43 @@ const Blogs: FC<BlogsTypes> = ({
             </article>
             <div className={style.control}>
                 <div className={style.blogTypes}>
-                    <button className={activeBlogType === 0 ? style.active : ""}
-                            onClick={() => onClickBlogTypeButtons(0)}>All
-                    </button>
-                    {blogTypeButtons || null}
+                    {
+                        loading ?
+                            skeletonControlsBlocks :
+                            <button className={activeBlogType === 0 ? style.active : ""}
+                                    onClick={() => onClickBlogTypeButtons(0)}>All
+                            </button>}
+                    {loading ? null : blogTypeButtons}
                 </div>
                 <div className={style.select}>
-                    <p>Blog Category</p>
-                    <CustomSelect options={optionsBlogBranch} value={activeBranch} onChange={onChangeBlogBranch}
-                                  placeholder={""}/>
+                    {
+                        loading ?
+                            skeletonSelectBlock :
+                            <>
+                                <p>Blog Category</p>
+                                <CustomSelect options={optionsBlogBranch} value={activeBranch}
+                                              onChange={onChangeBlogBranch}
+                                              placeholder={""}/>
+                            </>
+                    }
                 </div>
                 <SearchInput width={28.5} placeholder={"Search blog..."} onChange={onChangeSearchTextInput}
                              value={searchText}/>
             </div>
             <div className={style.content} style={{gridTemplateAreas: gridAreaOptions[randomNumberForGridArea]}}>
-                {blogs?.map((blog, index) =>
-                    <div className={style[`blog${index}`]} key={blog.id}>
-                        <BlogCard blog={blog}
-                                  staticSize={false}
-                                  searchText={searchText}/>
-                    </div>)}
+                {
+                    loading ?
+                        skeletonBlogsBlocks.map((block, index) => (
+                            <div className={style[`blog${index}`]}>
+                                {block}
+                            </div>
+                        )) :
+                        blogs?.map((blog, index) =>
+                            <div className={style[`blog${index}`]} key={blog.id}>
+                                <BlogCard blog={blog}
+                                          staticSize={false}
+                                          searchText={searchText}/>
+                            </div>)}
             </div>
             <div className={style.page}>
                 {

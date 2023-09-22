@@ -8,6 +8,7 @@ import {ReactComponent as FlexSVG} from "../../assets/icons/other/flex.svg";
 import {ReactComponent as GridSVG} from "../../assets/icons/other/grid.svg";
 import EventCard from "../../Components/EventCard/EventCard";
 import {EventsTypes} from "./EventsTypes";
+import {useSkeleton} from "../../hook/useSkeleton";
 
 
 const Events: FC<EventsTypes> = ({
@@ -28,8 +29,14 @@ const Events: FC<EventsTypes> = ({
                                      currentPage,
                                      onSetPage,
                                      onChangePage,
-                                     pages
+                                     pages,
+                                     loading
                                  }) => {
+
+
+    const skeletonControlsBlocks = useSkeleton(3, 19, 6)
+    const skeletonEventsBlocks = useSkeleton(6, isGridType ? undefined : 123, isGridType ? undefined : 12.8)
+
 
     return (
         <div className={style.wrapper}>
@@ -38,22 +45,30 @@ const Events: FC<EventsTypes> = ({
                 <h2>Lectures, workshops & master-classes</h2>
             </article>
             <div className={style.controls}>
-                <div className={style.control}>
-                    <p>Event category</p>
-                    <CustomSelect options={optionsEventCategory} value={category} onChange={onChangeCategory}
-                                  defaultValue={"all"}
-                                  placeholder={"all themes"}/>
-                </div>
-                <div className={style.control}>
-                    <p>Sort by</p>
-                    <CustomSelect options={optionsSortBy} value={sortBy} onChange={onChangeSortBy} defaultValue={"all"}
-                                  placeholder={"newest"}/>
-                </div>
-                <div className={style.control}>
-                    <p>Show</p>
-                    <CustomSelect options={optionsLimit} value={show} onChange={onChangeShow}
-                                  placeholder={"9"}/>
-                </div>
+                {
+                    loading ?
+                        skeletonControlsBlocks :
+                        <>
+                            <div className={style.control}>
+                                <p>Event category</p>
+                                <CustomSelect options={optionsEventCategory} value={category}
+                                              onChange={onChangeCategory}
+                                              defaultValue={"all"}
+                                              placeholder={"all themes"}/>
+                            </div>
+                            <div className={style.control}>
+                                <p>Sort by</p>
+                                <CustomSelect options={optionsSortBy} value={sortBy} onChange={onChangeSortBy}
+                                              defaultValue={"all"}
+                                              placeholder={"newest"}/>
+                            </div>
+                            <div className={style.control}>
+                                <p>Show</p>
+                                <CustomSelect options={optionsLimit} value={show} onChange={onChangeShow}
+                                              placeholder={"9"}/>
+                            </div>
+                        </>
+                }
                 <div>
                     <SearchInput width={28.2} placeholder={"Search event..."} onChange={onChangeHandler}
                                  value={searchText}/>
@@ -65,9 +80,13 @@ const Events: FC<EventsTypes> = ({
             </div>
             <div className={style.content + " " + (isGridType ? style.gridContent : style.flexContent)}>
                 {
-                    events?.map((event) => {
-                        return <EventCard key={event.id} event={event} isGridType={isGridType} searchText={searchText}/>
-                    })
+
+                    loading ?
+                        skeletonEventsBlocks :
+                        events?.map((event) => {
+                            return <EventCard key={event.id} event={event} isGridType={isGridType}
+                                              searchText={searchText}/>
+                        })
                 }
             </div>
             <div className={style.page}>

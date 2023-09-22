@@ -4,5 +4,6 @@ export interface FooterTypes {
     goTop: () => void,
     submit: (values: any) => void,
     branches: IBranch[] | null,
-    onClickToCoursePage: (branchId: number) => void
+    onClickToCoursePage: (branchId: number) => void,
+    loading: boolean
 }

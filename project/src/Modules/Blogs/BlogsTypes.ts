@@ -16,5 +16,6 @@ export interface BlogsTypes {
     currentPage: number,
     onChangePage: (num: number) => void,
     pages: number[],
-    onClickSetPage: (page: number) => void
+    onClickSetPage: (page: number) => void,
+    loading: boolean
 }

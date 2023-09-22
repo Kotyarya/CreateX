@@ -5,9 +5,14 @@ import BlogCard from "../../Components/BlogCard/BlogCard";
 import {NavLink} from "react-router-dom";
 import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
 import {LatestBlogsTypes} from "./LatestBlogsTypes";
+import {useSkeleton} from "../../hook/useSkeleton";
 
-const LatestBlogs: FC<LatestBlogsTypes> = ({blogs}) => {
+const LatestBlogs: FC<LatestBlogsTypes> = ({blogs, loading}) => {
 
+    const skeletonBlocks = useSkeleton(3, 39, 50.7)
+
+    const blogBlocks = blogs?.map((blog, index) => index < 3 ?
+        <BlogCard key={blog.id} blog={blog} staticSize={true} searchText={""}/> : null)
 
     return (
         <div className={style.wrapper}>
@@ -22,8 +27,9 @@ const LatestBlogs: FC<LatestBlogsTypes> = ({blogs}) => {
             </div>
             <div className={style.content}>
                 {
-                    blogs?.map((blog, index) => index < 3 ?
-                        <BlogCard key={blog.id} blog={blog} staticSize={true} searchText={""}/> : null)
+                    loading ?
+                        skeletonBlocks :
+                        blogBlocks
                 }
             </div>
         </div>

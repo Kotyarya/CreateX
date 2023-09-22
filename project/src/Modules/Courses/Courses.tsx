@@ -8,6 +8,7 @@ import {ReactComponent as LoadSVG} from "../../assets/icons/other/load.svg";
 import {markText} from "../../utils/helpers/markText";
 import {useNavigateTo} from "../../hook/useNavigateTo";
 import {CoursesTypes} from "./CoursesTypes";
+import {useSkeleton} from "../../hook/useSkeleton";
 
 
 const Courses: FC<CoursesTypes> = ({
@@ -19,13 +20,17 @@ const Courses: FC<CoursesTypes> = ({
                                        loading,
                                        changeBranch,
                                        loadMore,
+                                       branchesLoading
                                    }) => {
 
 
     const time = useTime();
     const rotate = useTransform(time, [0, 4000], [0, 360], {clamp: false});
     const {navigateToCoursePage} = useNavigateTo()
+    const allLoading = loading && branchesLoading
 
+    const skeletonCoursesBlocks = useSkeleton(9)
+    const skeletonBranchesBlocks = useSkeleton(6, 12.3, 4.8)
 
     const countAllCourse = branches?.reduce((count, branch) => {
         return count + branch.courseCount
@@ -78,10 +83,17 @@ const Courses: FC<CoursesTypes> = ({
                 <h2>Our online courses</h2>
             </article>
             <div className={style.controls}>
-                <button onClick={() => changeBranch(0, 1)}
-                        className={activeBranch === 0 ? style.active : undefined}>All <p>{countAllCourse}</p></button>
                 {
-                    branchesButton
+                    allLoading ?
+                        null :
+                        <button onClick={() => changeBranch(0, 1)}
+                                className={activeBranch === 0 ? style.active : undefined}>All <p>{countAllCourse}</p>
+                        </button>
+                }
+                {
+                    allLoading ?
+                        skeletonBranchesBlocks :
+                        branchesButton
                 }
                 <div className={style.searchInput}>
                     <SearchInput width={31.5} placeholder={"Search courses..."}
@@ -89,15 +101,21 @@ const Courses: FC<CoursesTypes> = ({
                 </div>
             </div>
             <div className={style.content}>
-                {coursesBlocks}
+                {
+                    allLoading ?
+                        skeletonCoursesBlocks :
+                        coursesBlocks
+                }
             </div>
             {
-                loadButton ?
-                    <button className={style.loadMore} onClick={loadMore}>
-                        <motion.div className={style.motionDiv} style={loading ? {rotate} : undefined}><LoadSVG/>
-                        </motion.div>
-                        Load more
-                    </button> : null
+                allLoading ?
+                    null :
+                    loadButton ?
+                        <button className={style.loadMore} onClick={loadMore}>
+                            <motion.div className={style.motionDiv} style={loading ? {rotate} : undefined}><LoadSVG/>
+                            </motion.div>
+                            Load more
+                        </button> : null
             }
         </div>
     )

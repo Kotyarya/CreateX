@@ -4,7 +4,7 @@ import {useTypedSelector} from "../../hook/useTypedSelector";
 import {useAction} from "../../hook/useAction";
 
 const LatestBlogsContainer = () => {
-    const blogs = useTypedSelector(state => state.blogs.blogs)
+    const {blogs, loading} = useTypedSelector(state => state.blogs)
     const {getBlogs} = useAction()
 
     useEffect(() => {
@@ -12,7 +12,7 @@ const LatestBlogsContainer = () => {
         // eslint-disable-next-line
     }, [])
 
-    return <LatestBlogs blogs={blogs}/>
+    return <LatestBlogs blogs={blogs} loading={loading}/>
 };
 
 export default LatestBlogsContainer;

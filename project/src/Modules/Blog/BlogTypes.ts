@@ -4,5 +4,6 @@ import {ReactElement} from "react";
 export interface BlogTypes {
     blog: IBlog | null,
     svg: null | ReactElement,
-    time: null | string
+    time: null | string,
+    loading: boolean
 }

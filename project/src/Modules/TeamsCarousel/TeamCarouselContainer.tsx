@@ -5,7 +5,7 @@ import {useAction} from "../../hook/useAction";
 
 const TeamCarouselContainer: FC = () => {
 
-    const curators = useTypedSelector(state => state.curators.curators)
+    const {curators, loading} = useTypedSelector(state => state.curators)
     const {getCurators} = useAction()
 
     useEffect(() => {
@@ -15,7 +15,7 @@ const TeamCarouselContainer: FC = () => {
 
 
     return (
-        <TeamCarousel curators={curators}/>
+        <TeamCarousel curators={curators} loading={loading}/>
     );
 };
 

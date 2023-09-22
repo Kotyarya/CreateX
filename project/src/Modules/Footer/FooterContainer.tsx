@@ -6,7 +6,7 @@ import {useNavigateTo} from "../../hook/useNavigateTo";
 
 const FooterContainer: FC = () => {
 
-    const {branches} = useTypedSelector(state => state.branches)
+    const {branches, loading} = useTypedSelector(state => state.branches)
     const {getBranches, getCourseByBranch} = useAction()
     const {navigateToCoursesPage} = useNavigateTo()
 
@@ -33,7 +33,8 @@ const FooterContainer: FC = () => {
     }, [])
 
     return (
-        <Footer goTop={goTop} submit={submit} branches={branches} onClickToCoursePage={onClickToCoursePage}/>
+        <Footer goTop={goTop} submit={submit} branches={branches} onClickToCoursePage={onClickToCoursePage}
+                loading={loading}/>
     );
 };
 

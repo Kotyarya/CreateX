@@ -3,6 +3,7 @@ import Blogs from "./Blogs";
 import {useTypedSelector} from "../../hook/useTypedSelector";
 import {useAction} from "../../hook/useAction";
 import {OptionsType} from "../../Components/Select/SelectTypes";
+import {useDebounce} from "../../hook/useDebounce";
 
 const BlogsContainer = () => {
 
@@ -12,15 +13,18 @@ const BlogsContainer = () => {
     const [activeBranch, setActiveBranch] = useState<OptionsType<number>>({value: 0, label: "All themes"})
 
 
-    const {blogs, blogTypes, activeBlogType, count} = useTypedSelector(state => state.blogs)
+    const {blogs, blogTypes, activeBlogType, count, loading} = useTypedSelector(state => state.blogs)
     const {branches} = useTypedSelector(state => state.branches)
 
 
     const {getBlogs, getBlogTypes, setActiveBlogType, getBranches} = useAction()
+    const debouncedGetBlogs = useDebounce(getBlogs, 200)
 
 
     const onChangeSearchTextInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setCurrentPage(1)
         setSearchText(e.target.value)
+        debouncedGetBlogs(currentPage, activeBlogType, activeBranch.value, e.target.value)
     }
 
     useEffect(() => {
@@ -37,7 +41,7 @@ const BlogsContainer = () => {
     useEffect(() => {
         getBlogs(currentPage, activeBlogType, activeBranch.value, searchText)
         // eslint-disable-next-line
-    }, [activeBlogType, currentPage, activeBranch, searchText])
+    }, [activeBlogType, currentPage, activeBranch])
 
 
     let pages: number[];
@@ -84,7 +88,8 @@ const BlogsContainer = () => {
         onChangePage,
         onClickBlogTypeButtons,
         currentPage,
-        randomNumberForGridArea
+        randomNumberForGridArea,
+        loading
     }
 
     return <Blogs {...props}/>

@@ -8,11 +8,13 @@ import {nanoid} from "nanoid";
 import {imgUrl} from "../../utils/const/imgUrl";
 import {useCarousel} from "../../hook/useCarousel";
 import {TeamCarouselTypes} from "./TeamCarouselTypes";
+import {useSkeleton} from "../../hook/useSkeleton";
 
 
-const TeamCarousel: FC<TeamCarouselTypes> = ({curators}) => {
+const TeamCarousel: FC<TeamCarouselTypes> = ({curators, loading}) => {
 
     const {translate, onMoveBack, onMoveForward} = useCarousel(31.5)
+    const skeletonBlocks = useSkeleton(4, 28.5, 43.8)
 
 
     const teamsBlock = curators ? curators.map((curator) => {
@@ -48,14 +50,19 @@ const TeamCarousel: FC<TeamCarouselTypes> = ({curators}) => {
                 <div className={style.controls}>
                     <ControlButton disabled={translate >= 0} rotation={ControlButtonRotation.left}
                                    onClick={onMoveBack}/>
-                    <ControlButton disabled={curators ? translate <= -((curators?.length - 4) * 31.5) : false}
-                                   rotation={ControlButtonRotation.right}
-                                   onClick={onMoveForward}/>
+                    <ControlButton
+                        disabled={loading || (curators ? translate <= -((curators?.length - 4) * 31.5) : false)}
+                        rotation={ControlButtonRotation.right}
+                        onClick={onMoveForward}/>
                 </div>
             </div>
             <div className={style.carousel}>
                 <div className={style.content} style={{transform: `translateX(${translate}rem)`}}>
-                    {teamsBlock}
+                    {
+                        loading ?
+                            skeletonBlocks :
+                            teamsBlock
+                    }
                 </div>
             </div>
         </div>

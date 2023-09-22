@@ -22,4 +22,5 @@ export interface EventsTypes {
     onChangeTypeBlocks: (isGridType: boolean) => void,
     onSetPage: (page: number) => void,
     onChangePage: (number: number) => void,
+    loading: boolean
 }

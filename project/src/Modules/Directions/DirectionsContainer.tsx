@@ -6,7 +6,7 @@ import {useNavigateTo} from "../../hook/useNavigateTo";
 
 const DirectionsContainer = () => {
 
-    const branches = useTypedSelector(state => state.branches.branches)
+    const {branches, loading} = useTypedSelector(state => state.branches)
     const {getBranches, setActiveBranch} = useAction()
     const {navigateToCoursesPage} = useNavigateTo()
 
@@ -20,7 +20,8 @@ const DirectionsContainer = () => {
         navigateToCoursesPage()
     }
 
-    return <Directions branches={branches} navigateToCoursesPageHandler={navigateToCoursesPageHandler}/>
+    return <Directions branches={branches} navigateToCoursesPageHandler={navigateToCoursesPageHandler}
+                       loading={loading}/>
 };
 
 export default DirectionsContainer;

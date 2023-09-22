@@ -4,70 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6b50f66-595e-4b61-b032-de6627445505" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Select/SelectTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/SkeletonBlock/SkeletonBlock.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/SkeletonBlock/SkeletonBlock.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/SkeletonBlock/SkeletonBlockTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Events/EventsTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Footer/FooterTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/LatestBlogs/LatestBlogsTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Lessons/LessonsTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Modal/ModalTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/TeamsCarousel/TeamCarouselTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/ThemesEvent/ThemesEventTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hook/useSkeleton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/const/navLinks.ts" afterDir="false" />
+    <list default="true" id="f6b50f66-595e-4b61-b032-de6627445505" name="Changes" comment="refactor, SkeletonBlock.tsx">
+      <change afterPath="$PROJECT_DIR$/src/hook/useDebounce.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Select/CustomSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Select/CustomSelect.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SkeletonBlock/SkeletonBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SkeletonBlock/SkeletonBlock.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SkeletonBlock/SkeletonBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SkeletonBlock/SkeletonBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SkeletonBlock/SkeletonBlockTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SkeletonBlock/SkeletonBlockTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Blog/Blog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Blog/Blog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Blog/BlogContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Blog/BlogContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Blog/BlogTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Blog/BlogTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Blogs/Blogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Blogs/Blogs.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/Blogs/BlogsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Blogs/BlogsContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/Blogs/BlogsTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Blogs/BlogsTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Courses/Courses.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Courses/Courses.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/Courses/CoursesContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Courses/CoursesContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/EventCarousel/EventCarouselContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/EventCarousel/EventCarouselContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Courses/CoursesTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Courses/CoursesTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Directions/Directions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Directions/Directions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Directions/DirectionsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Directions/DirectionsContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Directions/DirectionsTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Directions/DirectionsTypes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/Events/Events.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Events/Events.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/Events/EventsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Events/EventsContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Footer/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Footer/Footer.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Events/EventsTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Events/EventsTypes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Footer/Footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/Footer/FooterContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Footer/FooterContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/ForWhomEvent/ForWhomEventContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/ForWhomEvent/ForWhomEventContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/HomeCourses/HomeCourses.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/HomeCourses/HomeCourses.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/HomeCourses/HomeCourses.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/HomeCourses/HomeCourses.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/HomeCourses/HomeCoursesContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/HomeCourses/HomeCoursesContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/HomeCourses/HomeCoursesTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/HomeCourses/HomeCoursesTypes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/HomeEvents/HomeEvents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/HomeEvents/HomeEvents.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/HomeEvents/HomeEventsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/HomeEvents/HomeEventsContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/HomeEvents/HomeEventsTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/HomeEvents/HomeEventsTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Footer/FooterTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Footer/FooterTypes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/LatestBlogs/LatestBlogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/LatestBlogs/LatestBlogs.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/LatestBlogs/LatestBlogsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/LatestBlogs/LatestBlogsContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Lessons/Lessons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Lessons/Lessons.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Lessons/LessonsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Lessons/LessonsContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Modal/LoginModal/LoginModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Modal/LoginModal/LoginModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Modal/VideoModal/VideoModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Modal/VideoModal/VideoModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/NavBar/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/NavBar/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/LatestBlogs/LatestBlogsTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/LatestBlogs/LatestBlogsTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/TeamsCarousel/TeamCarousel.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/TeamsCarousel/TeamCarousel.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/TeamsCarousel/TeamCarousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/TeamsCarousel/TeamCarousel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/TeamsCarousel/TeamCarouselContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/TeamsCarousel/TeamCarouselContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Testimonials/Testimonials.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Testimonials/Testimonials.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Testimonials/TestimonialsContainer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/ThemesEvent/ThemesEvent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/ThemesEvent/ThemesEvent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/WhoWeAre/WhoWeAre.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/WhoWeAre/WhoWeAre.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/WhoWeAre/WhoWeAreContainer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/WhoWeAre/WhoWeAreTypes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/AboutUsPage/AboutUsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AboutUsPage/AboutUsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/BlogsPage/BlogPage/BlogPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/BlogsPage/BlogPage/BlogPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/BlogsPage/BlogsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/BlogsPage/BlogsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/CoursesPage/CoursePage/CoursePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/CoursesPage/CoursePage/CoursePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/CoursesPage/CoursesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/CoursesPage/CoursesPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/EventsPage/EventPage/EventPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/EventsPage/EventPage/EventPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/EventsPage/EventsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/EventsPage/EventsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/HomePage/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/HomePage/HomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/API/axiosConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/API/axiosConfig.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/API/course/coursesAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/API/course/coursesAPI.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/API/event/eventAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/API/event/eventAPI.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Other/Actions/blogsActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Other/Actions/blogsActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Other/Actions/coursesActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Other/Actions/coursesActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Other/Actions/eventsActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Other/Actions/eventsActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Other/Types/eventsTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Other/Types/eventsTypes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useCarousel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useCarousel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/TeamsCarousel/TeamCarouselTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/TeamsCarousel/TeamCarouselTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/blogsReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/blogsReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useSkeleton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useSkeleton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helpers/markText.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/markText.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,30 +79,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "js.last.introduce.type": "CONST",
-    "last_opened_file_path": "/Users/kotyarya/Documents/Programowanie/GitHub/CreateX/project/src/Modules/Modal/VideoModal",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Users/kotyarya/Documents/Programowanie/GitHub/CreateX/project/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kotyarya/Documents/Programowanie/GitHub/CreateX/project/src/Modules/Modal/VideoModal&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/kotyarya/Documents/Programowanie/GitHub/CreateX/project/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "TypeScript JSX"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;TypeScript JSX&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -230,7 +200,8 @@
       <workItem from="1692985928503" duration="11026000" />
       <workItem from="1693727582795" duration="1667000" />
       <workItem from="1694071283796" duration="1037000" />
-      <workItem from="1694937063822" duration="20547000" />
+      <workItem from="1694937063822" duration="20633000" />
+      <workItem from="1695110446699" duration="12903000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1686766810853</created>
@@ -501,7 +472,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694070960987</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="refactor, SkeletonBlock.tsx">
+      <option name="closed" value="true" />
+      <created>1694967809962</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1694967809962</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,6 +504,7 @@
     <MESSAGE value="Events.tsx" />
     <MESSAGE value="commit" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="refactor, SkeletonBlock.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor, SkeletonBlock.tsx" />
   </component>
 </project>

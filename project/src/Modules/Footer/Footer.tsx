@@ -15,9 +15,22 @@ import {NavLink} from "react-router-dom";
 import {navLinks} from "../../utils/const/navLinks";
 import {nanoid} from "nanoid";
 import {FooterTypes} from "./FooterTypes";
+import {useSkeleton} from "../../hook/useSkeleton";
 
 
-const Footer: FC<FooterTypes> = ({goTop, submit, branches, onClickToCoursePage}) => {
+const Footer: FC<FooterTypes> = ({goTop, submit, branches, onClickToCoursePage, loading}) => {
+
+    const branchList = branches?.map((branch) => {
+        return (
+            <li key={branch.id} onClick={() => onClickToCoursePage(branch.id)}>
+                <p>{branch.name}</p>
+            </li>
+        )
+    })
+
+    const skeletonBlocks = useSkeleton(5, 10.8, 2.6, true)
+
+
     return (
         <footer>
             <div className={style.content}>
@@ -49,13 +62,11 @@ const Footer: FC<FooterTypes> = ({goTop, submit, branches, onClickToCoursePage})
                 </ul>
                 <ul>
                     <p className={style.linkTitle}>Courses</p>
-                    {branches?.map((branch) => {
-                        return (
-                            <li key={branch.id} onClick={() => onClickToCoursePage(branch.id)}>
-                                <p>{branch.name}</p>
-                            </li>
-                        )
-                    })}
+                    {
+                        loading ?
+                            skeletonBlocks :
+                            branchList
+                    }
                 </ul>
                 <ul>
                     <p className={style.linkTitle}>Contact us</p>

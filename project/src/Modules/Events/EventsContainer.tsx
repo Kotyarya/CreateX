@@ -4,10 +4,11 @@ import {useTypedSelector} from "../../hook/useTypedSelector";
 import {useAction} from "../../hook/useAction";
 import {SortBy} from "../../Redux/API/event/eventAPI";
 import {OptionsType} from "../../Components/Select/SelectTypes";
+import {useDebounce} from "../../hook/useDebounce";
 
 const EventsContainer = () => {
 
-    const {eventCategory, events, count} = useTypedSelector(state => state.events)
+    const {eventCategory, events, count, loading} = useTypedSelector(state => state.events)
     const {getEventsCategory, getEvents} = useAction()
 
     const optionsSortBy = [
@@ -39,11 +40,13 @@ const EventsContainer = () => {
     const [currentPage, setPage] = useState<number>(1)
     const [searchText, setSearchText] = useState<string>("")
     const [isGridType, setIsGridType] = useState<boolean>(false)
+    const debouncedGetEvents = useDebounce(getEvents, 300)
 
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setSearchText(e.target.value)
         setPage(1)
+        debouncedGetEvents(show.value, category.value, currentPage, e.target.value.trim(), sortBy.value)
     }
     const onChangeCategory = (newValue: OptionsType<number>) => {
         setPage(1)
@@ -72,7 +75,7 @@ const EventsContainer = () => {
         getEventsCategory()
         getEvents(show.value, category.value, currentPage, searchText.trim(), sortBy.value)
         // eslint-disable-next-line
-    }, [show.value, category, sortBy, currentPage, searchText, sortBy])
+    }, [show.value, category, sortBy, currentPage, sortBy])
 
 
     const pages = []
@@ -98,7 +101,8 @@ const EventsContainer = () => {
         optionsEventCategory,
         optionsLimit,
         optionsSortBy,
-        isGridType
+        isGridType,
+        loading
     }
 
     return <Events {...props}/>
