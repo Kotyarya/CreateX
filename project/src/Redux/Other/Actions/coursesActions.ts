@@ -31,7 +31,11 @@ export const getMoreCourses = (branchId: number, page: number, text: string) => 
 export const getActiveCourse = (courseId: number) => {
     return async (dispatch: Dispatch<CoursesAction>) => {
         dispatch({type: CoursesActionType.FETCHING_COURSES})
-        const response = courseId === 0 ? undefined : await coursesApi.getCourseById(courseId)
+        const response = await coursesApi.getCourseById(courseId)
+        if (response === null) {
+            dispatch({type: CoursesActionType.COURSE_NOT_FOUND})
+            return
+        }
         dispatch({type: CoursesActionType.GET_ACTIVE_COURSE, payload: response})
     }
 }

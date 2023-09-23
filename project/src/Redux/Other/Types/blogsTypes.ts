@@ -59,7 +59,12 @@ export enum BlogsActionType {
     GET_BLOG_TYPES = "GET_BLOG_TYPES",
     SET_ACTIVE_BLOG_TYPE = "SET_ACTIVE_BLOG_TYPE",
     GET_COUNT_BLOGS = "GET_COUNT_BLOGS",
-    GET_ACTIVE_BLOG = "GET_ACTIVE_BLOG"
+    GET_ACTIVE_BLOG = "GET_ACTIVE_BLOG",
+    FETCHING_BLOG = "FETCHING_BLOG",
+}
+
+interface FetchingBlog {
+    type: BlogsActionType.FETCHING_BLOG,
 }
 
 interface GetCountBlogs {
@@ -91,7 +96,14 @@ interface GetActiveBlog {
     payload: IBlog | null
 }
 
-export type BlogsActions = GetBlogs | FetchingBlogs | GetBlogTypes | SetActiveBlogType | GetCountBlogs | GetActiveBlog
+export type BlogsActions =
+    GetBlogs
+    | FetchingBlogs
+    | GetBlogTypes
+    | SetActiveBlogType
+    | GetCountBlogs
+    | GetActiveBlog
+    | FetchingBlog
 
 export interface BlogsState {
     blogs: IBlog[] | null,
@@ -99,5 +111,6 @@ export interface BlogsState {
     activeBlogType: number,
     blogTypes: IBlogType[] | null,
     count: number,
-    activeBlog: IBlog | null
+    activeBlog: IBlog | null,
+    loadingBlog: boolean
 }

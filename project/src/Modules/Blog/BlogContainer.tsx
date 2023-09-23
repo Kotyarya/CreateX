@@ -6,7 +6,7 @@ import {ReactComponent as VideoSVG} from "../../assets/icons/blogLabel/Video.svg
 import {ReactComponent as PodcastSVG} from "../../assets/icons/blogLabel/Podcast.svg";
 
 const BlogContainer = () => {
-    const {activeBlog, loading} = useTypedSelector(state => state.blogs)
+    const {activeBlog, loadingBlog} = useTypedSelector(state => state.blogs)
     let svg: null | ReactComponentElement<typeof ArticleSVG | typeof VideoSVG | typeof PodcastSVG> = null
     let time: null | string = null
 
@@ -20,7 +20,7 @@ const BlogContainer = () => {
         time = `${activeBlog.podcastElement?.time} min listen`
     }
 
-    return <Blog blog={activeBlog} svg={svg} time={time} loading={loading}/>
+    return <Blog blog={activeBlog} svg={svg} time={time} loading={loadingBlog}/>
 };
 
 export default BlogContainer;

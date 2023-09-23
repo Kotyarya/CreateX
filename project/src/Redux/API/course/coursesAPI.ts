@@ -31,7 +31,7 @@ export const coursesApi = {
                 }
             }
         } catch (e) {
-            return undefined
+            return null
         }
     }
 }

@@ -32,7 +32,12 @@ export enum CoursesActionType {
     SET_BRANCH = "SET_BRANCH",
     GET_COURSES_BY_BRANCH = "GET_COURSES_BY_BRANCH",
     GET_MORE_COURSES = "GET_MORE_COURSES",
-    GET_ACTIVE_COURSE = "GET_ACTIVE_COURSE"
+    GET_ACTIVE_COURSE = "GET_ACTIVE_COURSE",
+    COURSE_NOT_FOUND = "COURSE_NOT_FOUND"
+}
+
+interface CourseNotFound {
+    type: CoursesActionType.COURSE_NOT_FOUND
 }
 
 interface GetStartCoursesAction {
@@ -72,10 +77,12 @@ export type CoursesAction =
     | GetCoursesByBranch
     | GetMoreCourses
     | GetActiveCourse
+    | CourseNotFound
 
 export interface CoursesState {
     courses: ICourse[] | undefined
     loading: boolean,
     activeBranch: number,
-    activeCourse: ICourse | undefined
+    activeCourse: ICourse | undefined,
+    courseNotFound: boolean
 }

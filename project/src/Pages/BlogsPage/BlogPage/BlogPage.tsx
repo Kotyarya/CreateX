@@ -6,22 +6,26 @@ import {useAction} from "../../../hook/useAction";
 import BlogAsideContainer from "../../../Modules/BlogAside/BlogAsideContainer";
 import SubscribeNewsletterContainer from "../../../Modules/SubscribeInEventPage/SubscribeNewsletterContainer";
 import BlogsCarouselContainer from "../../../Modules/BlogsCarousel/BlogsCarouselContainer";
+import {useTypedSelector} from "../../../hook/useTypedSelector";
+import {useNavigateTo} from "../../../hook/useNavigateTo";
 
 const BlogPage = () => {
 
     const blogId = useBlogId()
     const {getActiveBlog} = useAction()
+    const activeBlog = useTypedSelector(state => state.blogs.activeBlog)
+    const {navigateToContactsPage} = useNavigateTo()
 
     useEffect(() => {
         getActiveBlog(blogId)
 
-
-        return () => {
-            getActiveBlog(0)
+        if (activeBlog === null) {
+            navigateToContactsPage()
         }
 
         // eslint-disable-next-line
     }, [blogId])
+
 
     document.documentElement.scrollTo({
         top: 0,

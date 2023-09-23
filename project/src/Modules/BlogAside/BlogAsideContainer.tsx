@@ -11,6 +11,7 @@ const BlogAsideContainer = () => {
     const tags = useTypedSelector(state => state.blogs.activeBlog?.branch.tags)
     const blogType = useTypedSelector(state => state.blogs.activeBlog?.blogType.name)
     const blogs = useTypedSelector(state => state.blogs.blogs)
+    const loading = useTypedSelector(state => state.blogs.loadingBlog)
     const [searchText, setSearchText] = useState<string>("")
     const [editMode, setEditMode] = useState<boolean>(false)
 
@@ -50,7 +51,8 @@ const BlogAsideContainer = () => {
                       searchText={searchText}
                       curator={curator}
                       tags={tags}
-                      editMode={editMode}/>
+                      editMode={editMode}
+                      loading={loading}/>
 
 };
 

@@ -11,5 +11,6 @@ export interface BlogAsideTypes {
     curator: ICurator | null,
     blogType: string | undefined,
     blogs: IBlog[] | null,
-    tags: { text: string }[] | undefined
+    tags: { text: string }[] | undefined,
+    loading: boolean
 }

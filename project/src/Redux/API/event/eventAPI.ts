@@ -30,7 +30,6 @@ export const eventAPI = {
         try {
             let requestText = text ? `&text=${text}` : ""
             const response = await instance.get<IEventResponse>(`event?limit=${limit}&page=${page}&eventTypeId=${eventTypeId}${requestText}&sortBy=${sortBy}`)
-            console.log(`event?limit=${limit}&page=${page}&eventTypeId=${eventTypeId}${requestText}&sortBy=${sortBy}`)
             return response.data
         } catch (e) {
             return undefined

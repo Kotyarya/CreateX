@@ -6,7 +6,8 @@ const initialState: BlogsState = {
     loading: false,
     activeBlogType: 0,
     count: 0,
-    activeBlog: null
+    activeBlog: null,
+    loadingBlog: false
 }
 
 
@@ -46,7 +47,12 @@ const blogReducer = (state = initialState, action: BlogsActions): BlogsState => 
             return {
                 ...state,
                 activeBlog: action.payload,
-                loading: false
+                loadingBlog: false
+            }
+        case BlogsActionType.FETCHING_BLOG:
+            return {
+                ...state,
+                loadingBlog: true
             }
         default:
             return state

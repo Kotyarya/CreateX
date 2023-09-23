@@ -4,7 +4,8 @@ const initialState: CoursesState = {
     courses: [],
     loading: false,
     activeBranch: 0,
-    activeCourse: undefined
+    activeCourse: undefined,
+    courseNotFound: false
 }
 
 const coursesReducer = (state = initialState, action: CoursesAction): CoursesState => {
@@ -43,7 +44,13 @@ const coursesReducer = (state = initialState, action: CoursesAction): CoursesSta
             return {
                 ...state,
                 loading: false,
+                courseNotFound: false,
                 activeCourse: action.payload
+            }
+        case CoursesActionType.COURSE_NOT_FOUND:
+            return {
+                ...state,
+                courseNotFound: true
             }
         default :
             return state

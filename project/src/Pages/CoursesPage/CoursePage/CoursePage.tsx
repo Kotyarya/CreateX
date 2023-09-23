@@ -12,6 +12,9 @@ import LessonsContainer from "../../../Modules/Lessons/LessonsContainer";
 import RegisterForCourseContainer from "../../../Modules/RegisterForCourse/RegisterForCourseContainer";
 import CourseCarouselContainer from "../../../Modules/CourseCarousel/CourseCarouselContainer";
 import Testimonials from "../../../Modules/Testimonials/Testimonials";
+import {useTypedSelector} from "../../../hook/useTypedSelector";
+import {useNavigateTo} from "../../../hook/useNavigateTo";
+import Preloader from "../../../Components/Preloader/Preloader";
 
 const CoursePage = () => {
 
@@ -23,55 +26,66 @@ const CoursePage = () => {
     const idCourse = useCourseId()
 
     const {getActiveCourse} = useAction()
+    const {courseNotFound, loading} = useTypedSelector(state => state.courses)
+    const {navigateToContactsPage} = useNavigateTo()
 
     useEffect(() => {
         getActiveCourse(idCourse)
-
-
-        return () => {
-            getActiveCourse(0)
-        }
-
         // eslint-disable-next-line
     }, [])
 
+    useEffect(() => {
+        if (courseNotFound) {
+            navigateToContactsPage()
+        }
+        // eslint-disable-next-line
+    }, [courseNotFound])
+
+
     return (
-        <div className={style.coursePage}>
-            <div className={style.pageTitle}>
-                <CourseTitle/>
-            </div>
-            <div className={style.aboutCourse}>
-                <AboutCourseContainer/>
-            </div>
-            <div className={style.group}>
-                <div className={style.aboutCurator}>
-                    <AboutCuratorContainer/>
+        <>
+            {
+                loading ?
+                    <Preloader/> :
+                    null
+            }
+            <div className={style.coursePage}>
+                <div className={style.pageTitle}>
+                    <CourseTitle/>
                 </div>
-                <div className={style.mainSteps}>
-                    <MainSteps/>
+                <div className={style.aboutCourse}>
+                    <AboutCourseContainer/>
                 </div>
-                <div className={style.discount}>
-                    <DiscountContainer/>
-                </div>
-                <div className={style.forWhom}>
-                    <ForWhomCourseContainer/>
-                </div>
-                <div className={style.lessons}>
-                    <LessonsContainer/>
-                </div>
-                <div className={style.groupGray}>
-                    <div className={style.testimonials}>
-                        <Testimonials/>
+                <div className={style.group}>
+                    <div className={style.aboutCurator}>
+                        <AboutCuratorContainer/>
                     </div>
-                    <div className={style.register}>
-                        <RegisterForCourseContainer/>
+                    <div className={style.mainSteps}>
+                        <MainSteps/>
+                    </div>
+                    <div className={style.discount}>
+                        <DiscountContainer/>
+                    </div>
+                    <div className={style.forWhom}>
+                        <ForWhomCourseContainer/>
+                    </div>
+                    <div className={style.lessons}>
+                        <LessonsContainer/>
+                    </div>
+                    <div className={style.groupGray}>
+                        <div className={style.testimonials}>
+                            <Testimonials/>
+                        </div>
+                        <div className={style.register}>
+                            <RegisterForCourseContainer/>
+                        </div>
+                    </div>
+                    <div className={style.courseCarousel}>
+                        <CourseCarouselContainer/>
                     </div>
                 </div>
-                <div className={style.courseCarousel}>
-                    <CourseCarouselContainer/>
-                </div>
             </div>
-        </div>
+        </>
     );
 };
 
