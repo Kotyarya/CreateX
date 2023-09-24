@@ -1,34 +1,41 @@
 import React, {FC} from 'react';
-import {Field, reduxForm} from "redux-form";
+import {SubmitHandler, useForm} from "react-hook-form";
+import {ISubscribeForm} from "./ISubscribeForm";
 import Input, {sizeInput} from "../../../Components/Input/FormInput/Input";
 import Button from "../../../Components/Button/Button";
-import style from "./SubscribeForm.module.scss"
-import validateSubscribeForm from "../../../utils/validate/validateSubscribeForm";
-import {ButtonSize, ButtonType, ButtonVariant} from "../../../Components/Button/ButtonTypes";
+import {ButtonSize, ButtonVariant} from "../../../Components/Button/ButtonTypes";
 
 
-const SubscribeForm: FC = ({handleSubmit}: any) => {
+const SubscribeForm: FC = () => {
+
+    const {
+        register,
+        handleSubmit,
+        formState: {errors, isDirty, isSubmitSuccessful}
+    } = useForm<ISubscribeForm>({mode: "onSubmit"})
+
+    const onSubmit: SubmitHandler<ISubscribeForm> = (data) => {
+
+    }
+
+
+    const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+
+
     return (
-        <form onSubmit={handleSubmit} className={style.form}>
-            <Field
-                name={"email"}
-                placeholder={"Your working email"}
-                type={"email"}
-                component={Input}
-                sizeInput={sizeInput.large}
-                width={42.2}
-            />
-            <Button
-                type={ButtonType.submit}
-                text={"Subscribe"}
-                variant={ButtonVariant.solid}
-                size={ButtonSize.large}
-            />
+        <form onSubmit={handleSubmit(onSubmit)} style={{display: "flex", gap: "2.4rem"}}>
+            <Input register={register("email", {
+                required: "Required",
+                pattern: {
+                    value: EMAIL_REGEXP,
+                    message: "Please enter valid email"
+                }
+            })} placeholder={"Your working email"} width={42.2}
+                   sizeInput={sizeInput.large} errors={errors.email?.message} isSuccessful={isSubmitSuccessful}
+                   isDirty={isDirty}/>
+            <Button text={"Subscribe"} variant={ButtonVariant.solid} size={ButtonSize.large}/>
         </form>
     );
 };
 
-export default reduxForm({
-    form: "SubscribeForm",
-    validate: validateSubscribeForm
-})(SubscribeForm);
+export default SubscribeForm

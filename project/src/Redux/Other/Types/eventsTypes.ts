@@ -36,7 +36,12 @@ export enum EventsActionType {
     GET_EVENTS_CATEGORY = "GET_EVENTS_CATEGORY",
     GET_COUNT = "GET_COUNT",
     GET_EVENT_BY_ID = "GET_EVENT_BY_ID",
-    FETCHING_EVENTS = "FETCHING_EVENTS"
+    FETCHING_EVENTS = "FETCHING_EVENTS",
+    EVENT_NOT_FOUND = "EVENT_NOT_FOUND"
+}
+
+interface EventNotFound {
+    type: EventsActionType.EVENT_NOT_FOUND
 }
 
 interface GetStartEventsAction {
@@ -75,11 +80,13 @@ export type EventsAction =
     | GetCount
     | GetEventById
     | FetchingEvents
+    | EventNotFound
 
 export interface EventsState {
     events: IEvent[] | undefined,
     eventCategory: IEventCategory[] | undefined,
     count: number,
     activeEvent: IEvent | null,
-    loading: boolean
+    loading: boolean,
+    eventNotFound: boolean
 }

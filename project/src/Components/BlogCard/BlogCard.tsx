@@ -1,13 +1,13 @@
 import React, {FC} from 'react';
 import {imgUrl} from "../../utils/const/imgUrl";
 import style from "./BlogCard.module.scss"
-import {NavLink} from "react-router-dom";
 import {ReactComponent as ArrowSVG} from "../../assets/icons/other/Right.svg";
 import {ReactComponent as ArticleSVG} from "../../assets/icons/blogLabel/Article.svg";
 import {ReactComponent as VideoSVG} from "../../assets/icons/blogLabel/Video.svg";
 import {ReactComponent as PodcastSVG} from "../../assets/icons/blogLabel/Podcast.svg";
 import {markText} from "../../utils/helpers/markText";
 import {IBlog} from "../../Redux/Other/Types/blogsTypes";
+import {useNavigateTo} from "../../hook/useNavigateTo";
 
 interface BlogCardProps {
     blog: IBlog,
@@ -34,6 +34,11 @@ const BlogCard: FC<BlogCardProps> = ({blog, staticSize, searchText}) => {
         svg = <PodcastSVG/>
     }
 
+    const {navigateToBlogPage} = useNavigateTo()
+
+    const onNavigateToBlogPage = () => {
+        navigateToBlogPage(blog.id)
+    }
 
     return (
         <div key={blog.id} className={style.wrapper} style={staticSize ? {
@@ -58,7 +63,7 @@ const BlogCard: FC<BlogCardProps> = ({blog, staticSize, searchText}) => {
                 </div>
                 {markText(blog.title, searchText || "", style.title)}
                 <p className={style.description}>{blog.mainText}</p>
-                <NavLink className={style.link} to={`/blog/${blog.id}`}>{navLinkText} <ArrowSVG/></NavLink>
+                <p className={style.link} onClick={onNavigateToBlogPage}>{navLinkText} <ArrowSVG/></p>
             </div>
         </div>
     );

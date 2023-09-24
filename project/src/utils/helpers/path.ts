@@ -4,7 +4,8 @@ export enum staticPath {
     eventsPage = "/events",
     aboutUsPage = "/about-us",
     blogPage = "/blogs",
-    contactsPage = "/contacts"
+    contactsPage = "/contacts",
+    notFoundPage = "/notFoundPage"
 }
 
 type variablePathType = staticPath.coursePage | staticPath.blogPage | staticPath.eventsPage

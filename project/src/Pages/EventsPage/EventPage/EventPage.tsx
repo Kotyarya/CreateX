@@ -17,8 +17,8 @@ const EventPage = () => {
     const eventId = useEventId()
 
     const {getEventsById} = useAction()
-    const {loading, activeEvent} = useTypedSelector(state => state.events)
-    const {navigateToContactsPage} = useNavigateTo()
+    const {loading, eventNotFound} = useTypedSelector(state => state.events)
+    const {navigateToNotFoundPage} = useNavigateTo()
 
     useEffect(() => {
         getEventsById(eventId)
@@ -26,11 +26,11 @@ const EventPage = () => {
     }, [])
 
     useEffect(() => {
-        if (activeEvent === null) {
-            navigateToContactsPage()
+        if (eventNotFound) {
+            navigateToNotFoundPage()
         }
         // eslint-disable-next-line
-    }, [])
+    }, [eventNotFound])
 
     document.documentElement.scrollTo({
         top: 0,

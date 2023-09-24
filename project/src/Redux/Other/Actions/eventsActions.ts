@@ -32,6 +32,10 @@ export const getEventsById = (eventId: number) => {
     return async (dispatch: Dispatch<EventsAction>) => {
         dispatch({type: EventsActionType.FETCHING_EVENTS})
         const response = await eventAPI.getEventsById(eventId)
+        if (response === null) {
+            dispatch({type: EventsActionType.EVENT_NOT_FOUND})
+            return
+        }
         dispatch({type: EventsActionType.GET_EVENT_BY_ID, payload: response})
     }
 }

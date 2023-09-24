@@ -1,5 +1,6 @@
 import {FC} from "react";
 import style from "./Input.module.scss"
+import {UseFormRegisterReturn} from "react-hook-form";
 
 export enum sizeInput {
     small = "small",
@@ -9,44 +10,31 @@ export enum sizeInput {
 
 
 interface FormInputProps {
-    meta: {
-        error: string,
-        valid: boolean,
-        touched: boolean
-    },
-    input: {},
-    type: string,
     placeholder: string,
     label?: string,
     width: number,
     sizeInput: sizeInput,
-    theme?: string
+    theme?: string,
+    register: UseFormRegisterReturn,
+    errors: string | undefined,
+    isSuccessful: boolean,
+    isDirty: boolean
 }
 
 const FormInput: FC<FormInputProps> = ({
-                                           meta: {error, valid, touched},
-                                           input,
-                                           type,
                                            placeholder,
                                            label,
                                            width,
                                            sizeInput,
-                                           theme
+                                           theme,
+                                           register,
+                                           errors,
+                                           isSuccessful,
+                                           isDirty
                                        }) => {
 
 
-    let result = ""
-
-    if (touched) {
-        if (error) {
-            result = error
-        } else if (valid) {
-            result = "Looks good!"
-        }
-
-    }
-
-    const classInput = touched ? (error ? "error" : "success") : ""
+    const classSpan = errors ? style.error : isSuccessful ? isDirty ? style.success : style.error : ""
 
 
     return (
@@ -55,12 +43,12 @@ const FormInput: FC<FormInputProps> = ({
                 <label>{label}</label> :
                 null
             }
-            <div className={style.customInput + " " + style[classInput]}>
-                <input autoComplete="off" {...input} type={type} placeholder={placeholder}
+            <div className={style.customInput + " " + classSpan}>
+                <input {...register} autoComplete="off" placeholder={placeholder}
                        style={{width: `${width}rem`}}/>
 
             </div>
-            {<span className={style[classInput]}>{result}</span>}
+            {<span className={classSpan}>{errors ? errors : (isSuccessful ? "Looks good!" : errors)}</span>}
         </div>
     )
 }

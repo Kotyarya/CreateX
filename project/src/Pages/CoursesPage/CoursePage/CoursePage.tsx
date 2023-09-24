@@ -27,7 +27,7 @@ const CoursePage = () => {
 
     const {getActiveCourse} = useAction()
     const {courseNotFound, loading} = useTypedSelector(state => state.courses)
-    const {navigateToContactsPage} = useNavigateTo()
+    const {navigateToNotFoundPage} = useNavigateTo()
 
     useEffect(() => {
         getActiveCourse(idCourse)
@@ -36,7 +36,7 @@ const CoursePage = () => {
 
     useEffect(() => {
         if (courseNotFound) {
-            navigateToContactsPage()
+            navigateToNotFoundPage()
         }
         // eslint-disable-next-line
     }, [courseNotFound])

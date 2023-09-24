@@ -13,7 +13,7 @@ const SubscribeNewsletter = () => {
                         <h2>Don’t want to miss the best events?
                             Subscribe to our newsletter!</h2>
                     </article>
-                    <SubscribeNewsletterForm onSubmit={() => ({})}/>
+                    <SubscribeNewsletterForm/>
                 </div>
             </div>
         </div>

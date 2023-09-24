@@ -41,7 +41,7 @@ const Discount: FC<DiscountProps> = ({day, hour, minute, second}) => {
                         </div>
                     </div>
                 </div>
-                <DiscountForm onSubmit={() => []}/>
+                <DiscountForm/>
             </div>
         </div>
     );

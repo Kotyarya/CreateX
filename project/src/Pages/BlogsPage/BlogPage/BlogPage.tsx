@@ -13,19 +13,21 @@ const BlogPage = () => {
 
     const blogId = useBlogId()
     const {getActiveBlog} = useAction()
-    const activeBlog = useTypedSelector(state => state.blogs.activeBlog)
-    const {navigateToContactsPage} = useNavigateTo()
+    const {blogNotFound} = useTypedSelector(state => state.blogs)
+    const {navigateToNotFoundPage} = useNavigateTo()
 
     useEffect(() => {
         getActiveBlog(blogId)
 
-        if (activeBlog === null) {
-            navigateToContactsPage()
-        }
-
         // eslint-disable-next-line
     }, [blogId])
 
+    useEffect(() => {
+        if (blogNotFound) {
+            navigateToNotFoundPage()
+        }
+        // eslint-disable-next-line
+    }, [blogNotFound])
 
     document.documentElement.scrollTo({
         top: 0,

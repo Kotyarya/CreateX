@@ -29,6 +29,12 @@ export const getActiveBlog = (blogId: number) => {
     return async (dispatch: Dispatch<BlogsActions>) => {
         dispatch({type: BlogsActionType.FETCHING_BLOG})
         const response = await blogAPI.getBlogById(blogId)
+
+        if (response === null) {
+            dispatch({type: BlogsActionType.BLOG_NOT_FOUND})
+            return
+        }
+
         dispatch({type: BlogsActionType.GET_ACTIVE_BLOG, payload: response})
     }
 }

@@ -14,6 +14,7 @@ import FooterContainer from "./Modules/Footer/FooterContainer";
 import Modal from "./Modules/Modal/Modal";
 import {useTypedSelector} from "./hook/useTypedSelector";
 import {staticPath} from "./utils/helpers/path";
+import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
 
 
 const App: FC = () => {
@@ -31,8 +32,9 @@ const App: FC = () => {
                 <Route path={staticPath.eventsPage} element={<EventsPage/>}/>
                 <Route path={staticPath.eventsPage + "/:eventID"} element={<EventPage/>}/>
                 <Route path={staticPath.blogPage} element={<BlogsPage/>}/>
-                <Route path={"/blog/:blogId"} element={<BlogPage/>}/>
+                <Route path={staticPath.blogPage + "/:blogId"} element={<BlogPage/>}/>
                 <Route path={staticPath.aboutUsPage} element={<AboutUsPage/>}/>
+                <Route path={"*"} element={<NotFoundPage/>}/>
             </Routes>
             <FooterContainer/>
         </BrowserRouter>

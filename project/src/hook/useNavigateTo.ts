@@ -26,6 +26,12 @@ export const useNavigateTo = () => {
         },
         navigateToBlogsPage: () => {
             navigate(staticPath.blogPage)
+        },
+        navigateToBlogPage: (id: number) => {
+            navigate(variablePath(staticPath.blogPage, id))
+        },
+        navigateToNotFoundPage: () => {
+            navigate(staticPath.notFoundPage)
         }
     }
 }

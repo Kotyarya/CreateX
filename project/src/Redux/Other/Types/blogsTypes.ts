@@ -61,6 +61,11 @@ export enum BlogsActionType {
     GET_COUNT_BLOGS = "GET_COUNT_BLOGS",
     GET_ACTIVE_BLOG = "GET_ACTIVE_BLOG",
     FETCHING_BLOG = "FETCHING_BLOG",
+    BLOG_NOT_FOUND = "BLOG_NOT_FOUND"
+}
+
+interface BlogNotFound {
+    type: BlogsActionType.BLOG_NOT_FOUND
 }
 
 interface FetchingBlog {
@@ -104,6 +109,7 @@ export type BlogsActions =
     | GetCountBlogs
     | GetActiveBlog
     | FetchingBlog
+    | BlogNotFound
 
 export interface BlogsState {
     blogs: IBlog[] | null,
@@ -112,5 +118,6 @@ export interface BlogsState {
     blogTypes: IBlogType[] | null,
     count: number,
     activeBlog: IBlog | null,
-    loadingBlog: boolean
+    loadingBlog: boolean,
+    blogNotFound: boolean
 }

@@ -104,7 +104,7 @@ const Blogs: FC<BlogsTypes> = ({
                 {
                     loading ?
                         skeletonBlogsBlocks.map((block, index) => (
-                            <div className={style[`blog${index}`]}>
+                            <div key={nanoid(10)} className={style[`blog${index}`]}>
                                 {block}
                             </div>
                         )) :

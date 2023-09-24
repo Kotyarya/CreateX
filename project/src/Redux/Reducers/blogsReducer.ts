@@ -7,7 +7,8 @@ const initialState: BlogsState = {
     activeBlogType: 0,
     count: 0,
     activeBlog: null,
-    loadingBlog: false
+    loadingBlog: false,
+    blogNotFound: false
 }
 
 
@@ -47,12 +48,18 @@ const blogReducer = (state = initialState, action: BlogsActions): BlogsState => 
             return {
                 ...state,
                 activeBlog: action.payload,
-                loadingBlog: false
+                loadingBlog: false,
+                blogNotFound: false
             }
         case BlogsActionType.FETCHING_BLOG:
             return {
                 ...state,
                 loadingBlog: true
+            }
+        case BlogsActionType.BLOG_NOT_FOUND:
+            return {
+                ...state,
+                blogNotFound: true
             }
         default:
             return state

@@ -6,10 +6,10 @@ import {ReactComponent as InstagramSVG} from "../../assets/icons/socialMedia/ins
 import {ReactComponent as TwitterSVG} from "../../assets/icons/socialMedia/twitterSVG.svg";
 import {ReactComponent as LinkedInSVG} from "../../assets/icons/socialMedia/linkedinSVG.svg";
 import {nanoid} from "nanoid";
-import {NavLink} from "react-router-dom";
 import {markText} from "../../utils/helpers/markText";
 import {BlogAsideTypes} from "./BlogAsideTypes";
 import {useSkeleton} from "../../hook/useSkeleton";
+import {useNavigateTo} from "../../hook/useNavigateTo";
 
 
 const BlogAside: FC<BlogAsideTypes> = ({
@@ -27,6 +27,8 @@ const BlogAside: FC<BlogAsideTypes> = ({
 
     const img = curator ? imgUrl + curator.img : ""
     const skeletonAsideBlock = useSkeleton(1, 34.2, 90)
+    const {navigateToBlogPage} = useNavigateTo()
+
 
     return (
         <div className={style.wrapper}>
@@ -62,15 +64,14 @@ const BlogAside: FC<BlogAsideTypes> = ({
                                     blogs?.map((blog, index) => {
                                         if (index <= 2) {
                                             return (
-                                                <NavLink key={blog.id} to={`/blog/${blog.id}`}>
-                                                    <div className={style.blog}>
-                                                        <img src={imgUrl + blog.img} alt=""/>
-                                                        <div className={style.info}>
-                                                            <p className={style.date}>{blog.month} {blog.day}</p>
-                                                            <p className={style.title}>{blog.title}</p>
-                                                        </div>
+                                                <div className={style.blog} key={blog.id}
+                                                     onClick={() => navigateToBlogPage(blog.id)}>
+                                                    <img src={imgUrl + blog.img} alt=""/>
+                                                    <div className={style.info}>
+                                                        <p className={style.date}>{blog.month} {blog.day}</p>
+                                                        <p className={style.title}>{blog.title}</p>
                                                     </div>
-                                                </NavLink>
+                                                </div>
                                             )
                                         } else {
                                             return null
@@ -90,17 +91,16 @@ const BlogAside: FC<BlogAsideTypes> = ({
                     :
                     <div className={style.searchBlogs}>
                         {
-                            blogs?.map((blog, index) => {
+                            blogs?.map((blog) => {
                                 return (
-                                    <NavLink key={blog.id} to={`/blog/${blog.id}`}>
-                                        <div className={style.blog}>
-                                            <img src={imgUrl + blog.img} alt=""/>
-                                            <div className={style.info}>
-                                                <p className={style.date}>{blog.month} {blog.day}</p>
-                                                {markText(blog.title, searchText, style.title)}
-                                            </div>
+                                    <div className={style.blog} key={blog.id}
+                                         onClick={() => navigateToBlogPage(blog.id)}>
+                                        <img src={imgUrl + blog.img} alt=""/>
+                                        <div className={style.info}>
+                                            <p className={style.date}>{blog.month} {blog.day}</p>
+                                            {markText(blog.title, searchText, style.title)}
                                         </div>
-                                    </NavLink>
+                                    </div>
                                 )
                             })
                         }

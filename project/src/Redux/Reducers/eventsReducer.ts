@@ -5,7 +5,8 @@ const initialState: EventsState = {
     eventCategory: [],
     count: 0,
     activeEvent: null,
-    loading: false
+    loading: false,
+    eventNotFound: false
 }
 
 const eventsReducer = (state = initialState, action: EventsAction): EventsState => {
@@ -38,12 +39,18 @@ const eventsReducer = (state = initialState, action: EventsAction): EventsState 
             return {
                 ...state,
                 activeEvent: action.payload,
-                loading: false
+                loading: false,
+                eventNotFound: false
             }
         case EventsActionType.FETCHING_EVENTS:
             return {
                 ...state,
                 loading: true
+            }
+        case EventsActionType.EVENT_NOT_FOUND:
+            return {
+                ...state,
+                eventNotFound: true
             }
         default :
             return state
