@@ -4,42 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6b50f66-595e-4b61-b032-de6627445505" name="Changes" comment="loader and redirect to not found">
-      <change afterPath="$PROJECT_DIR$/src/Modules/Subscribe/SubscribeForm/ISubscribeForm.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/NotFoundPage/NotFoundPage.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/NotFoundPage/NotFoundPage.tsx" afterDir="false" />
+    <list default="true" id="f6b50f66-595e-4b61-b032-de6627445505" name="Changes" comment="input and react-hook-form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/BlogCard/BlogCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BlogCard/BlogCard.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/BlogCard/BlogCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BlogCard/BlogCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Input/FormInput/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Input/FormInput/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/BlogAside/BlogAside.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/BlogAside/BlogAside.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Blogs/Blogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Blogs/Blogs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Discount/Discount.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Discount/Discount.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Discount/DiscountForm/DiscountForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Discount/DiscountForm/DiscountForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Footer/FooterForm/FooterForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Footer/FooterForm/FooterForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/RegisterForCourse/RegisterForCourseForm/RegisterForCourseForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/RegisterForCourse/RegisterForCourseForm/RegisterForCourseForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Footer/FooterContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Footer/FooterContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Footer/FooterForm/FooterForm.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/SubscribeForm/SubscribeForm.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Footer/FooterForm/FooterForm.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Footer/FooterTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Footer/FooterTypes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/Subscribe/Subscribe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Subscribe/Subscribe.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Subscribe/SubscribeContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Subscribe/SubscribeContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Subscribe/SubscribeForm/SubscribeForm.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Subscribe/SubscribeForm/SubscribeForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Subscribe/SubscribeForm/SubscribeForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/SubscribeInEventPage/Form/SubscribeNewsletterForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/SubscribeInEventPage/Form/SubscribeNewsletterForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/SubscribeInEventPage/SubscribeNewsletter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/SubscribeInEventPage/SubscribeNewsletter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/BlogsPage/BlogPage/BlogPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/BlogsPage/BlogPage/BlogPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/CoursesPage/CoursePage/CoursePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/CoursesPage/CoursePage/CoursePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/EventsPage/EventPage/EventPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/EventsPage/EventPage/EventPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Other/Actions/blogsActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Other/Actions/blogsActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Other/Actions/eventsActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Other/Actions/eventsActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Other/Types/blogsTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Other/Types/blogsTypes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Other/Types/eventsTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Other/Types/eventsTypes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/blogsReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/blogsReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/eventsReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/eventsReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useNavigateTo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useNavigateTo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/helpers/path.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/path.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/validate/validateDiscountForm.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/validate/validateSubscribeForm.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Subscribe/SubscribeForm/ISubscribeForm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/SubscribeForm/ISubscribeForm.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Subscribe/SubscribeForm/SubscribeForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/SubscribeForm/SubscribeForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +78,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "js.last.introduce.type": "CONST",
-    "last_opened_file_path": "/Users/kotyarya/Documents/Programowanie/GitHub/CreateX/project/src/Modules/Modal/VideoModal",
+    "last_opened_file_path": "/Users/kotyarya/Library/Mobile Documents/com~apple~CloudDocs/Documents/Документы — MacBook Air — Maksim/Programowanie/GitHub/CreateX/project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -110,7 +86,7 @@
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "0d570cb2-96df-43cc-80da-7f777e6d0afe",
-    "ts.external.directory.path": "/Users/kotyarya/Documents/Programowanie/GitHub/CreateX/project/node_modules/typescript/lib",
+    "ts.external.directory.path": "/Users/kotyarya/Library/Mobile Documents/com~apple~CloudDocs/Documents/Документы — MacBook Air — Maksim/Programowanie/GitHub/CreateX/project/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -134,11 +110,11 @@
       <recent name="$PROJECT_DIR$/src/Modules/Courses/img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Modules/SubscribeForm" />
       <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$/src/Redux/Other/Data/BenefitsData" />
       <recent name="$PROJECT_DIR$/src/Modules" />
       <recent name="$PROJECT_DIR$/src/Redux/API/event" />
-      <recent name="$PROJECT_DIR$/src/Redux/API/curator" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -219,7 +195,8 @@
       <workItem from="1694937063822" duration="20633000" />
       <workItem from="1695110446699" duration="13636000" />
       <workItem from="1695455858739" duration="6170000" />
-      <workItem from="1695556721994" duration="11605000" />
+      <workItem from="1695556721994" duration="11695000" />
+      <workItem from="1696267059605" duration="3169000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1686766810853</created>
@@ -514,7 +491,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695462031786</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="input and react-hook-form">
+      <option name="closed" value="true" />
+      <created>1695575777086</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1695575777086</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -552,6 +537,7 @@
     <MESSAGE value="refactor, SkeletonBlock.tsx" />
     <MESSAGE value="SkeletonBlock.tsx" />
     <MESSAGE value="loader and redirect to not found" />
-    <option name="LAST_COMMIT_MESSAGE" value="loader and redirect to not found" />
+    <MESSAGE value="input and react-hook-form" />
+    <option name="LAST_COMMIT_MESSAGE" value="input and react-hook-form" />
   </component>
 </project>

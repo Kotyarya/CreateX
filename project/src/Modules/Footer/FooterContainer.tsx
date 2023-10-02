@@ -18,8 +18,6 @@ const FooterContainer: FC = () => {
         })
     }
 
-    const submit = (values: any) => {
-    }
 
     const onClickToCoursePage = (branchId: number) => {
         getCourseByBranch(branchId, 1, "")
@@ -33,7 +31,7 @@ const FooterContainer: FC = () => {
     }, [])
 
     return (
-        <Footer goTop={goTop} submit={submit} branches={branches} onClickToCoursePage={onClickToCoursePage}
+        <Footer goTop={goTop} branches={branches} onClickToCoursePage={onClickToCoursePage}
                 loading={loading}/>
     );
 };

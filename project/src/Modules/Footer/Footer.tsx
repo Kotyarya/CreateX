@@ -10,15 +10,15 @@ import {ReactComponent as LinkedInSVG} from "../../assets/icons/socialMedia/link
 import {ReactComponent as PhoneSVG} from "../../assets/icons/other/phoneSVG.svg";
 import {ReactComponent as MailSVG} from "../../assets/icons/other/mailSVG.svg";
 import {ReactComponent as HeartSVG} from "../../assets/icons/other/heart.svg";
-import FooterForm from "./FooterForm/FooterForm";
 import {NavLink} from "react-router-dom";
 import {navLinks} from "../../utils/const/navLinks";
 import {nanoid} from "nanoid";
 import {FooterTypes} from "./FooterTypes";
 import {useSkeleton} from "../../hook/useSkeleton";
+import SubscribeForm from "../SubscribeForm/SubscribeForm";
 
 
-const Footer: FC<FooterTypes> = ({goTop, submit, branches, onClickToCoursePage, loading}) => {
+const Footer: FC<FooterTypes> = ({goTop, branches, onClickToCoursePage, loading}) => {
 
     const branchList = branches?.map((branch) => {
         return (
@@ -75,7 +75,7 @@ const Footer: FC<FooterTypes> = ({goTop, submit, branches, onClickToCoursePage, 
                 </ul>
                 <div className={style.signUp}>
                     <p className={style.title}>SIGN UP TO OUR NEWSLETTER</p>
-                    <FooterForm onSubmit={submit}/>
+                    <SubscribeForm isFooterForm={true}/>
                     <p className={style.description}>*Subscribe to our newsletter to receive communications and early
                         updates from Createx SEO Agency.</p>
                 </div>

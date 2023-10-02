@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import style from "./Subscribe.module.scss"
-import SubscribeForm from "./SubscribeForm/SubscribeForm";
+import SubscribeForm from "../SubscribeForm/SubscribeForm";
 
 
 const Subscribe: FC = () => {
