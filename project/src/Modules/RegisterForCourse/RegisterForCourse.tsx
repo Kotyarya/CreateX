@@ -1,9 +1,11 @@
 import React from 'react';
 import style from "./RegisterForCourse.module.scss"
-import RegisterForCourseForm from "./RegisterForCourseForm/RegisterForCourseForm";
 import illustration from "./img/illustration.png"
+import JoinForm from "../JoinForm/JoinForm";
+import {JoinFormTypes} from "../JoinForm/JoinFormTypes";
 
 const RegisterForCourse = () => {
+
     return (
         <div className={style.wrapper}>
             <img src={illustration} alt="illustration"/>
@@ -12,7 +14,7 @@ const RegisterForCourse = () => {
                     <p>Leave a request now and get 20% off!</p>
                     <h2>Register for the course</h2>
                 </article>
-                <RegisterForCourseForm onSubmit={() => []}/>
+                <JoinForm type={JoinFormTypes.course}/>
             </div>
         </div>
     );

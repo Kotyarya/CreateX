@@ -9,6 +9,14 @@ import {ThemesEventTypes} from "./ThemesEventTypes";
 const ThemesEvent: FC<ThemesEventTypes> = ({event}) => {
 
 
+    const onClickHandler = () => {
+        document.documentElement.scrollTo({
+            top: document.documentElement.offsetHeight - (1.14 * document.documentElement.offsetWidth),
+            behavior: "smooth"
+        })
+    }
+
+
     const themesList = event?.theme.map((theme, index) => {
         return (
             <li key={nanoid(10)}>
@@ -45,7 +53,8 @@ const ThemesEvent: FC<ThemesEventTypes> = ({event}) => {
                         quam ac elit tristique dis.</p>
                 </div>
                 <a href="https://www.facebook.com/react/" rel={"noreferrer"} target={"_blank"}>Event on Facebook</a>
-                <Button text={"Join the event"} variant={ButtonVariant.solid} size={ButtonSize.regular}/>
+                <Button text={"Join the event"} variant={ButtonVariant.solid} size={ButtonSize.regular}
+                        onClick={onClickHandler}/>
             </div>
         </div>
     );

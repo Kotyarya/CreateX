@@ -1,6 +1,7 @@
 import React from 'react';
 import BlogsContainer from "../../Modules/Blogs/BlogsContainer";
 import style from "./BlogsPage.module.scss"
+import SubscribeNewsletterContainer from "../../Modules/SubscribeNewsletter/SubscribeNewsletterContainer";
 
 const BlogsPage = () => {
     document.documentElement.scrollTo({
@@ -10,7 +11,12 @@ const BlogsPage = () => {
 
     return (
         <div className={style.blogs}>
-            <BlogsContainer/>
+            <div className={style.blogsContent}>
+                <BlogsContainer/>
+            </div>
+            <div className={style.subscribe}>
+                <SubscribeNewsletterContainer/>
+            </div>
         </div>
     );
 };

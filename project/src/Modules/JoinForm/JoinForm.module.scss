@@ -1,0 +1,18 @@
+.form {
+  display: flex;
+}
+
+.raw {
+  gap: 2rem;
+  align-items: end;
+
+  button {
+    margin-bottom: 1rem;
+  }
+}
+
+.course,
+.event {
+  flex-direction: column;
+  gap: 2.4rem;
+}

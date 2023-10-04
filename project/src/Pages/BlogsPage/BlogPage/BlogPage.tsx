@@ -4,7 +4,7 @@ import BlogContainer from "../../../Modules/Blog/BlogContainer";
 import {useBlogId} from "../../../hook/useBlogId";
 import {useAction} from "../../../hook/useAction";
 import BlogAsideContainer from "../../../Modules/BlogAside/BlogAsideContainer";
-import SubscribeNewsletterContainer from "../../../Modules/SubscribeInEventPage/SubscribeNewsletterContainer";
+import SubscribeNewsletterContainer from "../../../Modules/SubscribeNewsletter/SubscribeNewsletterContainer";
 import BlogsCarouselContainer from "../../../Modules/BlogsCarousel/BlogsCarouselContainer";
 import {useTypedSelector} from "../../../hook/useTypedSelector";
 import {useNavigateTo} from "../../../hook/useNavigateTo";

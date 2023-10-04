@@ -6,6 +6,15 @@ import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
 import {AboutCourseTypes} from "./AboutCourseTypes";
 
 const AboutCourse: FC<AboutCourseTypes> = ({description, willLearn, date, price, lessonsLength}) => {
+
+
+    const onClickHandler = () => {
+        document.documentElement.scrollTo({
+            top: document.documentElement.offsetHeight - (1.09 * document.documentElement.offsetWidth),
+            behavior: "smooth"
+        })
+    }
+
     return (
         <div className={style.wrapper}>
             <div className={style.content}>
@@ -42,7 +51,8 @@ const AboutCourse: FC<AboutCourseTypes> = ({description, willLearn, date, price,
                     <p className={style.description}>Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris
                         quam ac elit tristique dis.</p>
                 </div>
-                <Button text={"Join the courses"} variant={ButtonVariant.solid} size={ButtonSize.regular}/>
+                <Button text={"Join the courses"} variant={ButtonVariant.solid} size={ButtonSize.regular}
+                        onClick={onClickHandler}/>
             </div>
         </div>
     );

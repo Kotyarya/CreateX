@@ -45,7 +45,7 @@ const FormInput: FC<FormInputProps> = ({
             }
             <div className={style.customInput + " " + classSpan}>
                 <input {...register} autoComplete="off" placeholder={placeholder}
-                       style={{width: `${width}rem`}}/>
+                       style={{minWidth: `${width}rem`}}/>
 
             </div>
             {<span className={classSpan}>{errors ? errors : (isSuccessful ? "Looks good!" : errors)}</span>}

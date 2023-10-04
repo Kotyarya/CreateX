@@ -6,7 +6,7 @@ import ThemesEventContainer from "../../../Modules/ThemesEvent/ThemesEventContai
 import EventTitle from "../../../Modules/EventTitle/EventTitle";
 import AboutSpeakerContainer from "../../../Modules/AboutSpeaker/AboutSpeakerContainer";
 import ForWhomEventContainer from "../../../Modules/ForWhomEvent/ForWhomEventContainer";
-import SubscribeNewsletterContainer from "../../../Modules/SubscribeInEventPage/SubscribeNewsletterContainer";
+import SubscribeNewsletterContainer from "../../../Modules/SubscribeNewsletter/SubscribeNewsletterContainer";
 import EventCarouselContainer from "../../../Modules/EventCarousel/EventCarouselContainer";
 import RegisterForEventContainer from "../../../Modules/RegisterForEvent/RegisterForEventContainer";
 import {useTypedSelector} from "../../../hook/useTypedSelector";
@@ -61,7 +61,7 @@ const EventPage = () => {
                     </div>
                 </div>
                 <div className={style.subscribe}>
-                    <SubscribeNewsletterContainer/>
+                    <SubscribeNewsletterContainer inEventPage={true}/>
                 </div>
                 <div className={style.joinEvent}>
                     <RegisterForEventContainer/>

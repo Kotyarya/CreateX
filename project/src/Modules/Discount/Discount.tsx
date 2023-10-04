@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import style from "./Discount.module.scss"
-import DiscountForm from "./DiscountForm/DiscountForm";
+import JoinForm from "../JoinForm/JoinForm";
+import {JoinFormTypes} from "../JoinForm/JoinFormTypes";
 
 interface DiscountProps {
     day: number,
@@ -41,7 +42,7 @@ const Discount: FC<DiscountProps> = ({day, hour, minute, second}) => {
                         </div>
                     </div>
                 </div>
-                <DiscountForm/>
+                <JoinForm type={JoinFormTypes.raw}/>
             </div>
         </div>
     );

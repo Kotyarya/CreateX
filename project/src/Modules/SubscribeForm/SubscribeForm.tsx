@@ -6,6 +6,7 @@ import Button from "../../Components/Button/Button";
 import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
 import style from "./SubscribeForm.module.scss";
 import {ReactComponent as ArrowSVG} from "../../assets/icons/arrows/arrowRigthSVG.svg";
+import {EMAIL_REGEXP} from "../../utils/const/regexp";
 
 
 export interface SubscribeFormTypes {
@@ -22,9 +23,6 @@ const SubscribeForm: FC<SubscribeFormTypes> = ({isFooterForm}) => {
 
     const onSubmit: SubmitHandler<ISubscribeForm> = (data) => {
     }
-
-
-    const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
 
 
     return (

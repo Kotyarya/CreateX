@@ -1,8 +1,9 @@
 import React from 'react';
-import RegisterForCourseForm from "../RegisterForCourse/RegisterForCourseForm/RegisterForCourseForm";
 import style from "./RegisterForEvent.module.scss"
 import illustration from "./img/illustration.png"
 import {useTypedSelector} from "../../hook/useTypedSelector";
+import JoinForm from "../JoinForm/JoinForm";
+import {JoinFormTypes} from "../JoinForm/JoinFormTypes";
 
 const RegisterForEvent = () => {
     const eventType = useTypedSelector(state => state.events.activeEvent?.eventType.name)
@@ -14,7 +15,7 @@ const RegisterForEvent = () => {
                     <p>Don’t miss the event</p>
                     <h2>Leave a request</h2>
                 </article>
-                <RegisterForCourseForm onSubmit={() => ({})}/>
+                <JoinForm type={JoinFormTypes.event}/>
                 <p className={style.text}>* You will receive a link to the {eventType?.toLowerCase()} in an email after
                     registration.</p>
             </div>
