@@ -20,5 +20,6 @@ export interface ButtonTypes {
     size: ButtonSize,
     onClick?: () => void,
     withIcon?: boolean,
-    type?: ButtonType
+    type?: ButtonType,
+    width?: number
 }

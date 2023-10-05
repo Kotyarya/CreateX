@@ -30,7 +30,7 @@ const SubscribeForm: FC<SubscribeFormTypes> = ({isFooterForm}) => {
             {
                 isFooterForm ?
                     <form onSubmit={handleSubmit(onSubmit)} className={style.form}>
-                        <Input placeholder={"Email address"} width={26} sizeInput={sizeInput.small}
+                        <Input placeholder={"Email address"} width={26} sizeInputProps={sizeInput.small}
                                register={register("email", {
                                    required: "Required",
                                    pattern: {
@@ -49,7 +49,7 @@ const SubscribeForm: FC<SubscribeFormTypes> = ({isFooterForm}) => {
                                 message: "Please enter valid email"
                             }
                         })} placeholder={"Your working email"} width={42.2}
-                               sizeInput={sizeInput.large} errors={errors.email?.message}
+                               sizeInputProps={sizeInput.large} errors={errors.email?.message}
                                isSuccessful={isSubmitSuccessful}
                                isDirty={isDirty}/>
                         <Button text={"Subscribe"} variant={ButtonVariant.solid} size={ButtonSize.large}/>

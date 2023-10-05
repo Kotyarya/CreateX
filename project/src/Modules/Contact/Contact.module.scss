@@ -1,0 +1,29 @@
+@import "../../Styles/global";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10.5rem;
+
+
+  img {
+    width: 43.5rem;
+    height: 48.1rem;
+  }
+
+  .content {
+    article {
+      color: $gray900;
+      margin-bottom: 4rem;
+
+      p {
+        @include title6
+      }
+
+      h2 {
+        @include title1
+      }
+    }
+  }
+}

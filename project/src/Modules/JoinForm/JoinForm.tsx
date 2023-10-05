@@ -25,12 +25,12 @@ const JoinForm: FC<JoinFormTypesInterface> = ({type}) => {
 
     return (
         <form className={style.form + " " + style[type]} onSubmit={handleSubmit(onSubmit)}>
-            <Input placeholder={"Your full name"} width={inputWidth} sizeInput={inputSize}
+            <Input placeholder={"Your full name"} width={inputWidth} sizeInputProps={inputSize}
                    register={register("name", {
                        required: "Required",
                    })} errors={errors.name?.message} isSuccessful={isSubmitSuccessful} isDirty={isDirty}
                    label={"Full Name"}/>
-            <Input placeholder={"Your working email"} width={inputWidth} sizeInput={inputSize}
+            <Input placeholder={"Your working email"} width={inputWidth} sizeInputProps={inputSize}
                    register={register("email", {
                        required: "Required",
                        pattern: {
@@ -39,7 +39,7 @@ const JoinForm: FC<JoinFormTypesInterface> = ({type}) => {
                        }
                    })} errors={errors.email?.message} isSuccessful={isSubmitSuccessful} isDirty={isDirty}
                    label={"Email"}/>
-            <Input placeholder={"Your phone number"} width={inputWidth} sizeInput={inputSize}
+            <Input placeholder={"Your phone number"} width={inputWidth} sizeInputProps={inputSize}
                    register={register("phone", {
                        required: "Required",
                        pattern: {

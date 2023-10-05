@@ -4,35 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6b50f66-595e-4b61-b032-de6627445505" name="Changes" comment="refactor">
-      <change afterPath="$PROJECT_DIR$/src/Modules/JoinForm/JoinForm.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/JoinForm/JoinForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/JoinForm/JoinFormTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/SubscribeNewsletter/SubscribeNewsletterTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/const/regexp.ts" afterDir="false" />
+    <list default="true" id="f6b50f66-595e-4b61-b032-de6627445505" name="Changes" comment="JoinForm.tsx">
+      <change afterPath="$PROJECT_DIR$/src/Modules/Contact/Contact.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/Contact/Contact.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/ContactForm/ContactForm.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/ContactForm/ContactForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/ContactForm/IContactForm.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/ContactInfo/ContactInfo.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/ContactInfo/ContactInfo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/ContactPage/ContactPage.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/ContactPage/ContactPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Button/ButtonTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button/ButtonTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CheckBox/CheckBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CheckBox/CheckBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Input/FormInput/Input.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Input/FormInput/Input.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Input/FormInput/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Input/FormInput/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/AboutCourse/AboutCourse.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/AboutCourse/AboutCourse.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Discount/Discount.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Discount/Discount.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Discount/DiscountForm/DiscountForm.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Discount/DiscountForm/DiscountForm.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/RegisterForCourse/RegisterForCourse.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/RegisterForCourse/RegisterForCourse.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/RegisterForEvent/RegisterForEvent.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/RegisterForEvent/RegisterForEvent.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/RegisterForEvent/RegisterForEvent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/RegisterForEvent/RegisterForEvent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/JoinForm/JoinForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/JoinForm/JoinForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/SubscribeForm/SubscribeForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/SubscribeForm/SubscribeForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/SubscribeInEventPage/Form/SubscribeNewsletterForm.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/SubscribeInEventPage/Form/SubscribeNewsletterForm.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/SubscribeInEventPage/SubscribeInEventPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/SubscribeNewsletter/SubscribeNewsletter.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/SubscribeInEventPage/SubscribeNewsletter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/SubscribeNewsletter/SubscribeNewsletter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/SubscribeInEventPage/SubscribeNewsletterContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/SubscribeNewsletter/SubscribeNewsletterContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/SubscribeInEventPage/img/illustration.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/SubscribeNewsletter/img/illustration.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/ThemesEvent/ThemesEvent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/ThemesEvent/ThemesEvent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/BlogsPage/BlogPage/BlogPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/BlogsPage/BlogPage/BlogPage.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/BlogsPage/BlogPage/BlogPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/BlogsPage/BlogPage/BlogPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/BlogsPage/BlogsPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/BlogsPage/BlogsPage.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/BlogsPage/BlogsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/BlogsPage/BlogsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/EventsPage/EventPage/EventPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/EventsPage/EventPage/EventPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useNavigateTo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useNavigateTo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/const/navLinks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/const/navLinks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helpers/path.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/path.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,31 +80,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "js.last.introduce.type": "CONST",
-    "last.edited.regexp": "073 04 10 550",
-    "last_opened_file_path": "/Users/kotyarya/Library/Mobile Documents/com~apple~CloudDocs/Documents/Документы — MacBook Air — Maksim/Programowanie/GitHub/CreateX/project",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "0d570cb2-96df-43cc-80da-7f777e6d0afe",
-    "ts.external.directory.path": "/Users/kotyarya/Library/Mobile Documents/com~apple~CloudDocs/Documents/Документы — MacBook Air — Maksim/Programowanie/GitHub/CreateX/project/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;last.edited.regexp&quot;: &quot;073 04 10 550&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kotyarya/Library/Mobile Documents/com~apple~CloudDocs/Documents/Документы — MacBook Air — Maksim/Programowanie/GitHub/CreateX/project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;0d570cb2-96df-43cc-80da-7f777e6d0afe&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/kotyarya/Library/Mobile Documents/com~apple~CloudDocs/Documents/Документы — MacBook Air — Maksim/Programowanie/GitHub/CreateX/project/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "TypeScript JSX"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;TypeScript JSX&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -127,11 +120,11 @@
       <recent name="$PROJECT_DIR$/src/Modules/Courses/img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Modules/Contact/img" />
+      <recent name="$PROJECT_DIR$/src/assets/icons/other" />
       <recent name="$PROJECT_DIR$/src/Modules/SubscribeForm" />
       <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$/src/Redux/Other/Data/BenefitsData" />
-      <recent name="$PROJECT_DIR$/src/Modules" />
-      <recent name="$PROJECT_DIR$/src/Redux/API/event" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -214,7 +207,8 @@
       <workItem from="1695455858739" duration="6170000" />
       <workItem from="1695556721994" duration="11695000" />
       <workItem from="1696267059605" duration="3273000" />
-      <workItem from="1696423976533" duration="7497000" />
+      <workItem from="1696423976533" duration="7561000" />
+      <workItem from="1696521948238" duration="6591000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1686766810853</created>
@@ -525,7 +519,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696270604951</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="JoinForm.tsx">
+      <option name="closed" value="true" />
+      <created>1696445636074</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1696445636074</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,6 +566,7 @@
     <MESSAGE value="loader and redirect to not found" />
     <MESSAGE value="input and react-hook-form" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="JoinForm.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="JoinForm.tsx" />
   </component>
 </project>

@@ -4,7 +4,7 @@ export enum staticPath {
     eventsPage = "/events",
     aboutUsPage = "/about-us",
     blogPage = "/blogs",
-    contactsPage = "/contacts",
+    contactPage = "/contacts",
     notFoundPage = "/notFoundPage"
 }
 

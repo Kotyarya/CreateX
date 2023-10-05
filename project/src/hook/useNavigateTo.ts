@@ -10,7 +10,7 @@ export const useNavigateTo = () => {
             navigate(staticPath.aboutUsPage)
         },
         navigateToContactsPage: () => {
-            navigate(staticPath.contactsPage)
+            navigate(staticPath.contactPage)
         },
         navigateToCoursesPage: () => {
             navigate(staticPath.coursePage)

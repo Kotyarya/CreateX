@@ -1,0 +1,95 @@
+@import "../../Styles/global";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  gap: 13rem;
+  justify-content: center;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+
+    article {
+      color: $gray900;
+
+      p {
+        @include title6;
+
+      }
+
+      h2 {
+        @include title1
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+
+
+      .block {
+        display: flex;
+        gap: 1.2rem;
+
+        svg {
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+
+        .text {
+
+          p {
+            color: $gray900;
+            @include largeRegular;
+          }
+
+          .label {
+            color: $gray700;
+            @include smallBold;
+          }
+        }
+      }
+    }
+
+    .links {
+
+      p {
+        color: $gray900;
+        @include title6;
+        margin-bottom: 2.4rem;
+      }
+
+      .blocks {
+        display: flex;
+        gap: 3.2rem;
+
+
+        svg {
+          width: 2.4rem;
+          height: 2.4rem;
+          fill: $gray700;
+          cursor: pointer;
+        }
+
+        svg:hover {
+          fill: $primary;
+        }
+      }
+    }
+  }
+
+  .map {
+    margin-top: 4rem;
+    width: 70.5rem;
+    height: 41.2rem;
+
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

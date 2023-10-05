@@ -5,7 +5,8 @@ import {UseFormRegisterReturn} from "react-hook-form";
 export enum sizeInput {
     small = "small",
     medium = "medium",
-    large = "large"
+    large = "large",
+    textArea = "textArea"
 }
 
 
@@ -13,24 +14,24 @@ interface FormInputProps {
     placeholder: string,
     label?: string,
     width: number,
-    sizeInput: sizeInput,
+    sizeInputProps: sizeInput,
     theme?: string,
     register: UseFormRegisterReturn,
     errors: string | undefined,
     isSuccessful: boolean,
-    isDirty: boolean
+    isDirty: boolean,
 }
 
 const FormInput: FC<FormInputProps> = ({
                                            placeholder,
                                            label,
                                            width,
-                                           sizeInput,
+                                           sizeInputProps,
                                            theme,
                                            register,
                                            errors,
                                            isSuccessful,
-                                           isDirty
+                                           isDirty,
                                        }) => {
 
 
@@ -38,14 +39,20 @@ const FormInput: FC<FormInputProps> = ({
 
 
     return (
-        <div className={style.input + " " + style[sizeInput]} data-theme={theme}>
+        <div className={style.input + " " + style[sizeInputProps]} data-theme={theme}>
             {label ?
                 <label>{label}</label> :
                 null
             }
             <div className={style.customInput + " " + classSpan}>
-                <input {...register} autoComplete="off" placeholder={placeholder}
-                       style={{minWidth: `${width}rem`}}/>
+                {
+                    sizeInputProps === sizeInput.textArea ?
+                        <textarea {...register} autoComplete="off" placeholder={placeholder}
+                                  style={{minWidth: `${width}rem`, maxWidth: `${width}rem`}}/>
+                        :
+                        <input {...register} autoComplete="off" placeholder={placeholder}
+                               style={{minWidth: `${width}rem`}}/>
+                }
 
             </div>
             {<span className={classSpan}>{errors ? errors : (isSuccessful ? "Looks good!" : errors)}</span>}

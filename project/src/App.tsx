@@ -15,6 +15,7 @@ import Modal from "./Modules/Modal/Modal";
 import {useTypedSelector} from "./hook/useTypedSelector";
 import {staticPath} from "./utils/helpers/path";
 import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
+import ContactPage from "./Pages/ContactPage/ContactPage";
 
 
 const App: FC = () => {
@@ -34,6 +35,7 @@ const App: FC = () => {
                 <Route path={staticPath.blogPage} element={<BlogsPage/>}/>
                 <Route path={staticPath.blogPage + "/:blogId"} element={<BlogPage/>}/>
                 <Route path={staticPath.aboutUsPage} element={<AboutUsPage/>}/>
+                <Route path={staticPath.contactPage} element={<ContactPage/>}/>
                 <Route path={"*"} element={<NotFoundPage/>}/>
             </Routes>
             <FooterContainer/>

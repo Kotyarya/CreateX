@@ -5,5 +5,5 @@ export const navLinks = [
     {path: staticPath.coursePage, label: "Courses"},
     {path: staticPath.eventsPage, label: "Events"},
     {path: staticPath.blogPage, label: "Blog"},
-    {path: staticPath.contactsPage, label: "Contacts"},
+    {path: staticPath.contactPage, label: "Contacts"},
 ]
