@@ -19,11 +19,11 @@ const ContactInfo = () => {
                     <h2>Get in touch</h2>
                 </article>
                 <div className={style.info}>
-                    <a className={style.block} href={"mailto:hello@createx.com"}>
+                    <a className={style.block} href={"mailto:createx.pet.project@gmail.com"}>
                         <ChatSVG/>
                         <div className={style.text}>
                             <p className={style.label}>Talk to us:</p>
-                            <p>hello@createx.com</p>
+                            <p>createx.pet.project@gmail.com</p>
                         </div>
                     </a>
                     <a className={style.block} href={"tel:(405) 555-0128"}>

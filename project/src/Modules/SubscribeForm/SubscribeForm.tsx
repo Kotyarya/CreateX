@@ -7,6 +7,7 @@ import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
 import style from "./SubscribeForm.module.scss";
 import {ReactComponent as ArrowSVG} from "../../assets/icons/arrows/arrowRigthSVG.svg";
 import {EMAIL_REGEXP} from "../../utils/const/regexp";
+import {emailAPI} from "../../Redux/API/email/emailAPI";
 
 
 export interface SubscribeFormTypes {
@@ -22,6 +23,7 @@ const SubscribeForm: FC<SubscribeFormTypes> = ({isFooterForm}) => {
     } = useForm<ISubscribeForm>({mode: "onSubmit"})
 
     const onSubmit: SubmitHandler<ISubscribeForm> = (data) => {
+        emailAPI.subscribe(data.email)
     }
 
 

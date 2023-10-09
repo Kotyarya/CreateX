@@ -1,4 +1,4 @@
-import {FC} from "react";
+import {FC, HTMLInputTypeAttribute} from "react";
 import style from "./Input.module.scss"
 import {UseFormRegisterReturn} from "react-hook-form";
 
@@ -20,6 +20,7 @@ interface FormInputProps {
     errors: string | undefined,
     isSuccessful: boolean,
     isDirty: boolean,
+    type?: HTMLInputTypeAttribute
 }
 
 const FormInput: FC<FormInputProps> = ({
@@ -32,6 +33,7 @@ const FormInput: FC<FormInputProps> = ({
                                            errors,
                                            isSuccessful,
                                            isDirty,
+                                           type
                                        }) => {
 
 
@@ -51,7 +53,7 @@ const FormInput: FC<FormInputProps> = ({
                                   style={{minWidth: `${width}rem`, maxWidth: `${width}rem`}}/>
                         :
                         <input {...register} autoComplete="off" placeholder={placeholder}
-                               style={{minWidth: `${width}rem`}}/>
+                               style={{minWidth: `${width}rem`}} type={type}/>
                 }
 
             </div>

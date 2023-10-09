@@ -71,7 +71,8 @@ const Footer: FC<FooterTypes> = ({goTop, branches, onClickToCoursePage, loading}
                 <ul>
                     <p className={style.linkTitle}>Contact us</p>
                     <li><a href={"tel:(405) 555-0128"}><PhoneSVG/> (405) 555-0128</a></li>
-                    <li><a href={"mailto:hello@createx.com"}><MailSVG/> hello@createx.com</a></li>
+                    <li><a href={"mailto:createx.pet.project@gmail.com"}><MailSVG/> createx.pet.project@gmail.com</a>
+                    </li>
                 </ul>
                 <div className={style.signUp}>
                     <p className={style.title}>SIGN UP TO OUR NEWSLETTER</p>

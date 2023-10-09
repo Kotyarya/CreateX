@@ -4,28 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6b50f66-595e-4b61-b032-de6627445505" name="Changes" comment="JoinForm.tsx">
-      <change afterPath="$PROJECT_DIR$/src/Modules/Contact/Contact.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Contact/Contact.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/ContactForm/ContactForm.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/ContactForm/ContactForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/ContactForm/IContactForm.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/ContactInfo/ContactInfo.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/ContactInfo/ContactInfo.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/ContactPage/ContactPage.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/ContactPage/ContactPage.tsx" afterDir="false" />
+    <list default="true" id="f6b50f66-595e-4b61-b032-de6627445505" name="Changes" comment="ContactPage.tsx">
+      <change afterPath="$PROJECT_DIR$/src/Modules/Modal/LoginModal/LoginForm/SignInForm/ISignInForm.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/Modal/LoginModal/LoginForm/SignInForm/SignInForm.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/Modal/LoginModal/LoginForm/SignInForm/SignInForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/API/email/emailAPI.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Button/ButtonTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button/ButtonTypes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/CheckBox/CheckBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CheckBox/CheckBox.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Input/FormInput/Input.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Input/FormInput/Input.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Input/FormInput/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Input/FormInput/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/JoinForm/JoinForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/JoinForm/JoinForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/ContactInfo/ContactInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/ContactInfo/ContactInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/LatestBlogs/LatestBlogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/LatestBlogs/LatestBlogs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Modal/LoginModal/LoginModal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Modal/LoginModal/LoginModal.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Modal/LoginModal/LoginModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Modal/LoginModal/LoginModal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/SubscribeForm/SubscribeForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/SubscribeForm/SubscribeForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useNavigateTo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useNavigateTo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/const/navLinks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/const/navLinks.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/helpers/path.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/path.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,8 +112,8 @@
       <recent name="$PROJECT_DIR$/src/Modules/Courses/img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Modules/Contact/img" />
       <recent name="$PROJECT_DIR$/src/assets/icons/other" />
+      <recent name="$PROJECT_DIR$/src/Modules/Contact/img" />
       <recent name="$PROJECT_DIR$/src/Modules/SubscribeForm" />
       <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$/src/Redux/Other/Data/BenefitsData" />
@@ -208,7 +200,7 @@
       <workItem from="1695556721994" duration="11695000" />
       <workItem from="1696267059605" duration="3273000" />
       <workItem from="1696423976533" duration="7561000" />
-      <workItem from="1696521948238" duration="6591000" />
+      <workItem from="1696521948238" duration="14792000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1686766810853</created>
@@ -527,7 +519,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696445636074</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="ContactPage.tsx">
+      <option name="closed" value="true" />
+      <created>1696529068457</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1696529068457</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,6 +567,7 @@
     <MESSAGE value="input and react-hook-form" />
     <MESSAGE value="refactor" />
     <MESSAGE value="JoinForm.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="JoinForm.tsx" />
+    <MESSAGE value="ContactPage.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="ContactPage.tsx" />
   </component>
 </project>

@@ -1,0 +1,30 @@
+@import "../../../../../Styles/global";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .password {
+    display: flex;
+    align-items: flex-start;
+
+    button {
+      width: 4.7rem;
+      height: 4.4rem;
+      background: white;
+      display: grid;
+      place-content: center;
+      margin-top: 2.9rem;
+      border: .1rem solid $gray400;
+      border-left: none;
+      border-top-right-radius: .4rem;
+      border-bottom-right-radius: .4rem;
+
+      svg {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+  }
+}

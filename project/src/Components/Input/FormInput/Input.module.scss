@@ -93,7 +93,32 @@
       color: white;
       opacity: .6;
     }
+  }
 
+  .error {
+    input {
+      border: .1rem solid $primary;
+    }
+  }
+
+  .success {
+    input {
+      border: .1rem solid $success;
+    }
+  }
+}
+
+[data-theme="pass"].input {
+  .customInput {
+    input {
+      border-right: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    input:focus {
+      border: .1rem solid rgba(255, 63, 58, 0.4);
+    }
   }
 
   .error {
