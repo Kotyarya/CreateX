@@ -5,7 +5,8 @@ export enum ModalActionType {
 
 export enum ModalType {
     video = "video",
-    logIn = "logIn"
+    logIn = "logIn",
+    registration = "registration"
 }
 
 interface ShowModalWindow {

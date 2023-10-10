@@ -15,11 +15,12 @@ const Modal: FC = () => {
     let modal
 
     switch (modalType) {
-        case ModalType.logIn:
+        case ModalType.logIn && ModalType.registration:
             modal = <LoginModal removeModalWindow={removeModalWindow}/>
             break
         case ModalType.video:
             modal = <VideoModal removeModalWindow={removeModalWindow}/>
+            break
     }
 
     return (

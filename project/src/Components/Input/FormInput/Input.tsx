@@ -39,7 +39,6 @@ const FormInput: FC<FormInputProps> = ({
 
     const classSpan = errors ? style.error : isSuccessful ? isDirty ? style.success : style.error : ""
 
-
     return (
         <div className={style.input + " " + style[sizeInputProps]} data-theme={theme}>
             {label ?
