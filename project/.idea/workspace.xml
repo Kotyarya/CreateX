@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6b50f66-595e-4b61-b032-de6627445505" name="Changes" comment="SignInForm.tsx">
-      <change afterPath="$PROJECT_DIR$/src/Modules/Modal/LoginModal/LoginForm/RegistrationForm/RegistrationForm.tsx" afterDir="false" />
+    <list default="true" id="f6b50f66-595e-4b61-b032-de6627445505" name="Changes" comment="RegistrationForm.tsx">
+      <change afterPath="$PROJECT_DIR$/src/Modules/Modal/LoginModal/LoginForm/RegistrationForm/IRegistrationForm.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/CheckBox/CheckBox.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CheckBox/CheckBox.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Input/FormInput/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Input/FormInput/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Modal/LoginModal/LoginForm/SignInForm/SignInForm.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Modal/LoginModal/LoginForm/SignInForm/SignInForm.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/Modal/LoginModal/LoginForm/SignInForm/SignInForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Modal/LoginModal/LoginForm/SignInForm/SignInForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Modal/LoginModal/LoginModal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Modal/LoginModal/LoginModal.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/Modal/LoginModal/LoginModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Modal/LoginModal/LoginModal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/Modal/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Modal/Modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Other/Types/modalTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Other/Types/modalTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/API/axiosConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/API/axiosConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/const/imgUrl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/const/imgUrl.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +195,8 @@
       <workItem from="1696267059605" duration="3273000" />
       <workItem from="1696423976533" duration="7561000" />
       <workItem from="1696521948238" duration="14862000" />
-      <workItem from="1696955859548" duration="5506000" />
+      <workItem from="1696955859548" duration="5542000" />
+      <workItem from="1697014372412" duration="3125000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1686766810853</created>
@@ -533,7 +531,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696862615559</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="RegistrationForm.tsx">
+      <option name="closed" value="true" />
+      <created>1696961402779</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1696961402779</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -575,6 +581,7 @@
     <MESSAGE value="JoinForm.tsx" />
     <MESSAGE value="ContactPage.tsx" />
     <MESSAGE value="SignInForm.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="SignInForm.tsx" />
+    <MESSAGE value="RegistrationForm.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="RegistrationForm.tsx" />
   </component>
 </project>

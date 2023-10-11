@@ -10,6 +10,7 @@ import Button from "../../../../../Components/Button/Button";
 import {ButtonSize, ButtonType, ButtonVariant} from "../../../../../Components/Button/ButtonTypes";
 import {useAction} from "../../../../../hook/useAction";
 import {ModalType} from "../../../../../Redux/Other/Types/modalTypes";
+import {EMAIL_REGEXP} from "../../../../../utils/const/regexp";
 
 const SignInForm = () => {
 
@@ -45,7 +46,11 @@ const SignInForm = () => {
         <form onSubmit={handleSubmit(onSubmit)} className={style.form}>
             <Input placeholder={"Your working email"} width={39} sizeInputProps={sizeInput.medium}
                    register={register("email", {
-                       required: "Required"
+                       required: "Required",
+                       pattern: {
+                           value: EMAIL_REGEXP,
+                           message: "Plese enter"
+                       }
                    })} errors={errors.email?.message}
                    isSuccessful={isSubmitSuccessful}
                    isDirty={isDirty} label={"Email"}/>

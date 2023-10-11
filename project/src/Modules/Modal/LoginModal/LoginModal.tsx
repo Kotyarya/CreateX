@@ -11,7 +11,6 @@ import RegistrationForm from "./LoginForm/RegistrationForm/RegistrationForm";
 const LoginModal: FC<ModalTypes> = ({removeModalWindow}) => {
 
     const modalType = useTypedSelector(state => state.modal.modalType)
-    console.log(modalType)
 
     return (
         <div className={style.login}>
