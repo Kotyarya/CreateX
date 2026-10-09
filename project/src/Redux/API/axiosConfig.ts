@@ -1,9 +1,8 @@
 import axios from "axios";
 
 export const instance = axios.create({
-    baseURL: "https://createxserver-0af809a58e22.herokuapp.com/api",
+    baseURL: process.env.REACT_APP_API_URL ?? "http://localhost:8000/api",
     headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
     },
 })
