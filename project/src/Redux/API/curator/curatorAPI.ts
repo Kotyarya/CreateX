@@ -1,5 +1,6 @@
 import {instance} from "../axiosConfig";
 import {ICurator, ICuratorResponse} from "../../Other/Types/curatorsTypes";
+import {normalizeText} from "../../../utils/helpers/normalizeText";
 
 
 export const curatorAPI = {
@@ -9,7 +10,7 @@ export const curatorAPI = {
             return response.data.map((curator) => {
                 return {
                     ...curator,
-                    description: curator.description.data.map((element) => String.fromCharCode(element)).join("")
+                    description: normalizeText(curator.description)
                 }
             })
         } catch (e) {
@@ -23,7 +24,7 @@ export const curatorAPI = {
             const response = await instance.get<ICuratorResponse>(`/curator/${curatorId}`)
             const result: ICurator = {
                 ...response.data,
-                description: response.data.description.data.map((element) => String.fromCharCode(element)).join("")
+                description: normalizeText(response.data.description)
             }
             return result
         } catch (e) {

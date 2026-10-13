@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 import style from "./JoinForm.module.scss"
 import {SubmitHandler, useForm} from "react-hook-form";
 import {IJoinForm, JoinFormTypes, JoinFormTypesInterface} from "./JoinFormTypes";
@@ -6,8 +6,10 @@ import Input, {sizeInput} from "../../Components/Input/FormInput/Input";
 import Button from "../../Components/Button/Button";
 import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
 import {EMAIL_REGEXP, PHONE_REGEXP} from "../../utils/const/regexp";
+import {emailAPI} from "../../Redux/API/email/emailAPI";
 
 const JoinForm: FC<JoinFormTypesInterface> = ({type}) => {
+    const [submitMessage, setSubmitMessage] = useState("")
 
     const {
         register,
@@ -15,8 +17,14 @@ const JoinForm: FC<JoinFormTypesInterface> = ({type}) => {
         formState: {errors, isDirty, isSubmitSuccessful}
     } = useForm<IJoinForm>({mode: "onSubmit"})
 
-    const onSubmit: SubmitHandler<IJoinForm> = (data) => {
-
+    const onSubmit: SubmitHandler<IJoinForm> = async (data) => {
+        setSubmitMessage("")
+        try {
+            await emailAPI.register(data)
+            setSubmitMessage("Your request has been sent.")
+        } catch (error) {
+            setSubmitMessage(error instanceof Error ? error.message : "Could not send your request.")
+        }
     }
 
     const inputWidth = type === JoinFormTypes.event || type === JoinFormTypes.course ? 49.5 : 29.1
@@ -50,6 +58,7 @@ const JoinForm: FC<JoinFormTypesInterface> = ({type}) => {
                    label={"Phone"}/>
             <Button text={buttonText} variant={ButtonVariant.solid}
                     size={type === JoinFormTypes.raw ? ButtonSize.regular : ButtonSize.large}/>
+            <p aria-live="polite">{submitMessage}</p>
         </form>
     );
 };

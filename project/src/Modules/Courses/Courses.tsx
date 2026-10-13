@@ -37,14 +37,10 @@ const Courses: FC<CoursesTypes> = ({
     }, 0)
 
 
-    let loadButton
-    if (branches && countAllCourse) {
-        if (activeBranch === 0 && countAllCourse > 9) {
-            loadButton = true
-        } else {
-            loadButton = branches.filter((branch) => branch.id === activeBranch)[0].courseCount > 9
-        }
-    }
+    const activeBranchCount = activeBranch === 0
+        ? countAllCourse
+        : branches?.find((branch) => branch.id === activeBranch)?.courseCount
+    const loadButton = Boolean(activeBranchCount && activeBranchCount > 9)
 
 
     const branchesButton = branches?.map((oneBranch) => {

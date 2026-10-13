@@ -5,7 +5,7 @@ export interface ICuratorResponse {
     rate: number,
     students: number,
     img: string,
-    description: {
+    description: string | {
         type: string,
         data: number[]
     }
