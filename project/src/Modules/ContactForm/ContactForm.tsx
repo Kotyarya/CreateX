@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import style from "./ContactForm.module.scss"
 import {SubmitHandler, useForm} from "react-hook-form";
 import {IContactForm} from "./IContactForm";
@@ -7,8 +7,10 @@ import Button from "../../Components/Button/Button";
 import {ButtonSize, ButtonVariant} from "../../Components/Button/ButtonTypes";
 import {EMAIL_REGEXP, PHONE_REGEXP} from "../../utils/const/regexp";
 import CheckBox from "../../Components/CheckBox/CheckBox";
+import {emailAPI} from "../../Redux/API/email/emailAPI";
 
 const ContactForm = () => {
+    const [submitMessage, setSubmitMessage] = useState("")
 
     const {
         register,
@@ -16,7 +18,19 @@ const ContactForm = () => {
         formState: {errors, isDirty, isSubmitSuccessful}
     } = useForm<IContactForm>({mode: "onSubmit"})
 
-    const onSubmit: SubmitHandler<IContactForm> = (data) => {
+    const onSubmit: SubmitHandler<IContactForm> = async (data) => {
+        setSubmitMessage("")
+        try {
+            await emailAPI.sendMessage({
+                email: data.email,
+                name: `${data.firstName} ${data.lastName}`,
+                phone: data.phone || "Not provided",
+                message: data.message,
+            })
+            setSubmitMessage("Your message has been sent.")
+        } catch (error) {
+            setSubmitMessage(error instanceof Error ? error.message : "Could not send your message.")
+        }
     }
 
     return (
@@ -63,6 +77,7 @@ const ContactForm = () => {
                 <CheckBox text={"I agree to receive communications from Createx Online School"} width={31.5}/>
                 <Button text={"Send message"} variant={ButtonVariant.solid} size={ButtonSize.large} width={34}/>
             </div>
+            <p aria-live="polite">{submitMessage}</p>
         </form>
     );
 };

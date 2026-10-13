@@ -11,10 +11,11 @@ import {ButtonSize, ButtonType, ButtonVariant} from "../../../../../Components/B
 import {useAction} from "../../../../../hook/useAction";
 import {ModalType} from "../../../../../Redux/Other/Types/modalTypes";
 import {EMAIL_REGEXP} from "../../../../../utils/const/regexp";
+import {userAPI} from "../../../../../Redux/API/user/userAPI";
 
 const SignInForm = () => {
 
-    const {showModalWindow} = useAction()
+    const {showModalWindow, removeModalWindow} = useAction()
 
     const {
         register,
@@ -24,9 +25,13 @@ const SignInForm = () => {
     } = useForm<ISignInForm>()
 
 
-    const onSubmit: SubmitHandler<ISignInForm> = (data) => {
-        if (data.email !== "sunguuner500@gmail.com") {
-            setError("email", {message: "Wrong Email"})
+    const onSubmit: SubmitHandler<ISignInForm> = async (data) => {
+        try {
+            const token = await userAPI.login(data.email, data.password)
+            localStorage.setItem("createxToken", token)
+            removeModalWindow()
+        } catch (error) {
+            setError("email", {message: error instanceof Error ? error.message : "Authentication failed"})
         }
     }
 
@@ -56,7 +61,7 @@ const SignInForm = () => {
                    isDirty={isDirty} label={"Email"}/>
             <div className={style.password}>
                 <Input placeholder={"Password"} width={34.2} sizeInputProps={sizeInput.medium}
-                       register={register("password", {})} errors={errors.password?.message}
+                       register={register("password", {required: "Required", minLength: {value: 6, message: "Minimum 6 characters"}})} errors={errors.password?.message}
                        isSuccessful={isSubmitSuccessful}
                        isDirty={isDirty} label={"Password"} type={showPass ? "text" : "password"} theme={"pass"}/>
                 <button onClick={showPassHandler}>{showPass ? <EyeSVG/> : <CloseEyeSVG/>}</button>

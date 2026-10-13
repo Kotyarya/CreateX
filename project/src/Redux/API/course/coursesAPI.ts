@@ -1,5 +1,6 @@
 import {instance} from "../axiosConfig";
 import {ICourse, ICourseResponse} from "../../Other/Types/coursesTypes";
+import {normalizeText} from "../../../utils/helpers/normalizeText";
 
 
 export const coursesApi = {
@@ -27,7 +28,7 @@ export const coursesApi = {
                 ...response.data,
                 curator: {
                     ...response.data.curator,
-                    description: response.data.curator.description.data.map((element) => String.fromCharCode(element)).join("")
+                    description: normalizeText(response.data.curator.description)
                 }
             }
         } catch (e) {
