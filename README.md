@@ -6,7 +6,7 @@ Responsive React frontend for a full-stack online-school demo. Visitors can brow
 
 **Live demo:** [createx-maksym-aksamitnyi.vercel.app](https://createx-maksym-aksamitnyi.vercel.app)
 
-**Production API:** [createx-server-maksym.onrender.com/api/health](https://createx-server-maksym.onrender.com/api/health)
+**Production API:** [createx-api-maksym.onrender.com/api/health](https://createx-api-maksym.onrender.com/api/health)
 
 ## Stack
 
@@ -17,7 +17,7 @@ Responsive React frontend for a full-stack online-school demo. Visitors can brow
 - SCSS modules
 - Vitest and Testing Library
 
-The API lives in [Kotyarya/CreateX-SERVER](https://github.com/Kotyarya/CreateX-SERVER). The frontend expects that service at `http://localhost:8000/api` by default.
+The API lives in [Kotyarya/CreateX-API](https://github.com/Kotyarya/CreateX-API). The frontend expects that service at `http://localhost:8000/api` by default.
 
 ## Local setup
 
