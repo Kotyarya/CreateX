@@ -1,61 +1,70 @@
-# CreateX IT Courses Shop
+# CreateX Online School
 
-This project is a multi-page website designed as a CreateX IT courses and events shop, where users can browse and purchase various courses on information technology, as well as participate in interesting events and learn more about technological innovations.
+[![Frontend CI](https://github.com/Kotyarya/CreateX/actions/workflows/ci.yml/badge.svg)](https://github.com/Kotyarya/CreateX/actions/workflows/ci.yml)
 
+Responsive React frontend for a full-stack online-school demo. Visitors can browse courses, events and articles, filter catalogues, open detail pages, submit contact/registration forms, and create or access a demo account.
 
-## About the Project
+## Stack
 
-This website is developed using the following technologies and libraries:
+- React 18, TypeScript and Vite
+- Redux + Redux Thunk
+- React Router
+- React Hook Form
+- SCSS modules
+- Vitest and Testing Library
 
-- React: The main library for building the user interface.
-- Redux: For managing the global state of the application.
-- SCSS: For styling components using the CSS preprocessor.
-- React Hook Form: For convenient form handling in React.
-- TypeScript: For typing code and improving its readability and support.
-- Redux Thunk: For asynchronous operations and managing side effects in Redux.
-- React Router Dom: For navigation between pages in the application.
-- Custom Hooks: Additional custom hooks developed specifically for this project.
+The API lives in [Kotyarya/CreateX-SERVER](https://github.com/Kotyarya/CreateX-SERVER). The frontend expects that service at `http://localhost:8000/api` by default.
 
-  
-## Main Pages and Functionality
+## Local setup
 
-1. ### Home Page:
-  
-- Information about the project and course promotions.
-   
-2. ### Courses Catalog:
-  
-- View the list of available IT courses.
-- Filter by categories and search by course name.
-- Each course has its own page with a detailed description of the field and curator.
+Requirements: Node.js 24 and npm.
 
-3. ### Course Page:
-  
-- Detailed information about each IT course, including field description, curator information, and purchase option.
+```bash
+git clone https://github.com/Kotyarya/CreateX.git
+cd CreateX
+cp .env.example .env.local
+npm ci --legacy-peer-deps
+npm run dev
+```
 
-4. ### Events Catalog:
+Open [http://localhost:3000](http://localhost:3000).
 
-- View the list of available IT events and conferences.
-- Filter by categories and search by event name.
-- Each event has its own page with information about the field, curator, and event details.
+Environment variables:
 
-5. ### Event Page:
-   
-- Detailed information about each IT event, including field description, curator information, and event details.
+| Variable | Purpose |
+| --- | --- |
+| `VITE_API_URL` | REST API base URL, including `/api` |
+| `VITE_ASSET_URL` | Backend base URL used for uploaded images and audio |
 
-6. ### About Us Page:
+## Quality checks
 
-- Information about the team and company that created this project.
-  
-7. ### Blog Page:
+```bash
+npm run lint
+npm test
+npm run build
+npm audit --omit=dev
+```
 
-- View articles, videos, and podcasts about news and trends in the IT field.
-- Filter by categories and search by article titles.
+GitHub Actions runs the same checks on every pull request and push to `main`.
 
+## Main flows
 
-## Installation
+- course catalogue, category filtering, search and course details;
+- events catalogue and event details;
+- blog catalogue and article/podcast/video details;
+- contact, course/event registration and newsletter forms;
+- account registration and login.
 
-Clone the repository:
-   
-   ```sh
-   git clone https://github.com/Kotyarya/CreateX
+## Architecture
+
+```mermaid
+flowchart LR
+  Browser[React SPA] --> Store[Redux store]
+  Store --> API[Axios API clients]
+  API --> Server[CreateX Express API]
+  Server --> DB[(PostgreSQL)]
+  Server --> Mail[SendGrid]
+  Server --> Media[Static media]
+```
+
+The repository root is the deployable application root. For static hosting, publish `dist/` and route unknown paths to `index.html`.
