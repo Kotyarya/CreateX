@@ -4,6 +4,10 @@
 
 Responsive React frontend for a full-stack online-school demo. Visitors can browse courses, events and articles, filter catalogues, open detail pages, submit contact/registration forms, and create or access a demo account.
 
+**Live demo:** [createx-maksym-aksamitnyi.vercel.app](https://createx-maksym-aksamitnyi.vercel.app)
+
+**Production API:** [createx-server-maksym.onrender.com/api/health](https://createx-server-maksym.onrender.com/api/health)
+
 ## Stack
 
 - React 18, TypeScript and Vite
@@ -63,7 +67,7 @@ flowchart LR
   Store --> API[Axios API clients]
   API --> Server[CreateX Express API]
   Server --> DB[(PostgreSQL)]
-  Server --> Mail[SendGrid]
+  Server --> Forms[(Form submissions)]
   Server --> Media[Static media]
 ```
 
