@@ -1,1 +1,0 @@
-export const imgUrl = "https://createxserver-0af809a58e22.herokuapp.com/"

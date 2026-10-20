@@ -1,0 +1,92 @@
+@import "../../Styles/global";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+  background-image: url("../../assets/img/Backgrounds/Background2.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+  article {
+    color: $gray900;
+    text-align: center;
+
+    p {
+      @include title6;
+    }
+
+    h1 {
+      @include title1
+    }
+  }
+
+  .controls {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+
+    .control {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+
+      p {
+        @include baseBold;
+        color: $gray800;
+      }
+    }
+
+    .blocksType {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+
+      svg {
+        fill: $gray800;
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+      }
+
+      .active {
+        fill: $primary;
+      }
+    }
+  }
+
+  .gridContent {
+    display: grid;
+    grid-template-columns: repeat(3, 39rem);
+    grid-auto-rows: 32.3rem;
+    grid-gap: 3rem;
+  }
+
+
+  .flexContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    p {
+      cursor: pointer;
+      @include baseBold;
+      color: $gray800;
+      user-select: none;
+    }
+
+    .activePage {
+      color: $primary;
+    }
+
+  }
+}
+
